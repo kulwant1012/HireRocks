@@ -1,0 +1,71 @@
+﻿@{ ViewBag.Title = "Notifications";}
+<h4>Notifications</h4>
+<hr />
+@(Html.Kendo().Grid<PS.HireRocks.Model.NotificationsViewModel>()
+.Name("NotificationsGrid")
+        .Columns(columns =>
+        {
+            columns.Bound(m => m.NotificationText).Title("Notification").HtmlAttributes(new {@class="notificationtext"});
+            columns.Bound(m => m.DateTime).Format("{0:dd/MM/yyyy}").HtmlAttributes(new { style="width:10%" }).Title("Date");
+            columns.Command(command => command.Destroy()).HtmlAttributes(new { style="width:5%"});
+        })
+        .DataSource(dataSource => dataSource.Ajax().Model(model=>model.Id(m=>m.NotificationId))
+        .Read(read => read.Action("GetNotificationsGridData", "Notifications"))
+        .Destroy(destroy => destroy.Action("DeleteNotification", "Notifications")))
+        .Pageable(pageable=>pageable.ButtonCount(5).Enabled(true).PageSizes(true).PreviousNext(true).Refresh(true))
+        .Events(events=>events.DataBound("NotificationsGridDataBound"))
+)
+
+<script type="text/javascript">
+    function NotificationsGridDataBound() {
+        debugger;
+        var button = $(".k-grid-delete");
+        if (button.length>0) {
+            var innerContent = button.html().replace("Delete", "");
+            button.html(innerContent);
+        }
+        $.each($('#NotificationsGrid').data("kendoGrid").dataSource.data(),function(index,value){
+            debugger;
+
+        })
+        if ($('#NotificationsGrid').data("kendoGrid").dataSource.total() > 0)
+            setTimeout(function () {
+                $.ajax({
+                    url: '@Url.Action("UpdateNotificationViewedStatus", "Notifications")',
+                    type: "POST",
+                    success: function () {
+                        debugger;
+                        GetUnreadNotificationsCount();
+                        $('.messageTextDiv').css({ border: 0 })
+                    }
+                })
+            }, 5000)
+    }
+
+    function GetUnreadNotificationsCount() {
+        $.ajax({
+            url: '@Url.Action("GetUnreadNotificationsCount", "Notifications")',
+            type: "GET",
+            success: function (data) {
+                debugger;
+                var notificationsCount = parseInt(data.UnreadNotificationsCount);
+                if (notificationsCount > 0)
+                    $('.notificationsCount').html(notificationsCount).show();
+                else
+                    $('.notificationsCount').html(0).hide();
+                $('.notificationTextDiv').css({ border: 0 })
+            }
+        });
+    }
+
+    $(document).on('click', '.notificationtext', function (e) {
+   
+        var grid = $("#NotificationsGrid").data("kendoGrid");      
+        var dataItem = grid.dataItem($(this).closest('tr'));  
+        if (dataItem.NotificationType != null) {
+            var url = "/WorkerContract/ReviewContract?id=" + dataItem.ObjectId;
+            window.open(url, '_blank');
+        }     
+    });
+</script>
+

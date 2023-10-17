@@ -1,0 +1,210 @@
+﻿@model PS.HireRocks.Model.UserProfileViewModel
+
+
+@using (Html.BeginForm("CompleteProfile", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    <!--Bootstrap Modal for categories-->
+    <div class="modal fade" id="chooseCategoryPopup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Choose categories</h4>
+                </div>
+                <div id="content" class="modal-body">
+                    <div class="accordion" id="accordionCategories">
+                        @for (int categoryCount = 0; categoryCount < Model.JobCategoryList.Count; categoryCount++)
+                        {
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#@categoryCount">
+                                        @Model.JobCategoryList[categoryCount].CategoryName
+                                    </a>
+                                </div>
+                                <div id="@categoryCount" class="accordion-body in collapse" style="height: auto;">
+                                    <div class="accordion-inner checkboxList">
+                                        @for (int subItemsCount = 0; subItemsCount < Model.JobCategoryList[categoryCount].JobSubCategoryList.Count; subItemsCount++)
+                                        {
+                                            @Html.CheckBoxFor(m => Model.JobCategoryList[categoryCount].JobSubCategoryList[subItemsCount].IsSelected)
+                                            @Html.LabelFor(m => Model.JobCategoryList[categoryCount].JobSubCategoryList[subItemsCount].IsSelected, Model.JobCategoryList[categoryCount].JobSubCategoryList[subItemsCount].SubCategoryName)
+                                            @Html.HiddenFor(m => Model.JobCategoryList[categoryCount].JobSubCategoryList[subItemsCount].JobSubCategoryId)
+                                            <br />
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                    @*<div>
+                            @helper RenderPartColumn(long categoryId)
+                            {
+                                @Html.Grid(Model.JobCategoryList.FirstOrDefault(x => x.JobCategoryId == categoryId).JobSubCategoryList).Columns(columns =>
+                                {
+                                    columns.Add(c => c.JobSubCategoryId, true);
+                                    columns.Add(c => c.IsSelected).Encoded(false).Sanitized(false).SetWidth(30).RenderValueAs(a => Html.CheckBoxFor(m=>a.IsSelected)).Titled(string.Empty);
+                                    columns.Add(c => c.SubCategoryName).Titled(string.Empty);
+                                })
+                            }
+                            @Html.Grid(Model.JobCategoryList).Columns(columns =>
+                            {
+                                columns.Add(c => c.CategoryName).Encoded(false).Titled(string.Empty);
+                                columns.Add(c => c.JobCategoryId).Encoded(false).Sanitized(false).Titled(string.Empty).RenderValueAs(a => RenderPartColumn(a.JobCategoryId).ToHtmlString());
+
+                            })
+                        </div>*@
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h4>Complete Profile</h4>
+    <hr />
+    @Html.ValidationSummary(true)
+    <div class="form-group">
+        @Html.LabelFor(m => m.Skills, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            <div class="checkboxList">
+                @for (int i = 0; i < Model.SkillList.Count; i++)
+                {
+                    @Html.CheckBoxFor(m => Model.SkillList[i].IsSelected)
+                    @Html.LabelFor(m => Model.SkillList[i].IsSelected, Model.SkillList[i].SkillName)
+                    @Html.HiddenFor(m => Model.SkillList[i].SkillId)
+                    <br />
+                }
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.HourlyRate, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.HourlyRate, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.HourlyRate)
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2 control-label">Choose working area</label>
+        <div class="col-md-10">
+            <a href="#" onclick="OpenChooseCategoriesScreen();">Choose categories</a>
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.AboutMe, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextAreaFor(m => m.AboutMe, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.AboutMe)
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Language, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            <div class="checkboxList">
+                @for (int i = 0; i < Model.LanguageList.Count; i++)
+                {
+                    @Html.CheckBoxFor(m => Model.LanguageList[i].IsSelected)
+                    @Html.LabelFor(m => Model.LanguageList[i].IsSelected, Model.LanguageList[i].LanguageName)
+                    @Html.HiddenFor(m => Model.LanguageList[i].LanguageId)
+                    <br />
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.Label("Address", new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Addresss1, new { @class = "form-control", @placeholder = "Address" })
+            @Html.ValidationMessageFor(m => m.Addresss1)<br />
+            @Html.DropDownListFor(m => m.Country1, Model.CountriesList, "Select country", new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Country1)<br />
+            @Html.TextBoxFor(m => m.City1, new { @class = "form-control", @placeholder = "City" })
+            @Html.ValidationMessageFor(m => m.City1)
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.Label("Address 2", new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Addresss2, new { @class = "form-control", @placeholder = "Address" })
+            @Html.ValidationMessageFor(m => m.Addresss2)<br />
+            @Html.DropDownListFor(m => m.Country2, Model.CountriesList, "Select country", new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Country2)<br />
+            @Html.TextBoxFor(m => m.City2, new { @class = "form-control", @placeholder = "City" })
+            @Html.ValidationMessageFor(m => m.City2)
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.CellPhone, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.CellPhone, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.CellPhone)
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.WorkPhone, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.WorkPhone, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.WorkPhone)
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.HomePhone, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.HomePhone, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.HomePhone)
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.TimeZone, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(m => m.TimeZone, Model.TimeZoneList, "Select time zone", new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.TimeZone)
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save profile" class="btn btn-default" />
+        </div>
+    </div>
+}
+
+<script type="text/javascript">
+    function OpenChooseCategoriesScreen() {
+        $('#chooseCategoryPopup').modal();
+        return false;
+    }
+</script>
+
+<style>
+    .accordion-group {
+        margin-bottom: 2px;
+        border: 1px solid #e5e5e5;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+    }
+
+    .accordion-heading {
+        border-bottom: 1px solid #e5e5e5;
+        height: 25px;
+        background: #e5e5e5;
+        padding: 2px 10px;
+    }
+
+    .accordion-inner {
+        padding: 15px 10px;
+    }
+
+    .checkboxList label {
+        font-weight: 100;
+        color: #808080;
+        margin-left: 5px;
+    }
+
+    .checkboxList {
+        padding: 0px 10px;
+    }
+</style>
+

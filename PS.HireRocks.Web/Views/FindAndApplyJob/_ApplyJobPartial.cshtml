@@ -1,0 +1,89 @@
+﻿@model PS.HireRocks.Model.ApplyForJobViewModel
+
+<style>
+    #applyJobForm .row {
+        padding: 2px;
+    }
+
+    #applyJobForm .control {
+        width: 100%;
+        max-width: 100%;
+    }
+</style>
+
+
+<script>   
+    function HourlyRateChange() {
+        $('#calculatedJobRate').val(CalculateFees($('#Rate').val()));
+    };
+
+    $('.rate').keyup(function () {
+        $('#calculatedJobRate').val(CalculateFees($('#Rate').val()));
+    }).blur(function () {
+        $('#calculatedJobRate').val(CalculateFees($('#Rate').val()));
+    })
+
+    function CalculateFees(hourlyRate) {
+        if (hourlyRate) return '$' + (hourlyRate - ((10 / 100) * hourlyRate)); else return '';
+    }
+</script>
+
+@using (Html.BeginForm("ApplyForJob", "FindAndApplyJob", FormMethod.Post, new { id = "applyJobForm" }))
+{
+    <h5 style="margin-top:0;margin-bottom:0" class="alert-success">@ViewData["Success"]</h5>
+    @Html.ValidationSummary()
+    <div class="row">
+        <div class="col-md-2">@Html.Label("Job name")</div>
+        <div class="col-md-10">
+            <label style="height:32px;line-height:20px;margin-bottom:0" id="JobName">@Model.JobName </label>
+            @Html.HiddenFor(m => m.JobName, new { @id = "JobNameHidden" })
+            @Html.HiddenFor(m => m.JobTypeId)
+            @Html.HiddenFor(m => m.JobTypeName)
+            @Html.HiddenFor(m => m.ClientUserName)
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2">@Html.Label("Job type")</div>
+        <div class="col-md-10">
+            <label style="height:32px;line-height:20px;margin-bottom:0" id="LabelJobTypeName">@Model.JobTypeName </label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2">@Html.LabelFor(m => m.Rate)</div>
+        <div class="col-md-10">
+            @(Html.Kendo().NumericTextBoxFor(m => m.Rate)
+            .Format("$#.00")
+            .Min(5)
+            .Max(decimal.MaxValue)
+            .HtmlAttributes(new { @class = "rate control" })
+            .Events(events => events.Spin("HourlyRateChange")))
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">@Html.Label("You will get")</div>
+        <div class="col-md-10"> @Html.TextBox("calculatedJobRate", null, new { @class = "form-control control", @readonly = "readonly" })</div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">@Html.Label("Cover Letter")</div>
+        <div class="col-md-10">
+            @(Html.Kendo().EditorFor(m => m.CoverLetter).Name("CoverLetter").Tools(tools => tools.FontName().FontSize()).HtmlAttributes(new { style = "" }).Encode(false))
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">@Html.Label("Attachments")</div>
+        <div class="col-md-10">
+            @(Html.Kendo().Upload().Name("attachments").HtmlAttributes(new { @class = "control" }))
+            @Html.HiddenFor(m => m.JobId)
+        </div>
+    </div>
+    <div class="modal-footer">
+        <input type="submit" class="btn btn-primary" name="myButton" value="Apply" />
+        <input type="button" class="btn btn-default" id="closeApplyJobButton" data-dismiss="modal" value="Done" />
+    </div>
+}
+
+
+
+

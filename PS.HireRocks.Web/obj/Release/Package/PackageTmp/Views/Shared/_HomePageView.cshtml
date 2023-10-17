@@ -1,0 +1,250 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/homePageCss")
+    @*@Styles.Render("~/Content/css")*@
+    @Styles.Render("~/Content/kendo/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/kendo")
+    @Scripts.Render("~/bundles/Particles")
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="~/Scripts/jquery.signalR-2.2.0.min.js" type="text/javascript"></script>
+    <script src="@System.Configuration.ConfigurationManager.AppSettings[PS.HireRocks.Web.Helpers.WebsiteConstants.ServerAddress]signalr/hubs/" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        var messageHub;
+        $(function () {
+            messageHub = $.connection.messageHub;
+            messageHub.client.newMessageReceived = function (message) {
+
+                if ('@User.IsInRole(PS.HireRocks.Data.Helpers.RoleConstants.Worker)' == 'True') {
+                    var jobsDropdown = $("#WorkerJobsDropdownList");
+                    if (jobsDropdown.length > 0) {
+                        if (jobsDropdown.data("kendoDropDownList").dataSource.data().length > 0)
+                            $("#WorkerMessageList").data("kendoListView").dataSource.read();
+                        else
+                            $("#WorkerJobsDropdownList").data("kendoDropDownList").dataSource.read();
+                    }
+                }
+                else {
+                    var jobsDropdown = $("#JobsDropdownList");
+                    if (jobsDropdown.length > 0) {
+                        if (jobsDropdown.data("kendoDropDownList").dataSource.data().length > 0)
+                            $("#MessageList").data("kendoListView").dataSource.read();
+                        else
+                            $("#JobsDropdownList").data("kendoDropDownList").dataSource.read();
+                    }
+                }
+                var messageCountSpan = $('.messagesCount');
+                messageCountSpan.html(parseInt(messageCountSpan.html()) + 1).show();
+                $('.messagesCount').html(parseInt(messageCountSpan.html())).show();
+                $('.tileMessagesCount').show();
+            }
+
+            messageHub.client.newNotificationReceived = function () {
+                debugger;
+                var notificationCountSpan = $('.notificationsCount');
+                notificationCountSpan.html(parseInt(notificationCountSpan.html()) + 1).show();
+                var notificationGrid = $('#NotificationsGrid').data("kendoGrid");
+                if (notificationGrid != null)
+                    notificationGrid.dataSource.read();
+            }
+            $.connection.hub.url = "@System.Configuration.ConfigurationManager.AppSettings[PS.HireRocks.Web.Helpers.WebsiteConstants.ServerAddress]signalr";
+            $.connection.hub.start().fail(function (error) { console.error(error); });
+            GetUnreadNotificationAndMessageCount();
+
+            //$.ajaxSetup({
+            //    beforeSend: function () {
+            //        // show gif here, eg:
+            //        debugger;
+            //        $("#loading").show();
+            //    },
+            //    complete: function () {
+            //        debugger;
+            //        // hide gif here, eg:
+            //        $("#loading").hide();
+            //    }
+            //});
+        });
+
+        function GetUnreadNotificationAndMessageCount() {
+            $.ajax({
+                url: '@Url.Action("GetUnreadNotificationAndMessageCount", "Base")',
+                type: "GET",
+                success: function (data) {
+                    var messageCount = parseInt(data.UnreadMessagesCount);
+                    var notificationCount = parseInt(data.UnreadNotificationsCount);
+                    if (messageCount > 0) {
+                        $('.messagesCount').html(messageCount).show();
+                        $('.tileMessagesCount').show();
+                    }
+                    else {
+                        $('.messagesCount').html(0).hide();
+                        $('.tileMessagesCount').hide();
+                    }
+                    if (notificationCount > 0) {
+                        $('.notificationsCount').html(notificationCount).show();
+                        $('.tileNotificationsCount').show();
+                    }
+                    else {
+                        $('.notificationsCount').html(0).hide();
+                        $('.tileNotificationsCount').hide();
+                    }
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <section id="top" class="topContact">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 left">
+                    <a class="email" href="mailto:hirerocksteam@gmail.com" target="_top">
+                        <i class="fa fa-envelope-o" aria-hidden="true"></i> hirerocksteam@gmail.com
+                    </a>
+                </div>
+                <div class="col-xl-9 col-lg-8 col-md-6 col-sm-6">
+                    <ul class="socialIcon">
+                        <li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <header id="myHeader" class="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                @if (Request.IsAuthenticated && Session[PS.HireRocks.Web.Helpers.SessionNameConstants.LogedInUserSession] != null)
+                {
+                    <a style="font-size:15px;display:none" id="backButton" class="navbar-brand" href="javascript:void(0);" onclick="history.go(-1);">Back</a>
+                    <a href="@Url.Action("Index", "Dashboard")" class="logo"><img class="img-fluid" width="120" src='@Url.Content("~/Content/Images/hirerocks.png")' /></a>
+                }
+                else
+                {
+                    <a href="@Url.Action("Index", "Home")" class="logo"><img class="img-fluid" width="120" src='@Url.Content("~/Content/Images/hirerocks.png")' /></a>
+                }
+                @*<a href="#"><img class="img-fluid" width="120" src="~/Content/images/hirerocks.png" alt="Hirerocks"> </a>*@
+                <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            @if (Request.IsAuthenticated && Session[PS.HireRocks.Web.Helpers.SessionNameConstants.LogedInUserSession] != null)
+                            {
+                                <a class="ancor nav-link" href="@Url.Action("Index", "Dashboard")">Home<span class="sr-only">(current)</span></a>
+                            }
+                            else
+                            {
+                                <a class="ancor nav-link" href="@Url.Action("Index", "Home")">Home<span class="sr-only">(current)</span></a>
+                            }
+                        </li>
+                        <li class="nav-item">
+                            <a class="ancor nav-link" href="@Url.Action("About", "Home")">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="ancor nav-link" href="@Url.Action("Contact", "Home")">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="userSec" id="navbarSupportedContent">
+
+                    @Html.Partial("_LoginPartial")
+                    @if (Request.IsAuthenticated && Session[PS.HireRocks.Web.Helpers.SessionNameConstants.LogedInUserSession] != null)
+                    {
+
+
+                        <a class="ancor message-alert" href="@Url.Action("MyMessages", "Message")"><span class="message "><i class="fa fa-envelope-o famessages" aria-hidden="true"></i> <span class="count notification-message-text messagesCount"> </span></span></a>
+
+                        @*<a class="ancor nav-link message-alert" href="@Url.Action("MyMessages", "Message")">Message</a>*@
+                        @*<span class="notification-message-text messagesCount">0</span>*@
+                        @*<span class="message "><i class="fa fa-envelope-o" aria-hidden="true"></i> <span class="count"> 1</span></span>*@
+
+
+                        <a class="ancor message-alert" href="@Url.Action("Notifications", "Notifications")"><span class="notification "><i class="fa fa-bell-o" aria-hidden="true"></i> <span class="count notification-text notificationsCount"> </span></span></a>
+                        @*<a class="ancor nav-link notification-alert" href="@Url.Action("Notifications", "Notifications")">Notification</a>*@
+                        @*<span class="notification-text notificationsCount">0</span>*@
+                        @*<span class="notification "><i class="fa fa-bell-o" aria-hidden="true"></i> <span class="count"> 1</span></span>*@
+
+
+
+                        @*<li style="width: 30px; margin-left: 15px;">
+                    @Html.ActionLink("Message", "MyMessages", "Message", null, new { @class = "message-alert" })
+
+                </li>
+                <li style="width: 30px; margin-left: 15px;">
+                    @Html.ActionLink("Notification", "Notifications", "Notifications", null, new { @class = "notification-alert" })
+
+                </li>*@
+                    }
+
+
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    @RenderBody()
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4">
+                    <div class="wTitle">
+                        Highest in Demand Talent
+                    </div>
+                    <ul>
+                        <li><a href="#">IOS Developer</a></li>
+                        <li><a href="#">Java Developer</a></li>
+                        <li><a href="#">.NET Developer</a></li>
+                        <li><a href="#">Front End Developer</a></li>
+                        <li><a href="#">UI Developer</a></li>
+                        <li><a href="#">UX Developer</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-xl-4 col-lg-4">
+                    <div class="wTitle"> About Us </div>
+                    <ul>
+                        <li><a href="#">Top 3%</a></li>
+                        <li><a href="#">Clients</a></li>
+                        <li><a href="#">Freelance Developers</a></li>
+                        <li><a href="#">Freelance Designers</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-xl-4 col-lg-4">
+                    <div class="wTitle">
+                        Contact
+                    </div>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Press Center</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Front End Developer</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center copyright">
+            Copyright 2020 hirerocks.com | All Rights Reserved <a class="scrollTop" href="#top"> <i class="fa fa-angle-up" aria-hidden="true"></i> </a>
+        </div>
+    </footer>
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

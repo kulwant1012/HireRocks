@@ -1,0 +1,115 @@
+﻿@model PS.HireRocks.Model.FindWorkerViewModel
+@using System.Configuration
+@using PS.HireRocks.Web.Helpers
+@{
+    ViewBag.Title = "Find Worker";
+}
+ 
+<h4 id="PageHeading">Find Worker</h4>
+<hr />
+<div id="FindWorkerDiv"> 
+<div class="form-group row">
+    <div class="col-md-10">
+        @Html.TextBoxFor(m => m.FindWorkerFilter.WorkerName, new { @class = "form-control", style = "display:inline", placeholder = "Worker name" })
+        <input type="button" class="btn btn-default" id="SearchWorkerButton" value="Find" />
+        @Html.ValidationMessageFor(m=>m.FindWorkerFilter.WorkerName)
+    </div>
+</div>
+<div class="row" style="margin-left:0;margin-right:0">
+    <div id="FiltersDiv" class="col-md-3" style="border:1px solid lightgray;padding-bottom:15px">
+        <h5>Select filters</h5>
+        @Html.LabelFor(m=>m.FindWorkerFilter.CountryNames)
+        @Html.Kendo().MultiSelect().Name("FindWorkerFilter_CountryName").BindTo(Model.CountriesList).Placeholder("Select country")
+
+        @Html.LabelFor(m => m.FindWorkerFilter.TimeZone)
+        @Html.DropDownListFor(x => x.FindWorkerFilter.TimeZone, Model.TimeZoneList, "Time zone", new { @class = "form-control", style = "max-width:100%" })
+
+        @Html.LabelFor(m => m.FindWorkerFilter.HourlyRate)
+        @Html.Kendo().NumericTextBoxFor(m => m.FindWorkerFilter.HourlyRate).HtmlAttributes(new { style = "width:100%" }).Format("$#.00 +").Value(5)
+        @Html.ValidationMessageFor(m => m.FindWorkerFilter.HourlyRate)
+
+        @Html.Label("Skills")<br />
+        <div class="checkboxList">
+            @for (int i = 0; i < Model.SkillsList.Count; i++)
+            {
+                @Html.CheckBoxFor(m => Model.SkillsList[i].IsSelected, new { @value = Model.SkillsList[i].SkillId})
+                @Html.LabelFor(m => Model.SkillsList[i].IsSelected, Model.SkillsList[i].SkillName)
+                <br />
+            }
+        </div>
+
+        @Html.LabelFor(m => m.FindWorkerFilter.Rating)
+        @(Html.Kendo().SliderFor(m => m.FindWorkerFilter.Rating).IncreaseButtonTitle("Right").DecreaseButtonTitle("Left").Min(0).Max(5).Value(0).HtmlAttributes(new { style = "width:100%", id = "FindWorkerFilter_Rating" }))
+    </div>
+    <div class="col-md-9" style="padding:0">
+        @(Html.Kendo().Grid<PS.HireRocks.Model.GetWorkerViewModel>()
+                           .ClientRowTemplate(
+                                            "<tr><td><table>" +
+                                            "<tr><td style='width:80px;border:0'><img style='height:80px;width:80px' src='" + ConfigurationManager.AppSettings[WebsiteConstants.profileThumbnailImageFolder] + "#:ProfileImage#' /></td><td colspan='3' style='border: 0;'><h3 style='color:\\#428bca'>#: FirstName # #: LastName #</h3><h6 style='color:gray'>Skills: C\\#, ASP.NET</h6></td></tr>" +
+                                            "<tr><td colspan='4' style='border-top: 0'><hr style='margin:5px'/>#:ProfileTitle# <hr style='margin-top:10px;margin-bottom:0'/></td></tr>" +
+                                            "<tr><td colspan='4' style='border-top:0'><span style='float:left;color:darkgray'>Country: #:Country#, Hourly rate: #:HourlyRate#$ </span>" +
+                                            "<span style='float:right'><a onclick='MessageButtonClick(this)' href = '\\#' class = 'k-button k-button-icontext k-grid-edit'>Message</a><a class = 'k-button k-button-icontext' href='HireWorker?workerId=#:WorkerId#');>Hire</a></span></td></tr>" +
+                                            "</table></td></tr>"
+                                         )                            
+                 .Name("WorkersGrid")
+                 .Sortable()                 
+                 .Pageable(pageable => pageable.Refresh(true).PageSizes(true).ButtonCount(5))
+                 .DataSource(dataSource => dataSource.Ajax().Model(m=>m.Id(p=>p.WorkerId)).Read(read => read.Action("GetWorkersList", "FindAndHireWorker").Data("AddWorkerFilters")))
+        )
+    </div>
+</div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+<script type="text/javascript">
+    $(window).resize(function () {
+        kendo.resize($('#FindUserFilter_Rating'));
+        kendo.resize($('#WorkersGrid'));
+    })
+
+    $('#SearchWorkerButton').click(function () {
+        ReloadWorkersGrid();
+    })
+
+    function AddWorkerFilters() {
+        var skillIds = [];
+        $('.checkboxList input:checked').each(function () {
+            skillIds.push(this.value);
+        })
+        return {
+            findWorkerFilter: {
+                WorkerName: $('#FindWorkerFilter_WorkerName').val(),
+                CountryNameList: $('#FindWorkerFilter_CountryName').data('kendoMultiSelect').value(),
+                HourlyRate: $('#FindWorkerFilter_HourlyRate').val(),
+                TimeZone: $('#FindWorkerFilter_TimeZone').val(),
+                Rating: $('#FindWorkerFilter_Rating').data('kendoSlider').value(),
+                SkillIdsList: skillIds
+            }
+        };
+    }
+
+    function ReloadWorkersGrid() {
+        $('#WorkersGrid').data("kendoGrid").dataSource.read();
+    }
+
+    function MessageButtonClick(button) {
+        debugger;
+        window.location = '/Message/MyMessages?workerId='+$("#WorkersGrid").data("kendoGrid").dataItem($(button).closest("table").closest('tr')).WorkerId;
+    }
+
+</script>
+
+<style>
+    #FiltersDiv label{
+        font-weight:normal
+    }
+
+    .k-grid .k-header {
+        display: none;
+    }
+</style>
+
+

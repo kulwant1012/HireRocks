@@ -1,0 +1,164 @@
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\PS.HireRocks.Web.dll.config
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\PS.HireRocks.Web.dll
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\PS.HireRocks.Web.pdb
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\Antlr3.Runtime.dll
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\CaptchaMvc.dll
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\CrystalDecisions.CrystalReports.Engine.dll
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\CrystalDecisions.ReportSource.dll
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\CrystalDecisions.Shared.dll
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\CrystalDecisions.Web.dll
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\EntityFramework.dll
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\EntityFramework.SqlServer.dll
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\GridMvc.dll
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\Kendo.Mvc.dll
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\Microsoft.AspNet.SignalR.Core.dll
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\Microsoft.IdentityModel.Logging.dll
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\Microsoft.Owin.dll
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\Microsoft.Owin.Security.dll
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\Microsoft.Owin.Security.Google.dll
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\Microsoft.Web.Infrastructure.dll
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\Newtonsoft.Json.dll
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\Owin.dll
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\PS.HireRocks.Data.dll
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\PS.HireRocks.Model.dll
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\System.Web.Helpers.dll
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\System.Web.Mvc.dll
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\System.Web.Optimization.dll
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\System.Web.Razor.dll
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\System.Web.WebPages.Deployment.dll
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\System.Web.WebPages.dll
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\System.Web.WebPages.Razor.dll
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\WebGrease.dll
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\PS.HireRocks.Data.pdb
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\PS.HireRocks.Data.dll.config
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\PS.HireRocks.Model.pdb
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\PS.HireRocks.Model.dll.config
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\CaptchaMvc.pdb
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\CaptchaMvc.xml
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\EntityFramework.xml
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\EntityFramework.SqlServer.xml
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\Microsoft.AspNet.SignalR.Core.xml
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\Microsoft.IdentityModel.Logging.xml
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\Microsoft.Owin.xml
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\Microsoft.Owin.Security.xml
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\Newtonsoft.Json.xml
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\System.Web.Helpers.xml
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\System.Web.Mvc.xml
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\System.Web.Razor.xml
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\System.Web.WebPages.xml
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\System.Web.WebPages.Deployment.xml
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\System.Web.WebPages.Razor.xml
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\System.Web.Optimization.xml
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\Antlr3.Runtime.pdb
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\Microsoft.Owin.Security.Google.xml
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\obj\Release\PS.HireRocks.Web.csproj.AssemblyReference.cache
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\obj\Release\PS.HireRocks.Web.csproj.ResolveComReference.cache
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\obj\Release\PS.HireRocks.Web.csproj.CoreCompileInputs.cache
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\obj\Release\PS.HireRocks.Web.csproj.CopyComplete
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\obj\Release\PS.HireRocks.Web.dll
+D:\Rashika Projects\Hirerocks (1)\Hirerocks1\Hirerocks\PS.HireRocks.Web\obj\Release\PS.HireRocks.Web.pdb
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\PS.HireRocks.Web.dll.config
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\PS.HireRocks.Web.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\PS.HireRocks.Web.pdb
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\Antlr3.Runtime.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\CaptchaMvc.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\CrystalDecisions.CrystalReports.Engine.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\CrystalDecisions.ReportSource.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\CrystalDecisions.Shared.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\CrystalDecisions.Web.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\EntityFramework.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\EntityFramework.SqlServer.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\GridMvc.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\Kendo.Mvc.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\Microsoft.AspNet.SignalR.Core.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\Microsoft.IdentityModel.Logging.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\Microsoft.Owin.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\Microsoft.Owin.Security.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\Microsoft.Owin.Security.Google.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\Microsoft.Web.Infrastructure.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\Newtonsoft.Json.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\Owin.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\PS.HireRocks.Data.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\PS.HireRocks.Model.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\System.Web.Helpers.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\System.Web.Mvc.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\System.Web.Optimization.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\System.Web.Razor.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\System.Web.WebPages.Deployment.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\System.Web.WebPages.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\System.Web.WebPages.Razor.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\WebGrease.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\CrystalDecisions.ReportAppServer.Prompting.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\PS.HireRocks.Data.pdb
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\PS.HireRocks.Data.dll.config
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\PS.HireRocks.Model.pdb
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\PS.HireRocks.Model.dll.config
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\CaptchaMvc.pdb
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\CaptchaMvc.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\EntityFramework.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\EntityFramework.SqlServer.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\Microsoft.AspNet.SignalR.Core.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\Microsoft.IdentityModel.Logging.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\Microsoft.Owin.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\Microsoft.Owin.Security.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\Newtonsoft.Json.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\System.Web.Helpers.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\System.Web.Mvc.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\System.Web.Razor.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\System.Web.WebPages.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\System.Web.WebPages.Deployment.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\System.Web.WebPages.Razor.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\System.Web.Optimization.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\Antlr3.Runtime.pdb
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\Microsoft.Owin.Security.Google.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\obj\Release\PS.HireRocks.Web.csproj.AssemblyReference.cache
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\obj\Release\PS.HireRocks.Web.csproj.ResolveComReference.cache
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\obj\Release\PS.HireRocks.Web.csproj.CoreCompileInputs.cache
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\obj\Release\PS.HireRocks.Web.csproj.CopyComplete
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\obj\Release\PS.HireRocks.Web.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.HireRocks.Web\obj\Release\PS.HireRocks.Web.pdb

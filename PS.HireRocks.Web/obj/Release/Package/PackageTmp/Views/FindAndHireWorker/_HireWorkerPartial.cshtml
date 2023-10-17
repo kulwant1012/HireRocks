@@ -1,0 +1,414 @@
+﻿@{
+    Layout = null;
+}
+@using System.Configuration
+@using PS.HireRocks.Web.Helpers
+@model PS.HireRocks.Model.ContractViewModel
+
+@{bool isContractEditable = true;}
+@if (Model.ContractEndDate.HasValue)
+{
+    isContractEditable = DateTime.Now.Date <= Model.ContractEndDate.Value.AddDays(Convert.ToInt16(ConfigurationManager.AppSettings["DaysForWhichContractEditable"])).Date ? true : false;
+}
+<h5 class="alert-success" id="SuccessMessage">@TempData[PS.HireRocks.Web.Helpers.SessionNameConstants.SuccessMessage]</h5>
+
+<link href="~/Content/rateit.css" rel="stylesheet" />
+<script type="text/javascript">
+    $(document).ready(function () {
+        if ($('#JobTypeId').val() == '@((long)PS.HireRocks.Data.Helpers.JobTypeEnum.Hourly)')
+            $('.hourly-div').show();
+        if ($('#JobTypeId').val() == '@((long)PS.HireRocks.Data.Helpers.JobTypeEnum.Fixed)')
+            $('.fixed-rate-div').show();
+
+        if ('@(Model.COntractStatusId==PS.HireRocks.Data.Helpers.ContractStatusConstants.Closed)' == 'True') {
+            $("#SkillRatingDiv").attr("data-rateit-value", '@Model.UserRatingsViewModel.SkillRating').attr('data-rateit-readonly', '@isContractEditable' == 'True' ? false : true);
+            $("#QualityRatingDiv").attr("data-rateit-value", '@Model.UserRatingsViewModel.QualityRating').attr('data-rateit-readonly', '@isContractEditable' == 'True' ? false : true);
+            $("#AvailabilityRatingDiv").attr("data-rateit-value", '@Model.UserRatingsViewModel.AvailabilityRating').attr('data-rateit-readonly', '@isContractEditable' == 'True' ? false : true);
+            $("#CommunicationRatingDiv").attr("data-rateit-value", '@Model.UserRatingsViewModel.CommunicationRating').attr('data-rateit-readonly', '@isContractEditable' == 'True' ? false : true);
+            $("#CooperationRatingDiv").attr("data-rateit-value", '@Model.UserRatingsViewModel.CooperationRating').attr('data-rateit-readonly', '@isContractEditable' == 'True' ? false : true);
+            $("#DeadlineRatingDiv").attr("data-rateit-value", '@Model.UserRatingsViewModel.DeadlineRating').attr('data-rateit-readonly', '@isContractEditable' == 'True' ? false : true);
+
+            if ('@isContractEditable' == 'True') BindRatingChangeEvent();
+        } else {
+            BindRatingChangeEvent();
+        }
+    });
+
+    function BindRatingChangeEvent() {
+        $("#SkillRatingDiv").bind('rated', function (event, value) { $('#UserRatingsViewModel_SkillRating').val(value); });
+        $("#QualityRatingDiv").bind('rated', function (event, value) { $('#UserRatingsViewModel_QualityRating').val(value); });
+        $("#AvailabilityRatingDiv").bind('rated', function (event, value) { $('#UserRatingsViewModel_AvailabilityRating').val(value); });
+        $("#CommunicationRatingDiv").bind('rated', function (event, value) { $('#UserRatingsViewModel_CommunicationRating').val(value); });
+        $("#CooperationRatingDiv").bind('rated', function (event, value) { $('#UserRatingsViewModel_CooperationRating').val(value); });
+        $("#DeadlineRatingDiv").bind('rated', function (event, value) { $('#UserRatingsViewModel_DeadlineRating').val(value); });
+    }
+
+    function SetDefaultRatings() {
+        $('#UserRatingsViewModel_SkillRating').val(5);
+        $('#UserRatingsViewModel_QualityRating').val(5);
+        $('#UserRatingsViewModel_AvailabilityRating').val(5);
+        $('#UserRatingsViewModel_CommunicationRating').val(5);
+        $('#UserRatingsViewModel_CooperationRating').val(5);
+        $('#UserRatingsViewModel_DeadlineRating').val(5);
+    }
+
+    $('#JobId').change(function () {
+        var jobsDropdown = $("#JobId").data("kendoDropDownList").dataItem();
+        if (jobsDropdown.JobId == '') {
+            $('.fixed-rate-div').hide();
+            $('.hourly-div').hide();
+            return;
+        }
+        $('#HiddenJobTitle').val(jobsDropdown.JobTitle);
+        $('#JobTypeId').val(jobsDropdown.JobTypeId)
+        if (jobsDropdown.JobTypeId == '@((long)PS.HireRocks.Data.Helpers.JobTypeEnum.Hourly)') {
+            $('.hourly-div').show();
+            $('.fixed-rate-div').hide();
+            $('#HourlyRate').data("kendoNumericTextBox").value($('#HiddenHourlyRate').val());
+        }
+        else if (jobsDropdown.JobTypeId == '@((long)PS.HireRocks.Data.Helpers.JobTypeEnum.Fixed)') {
+            $('.fixed-rate-div').show();
+            var fixedRateTextBox = $('#FixedRate').data("kendoNumericTextBox");
+            fixedRateTextBox.min(jobsDropdown.FixedRate);
+            fixedRateTextBox.value(jobsDropdown.FixedRate);
+            $('.hourly-div').hide();
+        }
+    });
+
+    $('#IsEndingContract').change(function () {
+        if ($(this).is(':checked'))
+            $('#EndContractCOntrols').show();
+        else
+            $('#EndContractCOntrols').hide();
+        SetDefaultRatings();
+    });
+
+    $('#EndReasonId').change(function () {
+        var dropdown = $(this).data("kendoDropDownList").dataItem();
+        var endReason = $('#EndReason');
+        var otherEndReason = $('#OtherReasonControls');
+        if (dropdown.ContractEndOrDenyReasonId == '@((long)PS.HireRocks.Data.Helpers.ContractEndReasonEnum.Other)')
+            otherEndReason.show();
+        else
+            otherEndReason.hide();
+        if (dropdown.ContractEndOrDenyReasonId == '')
+            endReason.val('');
+        else
+            endReason.val(dropdown.EndOrDenyReason);
+    });
+
+    EndReasonDropdownDataBound = function (e) {
+        var dropdown = $('#EndReasonId').data("kendoDropDownList");
+        if (dropdown != undefined && '@Model.COntractStatusId' == '@PS.HireRocks.Data.Helpers.ContractStatusConstants.Closed' && '@isContractEditable' == 'True') {
+            dropdown.select(function (dataItem) {
+                return dataItem.EndOrDenyReason === "@Model.EndReason";
+            });
+
+            var dropdownItem = dropdown.value();
+            if (!dropdownItem) {
+                $('#OtherReasonControls').show();
+                $('#OtherEndReason').val('@Model.EndReason');
+                dropdown.value(@((long)PS.HireRocks.Data.Helpers.ContractEndReasonEnum.Other));
+            }
+
+        }
+    }
+</script>
+
+@using (Ajax.BeginForm("HireWorker", null, ajaxOptions: new AjaxOptions { HttpMethod = "Post", InsertionMode = InsertionMode.Replace, UpdateTargetId = "HireWorkerForm", OnSuccess = "ShowHireWorkerForm('true')" }, htmlAttributes: new { @class = "form-horizontal", id = "HireWorkerForm", style = "text-align: -webkit-center" }))
+{
+    Html.ValidationSummary(true);
+    <div style="max-width:600px">
+        <div class="form-group">
+            @Html.HiddenFor(m => m.WorkerId)
+            @Html.HiddenFor(m => m.WorkerHourlyRate, new { id = "HiddenHourlyRate" })
+            @Html.HiddenFor(m => m.JobTitle, new { id = "HiddenJobTitle" })
+            @Html.HiddenFor(m => m.JobTypeId)
+            @Html.HiddenFor(m => m.EndReason)
+            @Html.HiddenFor(m => m.COntractStatusId)
+            @Html.HiddenFor(m => m.UserName)
+            @Html.HiddenFor(m => m.ContractEndDate)
+
+            @Html.LabelFor(m => m.JobId, new { @class = "col-md-4 control-label" })
+            <div class="col-md-8">
+                @if (!Model.ContractId.HasValue)
+                {
+                    @(Html.Kendo().DropDownListFor(m => m.JobId)
+                            .DataTextField("JobTitle")
+                            .DataValueField("JobId")
+                            .DataSource(datasource => datasource.Read(read => read.Action("GetJobsList", "FindAndHireWorker", new { workerId = Model.WorkerId })))
+                            .OptionLabel("Select job")
+                            .HtmlAttributes(new { style = "width:100%" }))
+                    @Html.ValidationMessageFor(m => m.JobId)
+                }
+                else
+                {
+                    @Html.HiddenFor(m => m.JobId)
+                    <div class="form-control" style="max-width: 100%;overflow-y:auto;text-align:left">@Model.JobTitle</div>
+                }
+            </div>
+        </div>
+        <div class="form-group hourly-div" style="display:none">
+            @Html.LabelFor(m => m.HourlyRate, new { @class = "col-md-4 control-label" })
+            <div class="col-md-8">
+                @if (Model.COntractStatusId != PS.HireRocks.Data.Helpers.ContractStatusConstants.Closed)
+                {
+                    @Html.Kendo().NumericTextBoxFor(m => m.HourlyRate).Format("$#.00 +").Min(Model.HourlyRate).HtmlAttributes(new { style = "width:100%" });
+                    @Html.ValidationMessageFor(m => m.HourlyRate);
+                }
+                else
+                {
+                    <div class="form-control" style="max-width: 100%;overflow-y:auto;text-align:left">@Model.HourlyRate $</div>
+                    if (isContractEditable)
+                    {
+                        @Html.HiddenFor(m => m.HourlyRate);
+                    }
+                }
+            </div>
+        </div>
+        <div class="form-group fixed-rate-div" style="display:none">
+            @Html.LabelFor(m => m.FixedRate, new { @class = "col-md-4 control-label" })
+            <div class="col-md-8">
+                @if (Model.COntractStatusId != PS.HireRocks.Data.Helpers.ContractStatusConstants.Closed)
+                {
+                    @Html.Kendo().NumericTextBoxFor(m => m.FixedRate).Format("$#.00").Value(Model.FixedRate).HtmlAttributes(new { style = "width:100%" })
+                    @Html.ValidationMessageFor(m => m.FixedRate)
+                }
+                else
+                {
+                    <div class="form-control" style="max-width: 100%;overflow-y:auto;text-align:left">@Model.FixedRate $</div>
+                    if (isContractEditable)
+                    {
+                        @Html.HiddenFor(m => m.FixedRate)
+                    }
+                }
+            </div>
+        </div>
+        @*<div class="form-group">
+                @Html.LabelFor(m => m.JobStartDate, new { @class = "col-md-4 control-label" })
+                <div class="col-md-8">
+                    @Html.Kendo().DatePickerFor(m => m.JobStartDate).Value(DateTime.Now).HtmlAttributes(new { style="width:100%"})
+                    @Html.ValidationMessageFor(m => m.JobStartDate)
+                </div>
+            </div>*@
+        <div class="form-group">
+            @Html.LabelFor(m => m.EstimatedDuration, new { @class = "col-md-4 control-label" })
+            <div class="col-md-5">
+                @if (Model.COntractStatusId != PS.HireRocks.Data.Helpers.ContractStatusConstants.Closed)
+                {
+                    @Html.Kendo().NumericTextBoxFor(m => m.EstimatedDuration).HtmlAttributes(new { style = "width:100%" });
+                    @Html.ValidationMessageFor(m => m.EstimatedDuration);
+                }
+                else
+                {
+                    <div class="form-control" style="max-width: 100%;overflow-y:auto;text-align:left">@Model.EstimatedDuration</div>
+                    if (isContractEditable)
+                    {
+                        @Html.HiddenFor(m => m.EstimatedDuration)
+                    }
+                }
+            </div>
+            <div class="col-md-3">
+                @if (Model.COntractStatusId != PS.HireRocks.Data.Helpers.ContractStatusConstants.Closed)
+                {
+                    @Html.Kendo().DropDownListFor(m => m.TimeUnitId).BindTo(Model.TimeUnitsList).HtmlAttributes(new { style = "width:100%" })
+                    @Html.ValidationMessageFor(m => m.TimeUnitId)
+                }
+                else
+                {
+                    <div class="form-control" style="max-width: 100%;overflow-y:auto;text-align:left">@Model.TimeUnitsList.FirstOrDefault(x => x.Value == Model.TimeUnitId.ToString()).Text</div>
+                    if (isContractEditable)
+                    {
+                        @Html.HiddenFor(m => m.TimeUnitId)
+                    }
+                }
+            </div>
+        </div>
+        <div class="form-group hourly-div" style="display:none">
+            @Html.LabelFor(m => m.WeeklyHourLimit, new { @class = "col-md-4 control-label" })
+            <div class="col-md-8">
+                @if (Model.COntractStatusId != PS.HireRocks.Data.Helpers.ContractStatusConstants.Closed)
+                {
+                    @Html.Kendo().NumericTextBoxFor(m => m.WeeklyHourLimit).HtmlAttributes(new { style = "width:100%" });
+                    @Html.ValidationMessageFor(m => m.WeeklyHourLimit);
+                }
+                else
+                {
+                    <div class="form-control" style="max-width: 100%;overflow-y:auto;text-align:left">@Model.WeeklyHourLimit</div>
+                    if (isContractEditable)
+                    {
+                        @Html.HiddenFor(m => m.WeeklyHourLimit)
+                    }
+                }
+            </div>
+        </div>
+        @if (Model.ContractId.HasValue)
+        {
+            @Html.HiddenFor(m => m.ContractId)
+            <div class="form-group">
+                @Html.LabelFor(m => m.ActualDuration, new { @class = "col-md-4 control-label" })
+                <div class="col-md-8">
+                    <div class="form-control" style="max-width: 100%;overflow-y:auto;text-align:left">@Model.ActualDuration</div>
+                </div>
+            </div>
+            if (Model.COntractStatusId != PS.HireRocks.Data.Helpers.ContractStatusConstants.Closed)
+            {
+                <div class="form-group">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-8" style="text-align:left">
+                        @Html.CheckBoxFor(m => m.IsEndingContract)@Html.LabelFor(m => m.IsEndingContract, new { style = "font-weight:normal;margin-left:5px" })
+                    </div>
+                </div>
+            }
+            else
+            {
+                @Html.HiddenFor(m => m.UserRatingsViewModel.UserRatingId)
+                @Html.HiddenFor(m => m.IsEndingContract, new { Value = "true" })
+            }
+            <div id="EndContractCOntrols" style="display: @(Model.COntractStatusId != PS.HireRocks.Data.Helpers.ContractStatusConstants.Closed && !Model.IsEndingContract?"none":"block")">
+                <div class="form-group">
+                    @Html.LabelFor(m => m.EndReason, new { @class = "col-md-4 control-label" })
+                    <div class="col-md-8">
+                        @if (Model.COntractStatusId != PS.HireRocks.Data.Helpers.ContractStatusConstants.Closed || isContractEditable)
+                        {
+                            @(Html.Kendo().DropDownListFor(m => m.EndReasonId)
+                                    .DataTextField("EndOrDenyReason")
+                                    .DataValueField("ContractEndOrDenyReasonId")
+                                    .DataSource(datasource => datasource.Read(read => read.Action("GetContractEndReasons", "Common")))
+                                    .OptionLabel("Select end reason")
+                                    .Value(Model.EndReasonId.HasValue ? Model.EndReasonId.ToString() : string.Empty)
+                                    .HtmlAttributes(new { style = "margin-top:10px;width:100%" })
+                                    .Events(events => events.DataBound("EndReasonDropdownDataBound")))
+                            @Html.ValidationMessageFor(m => m.EndReason)
+                        }
+                        else
+                        {
+                            <div class="form-control" style="height: 150px; max-width: 100%;overflow-y:auto;text-align:left">@Model.EndReason</div>
+                        }
+                    </div>
+                </div>
+                <div class="form-group" style="display:@(Model.EndReasonId==(long)PS.HireRocks.Data.Helpers.ContractEndReasonEnum.Other?"":"none")" id="OtherReasonControls">
+                    @Html.Label("Other reason", new { @class = "col-md-4 control-label" })
+                    <div class="col-md-8">
+                        @Html.TextAreaFor(m => m.OtherEndReason, new { style = "height:200px;width:100%;max-width:100%", @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.OtherEndReason)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.UserRatingsViewModel.Comment, new { @class = "col-md-4 control-label", @readonly = Model.COntractStatusId != PS.HireRocks.Data.Helpers.ContractStatusConstants.Closed ? "" : "readonly" })
+                    <div class="col-md-8">
+                        @if (Model.COntractStatusId != PS.HireRocks.Data.Helpers.ContractStatusConstants.Closed || isContractEditable)
+                        {
+                            @Html.TextAreaFor(m => m.UserRatingsViewModel.Comment, new { style = "height:150px;width:100%;max-width: 100%", @class = "form-control" });
+                            @Html.ValidationMessageFor(m => m.UserRatingsViewModel.Comment);
+                        }
+                        else
+                        {
+                            <div class="form-control" style="height: 150px; max-width: 100%;overflow-y:auto;text-align:left">@Model.UserRatingsViewModel.Comment</div>
+                        }
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.Label("Job ratings", new { @class = "col-md-4 control-label" })
+                    <div class="col-md-8">
+                        <div class="col-md-3">
+                            @Html.LabelFor(m => m.UserRatingsViewModel.SkillRating)
+                        </div>
+                        <div class="col-md-5">
+                            <div class="rateit" data-rateit-resetable="false" data-rateit-ispreset="true" data-rateit-min="0" data-rateit-max="5" data-rateit-value="5" id="SkillRatingDiv"></div>
+                            @Html.HiddenFor(m => m.UserRatingsViewModel.SkillRating)
+                        </div>
+                    </div>
+                    <div class="col-md-4"></div>
+                    <div class="col-md-8">
+                        <div class="col-md-3">
+                            @Html.LabelFor(m => m.UserRatingsViewModel.QualityRating)
+                        </div>
+                        <div class="col-md-5">
+                            <div class="rateit" data-rateit-resetable="false" data-rateit-ispreset="true" data-rateit-min="0" data-rateit-max="5" data-rateit-value="5" id="QualityRatingDiv"></div>
+                            @Html.HiddenFor(m => m.UserRatingsViewModel.QualityRating)
+                        </div>
+                    </div>
+                    <div class="col-md-4"></div>
+                    <div class="col-md-8">
+                        <div class="col-md-3">
+                            @Html.LabelFor(m => m.UserRatingsViewModel.AvailabilityRating)
+                        </div>
+                        <div class="col-md-5">
+                            <div class="rateit" data-rateit-resetable="false" data-rateit-ispreset="true" data-rateit-min="0" data-rateit-max="5" data-rateit-value="5" id="AvailabilityRatingDiv"></div>
+                            @Html.HiddenFor(m => m.UserRatingsViewModel.AvailabilityRating)
+                        </div>
+                    </div>
+                    <div class="col-md-4"></div>
+                    <div class="col-md-8">
+                        <div class="col-md-3">
+                            @Html.LabelFor(m => m.UserRatingsViewModel.CommunicationRating)
+                        </div>
+                        <div class="col-md-5">
+                            <div class="rateit" data-rateit-resetable="false" data-rateit-ispreset="true" data-rateit-min="0" data-rateit-max="5" data-rateit-value="5" id="CommunicationRatingDiv"></div>
+                            @Html.HiddenFor(m => m.UserRatingsViewModel.CommunicationRating)
+                        </div>
+                    </div>
+                    <div class="col-md-4"></div>
+                    <div class="col-md-8">
+                        <div class="col-md-3">
+                            @Html.LabelFor(m => m.UserRatingsViewModel.CooperationRating)
+                        </div>
+                        <div class="col-md-5">
+                            <div class="rateit" data-rateit-resetable="false" data-rateit-ispreset="true" data-rateit-min="0" data-rateit-max="5" data-rateit-value="5" id="CooperationRatingDiv"></div>
+                            @Html.HiddenFor(m => m.UserRatingsViewModel.CooperationRating)
+                        </div>
+                    </div>
+                    <div class="col-md-4"></div>
+                    <div class="col-md-8">
+                        <div class="col-md-3">
+                            @Html.LabelFor(m => m.UserRatingsViewModel.DeadlineRating)
+                        </div>
+                        <div class="col-md-5">
+                            <div class="rateit" data-rateit-resetable="false" data-rateit-ispreset="true" data-rateit-min="0" data-rateit-max="5" data-rateit-value="5" id="DeadlineRatingDiv"></div>
+                            @Html.HiddenFor(m => m.UserRatingsViewModel.DeadlineRating)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+        <div class="form-group">
+            @Html.Label(" ", new { @class = "col-md-4 control-label" })
+            <div class="col-md-8" style="text-align:left">
+                @if ((Model.COntractStatusId != PS.HireRocks.Data.Helpers.ContractStatusConstants.Closed && Model.ContractId != null) ||
+                      Model.ContractId == null ||
+                      (Model.ContractEndDate.HasValue && isContractEditable))
+                {
+                    <input type="submit" id="submitButton" class="btn btn-primary" value="@(Model.ContractId.HasValue?"Update":"Hire now")" style="max-width: 49%; width: 49%; " />
+                }
+                <input type="button" onclick="CancelHireWorkerClick();" class="btn btn-default" value="Back" style="max-width: 49%; width: 49%; " />
+            </div>
+        </div>
+    </div>
+}
+
+<style>
+    /*This style expands outer div according to inner content*/
+    #HireWorkerDiv:before,
+    #HireWorkerDiv:after {
+        content: "";
+        display: table;
+    }
+
+    #HireWorkerDiv:after {
+        clear: both;
+    }
+
+    #HireWorkerForm input[type="text"] {
+        max-width: 100%;
+    }
+
+    .col-md-3 {
+        text-align: left;
+    }
+</style>
+<script src="~/Scripts/jquery.rateit.min.js"></script>
+
+
+

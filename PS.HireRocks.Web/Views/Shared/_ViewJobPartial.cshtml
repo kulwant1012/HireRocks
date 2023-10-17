@@ -1,0 +1,229 @@
+﻿@model PS.HireRocks.Model.ViewJobViewModel
+@using System.Configuration;
+@using PS.HireRocks.Web.Helpers;
+@using PS.HireRocks.Data.Helpers;
+<link href="~/Content/rateit.css" rel="stylesheet" />
+<script src="~/Scripts/jquery.rateit.min.js"></script>
+<div class="modal fade" id="viewJobPopup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">@Model.JobTitle</h4>
+            </div>
+            <div class="modal-body" style="overflow-y:visible">
+                <div class="row previewPopup">
+                    <div class="col-lg-7">
+                        <div class="col-lg-10">
+                            <div class="col-md-5">
+                                @Html.LabelFor(m => m.JobTitle)
+                            </div>
+                            <div class="col-md-5">
+                                @Model.JobTitle
+                            </div>
+                        </div>
+                        <div class="col-lg-10">
+                            <div class="col-md-5">
+                                @Html.LabelFor(m => m.JobDescription)
+                            </div>
+                            <div class="col-md-5">
+                                @Model.JobDescription
+                            </div>
+                        </div>
+                        <div class="col-lg-10">
+                            <div class="col-md-5">
+                                @Html.LabelFor(m => m.JobStartDate)
+                            </div>
+                            <div class="col-md-5">
+                                @(Model.JobStartDate.HasValue ? Model.JobStartDate.Value.ToShortDateString() : null)
+                            </div>
+                        </div>
+                        <div class="col-lg-10">
+                            <div class="col-md-5">
+                                @Html.LabelFor(m => m.JobEndDate)
+                            </div>
+                            <div class="col-md-5">
+                                @(Model.JobEndDate.HasValue ? Model.JobEndDate.Value.ToShortDateString() : null)
+                            </div>
+                        </div>
+                        <div class="col-lg-10">
+                            <div class="col-md-5">
+                                @Html.LabelFor(m => m.JobCategory)
+                            </div>
+                            <div class="col-md-5">
+                                @Model.JobCategory
+                            </div>
+                        </div>
+                        <div class="col-lg-10">
+                            <div class="col-md-5">
+                                @Html.LabelFor(m => m.JobSubCategory)
+                            </div>
+                            <div class="col-md-5">
+                                @Model.JobSubCategory
+                            </div>
+                        </div>
+                        <div class="col-lg-10">
+                            <div class="col-md-5">
+                                @Html.LabelFor(m => m.JobType)
+                            </div>
+                            <div class="col-md-5">
+                                @Model.JobType
+                            </div>
+                        </div>
+                        <div style="@(Model.JobType == "Hourly" ? "display:block" : "display:none")">
+                            <div class="col-lg-10">
+                                <div class="col-md-5">
+                                    @Html.LabelFor(m => m.Min_PRF_Rate)
+                                </div>
+                                <div class="col-md-5">
+                                    @Model.Min_PRF_Rate
+                                </div>
+                            </div>
+                            <div class="col-lg-10">
+                                <div class="col-md-5">
+                                    @Html.LabelFor(m => m.Max_PRF_Rate)
+                                </div>
+                                <div class="col-md-5">
+                                    @Model.Max_PRF_Rate
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-10" style="@(Model.JobType=="Fixed" ? "display:block" : "display:none")">
+                            <div class="col-md-5">
+                                @Html.LabelFor(m => m.FixedRate)
+                            </div>
+                            <div class="col-md-5">
+                                @Model.FixedRate
+                            </div>
+                        </div>
+                        <div class="col-lg-10">
+                            <div class="col-md-5">
+                                @Html.LabelFor(m => m.EstimatedDuration)
+                            </div>
+                            <div class="col-md-5">
+                                @Model.EstimatedDuration @Model.TimeUnit
+                            </div>
+                        </div>
+                        <div class="col-lg-10">
+                            <div class="col-md-5">
+                                @Html.LabelFor(m => m.ExperienceLevel)
+                            </div>
+                            <div class="col-md-5">
+                                @Model.ExperienceLevel
+                            </div>
+                        </div>
+                        <div class="col-lg-10">
+                            <div class="col-md-5">
+                                @Html.LabelFor(m => m.ClientName)
+                            </div>
+                            <div class="col-md-5">
+                                @Model.ClientName
+                            </div>
+                        </div>
+                        <div class="col-lg-10">
+                            <div class="col-md-5">
+                                @Html.LabelFor(m => m.WorkerType)
+                            </div>
+                            <div class="col-md-5">
+                                @Model.WorkerType
+                            </div>
+                        </div>
+                        <div class="col-lg-10">
+                            <div class="col-md-5">
+                                @Html.LabelFor(m => m.Locality_PRF)
+                            </div>
+                            <div class="col-md-5">
+                                @Model.Locality_PRF
+                            </div>
+                        </div>
+                        <div class="col-lg-10">
+                            <div class="col-md-5">
+                                @Html.LabelFor(m => m.Active)
+                            </div>
+                            <div class="col-md-5">
+                                @Model.Active
+                            </div>
+                        </div>
+                        <div class="col-lg-10">
+                            <div class="col-md-5">
+                                @Html.LabelFor(m => m.HiringClosed)
+                            </div>
+                            <div class="col-md-5">
+                                @Model.HiringClosed
+                            </div>
+                        </div>
+                        <div class="col-lg-10">
+                            <div class="col-md-5">
+                                @Html.Label("AttachmentsLabel", "Attachments")
+                            </div>
+                        </div>
+                        <div class="col-lg-10" style="padding-left:30px">
+                            <ul style="padding-left:0;">
+                                @foreach (var item in Model.JobAttachmentsList)
+                                {
+                                    <li><a download href="@ConfigurationManager.AppSettings[WebsiteConstants.ServerAddress]@ConfigurationManager.AppSettings[WebsiteConstants.AttachmentFolderName]@item">@item</a></li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+
+                    @if (User.IsInRole(RoleConstants.Worker))
+                    {
+                        <div class="col-md-5" style="border:1px solid lightgray">
+                            <div class="row" style="padding-top:5px;">
+                                <div class="col-md-4"><img src="@ConfigurationManager.AppSettings[WebsiteConstants.profileThumbnailImageFolder]@Model.ClientInfoViewModel.ProfileImage" style='height:80px;width:80px'></div>
+                                <div class="col-md-6" style="padding-top:15px">@Html.Label(@Model.ClientInfoViewModel.FirstName, null, new { style = "float:left;color:#428bca;font-weight:inherit;font-size:24px;" })  @Html.Label(@Model.ClientInfoViewModel.LastName, null, new { style = "color:#428bca;font-weight:inherit;font-size:24px;" })</div>
+                            </div><hr />
+                            <div class="row" style="margin-left:25px">
+                                @Html.Label("Country:", new { style = "font-weight:inherit;color:darkgray;" })@Html.Label(@Model.ClientInfoViewModel.Country, new { style = "color:darkgray" })
+                            </div>
+                            <div class="row" style="margin-left: 25px;">
+                                @Html.Label("No of Jobs Posted:", new { style = "font-weight:inherit;color:darkgray" }) <h style="font-weight:inherit;color:darkgray">@Model.ClientInfoViewModel.TotalJobsPosted</h>
+                            </div>
+                            <div class="row" style="margin-left: 25px;">
+                                @Html.Label("Total $ Invested:", new { style = "font-weight:inherit;color:darkgray" })
+                            </div><hr />
+                            <div style="float:left;margin-left:25px">
+                                @Html.Label("Rating:", new { style = "font-weight:inherit;color:darkgray" })
+                                <div class="rateit" data-rateit-resetable="false" data-rateit-ispreset="true" data-rateit-readonly="true" data-rateit-min="0" data-rateit-max="5" data-rateit-value="@Model.ClientInfoViewModel.Rating" id="jobRating"></div>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div class="modal-footer col-lg-12">
+                    @if (User.IsInRole(RoleConstants.Client))
+                    {
+                        @Html.ActionLink("Edit", "PostJob", routeValues: new { @jobId = Model.JobId }, htmlAttributes: new { @class = "k-button k-button-icontext k-grid-edit" });
+                    }
+                    else if (User.IsInRole(RoleConstants.Worker))
+                    {
+                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Done" />
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /*This style expands outer div according to inner content*/
+    .modal-body:before,
+    .modal-body:after {
+        content: "";
+        display: table;
+    }
+
+    .modal-dialog {
+        width: 900px !important;
+    }
+
+    .modal-body:after {
+        clear: both;
+    }
+
+    .previewPopup .col-md-5, .col-lg-10 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+</style>
+

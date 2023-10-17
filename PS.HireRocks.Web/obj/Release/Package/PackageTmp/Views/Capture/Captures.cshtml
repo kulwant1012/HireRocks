@@ -1,0 +1,238 @@
+﻿@using System.Configuration
+@using PS.HireRocks.Web.Helpers
+@using PS.HireRocks.Data.Helpers
+@model PS.HireRocks.Model.CaptureViewModel
+@{
+    ViewBag.Title = "Captures";
+    Layout = "~/Views/Shared/_HomePageView.cshtml";
+}
+    <section class="captures">
+        <h4>Captures</h4><br />
+
+        @(Html.Kendo().DropDownList()
+                      .Name("JobsDropdown")
+                      .DataTextField("JobTitle")
+                      .DataValueField("ContractId")
+                      .HtmlAttributes(new { style = "width:250px;" })
+                      .Events(events => events.Change("RebindCaptureListView"))
+                      .DataSource(dataSource => dataSource.Read(read => read.Action("GetWorkerJobs", "Capture")))
+                      .Value(Request.QueryString["contractId"]))
+
+        <input type="text" id="FromDate" class="form-control dateTimePicker" style="display:inline-block;" />
+        <input type="text" id="ToDate" class="form-control dateTimePicker" style="display:none;" />
+
+        @(Html.Kendo().DropDownList()
+                      .Name("DateRangeTypeDropdown")
+                      .SelectedIndex(0)
+                      .DataTextField("Text")
+                      .DataValueField("Value")
+                      .HtmlAttributes(new { style = "width:100px;" })
+                      .Events(events => events.Change("DateRangeTypeDropdownChange"))
+                      .BindTo(new List<SelectListItem> {
+                          new SelectListItem { Text = "Day",Value="Day" },
+                          new SelectListItem { Text = "Week",Value="Week" },
+                          new SelectListItem { Text = "Month",Value="Month" },
+                          new SelectListItem { Text = "Year",Value="Year" },
+                          new SelectListItem { Text = "Custom",Value="Custom" }}))
+
+        <input type="button" value="Delete captures" class="btn btn-default" id="DeleteModeButton" />
+        <input type="button" value="Delete" class="btn btn-default delete-capture" id="DeleteCaptureButton" />
+        <input type="button" value="Done" class="btn btn-default delete-capture" id="CancelDeleteModeButton" />
+
+        <span id="TotalHoursBurned" class="btn-info" style="float: right;padding: 7px; border-radius: 4px;color:white;display:none"></span>
+
+        <hr />
+        <div id="CaptureList" style="display:none">
+            @(Html.Kendo().ListView<PS.HireRocks.Model.CaptureViewModel>()
+                                      .Name("CaptureListView")
+                                      .TagName("div")
+                                      .ClientTemplateId("CaptureListViewTemplate")
+                                      .DataSource(datasource => datasource.Read(read => read.Action("GetJobCaptues", "Capture").Data("GetFilterData")).Model(model => model.Id(m => m.CaptureId)).PageSize(25))
+                                      .Pageable()
+                                      .Events(events => { events.DataBound("CaptureListViewDataBound"); }))
+        </div>
+        <span id="noWorkWarning" style="display:none" class="alert-warning">No work to show for this worker</span>
+
+        <!--BootStrap Modal for Cover Letter-->
+        <div class="modal fade" id="CaptureDetailPopUp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="myModalLabel">Captures</h4>
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+
+                    </div>
+                    <div class="modal-body">
+                        <img src='' style="width:100%" onclick="" id="CaptureFullImage" />
+                        <br />
+                        <br />
+                        <label id="">Mouse Click:</label>
+                        <label id="mousecount" style="font-weight: inherit"></label><br />
+                        <label id="">Keyboard Input:</label>
+                        <label id="keyCount" style="font-weight: inherit"></label><br />
+                        <label id="">Capture Date:</label>
+                        <label id="captureDate" style="font-weight: inherit"></label><br />
+                        <label id="">Matched Keywords:</label>
+                        <label id="keyboardCapture" style="font-weight: inherit"></label><br />
+                    </div>
+                    @if (User.IsInRole(RoleConstants.Client))
+                    {
+                        <div class="modal-footer">
+                            <input type="submit" class="btn btn-primary" name="myButton" value="Message" onclick="MessageButtonClick(this);" />
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+
+<script type="text/x-kendo-tmpl" id="CaptureListViewTemplate">
+    <div style="padding-left: 20px; padding-right: 10px; float: left; width: 190px; height: 160px;" class="divbutton">
+        <img src='@ConfigurationManager.AppSettings[WebsiteConstants.ScreenCapturePath]/#:ScreenCaptureThumbnailImage#' style="height: 130px; width: 190px; cursor: pointer; #=IsRejected ? 'border:2px solid red':''#" onclick="CaptureDetail(this);" />
+        <div style="font-weight: normal; line-height: 1.6; position: relative; margin-top: -23px; background: gray !important;margin-left:2px;color:white;padding-left:5px; ">
+            #:kendo.toString(CaptureDate, "g")#
+            <input type="checkbox" class="delete-capture delete-capture-checkbox" />
+        </div>
+    </div>
+</script>
+
+<script type="text/javascript">
+    var _fromDate = null;
+    var _toDate = null;
+    $(document).ready(function () { $('.dateTimePicker').datepicker().val(moment().format("MM/DD/YYYY")).trigger('change'); });
+
+    function CaptureDetail(e) {
+        var result = $("#CaptureListView").data("kendoListView").dataSource.getByUid($(e).closest("[role='option']").data("uid"));
+        $("#CaptureDetailPopUp").modal();
+        $('#mousecount').html(result.MouseCount);
+        $("#keyCount").html(result.KeyCount);
+        $("#captureDate").html(moment(result.CaptureDate).format("MM/DD/YYYY"));
+        $("#keyboardCapture").html(result.KeyboardCapture);
+        $("#CaptureFullImage").prop('src', "@ConfigurationManager.AppSettings[WebsiteConstants.ScreenCapturePath]" + result.ScreenCaptureFullImage);
+        $("#workerId").val();
+    }
+
+    function GetFilterData() {
+        var contractId = $('#JobsDropdown').val();
+        return { contractId: contractId, fromDate: _fromDate, toDate: _toDate };
+    }
+
+    function MessageButtonClick() {
+        var workerId = '@Request.QueryString["workerId"]';
+        window.location = '/Message/MyMessages?workerId=' + workerId;
+    }
+
+    function CaptureListViewDataBound(e) {
+        if (this.dataSource.total() > 0) {
+            $('#CaptureList').show();
+            $('#DeleteModeButton').show();
+            $('.delete-capture').hide();
+        }
+        GetTotalTimeBurned();
+    }
+
+    function DateRangeTypeDropdownChange(e) {
+        var currentDate = moment().format("MM/DD/YYYY");
+        var toDate = $('#ToDate');
+        var fromDate = $('#FromDate');
+        if (e.sender.value() == 'Custom') {
+            toDate.css({ 'display': 'inline-block', 'maxWidth': 160 });
+            fromDate.css('maxWidth', 160)
+            fromDate.val(currentDate).trigger('change');
+            toDate.val(currentDate).trigger('change');
+        }
+        else {
+            toDate.hide();
+            fromDate.css('maxWidth', 280);
+            fromDate.val(currentDate).trigger('change');
+        }
+    }
+
+    $('#FromDate').change(function (e) {
+        var rangeType = $('#DateRangeTypeDropdown').val();
+        var value = $(this).val();
+        var fromDate = moment(value).startOf(rangeType).format("MM/DD/YYYY");
+        var toDate = moment(value).endOf(rangeType).format("MM/DD/YYYY");
+        if (rangeType != 'Custom') {
+            if (fromDate != 'Invalid date') {
+                _fromDate = moment(value).startOf(rangeType).format("MM/DD/YYYY");
+                _toDate = moment(value).endOf(rangeType).format("MM/DD/YYYY");
+                $('#FromDate').val(_fromDate + " To " + _toDate);
+            }
+        }
+        else
+            _fromDate = fromDate;
+        $('.datepicker').hide();
+        if (fromDate != 'Invalid date') RebindCaptureListView();
+    });
+
+    $('#ToDate').change(function () {
+        _toDate = $(this).val();
+        $('.datepicker').hide();
+        if (_toDate != 'Invalid date') RebindCaptureListView();
+    });
+
+    function RebindCaptureListView() {
+        $("#CaptureListView").data("kendoListView").dataSource.page(1);
+    }
+
+    $('#DeleteModeButton').click(function () {
+        $(this).hide();
+        $('.delete-capture').show();
+    })
+
+    $('#CancelDeleteModeButton').click(function () {
+        $('.delete-capture').hide();
+        $('#DeleteModeButton').show();
+        $('.delete-capture-checkbox:checkbox:checked').each(function () { $(this).prop('checked', false) });
+    })
+
+    $('#DeleteCaptureButton').click(function () {
+        var captureListView = $("#CaptureListView").data("kendoListView").dataSource;
+        var captureIdsToDelete = $('.delete-capture-checkbox:checkbox:checked').map(function () { return captureListView.getByUid($(this).closest("[role='option']").data("uid")).CaptureId; }).get().join(',');
+        jQuery.ajax({
+            type: "POST",
+            url: '@Url.Action("DeleteCapture", "Capture")',
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify({ captureIdsToDelete: captureIdsToDelete }),
+            success: function (data) {
+                if (data.result == true) {
+                    RebindCaptureListView();
+                }
+            }
+        });
+    })
+
+    function GetTotalTimeBurned() {
+        $.ajax({
+            url: '@Url.Action("GetTotalTimeBurned", "Capture")',
+            success: function (result) { $('#TotalHoursBurned').text("Total Time Burned: " + result.TotalHoursBurned + " Hrs.").show(); }
+        });
+    }
+</script>
+
+<style>
+    #CaptureDetailPopUp .modal-dialog {
+        width: 700px;
+        max-height: 1000px; /* your width */
+    }
+
+    #CaptureListView .k-widget, .k-listview {
+        border: none;
+    }
+
+    .delete-capture-checkbox {
+        float: right;
+        margin: 5px !important;
+        display: none;
+    }
+
+    .delete-capture {
+        display: none;
+    }
+
+    #DeleteModeButton {
+        display: none;
+    }
+</style>

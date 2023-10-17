@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Report";
+}
+<h4>Report</h4><hr />
+<div class="tiles blue tile-group">
+    <div class="live-tile accent yellow exclude" data-link="/Report/WorkerReport">
+        <div>
+            <span class="tile-title tile-main-title">Worker Report</span>
+            @*<img class="full" src="~/Content/images/Tools.png" />*@
+            <span class="tile-title">Worker Report</span>
+        </div>
+    </div>
+    <div class="live-tile accent green exclude" data-link="/Report/ClientReport">
+        <div>
+            <span class="tile-title tile-main-title">Client Report</span>
+            @*<img class="full" src="~/Content/images/Tools.png" />*@
+            <span class="tile-title">Client Report</span>
+        </div>
+    </div>
+    
+</div>
+
+<script type="text/javascript">
+    $(".live-tile, .flip-list").not(".exclude").liveTile();
+    $(".tiles").sortable();
+    $(".tiles").disableSelection();
+    $(".live-tile").click(function () { document.location = $(this).attr('data-link') }).css('cursor', 'pointer');
+</script>
+<style>
+    .tile-main-title {
+        font-size: 18px !important;
+        top: 0;
+        vertical-align: top;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        padding: 5px 10px;
+    }
+</style>

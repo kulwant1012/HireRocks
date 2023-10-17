@@ -1,0 +1,9 @@
+﻿@using System.Collections
+@model System.Int64
+@(Html.Kendo().DropDownList()
+.BindTo((IEnumerable)ViewBag.EducationTypeList)
+.OptionLabel("Degree type")
+.DataValueField("Value")
+.DataTextField("Text")
+.Name("DegreeTypeId")
+)

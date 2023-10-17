@@ -1,0 +1,42 @@
+﻿<h2 style="color:gray">Hire Rocks Tracker</h2>
+<hr />
+
+<div class="col-md-12">
+    <label class="heading-label">Name:</label>
+    <label class="value-label">Hire Rocks Tracker</label>
+</div>
+<div class="col-md-12">
+    <label class="heading-label">Version:</label>
+    <label class="value-label">1.0.0.0</label>
+</div>
+<div class="col-md-12">
+    <label class="heading-label">Publisher:</label>
+    <label class="value-label">Percept Systems</label>
+</div>
+<div class="col-md-12">
+    <label class="value-label">The following prerequisites are required:</label>
+    <ul>
+        <li>Microsoft .NET Framework 4.5 (x86 and x64)</li>
+    </ul>
+</div>
+<div class="col-md-12">
+    <label class="value-label">Click below link to download tracker setup:</label>
+</div>
+<div class="col-md-12">
+    <a class="btn btn-default " href="~/hireRocks.msi" @*href="/HireRockstracker/HireRocks.msi"*@ @*href="@Url.Action("DownloadSetup","Home")"*@>Download</a>
+ 
+</div>
+
+<style>
+    .value-label {
+        font-weight: normal;
+    }
+
+    .heading-label {
+        min-width: 80px;
+    }
+
+    .col-md-12 {
+        margin-top: 20px;
+    }
+</style>

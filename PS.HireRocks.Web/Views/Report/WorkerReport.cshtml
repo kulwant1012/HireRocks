@@ -1,0 +1,195 @@
+﻿@using System.Configuration
+@using PS.HireRocks.Web.Helpers
+@using PS.HireRocks.Data.Helpers
+@{
+    ViewBag.Title = "WorkerReport";
+}
+
+<h2>WorkerReport</h2>
+
+<div class="row">
+    @(Html.Kendo().DropDownList()
+              .Name("DateRangeTypeDropdown")
+              .SelectedIndex(0)
+              .DataTextField("Text")
+              .DataValueField("Value")
+              .HtmlAttributes(new { style = "width:100px;" })
+              .Events(events => events.Change("DateRangeTypeDropdownChange"))
+              .BindTo(new List<SelectListItem> {
+                  new SelectListItem { Text = "Day",Value="Day" },
+                  new SelectListItem { Text = "Week",Value="Week" },
+                  new SelectListItem { Text = "Month",Value="Month" },
+                  new SelectListItem { Text = "Year",Value="Year" },
+                  new SelectListItem { Text = "Custom",Value="Custom" }}))
+
+    <input type="text" id="FromDate" class="form-control dateTimePicker" style="display:inline-block;" />
+    <input type="text" id="ToDate" class="form-control dateTimePicker" style="display:none;" />
+
+    @if (User.IsInRole(RoleConstants.Worker))
+        {
+            @(Html.Kendo().DropDownList()
+                    .Name("WorkerJobsDropdownList")
+                    .DataTextField("Text")
+                    .DataValueField("Value")
+                    .DataSource(datasource => datasource.Read(read => read.Action("GetWorkerJobList", "Report")))
+                    .OptionLabel("Select job")
+                    .HtmlAttributes(new { style = "width:250px;" }))
+        }
+    @if (User.IsInRole(RoleConstants.Worker))
+    {
+        <div class="row">
+            <a class='k-button k-button-icontext' onclick='WorkerReportButtonClick(); return false;'>DownloadReport</a>
+            <a class='k-button k-button-icontext' onclick='ViewWorkerReportButtonClick(); return false;'>ViewReport</a>
+        </div>
+    }
+    @if (User.IsInRole(RoleConstants.Client))
+    {
+        @(Html.Kendo().DropDownList()
+                .Name("JobsDropdownList")
+                .DataTextField("Text")
+                .DataValueField("Value")
+                .DataSource(datasource => datasource.Read(read => read.Action("GetJobList", "Report")))
+                .OptionLabel("Select job")
+                .HtmlAttributes(new { style = "width:250px;" })
+                .Events(events => events.Change("JobsDropdownChange")))
+    }
+</div>
+
+@if (User.IsInRole(RoleConstants.Client))
+{
+    @(Html.Kendo().ListView<PS.HireRocks.Model.GetWorkerViewModel>()
+    .Name("TeamList")
+    .TagName("div")
+    .ClientTemplateId("TeamListViewTemplate")
+    .DataSource(dataSource => dataSource.Read(read => read.Action("GetTeamsGridData", "Report").Data("GetWorkersFilterData")))
+    .Pageable(pageable => pageable.Enabled(true).ButtonCount(5).PageSizes(true)))
+
+    <script type="text/x-kendo-tmpl" id="TeamListViewTemplate">
+        <div class="row">
+            <div class="row" style="padding:5px">
+                <div class="col-md-1" style="padding:0">
+                    <img style="width:80px;height:80px" src="@ConfigurationManager.AppSettings[WebsiteConstants.profileThumbnailImageFolder]#:ProfileImage#" />
+                </div>
+                <div class="col-md-8" style="padding:0">
+                    <h3 style='color:\\#428bca;margin:0'>#:FirstName# #:LastName#</h3>
+                    <span style="color:gray">#:Email#</span>
+                </div>
+                <div class="col-md-8" style="padding: 0; margin-top: 5px">
+                    <span style="color: \\#428bca;font-size:12px">Hourly rate: #:HourlyRate#$, Ratings: #:Rating#, #:Country#</span>
+                </div>
+            </div>
+            <div class="row" style="padding:5px">
+                <a class='k-button k-button-icontext' onclick='ReportButtonClick(this); return false;'>Report</a>
+                <a class='k-button k-button-icontext' onclick='ViewReportButtonClick(this); return false;'>View Report</a>
+            </div>
+        </div>
+    </script>
+}
+
+<script type="text/javascript">
+    var _fromDate = null;
+    var _toDate = null;
+    $(document).ready(function () { $('.dateTimePicker').datepicker().val(moment().format("MM/DD/YYYY")).trigger('change'); });
+
+    function ReportButtonClick(button) {
+        var teamListView = $('#TeamList').data("kendoListView");
+        var WorkerId = teamListView.dataSource.view()[$(button).closest("[role='option']").index()].WorkerId;
+        var rangeType = $('#DateRangeTypeDropdown').val();
+        var JobId = $('#JobsDropdownList').val();
+        var type = true;
+        window.location = "/Report/GetWorkerReportByWorkerIdAndClientId?WorkerId=" + WorkerId + "&rangeType=" + rangeType + "&fromdate=" + _fromDate + "&todate=" + _toDate + "&type=" + type + "&JobId=" + JobId;
+    }
+
+    function ViewReportButtonClick(button) {
+        var teamListView = $('#TeamList').data("kendoListView");
+        var WorkerId = teamListView.dataSource.view()[$(button).closest("[role='option']").index()].WorkerId;
+        var rangeType = $('#DateRangeTypeDropdown').val();
+        var JobId = $('#JobsDropdownList').val();
+        var type = false;
+        var url = "/Report/GetWorkerReportByWorkerIdAndClientId?WorkerId=" + WorkerId + "&rangeType=" + rangeType + "&fromdate=" + _fromDate + "&todate=" + _toDate + "&type=" + type + "&JobId=" + JobId;
+        window.open(url, '_blank');
+    }
+
+    function WorkerReportButtonClick() {
+        var JobId = $('#WorkerJobsDropdownList').val();
+        var rangeType = $('#DateRangeTypeDropdown').val();
+        var type = true;
+        window.location = "/Report/GetWorkerReportByWorkerId?rangeType=" + rangeType + "&fromdate=" + _fromDate + "&todate=" + _toDate + "&type=" + type + "&JobId=" + JobId;
+    }
+
+    function ViewWorkerReportButtonClick() {
+        var JobId = $('#WorkerJobsDropdownList').val();
+        var rangeType = $('#DateRangeTypeDropdown').val();
+        var type = false;
+        var url = "/Report/GetWorkerReportByWorkerId?rangeType=" + rangeType + "&fromdate=" + _fromDate + "&todate=" + _toDate + "&type=" + type + "&JobId=" + JobId;
+        window.open(url, '_blank');
+    }
+
+    function JobsDropdownChange() {
+        $("#TeamList").data("kendoListView").dataSource.read();
+    }
+
+    function GetWorkersFilterData() {
+        var jobId = $('#JobsDropdownList').val();
+        return {
+            jobId: jobId,
+        };
+    }
+
+    function DateRangeTypeDropdownChange(e) {
+        var currentDate = moment().format("MM/DD/YYYY");
+        var toDate = $('#ToDate');
+        var fromDate = $('#FromDate');
+        if (e.sender.value() == 'Custom') {
+            toDate.css({ 'display': 'inline-block', 'maxWidth': 160 });
+            fromDate.css('maxWidth', 160)
+            fromDate.val(currentDate).trigger('change');
+            toDate.val(currentDate).trigger('change');
+        }
+        else {
+            toDate.hide();
+            fromDate.css('maxWidth', 280);
+            fromDate.val(currentDate).trigger('change');
+        }
+    }
+
+    $('#FromDate').change(function (e) {
+        var rangeType = $('#DateRangeTypeDropdown').val();
+        var value = $(this).val();
+        var fromDate = moment(value).startOf(rangeType).format("MM/DD/YYYY");
+        var toDate = moment(value).endOf(rangeType).format("MM/DD/YYYY");
+        if (rangeType != 'Custom') {
+            if (fromDate != 'Invalid date') {
+                _fromDate = moment(value).startOf(rangeType).format("MM/DD/YYYY");
+                _toDate = moment(value).endOf(rangeType).format("MM/DD/YYYY");
+                $('#FromDate').val(_fromDate + " To " + _toDate);
+            }
+        }
+        else
+            _fromDate = fromDate;
+        $('.datepicker').hide();
+        if (fromDate != 'Invalid date') RebindCaptureListView();
+    });
+
+    $('#ToDate').change(function () {
+        _toDate = $(this).val();
+        $('.datepicker').hide();
+        if (_toDate != 'Invalid date') RebindCaptureListView();
+    });
+</script>
+
+<style>
+    .row {
+        margin: 0;
+        padding: 0;
+        padding-bottom: 5px;
+    }
+
+    .col-md-4 {
+        padding: 0;
+        margin: 0;
+        padding-bottom: 5px;
+    }
+</style>
+
+

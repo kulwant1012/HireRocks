@@ -1,0 +1,106 @@
+﻿@using System.Configuration
+@using PS.HireRocks.Web.Helpers
+@{
+    ViewBag.Title = "";
+}
+<h4>My Team</h4><hr />
+<div class="row">
+    <div class="col-md-4">
+        @(Html.Kendo().DropDownList()
+                .Name("JobsDropdownList")
+                .DataTextField("Text")
+                .DataValueField("Value")
+                .DataSource(datasource => datasource.Read(read => read.Action("GetJobList", "Team")))
+                .OptionLabel("Select job")
+                .HtmlAttributes(new { style = "margin-top:10px;width:100%" })
+                .Events(events => events.Change("JobsDropdownChange")))
+    </div>
+    <div class="col-md-4" style="padding: 14px;display:none" id="ShowActiveInactiveContractDiv">
+        @Html.CheckBox("ShowActiveInactiveContractCheckBox")@Html.Label("Workers with active contract", new { style = "font-weight: normal;margin-left: 5px;", id = "ShowActiveInactiveContractLabel" })
+    </div>
+</div>
+
+@(Html.Kendo().ListView<PS.HireRocks.Model.GetWorkerViewModel>()
+    .Name("TeamList")
+    .TagName("div")
+    .ClientTemplateId("TeamListViewTemplate")
+    .DataSource(dataSource => dataSource.Read(read => read.Action("GetTeamsGridData", "Team").Data("GetWorkersFilterData")))
+    .Pageable(pageable => pageable.Enabled(true).ButtonCount(5).PageSizes(true)))
+
+<script type="text/x-kendo-tmpl" id="TeamListViewTemplate">
+    <div class="row">
+        <div class="row" style="padding:5px">
+            <div class="col-md-1" style="padding:0">
+                <img style="width:80px;height:80px" src="@ConfigurationManager.AppSettings[WebsiteConstants.profileThumbnailImageFolder]#:ProfileImage#" />
+            </div>
+            <div class="col-md-8" style="padding:0">
+                <h3 style='color:\\#428bca;margin:0'>#:FirstName# #:LastName#</h3>
+                <span style="color:gray">#:Email#</span>
+            </div>
+            <div class="col-md-8" style="padding: 0; margin-top: 5px">
+                <span style="color: \\#428bca;font-size:12px">Hourly rate: #:HourlyRate#$, Ratings: #:Rating#, #:Country#</span>
+            </div>
+        </div>
+        <div class="row" style="padding:5px">
+            <a class='k-button k-button-icontext' onclick='ContractsButtonClick(this); return false;'>Contracts</a>
+            <a class='k-button k-button-icontext' onclick='MessageButtonClick(this); return false;'>Message </a>
+        </div>
+    </div>
+</script>
+
+
+<script type="text/javascript">
+    function MessageButtonClick(button) {
+        debugger;
+        var teamListView = $('#TeamList').data("kendoListView");
+        window.location = "/Message/MyMessages?workerId=" + teamListView.dataSource.view()[$(button).closest("[role='option']").index()].WorkerId;
+    }
+
+    function ContractsButtonClick(button) {
+        var teamListView = $('#TeamList').data("kendoListView");
+        window.location = "/FindAndHireWorker/HireWorker?workerId=" + teamListView.dataSource.view()[$(button).closest("[role='option']").index()].WorkerId;
+    }
+
+    function JobsDropdownChange() {
+        var showActiveInactiveContractDiv = $('#ShowActiveInactiveContractDiv');
+        if ($('#JobsDropdownList').val() == '')
+            showActiveInactiveContractDiv.hide();
+        else
+            showActiveInactiveContractDiv.show();
+        $("#TeamList").data("kendoListView").dataSource.read();
+    }
+
+    function GetWorkersFilterData() {
+        debugger;
+        var jobId = $('#JobsDropdownList').val();
+        var showActiveWorkers = $('#ShowActiveInactiveContractCheckBox').is(":checked");
+        if (jobId == '')
+            showActiveWorkers = null;
+        return {
+            jobId: jobId,
+            showActiveWorkers: showActiveWorkers
+        };
+    }
+
+    $('#ShowActiveInactiveContractCheckBox').change(function () {
+        if ($(this).is(":checked"))
+            $('#ShowActiveInactiveContractLabel').text("Workers with in-active contract");
+        else
+            $('#ShowActiveInactiveContractLabel').text("Workers with active contract");
+        $("#TeamList").data("kendoListView").dataSource.read();
+    });
+</script>
+
+<style>
+    .row {
+        margin: 0;
+        padding: 0;
+        padding-bottom: 5px;
+    }
+
+    .col-md-4 {
+        padding: 0;
+        margin: 0;
+        padding-bottom: 5px;
+    }
+</style>

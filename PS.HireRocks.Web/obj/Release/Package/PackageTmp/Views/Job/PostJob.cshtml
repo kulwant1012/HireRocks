@@ -1,0 +1,295 @@
+﻿@using System.Configuration;
+@using PS.HireRocks.Web.Helpers
+@model PS.HireRocks.Model.PostJobViewModel
+@using GridMvc.Html
+@{
+    ViewBag.Title = "Post Job";
+}
+@using System.Configuration;
+@using PS.HireRocks.Web.Helpers;
+
+@using (Html.BeginForm("PostJob", "Job", FormMethod.Post, new { @class = "form-horizontal", role = "form", enctype = "multipart/form-data" ,id="postJobFrom"}))
+{
+    @Html.AntiForgeryToken()    
+    <h4>@(Model.JobId.HasValue?"Update job":"Post job")</h4>    
+    <h6 class="alert-success">@TempData[PS.HireRocks.Web.Helpers.SessionNameConstants.SuccessMessage]</h6>
+    <hr />
+    @Html.ValidationSummary(true)
+    @Html.HiddenFor(m=>m.JobId)
+    <div class="form-group">
+        @Html.LabelFor(m => m.JobTitle, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.JobTitle, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.JobTitle)
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.WorkerTypeId, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(m => m.WorkerTypeId, Model.WorkerTypeList, "Select worker type", new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.WorkerTypeId)
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.ExperienceLevelId, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(m => m.ExperienceLevelId, Model.ExperienceLevelList, "Select experience level", new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.ExperienceLevelId)
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.JobTypeId, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(m => m.JobTypeId, Model.JobTypeList, "Select job type", new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.JobTypeId)
+        </div>
+    </div>
+
+    <div class="form-group" style="@(Model.JobTypeId==2 ? "display:block" : "display:none")" id="Fixed_Rate">
+        @Html.LabelFor(m => m.FixedRate, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @(Html.Kendo().NumericTextBoxFor(m => m.FixedRate).Format("$#.00").HtmlAttributes(new { @class = "rate control", style = " width: 100%; max-width: 280px" }))
+            @Html.ValidationMessageFor(m => m.FixedRate)
+        </div>
+    </div>
+
+
+    <div id="HourlyRate" style="@(Model.JobTypeId==1 ? "display:block" : "display:none")">
+        <div class="form-group">
+            @Html.LabelFor(m => m.Min_PRF_Rate, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @(Html.Kendo().NumericTextBoxFor(m => m.Min_PRF_Rate)
+            .Format("$#.00")
+            .Value(@Model.Min_PRF_Rate.HasValue?Model.Min_PRF_Rate:3)
+            .Min(3)
+            .Max(decimal.MaxValue)
+            .HtmlAttributes(new { @class = "rate control", style = " width: 100%; max-width: 280px" }))
+                @Html.ValidationMessageFor(m => m.Min_PRF_Rate)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Max_PRF_Rate, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @(Html.Kendo().NumericTextBoxFor(m => m.Max_PRF_Rate).Format("$#.00").HtmlAttributes(new { @class = "rate control", style = " width: 100%; max-width: 280px" }))
+                @Html.ValidationMessageFor(m => m.Max_PRF_Rate)
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.JobCategoryId, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(m => m.JobCategoryId, Model.JobCategoryList, "Select job category", new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.JobCategoryId)
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.JobSubCategoryId, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(m => m.JobSubCategoryId, Model.JobSubCategoryList, "Select job sub-category", new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.JobSubCategoryId)
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.JobStartDate, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(x => x.JobStartDate, new {@class = "date-picker form-control" })
+            </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.JobEndDate, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(x => x.JobEndDate, new { @class = "date-picker form-control" })
+            </div>
+    </div>
+     
+    <div class="form-group">
+        @Html.LabelFor(m => m.SkillRequiredForJobIds, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            <!--Bootstrap Modal for skills-->
+            <div class="modal fade" id="skillPopup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Select skills</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="checkboxList">
+                                @for (int i = 0; i < Model.SkillList.Count; i++)
+                                {
+                                    @Html.CheckBoxFor(m => Model.SkillList[i].IsSelected, new { @checkboxText = Model.SkillList[i].SkillName })
+                                    @Html.LabelFor(m => Model.SkillList[i].IsSelected, Model.SkillList[i].SkillName)
+                                    @Html.HiddenFor(m => Model.SkillList[i].SkillId)
+                                    @Html.HiddenFor(m => Model.SkillList[i].SkillName)
+                                    <br />
+                                }
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @Html.TextAreaFor(m => m.SkillRequiredForJobIds, new { @class = "form-control" })
+            <input type="button" value="Select skills" class="btn btn-default" id="selectSkillsButton" style="margin-top:3px" />
+            @Html.ValidationMessageFor(m => m.SkillRequiredForJobIds)
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.EstimateDuratoion, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10" style="margin-left:-15px">
+            <div class="col-md-2">
+                @Html.TextBoxFor(m => m.EstimateDuratoion, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.EstimateDuratoion)
+            </div>
+            <div class="col-md-2">
+                @Html.DropDownListFor(m => m.TimeUnitId, Model.TimeUnits, "Time unit", new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.TimeUnitId)
+            </div>
+        </div>
+    </div>   
+     <div class="form-group">
+        @Html.LabelFor(m => m.Locality_PRF, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(m => m.Locality_PRF, Model.CountriesList, "Select country", new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Locality_PRF)
+        </div>
+    </div> 
+    
+    if (Model.JobId.HasValue) { 
+         <div class="form-group">
+            @Html.LabelFor(m => m.IsActive, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.CheckBoxFor(m=>m.IsActive) @Html.LabelFor(m => m.IsActive, new { style = "font-weight: normal;" })
+            </div>
+        </div>
+         <div class="form-group">
+            @Html.LabelFor(m => m.IsHiringClosed, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.CheckBoxFor(m => m.IsHiringClosed) @Html.LabelFor(m => m.IsHiringClosed, new { style = "font-weight: normal;" })
+            </div>
+        </div>
+    }
+    <div class="form-group">
+        @Html.LabelFor(m => m.Description, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextAreaFor(m => m.Description, new { @class = "form-control" ,style=" max-width: 800px; height: 200px"})
+            @Html.ValidationMessageFor(m => m.Description)
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.Label("Attachments", new { @class = "col-md-2 control-label" })           
+            <div class="col-md-10">
+                @Html.Kendo().Upload().Name("Attachments")
+                <span class="" id="FileUploadMessage" style="display: none; color: #b94a48">Please Select pdf file only</span>
+                @*<div style="position:relative;">
+                    <a class='btn btn-default' href='javascript:;'>
+                        Choose File..
+                        <input type="file" name="attachments" multiple="multiple" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:" progid:dximagetransform.microsoft.alpha(opacity=0)";opacity:0;background-color:transparent;color:transparent;' size="40" onchange='$("#upload-file-info").html($(this)[0].files.length+" file(s) selected");'>
+                    </a> &nbsp;
+                    <span class='label label-info' id="upload-file-info"></span>
+                </div>
+                <div style="border:1px solid gray" class="form-control"></div>*@
+            </div>
+    </div>
+    
+    if (Model.JobAttachmentsList.Count > 0)
+    {
+        <div class="form-group">
+        @Html.Label("Uploaded Attachments", new { @class = "col-md-2 control-label" })           
+            <div class="col-md-10">
+                @foreach (var item in Model.JobAttachmentsList)
+                {
+                    <div class="form-control">
+                        <img src="~/Content/images/DeleteIcon.png" class="removeAttachments" id='@item.JobAttachmentId' />
+                        @*<input type="button" style="height:20px;width:20px" value="X" class="removeAttachments" id='@item.JobAttachmentId'>*@
+                        <a download href="@ConfigurationManager.AppSettings[WebsiteConstants.ServerAddress]@ConfigurationManager.AppSettings[WebsiteConstants.AttachmentFolderName]@item.AttachmentName">@item.AttachmentName</a><br />
+                    </div>
+                }   
+            </div>
+        </div>
+    }    
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" id="submitButton" class="btn btn-default" value="@(Model.JobId.HasValue?"Update":"Post")" />
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".date-picker").datepicker({
+            format: 'mm/dd/yyyy'
+        });
+        $("#backButton").show();
+    });
+
+    $('#selectSkillsButton').click(function () {
+        $('#skillPopup').modal();
+    });
+
+    $(':checkbox').change(function () {
+        var valuesArray = [];
+        $(this).closest('.modal-dialog').find('input:checked').each(function () {
+            valuesArray.push($(this).attr('checkboxText'));
+        })
+        $(this).closest('.col-md-10').find('textarea').val(valuesArray.join(', '));
+    });
+
+    $('#JobCategoryId').change(function (e) {
+        $.ajax({
+            url: '@Url.Action("GetJobSubCategories")',
+            type: "get",
+            data: { jobCategoryId: $(this).val() },
+            success: function (data) {
+                if (data.result) {
+                    var subJobsList = $('#JobSubCategoryId').empty().append("<option value>Select job sub-category</option>");
+                    $.each(data.data, function (index, value) {
+                        subJobsList.append($('<option></option>').val(value.JobSubCategoryId).html(value.SubCategoryName)
+                        );
+                    });
+                }
+            }
+        });
+    });
+
+    $('.removeAttachments').click(function () {
+        var removeButton = $(this);
+        $.ajax({
+            url: '@Url.Action("RemoveAttachment")',
+            type: "POST",
+            data: { attachmentId: removeButton.attr('id') },
+            success: function (data) {
+                if (data.Result) {
+                    removeButton.closest('.form-control').remove();
+                }
+            }
+        })
+    });
+    $("#JobTypeId").change(function () {
+        var JobType = $("#JobTypeId :selected").text();
+        if (JobType == "Hourly") {
+            $("#HourlyRate").show();
+            $("#Fixed_Rate").hide();
+        }
+        else {
+            $("#Fixed_Rate").show();
+            $("#HourlyRate").hide();
+        }
+    });
+
+</script>
+
+
+
+
+
+
+

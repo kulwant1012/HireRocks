@@ -1,0 +1,123 @@
+﻿@model PS.HireRocks.Model.LoginViewModel
+
+@{
+    Layout = "~/Views/Shared/_HomePageView.cshtml";
+}
+@{
+    var url = ViewBag.ReturnUrl2;
+}
+
+<section class="loginSection" id="loginForm">
+    @using (Html.BeginForm("Login", "Account", new { returnUrl = @url }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+        <div class="conntainer">
+            <div class="login-form col-sm-10 col-md-5 col-xl-4 ml-auto mr-auto">
+                <h2 class="text-center"> Log in. </h2>
+                <div class="text-center"> Use a local account to log in.</div>
+                @Html.ValidationSummary(true)
+                <div class="formlogin">
+                    <div class="form-group">
+                        <i class="fa fa-user"></i>
+                        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", placeholder = "Username", })
+                        @Html.ValidationMessageFor(m => m.UserName)
+                        @*<input type="text" class="form-control" name="username" placeholder="Username" required="required">*@
+                    </div>
+                    <div class="form-group">
+                        <i class="fa fa-lock"></i>
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Password" })
+                        @Html.ValidationMessageFor(m => m.Password)
+                        @*<input type="password" class="form-control" name="password" placeholder="Password" required="required">*@
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">Log in</button>
+                    </div>
+                    <div class="clearfix">
+                        @Html.CheckBoxFor(m => m.RememberMe)
+                        @Html.LabelFor(m => m.RememberMe, new { @class = "checkbox-inline" })
+                        <a href="@Url.Action("ForgotPassword", "Account")" class="pull-right">Forgot Password?</a>
+                    </div>
+
+
+                </div>
+                <p class="text-center small">If you don't have an account? <a href="@Url.Action("Register", "Account")" class="register">Register</a></p>
+
+            </div>
+        </div>
+    }
+</section>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
+
+
+
+
+
+
+@*@{
+        ViewBag.Title = "Log in";
+    }
+
+    <h2>@ViewBag.Title.</h2>
+    @{
+        var url = ViewBag.ReturnUrl2;
+    }
+
+    <div class="row">
+        <div class="col-md-12">
+            <section id="loginForm">
+                @using (Html.BeginForm("Login", "Account", new { returnUrl = @url }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <h4>Use a local account to log in.</h4>
+                    <hr />
+                    @Html.ValidationSummary(true)
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.UserName, new { @class = "col-md-2 control-label" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.UserName)
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+                        <div class="col-md-10">
+                            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.Password)
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <div class="checkbox">
+                                @Html.CheckBoxFor(m => m.RememberMe)
+                                @Html.LabelFor(m => m.RememberMe)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Log in" class="btn btn-default" onclick="navigate" />
+                        </div>
+                    </div>
+                    <p>
+                        @Html.ActionLink("Register", "Register") if you don't have an account.
+                    </p>
+                    <p>
+                        @Html.ActionLink("Forgot password?", "ForgotPassword")
+                    </p>
+                }
+            </section>
+        </div>
+        <div class="col-md-4">
+            <section id="socialLoginForm">
+                @Html.Partial("_ExternalLoginsListPartial", new { Action = "ExternalLogin", ReturnUrl = ViewBag.ReturnUrl })
+            </section>
+        </div>
+    </div>
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }*@

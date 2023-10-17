@@ -1,0 +1,185 @@
+﻿@using Microsoft.AspNet.Identity
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/kendo/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/kendo")
+    <script src="~/Scripts/jquery.signalR-2.2.0.min.js" type="text/javascript"></script>
+    <script src="@System.Configuration.ConfigurationManager.AppSettings[PS.HireRocks.Web.Helpers.WebsiteConstants.ServerAddress]/signalr/hubs/" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        var messageHub;
+        $(function () {
+
+            messageHub = $.connection.messageHub;
+            messageHub.client.newMessageReceived = function (message) {
+                if ('@User.IsInRole(PS.HireRocks.Data.Helpers.RoleConstants.Worker)' == 'True') {
+                    var jobsDropdown = $("#WorkerJobsDropdownList");
+                    if (jobsDropdown.length > 0) {
+                        if (jobsDropdown.data("kendoDropDownList").dataSource.data().length > 0)
+                            $("#WorkerMessageList").data("kendoListView").dataSource.read();
+                        else
+                            $("#WorkerJobsDropdownList").data("kendoDropDownList").dataSource.read();
+                    }
+                }
+                else {
+                    var jobsDropdown = $("#JobsDropdownList");
+                    if (jobsDropdown.length > 0) {
+                        if (jobsDropdown.data("kendoDropDownList").dataSource.data().length > 0)
+                            $("#MessageList").data("kendoListView").dataSource.read();
+                        else
+                            $("#JobsDropdownList").data("kendoDropDownList").dataSource.read();
+                    }
+                }
+                var messageCountSpan = $('.messagesCount');
+                messageCountSpan.html(parseInt(messageCountSpan.html()) + 1).show();
+                $('.messagesCount').html(parseInt(messageCountSpan.html())).show();
+                $('.tileMessagesCount').show();
+            }
+
+            messageHub.client.newNotificationReceived = function () {
+                debugger;
+                var notificationCountSpan = $('.notificationsCount');
+                notificationCountSpan.html(parseInt(notificationCountSpan.html()) + 1).show();
+                var notificationGrid = $('#NotificationsGrid').data("kendoGrid");
+                if (notificationGrid != null)
+                    notificationGrid.dataSource.read();
+            }
+            $.connection.hub.url = "@System.Configuration.ConfigurationManager.AppSettings[PS.HireRocks.Web.Helpers.WebsiteConstants.ServerAddress]signalr";
+            $.connection.hub.start().fail(function (error) { console.error(error); });
+            GetUnreadNotificationAndMessageCount();
+
+            //$.ajaxSetup({
+            //    beforeSend: function () {
+            //        // show gif here, eg:
+            //        debugger;
+            //        $("#loading").show();
+            //    },
+            //    complete: function () {
+            //        debugger;
+            //        // hide gif here, eg:
+            //        $("#loading").hide();
+            //    }
+            //});
+        });
+
+        function GetUnreadNotificationAndMessageCount() {
+            $.ajax({
+                url: '@Url.Action("GetUnreadNotificationAndMessageCount", "Base")',
+                type: "GET",
+                success: function (data) {
+                    var messageCount = parseInt(data.UnreadMessagesCount);
+                    var notificationCount = parseInt(data.UnreadNotificationsCount);
+                    if (messageCount > 0) {
+                        $('.messagesCount').html(messageCount).show();
+                        $('.tileMessagesCount').show();
+                    }
+                    else {
+                        $('.messagesCount').html(0).hide();
+                        $('.tileMessagesCount').hide();
+                    }
+                    if (notificationCount > 0) {
+                        $('.notificationsCount').html(notificationCount).show();
+                        $('.tileNotificationsCount').show();
+                    }
+                    else {
+                        $('.notificationsCount').html(0).hide();
+                        $('.tileNotificationsCount').hide();
+                    }
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    @*<div id="loading">
+            <p>Please wait..</p>
+        </div>*@
+    <div class="navbar navbar-inverse navbar-fixed-top override">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @if (Request.IsAuthenticated && Session[PS.HireRocks.Web.Helpers.SessionNameConstants.LogedInUserSession] != null)
+                {
+                    <a style="font-size:15px;display:none" id="backButton" class="navbar-brand" href="javascript:void(0);" onclick="history.go(-1);">Back</a>
+                    <a href="@Url.Action("Index", "Dashboard")" class="navbar-brand logo"><img src='@Url.Content("~/Content/Images/hirerocks.png")' /></a>
+                }
+                else
+                {
+                    <a href="@Url.Action("Index", "Home")" class="navbar-brand logo"><img src='@Url.Content("~/Content/Images/hirerocks.png")' /></a>
+                }
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    @if (Request.IsAuthenticated && Session[PS.HireRocks.Web.Helpers.SessionNameConstants.LogedInUserSession] != null)
+                    {
+                        <li style="width: 30px; margin-left: 15px;">
+                            @Html.ActionLink("Message", "MyMessages", "Message", null, new { @class = "message-alert" })
+                            <span class="notification-message-text messagesCount">0</span>
+                        </li>
+                        <li style="width: 30px; margin-left: 15px;">
+                            @Html.ActionLink("Notification", "Notifications", "Notifications", null, new { @class = "notification-alert" })
+                            <span class="notification-message-text notificationsCount">0</span>
+                        </li>
+                    }
+                </ul>
+                
+                    @if (Request.IsAuthenticated && Session[PS.HireRocks.Web.Helpers.SessionNameConstants.LogedInUserSession] != null)
+                    {
+
+                        using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "logoffform navbar-right" }))
+                        {
+                            @Html.AntiForgeryToken()
+
+                            <span class="userL">
+                                @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Manage", "Account", routeValues: null, htmlAttributes: new { title = "Manage", @class = "userName" })
+                            </span>
+                            <span class="userL">
+                                <a class="rr-1" href="javascript:document.getElementById('logoutForm').submit()"> <i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
+
+                            </span>
+                        }
+
+                    }
+                    else
+                    {
+                       <ul class="nav navbar-nav">
+                            <li>
+                                @Html.ActionLink("Register", "Register", "Account")
+
+                            </li>
+                            <li class="userLogin">
+                                @Html.ActionLink("Login", "Login", "Account")
+
+                            </li>
+                            
+                        </ul>
+                    }
+
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Hire Rocks</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

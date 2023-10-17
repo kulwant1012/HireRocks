@@ -1,0 +1,172 @@
+﻿@{ ViewBag.Title = "Review Contract";}
+@model PS.HireRocks.Model.ContractViewModel
+@if (Model != null) { 
+<h3 style="color: #428bca"> @Ajax.ActionLink(Model.JobTitle, "ViewJob", "Job", ajaxOptions: new AjaxOptions { HttpMethod = "Get", InsertionMode = InsertionMode.Replace, UpdateTargetId = "viewJobContent", OnComplete = "ViewJobRequestComplete" }, routeValues: new { @jobId = Model.JobId }, htmlAttributes: new {title="View job details"})</h3>
+<hr style="margin-bottom:0"/>
+    <div class="row" id="DivReviewContract">
+        @Html.HiddenFor(m => m.ContractId)
+        @Html.HiddenFor(m => m.ClientUserName)
+        <div class="col-lg-10">
+            <div class="col-md-5">
+                @Html.ValidationSummary(false, "", new { id = "validationSummary" })
+            </div>
+        </div>
+        @if (Model.JobTypeId == (long)PS.HireRocks.Data.Helpers.JobTypeEnum.Hourly)
+        {
+            <div class="col-lg-10">
+                <div class="col-md-3">@Html.Label("Job type")</div>
+                <div class="col-md-5">Hourly</div>
+            </div>
+            <div class="col-lg-10">
+                <div class="col-md-3">@Html.LabelFor(m => m.HourlyRate)</div>
+                <div class="col-md-5">@Model.HourlyRate</div>
+            </div>
+            <div class="col-lg-10">
+                <div class="col-md-3">@Html.LabelFor(m => m.WeeklyHourLimit)</div>
+                <div class="col-md-5">@Model.WeeklyHourLimit</div>
+            </div>
+        }
+        @if (Model.JobTypeId == (long)PS.HireRocks.Data.Helpers.JobTypeEnum.Fixed)
+        {
+            <div class="col-lg-10">
+                <div class="col-md-3">@Html.Label("Job type")</div>
+                <div class="col-md-5">Fixed</div>
+            </div>
+            <div class="col-lg-10">
+                <div class="col-md-3">@Html.LabelFor(m => m.FixedRate)</div>
+                <div class="col-md-5">@Model.FixedRate</div>
+            </div>
+        }
+
+        <div class="col-lg-10">
+            <div class="col-md-3">@Html.LabelFor(m => m.EstimatedDuration)</div>
+            <div class="col-md-5">@Model.EstimatedDuration @Model.TimeUnitName</div>
+        </div>
+        <div class="col-lg-10">
+            <div class="col-md-3">@Html.LabelFor(m => m.ClientName)</div>
+            <div class="col-md-5">@Ajax.ActionLink(Model.FirstName + " " + Model.LastName, "#", "#", ajaxOptions: new AjaxOptions { HttpMethod = "Get", InsertionMode = InsertionMode.Replace, UpdateTargetId = "viewJobContent" }, routeValues: new { @jobId = 35 }, htmlAttributes: new { title = "View client information" })</div>
+        </div>
+        <div class="col-lg-10 div-end-reason" style="display:none">
+            <div class="col-md-3">@Html.LabelFor(m => m.EndReasonId)</div>
+            <div class="col-md-5">
+                @(Html.Kendo().DropDownListFor(m => m.EndReason)
+                            .DataTextField("EndOrDenyReason")
+                            .DataValueField("ContractEndOrDenyReasonId")
+                            .AutoBind(false)
+                            .DataSource(datasource => datasource.Read(read => read.Action("GetContractDenyReasonsByRole", "WorkerContract")))
+                            .Events(events => events.Change("EndReasonDropdownChange"))
+                            .OptionLabel("Select end reason")
+                            .HtmlAttributes(new { style = "width:100%" }))
+            </div>
+        </div>
+        <div class="col-lg-10" style="display:none" id="DivOtherEndReason">
+            <div class="col-md-3">@Html.LabelFor(m => m.OtherEndReason)</div>
+            <div class="col-md-5">@Html.TextAreaFor(m => m.OtherEndReason, new { @class = "form-control", placeholder = "Please specify other reason", style = "max-width: 100%;height: 150px;" })</div>
+            @Html.ValidationMessageFor(m => m.OtherEndReason)
+        </div>
+        <div class="col-lg-10 div-end-reason" style="padding-left:30px;display:none">
+            <input type="button" id="RejectContract" value="Reject" class="btn btn-primary" />
+            <input type="button" id="CancelContractRejection" value="Cancel" class="btn btn-primary" />
+        </div>
+        <div class="col-lg-10 div-approve" style="padding-left:30px">
+            @if (Model.COntractStatusId == PS.HireRocks.Data.Helpers.ContractStatusConstants.Awaiting)
+            {
+                @Html.ActionLink("Approve", "ApproveContract", "WorkerContract", routeValues: new { id = Request.QueryString["id"],jobId=Model.JobId}, htmlAttributes: new { id = "ApproveContract", @class = "btn btn-primary" })
+                <input type="button" id="ShowRejectContractReasons" value="Reject" class="btn btn-primary" />
+            }
+            else
+            {
+                @Html.ActionLink("Dashboard", "Index", "Dashboard",null, htmlAttributes: new { @class="btn btn-default"})
+            }
+        </div>
+    </div>
+    <div id="viewJobContent"></div>
+}
+else
+{
+    <hr />
+    <h4>Contract does't exists or you already reviewed it!</h4>
+    <span>Go to</span> @Html.ActionLink("Dashboard","Index","Dashboard")
+}
+
+<script type="text/javascript">
+    function ViewJobRequestComplete() {
+        $('#viewJobPopup').modal();
+    };
+
+    $('#ApproveContract').click(function () {
+        debugger;
+        messageHub.server.sendNewNotification($('#ClientUserName').val());
+    });
+
+    $('#ShowRejectContractReasons').click(function () {
+        $('.div-end-reason').show();
+        $('.div-approve').hide();
+    });
+
+    $('#RejectContract').click(function () {
+        var endReasonDropdown = $("#EndReason").data("kendoDropDownList").dataItem();
+        var endReasonId;
+        var endReason;
+        if (endReasonDropdown != undefined){
+            endReasonId = endReasonDropdown.ContractEndOrDenyReasonId;
+            endReason = endReasonDropdown.EndOrDenyReason;
+        }            
+        var model = JSON.stringify({
+            model: {
+                ContractId: $('#ContractId').val(),
+                EndReasonId: endReasonId,
+                EndReason: endReason,
+                OtherEndReason: $('#OtherEndReason').val()
+            }
+        });
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("RejectContract")',
+            data: model,
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            async: true,
+            success: function (data) {
+                var validationSummary = $('#validationSummary');
+                validationSummary.empty();
+                if (data.result != null) {
+                    var errors = [];
+                    validationSummary.addClass('validation-summary-errors').removeClass('validation-summary-valid');
+                    $.each(data.result, function (i, error) { errors.push('<li>' + error + '</li>'); });
+                    $(validationSummary).append(errors.join(''));
+                }
+                else {
+                    validationSummary.removeClass('validation-summary-errors').addClass('validation-summary-valid');
+                    window.location = "/Dashboard/Index";
+                    debugger;
+                    messageHub.server.sendNewNotification($('#ClientUserName').val());
+                }
+            }
+        })
+    });
+
+    $('#CancelContractRejection').click(function () {
+        $('.div-end-reason').hide();
+        $('.div-approve').show();
+        $('#DivOtherEndReason').hide();
+        $('#OtherEndReason').val('');
+        $("#EndReason").data("kendoDropDownList").select(0)
+    })
+
+    function EndReasonDropdownChange() {
+        if ($("#EndReason").data("kendoDropDownList").dataItem().ContractEndOrDenyReasonId == '@((long)PS.HireRocks.Data.Helpers.ContractDenyReasonEnum.Other)') 
+            $('#DivOtherEndReason').show();
+        else {
+            $('#OtherEndReason').val('');
+            $('#DivOtherEndReason').hide();
+        }            
+    }
+</script>
+
+<style>
+    #DivReviewContract .col-lg-10 {
+        margin:8px
+    }    
+</style>
+

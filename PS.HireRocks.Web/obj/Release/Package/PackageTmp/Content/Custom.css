@@ -1,0 +1,1034 @@
+﻿* {
+    font-family: "Poppins",Arial,Helvetica,sans-serif;
+}
+
+.topContact {
+    background: #4b4b4b;
+}
+
+    .topContact .email {
+        color: #fff;
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        padding: 10px 0;
+    }
+
+.left {
+    z-index: 1;
+}
+
+    .left:after {
+        content: "";
+        width: 5000px;
+        height: 100%;
+        background-color: #37a000;
+        right: 20px;
+        top: 0;
+        position: absolute;
+        z-index: 0;
+        z-index: -1;
+    }
+
+.topContact .email .fa {
+    font-size: 14px;
+    line-height: 20px;
+    width: 28px;
+    height: 28px;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    border: 1.5px solid #fff;
+    border-radius: 100%;
+    margin-right: 5px;
+}
+
+.topContact .socialIcon .fa {
+    font-size: 18px;
+    line-height: 20px;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    border-radius: 100%;
+    margin-left: 20px;
+}
+
+.topContact .socialIcon {
+    display: flex;
+    padding: 12px 0;
+    margin: 0px;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+    .topContact .socialIcon a {
+        color: #fff;
+        text-decoration: none;
+        transition: 0.5s;
+    }
+
+        .topContact .socialIcon a:hover {
+            color: #37a000;
+            transition: 0.5s;
+        }
+
+.banner {
+    background-image: url('images/hire.jpg');
+    position: relative;
+    background-size: cover;
+    background-position: right top;
+    overflow: hidden;
+    min-height: 450px;
+}
+
+    .banner:after {
+        content: '';
+        position: absolute;
+        background: #4b4b4bbd;
+        left: 0px;
+        width: 27%;
+        top: 79.4px;
+        bottom: 0px;
+    }
+
+.header {
+    position: absolute;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 9;
+    height: 78px;
+}
+
+.headerSticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    background: #fff;
+    box-shadow: 0px 2px 3px rgba(75, 75, 75, 0.06);
+}
+
+.header .navbar {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.header .navbar-light .navbar-nav .nav-link {
+    margin-left: 10px;
+    color: #4b4b4b;
+    padding: 5px 10px;
+}
+
+    .header .navbar-light .navbar-nav .nav-link:focus, .header .navbar-light .navbar-nav .nav-link:hover, .header .navbar-light .navbar-nav .active > .nav-link {
+        color: #37a000;
+    }
+
+.header .login {
+    border: 1.5px solid;
+    border-radius: 50px;
+    min-width: 100px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.header .navbar-light .navbar-nav .nav-link.login:hover {
+    color: #fff;
+    transition: 0.5s;
+    background: #37a000bd;
+    border-color: #37a000bd;
+}
+
+.bCaption {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.hire {
+    font-weight: 700;
+    font-size: 65px;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 1px 2px 5px rgba(46, 46, 46, 0.4392156862745098);
+    max-width: 780px;
+}
+
+.subline {
+    color: #fff;
+    font-size: 16px;
+    max-width: 650px;
+}
+
+.btnRead {
+    border: 1px solid #4b4b4b;
+    color: #fff;
+    padding: 14px 30px;
+    display: inline-block;
+    border-radius: 50px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    position: relative;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+    .btnRead,
+    .btnRead::after {
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+
+        .btnRead::before,
+        .btnRead::after {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            background: #37a000;
+            width: 100%;
+        }
+
+        .btnRead:hover {
+            text-decoration: none;
+            color: #fff;
+            border-color: #fff;
+        }
+
+        .btnRead::after {
+            height: 100%;
+            left: 0;
+            top: 0;
+        }
+
+        .btnRead:hover:after {
+            width: 0;
+            left: 0;
+        }
+
+.work {
+    margin: -60px 0 0 0;
+}
+
+.bgwhite {
+    background: #fff;
+}
+
+.icon {
+    width: 80px;
+    margin: 50px auto 15px;
+    text-align: center;
+    height: 80px;
+    font-size: 40px;
+    line-height: 80px;
+    color: #fff;
+    border-radius: 100%;
+    border: 1px solid #4b4b4b;
+    transition: 0.5s;
+    background: #4b4b4b;
+}
+
+    .icon:hover {
+        background: #37a000;
+        transition: 0.5s;
+        color: #ffffff;
+        cursor: pointer;
+        border-color: #37a000;
+    }
+
+.workTitle {
+    text-align: center;
+    font-size: 16px;
+    color: #2a2a2a;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.catagory {
+    background: url('images/freelancer.jpg');
+    margin-top: 60px;
+    padding: 60px 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 1;
+}
+
+    .catagory::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: #4b4b4bbd;
+        z-index: -1;
+    }
+
+.secTitle {
+    color: #fff;
+    margin-bottom: 50px;
+    text-transform: capitalize;
+}
+
+.catBox {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.catTitle {
+    padding: 10px 15px;
+    display: block;
+    border: 1.5px solid #ccc;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    font-size: 16px;
+}
+
+    .catTitle::after {
+        content: "";
+        width: 0%;
+        background: #37a000;
+        position: absolute;
+        left: 0;
+        top: 0px;
+        z-index: -1;
+        height: 100%;
+        transition: 0.5s;
+    }
+
+    .catTitle::before {
+        content: "";
+        width: 0%;
+        background: #37a000;
+        position: absolute;
+        right: 0;
+        top: 0px;
+        z-index: -1;
+        height: 100%;
+        transition: 0.5s;
+    }
+
+    .catTitle:hover::before, .catTitle:hover::after {
+        width: 50%;
+    }
+
+    .catTitle:hover {
+        text-decoration: none;
+        color: #fff;
+        border-color: #37a000;
+    }
+
+.getStart {
+    margin: 60px 0;
+}
+
+    .getStart .btnRead:hover {
+        background: #4b4b4b;
+    }
+
+.descTitle {
+    font-size: 25px;
+    font-weight: 600;
+    border-left: 10px solid #37a000;
+    padding-left: 20px;
+    text-transform: uppercase;
+    line-height: 55px;
+    margin-bottom: 14px;
+}
+
+.get {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    position: relative;
+    box-shadow: 0px 0px 13px 7px #cccccc21;
+    animation: scale 3s linear infinite;
+}
+
+@keyframes scale {
+    50% {
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+}
+
+.ar {
+    text-align: right;
+}
+
+.contact {
+    position: relative;
+    background-image: url('images/contactbg.jpg');
+    background-size: cover;
+    background-position: right -10px;
+    padding: 60px 15px;
+}
+
+    .contact .secTitle {
+        color: #333333;
+        text-transform: uppercase;
+        font-weight: 600;
+        border-left: 10px solid #37a000;
+        padding-left: 20px;
+    }
+
+.Connects .form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #37a000;
+    outline: 0;
+    box-shadow: none;
+}
+
+.Connects input {
+    height: 50px;
+}
+
+.send {
+    width: 100%;
+    height: 55px;
+    background: #4b4b4b;
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 16px;
+}
+
+    .send:hover {
+        transition: 0.5s;
+        background: #37a000;
+    }
+
+.footer {
+    background: #4b4b4b;
+    padding-top: 50px;
+}
+
+.wTitle {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0px;
+}
+
+    .footer ul a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 14px;
+        transition: 0.5s;
+        line-height: 33px;
+    }
+
+        .footer ul a:hover, .footer ul a:focus, .footer ul .active a {
+            color: #37a000;
+        }
+
+.copyright {
+    color: #fff;
+    font-size: 13px;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    position: relative;
+}
+
+.scrollTop {
+    position: absolute;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    bottom: 35px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background: #37a000;
+    font-size: 30px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.5s;
+    border: 1.5px solid #37a000
+}
+
+    .scrollTop:hover {
+        background: #4b4b4b;
+        transition: 0.5s;
+        text-decoration: none;
+        color: #fff;
+        border-color: rgba(255, 255, 255, 0.12);
+    }
+
+.fade.in {
+    opacity: 1;
+}
+
+.modal-backdrop.fade.in {
+    opacity: 0.5;
+}
+
+#CaptureDetailPopUp .modal-dialog {
+    transform: none;
+}
+
+@media (max-width:1199px) {
+    .wTitle {
+        font-size: 18px;
+    }
+}
+
+@media (max-width:991px) {
+    .get {
+        width: 180px;
+        height: 180px;
+    }
+
+        .get img {
+            width: 50%;
+        }
+
+    .wTitle {
+        font-size: 18px;
+    }
+
+    .hire {
+        font-size: 40px;
+        max-width: 400px;
+    }
+
+    .subline {
+        max-width: 530px;
+    }
+
+    .header .navbar-collapse {
+        position: absolute;
+        top: 79.4px;
+        width: 100%;
+        background: #fff;
+        padding: 0 10px 14px 0;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+}
+
+@media (max-width:767px) {
+    .topContact {
+        display: none;
+    }
+
+    .bCaption {
+        top: 60%;
+    }
+
+    .banner:after {
+        width: 100%;
+        top: 79.5px;
+    }
+
+    .work {
+        margin: auto;
+    }
+
+    .contact {
+        background-position: -315px 0px;
+    }
+
+    .work h2 {
+        font-size: 25px;
+    }
+
+    .secTitle {
+        margin-bottom: 30px;
+        font-size: 25px;
+    }
+
+    .catagory {
+        margin-top: 30px;
+        padding: 30px 0px;
+    }
+
+    .get {
+        margin: 0px auto 70px;
+    }
+
+    .getStart {
+        margin: 30px 0;
+    }
+}
+a.nav-link {
+    font-size: initial;
+}
+span.btnSpan {
+    font-size: 16px;
+}
+h2.text-center.text-uppercase.mt-5 {
+    font-size: 32px;
+    padding-top: 8px;
+}
+.secTitle {
+    color: #fff;
+    margin-bottom: 50px;
+    text-transform: capitalize;
+    font-size: 28px;
+}
+.desc {
+    font-size: 15px;
+}
+input#exampleFormControlInput1 {
+    font-size: 15px;
+}
+textarea#exampleFormControlTextarea1 {
+    font-size: 15px;
+}
+a.ancor.nav-link.message-alert {
+    width: 36px;
+}
+a.ancor.nav-link.notification-alert {
+    width: 440px;
+}
+
+.userSec {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+i.fa.fa-envelope-o.famessages {
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    line-height: 35px;
+  
+    background: #37a000;
+    color: #fff;
+    font-size: 16px;
+    position: relative;
+}
+i.fa.fa-bell-o {
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    line-height: 35px;
+    margin-left: 15px;
+    background: #37a000;
+    color: #fff;
+    font-size: 16px;
+    position: relative;
+}
+
+span.count.notification-message-text.messagesCount {
+    position: absolute;
+    top: 13px;
+    right: 43px;
+    border-radius: 25px;
+    font-size: 13px;
+    min-width: 20px;
+    height: 20px;
+    background: #fff;
+    color: #333;
+    border: 1px solid #37a000;
+    line-height: 10px;
+    padding: 5px;
+}
+
+.userLogin .login {
+    border: 1px solid;
+    border-radius: 50px;
+    min-width: 100px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    padding: 8px 10px;
+    text-decoration: none;
+    margin-left: 10px;
+    color: #37a000
+}
+span.count.notification-text.notificationsCount {
+    position: absolute;
+    top: 12px;
+    right: -7px;
+    border-radius: 25px;
+    font-size: 13px;
+    min-width: 20px;
+    height: 20px;
+    background: #fff;
+    color: #333;
+    border: 1px solid #37a000;
+    line-height: 10px;
+    padding: 5px;
+}
+.userLogin .userName {
+    border-radius: 50px;
+    min-width: 100px;
+    text-align: center;
+    transition: 0.5s;
+    padding: 5px 10px;
+    text-decoration: none;
+    margin-left: 5px;
+    text-transform: capitalize;
+    color: #4b4b4b;
+}
+
+    .userLogin .userName:hover {
+        color: #37a000;
+    }
+
+.userLogin .login:hover {
+    color: #fff;
+    transition: 0.5s;
+    background: #37a000bd;
+    border-color: #37a000bd;
+    ;
+}
+/*.notification-alert {
+    background: url(/Content/images/NotificationsAlert.png) no-repeat left;
+    display: block;
+    text-indent: -9999px;
+    margin-left: 0;
+}*/
+
+
+
+
+/* === Login css start === */
+
+.loginSection {
+    background: #f1f1f1;
+    padding: 90px 0;
+    margin-top: 79.2px;
+}
+.dashboardSection {
+    background: #f1f1f1;
+    padding: 37px 90px 37px 140px;
+    margin-top: 79.2px;
+}
+
+button.btn.btn-primary.btn-lg.btn-block:hover {
+  
+    background: #37a000;
+}
+h2.text-center {
+    font-size: 2rem;
+}
+
+
+.login-form .form-group {
+    position: relative;
+}
+
+.login-form i {
+    position: absolute;
+    left: 13px;
+    top: 13px;
+    font-size: 18px;
+}
+.formlogin {
+    background: #fff;
+    padding: 30px;
+    box-shadow: 0 0px 3px 3px #3333330a;
+    margin: 15px 0 15px 0;
+    border-radius: 5px;
+}
+
+.login-form .form-control:focus {
+    border-color: #70c5c0;
+}
+input#UserName {
+    min-height: 45px;
+    background: #fff;
+    box-shadow: none !important;
+    border-color: #e3e3e3;
+    border-radius: 2px;
+    padding-left: 40px;
+    color: #212529;
+}
+input#Password {
+    min-height: 45px;
+    background: #fff;
+    box-shadow: none !important;
+    border-color: #e3e3e3;
+    border-radius: 2px;
+    padding-left: 40px;
+    color: #212529;
+}
+
+a.pull-right {
+    color: #37a000;
+}
+    a.pull-right:hover {
+        color: #212529;
+    }
+button.btn.btn-primary.btn-lg.btn-block {
+    background: #4b4b4b;
+}
+
+    .btn:hover, .btn:focus {
+        background: #37a000;
+    }
+@media screen and ( min-height: 700px ) {
+    .loginSection {
+        height: calc(100vh - 210px);
+        padding: 65px 0 0;
+    }
+}
+
+
+/* === Login css End === */
+
+/* === Contact css start === */
+.bgColor {
+    background: #f1f1f1;
+}
+
+.mytop-7 {
+    margin-top: 72.9px;
+}
+
+.contact_box {
+    width: 100%;
+    text-align: center;
+    display: table;
+    height: 289px;
+    position: relative;
+    min-height: 289px;
+    background: #fff;
+    border-radius: 5px;
+    transition: 0.5s;
+    box-shadow: 0 0px 3px 3px #3333330a;
+}
+
+    .contact_box:hover {
+        transition: 0.5s;
+        -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.06);
+        -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.06);
+        -ms-box-shadow: 0 0 15px rgba(0, 0, 0, 0.06);
+        -o-box-shadow: 0 0 15px rgba(0, 0, 0, 0.06);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.06);
+        -webkit-transform: translateY(-10px);
+        -moz-transform: translateY(-10px);
+        -ms-transform: translateY(-10px);
+        -o-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+
+    .contact_box p {
+        margin: 0px;
+        word-break: break-word;
+    }
+
+.cbox_inset {
+    vertical-align: middle;
+    display: table-cell;
+    padding: 15px;
+}
+
+.cIcon {
+    width: 80px;
+    margin: 0 auto 15px;
+    text-align: center;
+    height: 80px;
+    font-size: 40px;
+    line-height: 80px;
+    color: #4b4b4b;
+    border-radius: 100%;
+    border: 1px solid #4b4b4b;
+    transition: 0.5s;
+}
+
+.contact_box:hover .cIcon {
+    color: #fff;
+    border: 1px solid #37a000;
+    background: #37a000;
+}
+
+.cbTitle {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.contact_box hr {
+    width: 60px;
+    border-color: #4b4b4b;
+    margin: 10px auto;
+}
+
+.contactSec .form-control {
+    padding-left: 15px;
+}
+
+/* === Contact css End === */
+
+@media (max-width:1199px) {
+    .wTitle {
+        font-size: 18px;
+    }
+}
+
+@media (max-width:991px) {
+    .get {
+        width: 180px;
+        height: 180px;
+    }
+
+        .get img {
+            width: 50%;
+        }
+
+    .wTitle {
+        font-size: 18px;
+    }
+
+    .hire {
+        font-size: 40px;
+        max-width: 400px;
+    }
+
+    .subline {
+        max-width: 530px;
+    }
+
+    .header .navbar-collapse {
+        position: absolute;
+        top: 79.4px;
+        width: 100%;
+        background: #fff;
+        padding: 0 10px 14px 0;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+}
+
+@media (max-width:767px) {
+    .topContact {
+        display: none;
+    }
+
+    .bCaption {
+        top: 60%;
+    }
+
+    .banner:after {
+        width: 100%;
+        top: 79.5px;
+    }
+
+    .work {
+        margin: auto;
+    }
+
+    .contact {
+        background-position: -315px 0px;
+    }
+
+    .work h2 {
+        font-size: 25px;
+    }
+
+    .secTitle {
+        margin-bottom: 30px;
+        font-size: 25px;
+    }
+
+    .catagory {
+        margin-top: 30px;
+        padding: 30px 0px;
+    }
+
+    .get {
+        margin: 0px auto 70px;
+    }
+
+    .getStart {
+        margin: 30px 0;
+    }
+
+    .loginSection {
+        margin-top: 0px;
+        height: auto;
+        padding: 150px 0 80px;
+    }
+    .dashboardSection {
+        margin-top: 0px;
+        height: auto;
+        padding: 150px 0 80px;
+    }
+    .captures {
+        padding: 120px 0 50px;
+        background: #f1f1f1;
+        padding-left: 58px;
+        padding-right: 58px
+    }
+
+    .contactSec {
+        padding-top: 120px;
+        padding-bottom: 40px;
+        margin-top: 0px;
+    }
+
+    .contact_box {
+        margin-bottom: 15px;
+    }
+}
+.chat {
+    padding: 120px 0 50px;
+    margin-top: 0px;
+}
+
+
+/**********Capture.css .Custom*******************/
+
+input,
+select,
+textarea {
+    max-width: 100%;
+}
+.captures {
+    padding: 120px 0 50px;
+    background: #f1f1f1;
+    padding-left: 58px;
+    padding-right: 58px
+}
+.manage {
+    background: #f1f1f1;
+    padding: 90px 0;
+    margin-top: 79.2px;
+}
+
+
+.logoffform {
+    margin-top: 15px !important;
+}
+.logoffform {
+    margin-top: 15px;
+}
+
+
+
+
+
+
+
+

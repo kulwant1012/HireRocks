@@ -1,0 +1,488 @@
+﻿@using System.Configuration;
+@using PS.HireRocks.Web.Helpers
+@model PS.HireRocks.Model.UserProfileViewModel
+@using GridMvc.Html
+@{
+    ViewBag.Title = Model != null && Model.UserProfileId.HasValue ? "Update profile" : "Complete profile";
+}
+
+@using (Html.BeginForm("CompleteProfile", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form", enctype = "multipart/form-data" }))
+{
+    <h4>@(Model != null && Model.UserProfileId.HasValue ? "Update profile" : "Complete profile")</h4>
+    <hr />
+    <h6 class="alert-success">@TempData[SessionNameConstants.SuccessMessage]</h6>
+    <h6 class="alert-warning">@ViewBag.LoginMessage</h6>
+    @Html.ValidationSummary(true)
+    if (Model != null)
+    {
+        @Html.HiddenFor(m => m.UserProfileId)
+        if (Model.IsUserWorker)
+        {
+            @Html.HiddenFor(m => m.IsUserWorker, new { @Value = "true" })
+            <div class="form-group">
+                @Html.LabelFor(m => m.SkillIds, new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    <!--Bootstrap Modal for skills-->
+                    <div class="modal fade" id="skillPopup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">Select skills</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="checkboxList">
+                                        @for (int i = 0; i < Model.SkillList.Count; i++)
+                                        {
+                                            @Html.CheckBoxFor(m => Model.SkillList[i].IsSelected, new { @checkboxText = Model.SkillList[i].SkillName })
+                                            @Html.LabelFor(m => Model.SkillList[i].IsSelected, Model.SkillList[i].SkillName)
+                                            @Html.HiddenFor(m => Model.SkillList[i].SkillId)
+                                            @Html.HiddenFor(m => Model.SkillList[i].SkillName)
+                                            <br />
+                                        }
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @Html.TextAreaFor(m => m.SkillIds, new { @class = "form-control", @readonly = "readonly" })
+                    <input type="button" value="Select skills" class="btn btn-default" id="selectSkillsButton" style="margin-top:3px" />
+                    @Html.ValidationMessageFor(m => m.SkillIds)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.HourlyRate, new { @class = "col-md-2 control-label" })
+                <div class="col-md-5">
+                    @Html.Kendo().NumericTextBoxFor(m => m.HourlyRate).HtmlAttributes(new { style = "width:100%;max-width:280px" })
+                    @*@Html.TextBoxFor(m => m.HourlyRate, new { @class = "form-control" })*@
+                    @Html.ValidationMessageFor(m => m.HourlyRate)
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 control-label">Choose working area</label>
+                <div class="col-md-10">
+                    <!--Bootstrap Modal for categories-->
+                    <div class="modal fade" id="categoryPopup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">Choose categories</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="accordion" id="accordionCategories">
+                                        @for (int categoryCount = 0; categoryCount < Model.JobCategoryList.Count; categoryCount++)
+                                        {
+                                            <div class="accordion-group">
+                                                <div class="accordion-heading">
+                                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#@categoryCount">
+                                                        @Model.JobCategoryList[categoryCount].CategoryName
+                                                    </a>
+                                                </div>
+                                                <div id="@categoryCount" class="accordion-body in collapse" style="height: auto;">
+                                                    <div class="accordion-inner checkboxList">
+                                                        @for (int subItemsCount = 0; subItemsCount < Model.JobCategoryList[categoryCount].JobSubCategoryList.Count; subItemsCount++)
+                                                        {
+                                                            @Html.CheckBoxFor(m => Model.JobCategoryList[categoryCount].JobSubCategoryList[subItemsCount].IsSelected, new { @checkboxText = Model.JobCategoryList[categoryCount].JobSubCategoryList[subItemsCount].SubCategoryName })
+                                                            @Html.LabelFor(m => Model.JobCategoryList[categoryCount].JobSubCategoryList[subItemsCount].IsSelected, Model.JobCategoryList[categoryCount].JobSubCategoryList[subItemsCount].SubCategoryName)
+                                                            @Html.HiddenFor(m => Model.JobCategoryList[categoryCount].JobSubCategoryList[subItemsCount].JobSubCategoryId)
+                                                            @Html.HiddenFor(m => Model.JobCategoryList[categoryCount].JobSubCategoryList[subItemsCount].SubCategoryName)
+                                                            <br />
+                                                        }
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        }
+                                    </div>
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @Html.TextAreaFor(m => m.JobSubCategoriesIds, new { @class = "form-control" })
+                    <input type="button" value="Choose categories" class="btn btn-default" id="chooseCategoriesButton" style="margin-top:3px" />
+                    @Html.ValidationMessageFor(m => m.JobSubCategoriesIds)
+                </div>
+            </div>
+        }
+        <div class="form-group">
+            @Html.LabelFor(m => m.ProfileTitle, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(m => m.ProfileTitle, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.ProfileTitle)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.LanguageIds, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                <!--Bootstrap Modal for languages-->
+                <div class="modal fade" id="languagePopup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                <h4 class="modal-title" id="myModalLabel">Select languages</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="checkboxList">
+                                    @for (int i = 0; i < Model.LanguageList.Count; i++)
+                                    {
+                                        @Html.CheckBoxFor(m => Model.LanguageList[i].IsSelected, new { @checkboxText = Model.LanguageList[i].LanguageName })
+                                        @Html.LabelFor(m => Model.LanguageList[i].IsSelected, Model.LanguageList[i].LanguageName)
+                                        @Html.HiddenFor(m => Model.LanguageList[i].LanguageId)
+                                        @Html.HiddenFor(m => Model.LanguageList[i].LanguageName)
+                                        <br />
+                                    }
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @Html.TextAreaFor(x => x.LanguageIds, new { @class = "form-control" })
+                <input type="button" value="Choose languages" class="btn btn-default" id="chooseLanguagesButton" style="margin-top:3px" />
+                @Html.ValidationMessageFor(m => m.LanguageIds)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("Address", new { @class = "col-md-2 control-label" })
+            <div class="col-md-5">
+                @Html.TextBoxFor(m => m.Addresss1, new { @class = "form-control", @placeholder = "Address" })
+                @Html.ValidationMessageFor(m => m.Addresss1)<br />
+                @Html.DropDownListFor(m => m.Country1, Model.CountriesList, "Select country", new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Country1)<br />
+                @Html.TextBoxFor(m => m.City1, new { @class = "form-control", @placeholder = "City" })
+                @Html.ValidationMessageFor(m => m.City1)
+
+            </div>
+        </div>
+        @*<div class="form-group">
+                @Html.Label("Address 2", new { @class = "col-md-2 control-label" })
+                <div class="col-md-5">
+                    @Html.TextBoxFor(m => m.Addresss2, new { @class = "form-control", @placeholder = "Address" })
+                    @Html.ValidationMessageFor(m => m.Addresss2)<br />
+                    @Html.DropDownListFor(m => m.Country2, Model.CountriesList, "Select country", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Country2)<br />
+                    @Html.TextBoxFor(m => m.City2, new { @class = "form-control", @placeholder = "City" })
+                    @Html.ValidationMessageFor(m => m.City2)
+                </div>
+            </div>*@
+        <div class="form-group">
+            @Html.LabelFor(m => m.CellPhone, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.CellPhone, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.CellPhone)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.WorkPhone, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.WorkPhone, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.WorkPhone)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.HomePhone, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.HomePhone, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.HomePhone)
+            </div>
+        </div>
+        if (Model.IsUserWorker)
+        {
+            <div class="form-group">
+            @for (int educationIndex = 0; educationIndex < Model.EducationList.Count(); educationIndex++)
+            {
+                @Html.Label("Education", new { @class = "col-md-2 control-label" })
+                <div class="col-md-10" style="padding-left:0">
+                    @Html.HiddenFor(m => Model.EducationList[educationIndex].EducationId)
+                    @Html.HiddenFor(m => Model.EducationList[educationIndex].DegreeTypeId)
+                    <div class="col-md-2">
+                        @Html.TextBoxFor(m => Model.EducationList[educationIndex].DegreeTypeName, new { @readonly = "readonly", @class = "form-control" })
+                    </div>
+                    <div class="col-md-2">
+                        @Html.TextBoxFor(m => Model.EducationList[educationIndex].DegreeName, new { @class = "form-control", placeholder = "Degree name" })
+                    </div>
+                    <div class="col-md-2">
+                        @*@Html.TextBoxFor(m => Model.EducationList[educationIndex].DegreeStartDate, new { @class = "form-control datePicker", placeholder = "From date" })*@
+                        @Html.Kendo().DatePickerFor(m => Model.EducationList[educationIndex].DegreeStartDate).Format("M/d/yyyy").HtmlAttributes(new { style = "width:100%;max-width:280px" })
+                    </div>
+                    <div class="col-md-2">
+                        @*@Html.TextBoxFor(m => Model.EducationList[educationIndex].DegreeEndDate, new { @class = "form-control datePicker", placeholder = "To date" })*@
+                        @Html.Kendo().DatePickerFor(m => Model.EducationList[educationIndex].DegreeEndDate).Format("M/d/yyyy").HtmlAttributes(new { style = "width:100%;max-width:280px" })
+                    </div>
+                    <div class="col-md-1">
+                        @Html.TextBoxFor(m => Model.EducationList[educationIndex].Percentage, new { @class = "form-control", placeholder = "%" })
+                    </div>
+                    <div class="col-md-1">
+                        @Html.HiddenFor(x => Model.EducationList[educationIndex].IsDeleted)
+                        <a class="btn btn-default deleteEducation"><span class="k-icon k-i-close"></span></a>
+                    </div>
+                </div>
+            }
+            </div>
+        }
+        if (Model.IsUserWorker)
+        {
+            <div class="form-group">
+                @Html.Label("Certifications", new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    @(Html.Kendo().Grid<PS.HireRocks.Model.CertificationViewModel>().Name("CertificationsGrid")
+                    .ToolBar(toolbar => toolbar.Create().Text("Add certification"))
+                    .DataSource(dataSource => dataSource.Ajax()
+                    .Read(read => read.Action("GetCertifications", "Account"))
+                    .Create(create => create.Action("AddCertification", "Account"))
+                    .Update(update => update.Action("UpdateCertification", "Account"))
+                    .Destroy(destroy => destroy.Action("DeleteCertification", "Account"))
+                    .Model(model => model.Id(m => m.CertificationId)))
+                    .Pageable().Scrollable().Mobile()
+                    .Columns(columns =>
+                    {
+                        columns.Bound(m => m.CertificationName).Width(150);
+                        columns.Bound(m => m.CertificationNumber).Width(150);
+                        columns.Bound(m => m.CertificationYear).Format("{0:M/d/yyyy}").Width(150);
+                        columns.Bound(m => m.IsDeleted).Width(80);
+                        columns.Command(commands => { commands.Edit(); }).Width(100);
+
+                    }
+                ))
+                </div>
+            </div>
+        }
+        <div class="form-group">
+            @Html.LabelFor(m => m.TimeZone, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(m => m.TimeZone, Model.TimeZoneList, "Select time zone", new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.TimeZone)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.ProfileImage, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @if (!string.IsNullOrEmpty(Model.ProfileImage))
+                {
+                    var profileImageBaseUrl = ConfigurationManager.AppSettings[WebsiteConstants.profileThumbnailImageFolder];
+                    @Html.Hidden("ProfilePicUrlHidden", profileImageBaseUrl + Model.ProfileImage)
+                    @Html.HiddenFor(m => m.ProfileImage, new { id = "ProfilePicNameHidden" })
+                    <div style="height:100px;width:130px">
+                        <img style="border:1px solid lightgray" height="100" width="100" id="profileImage" src="@profileImageBaseUrl@Model.ProfileImage">
+                        <span style="width:20px;height:100px;float:right">
+                            <span class="k-icon k-i-pencil" onclick="$('#ProfilePicFileUpload').trigger('click')" style="cursor:pointer"></span>
+                            <span class="k-icon k-i-cancel" style="cursor:pointer" onclick="RemoveProfilePic();"></span>
+                        </span>
+                    </div>
+                }
+                <div style="position:relative;display:@(!string.IsNullOrEmpty(Model.ProfileImage)?"none":"")">
+                    <a class='btn btn-default' href='javascript:;'>
+                        Browse pic..
+                        <input type="file" id="ProfilePicFileUpload" name="ProfileImage" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:" progid:dximagetransform.microsoft.alpha(opacity=0)";opacity:0;background-color:transparent;color:transparent;' size="40" onchange='FileUploadChange(this);'>
+                    </a> &nbsp;
+                    <span class='label label-info' id="upload-file-info"></span>
+                </div>
+                <span id="FileUploadMessage" style="display: none; color: #b94a48">Please Select jpg, png image only</span>
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.VideoIntroduction, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                <div style="position:relative">
+                    <a class='btn btn-default' href='javascript:;'>
+                        Browse video..
+                        <input type="file" id="IntroductionVideoUploader" name="introductionVideo" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:" progid:dximagetransform.microsoft.alpha(opacity=0)";opacity:0;background-color:transparent;color:transparent;' size="40" onchange='IntroductionVideoUploaderChange(this);'>
+                    </a> &nbsp;
+                    <span class='label label-info' id="upload-video-file-info"></span>
+                </div>
+                <div class="col-md-5" style="padding: 0; display: @(Model.VideoIntroduction!=null?"block":"none !important ");" id="videoControlDiv">
+                    <video src="@(Model.VideoIntroduction!=null?ConfigurationManager.AppSettings[WebsiteConstants.ServerAddress]+ConfigurationManager.AppSettings[WebsiteConstants.IntroductionVideoFolder]+Model.VideoIntroduction:"#")" id="ProfileIntroductionVideoPlayer" style="display: @(Model.VideoIntroduction!=null?"block":"none !important"); padding-top: 5px; width: 100%; height: auto" controls></video>
+                    <span style="position: absolute; top: 5px; right: 0; margin-top: 1px; background: white;">
+                        <span class="k-icon k-i-cancel" style="cursor:pointer;" onclick="RemoveIntroductionVideo();"></span>
+                    </span>
+                </div>
+                @Html.HiddenFor(m => m.VideoIntroduction)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.DateOfBirth, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.Kendo().DatePickerFor(m => m.DateOfBirth).Max(DateTime.Now.Date).Format("M/d/yyyy").HtmlAttributes(new { style = "width:100%;max-width:280px" })
+                @Html.ValidationMessageFor(m => m.DateOfBirth)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Gender, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10 gender">
+                @Html.RadioButtonFor(m => m.Gender, PS.HireRocks.Data.Helpers.GenderConstants.Male, new { @class = "k-radio", @id = "Male" }) <label style="font-weight:normal" class="k-radio-label" for="Male">@PS.HireRocks.Data.Helpers.GenderConstants.Male</label> &nbsp;&nbsp;
+                @Html.RadioButtonFor(m => m.Gender, PS.HireRocks.Data.Helpers.GenderConstants.Female, new { @class = "k-radio", @id = "Female" }) <label style="font-weight:normal" class="k-radio-label" for="Female">@PS.HireRocks.Data.Helpers.GenderConstants.Female</label>
+                @Html.ValidationMessageFor(m => m.Gender)
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="@(Model.UserProfileId.HasValue?"Update profile":"Save profile")" class="btn btn-primary" />
+            </div>
+        </div>
+    }
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+<script type="text/javascript">
+    $('#chooseCategoriesButton').click(function () {
+        $('#categoryPopup').modal();
+    });
+
+    $('#selectSkillsButton').click(function () {
+        $('#skillPopup').modal();
+    });
+
+    $('#chooseLanguagesButton').click(function () {
+        $('#languagePopup').modal();
+    });
+
+    $(':checkbox').change(function () {
+        var valuesArray = [];
+        $(this).closest('.modal-dialog').find('input:checked').each(function () {
+            valuesArray.push($(this).attr('checkboxText'));
+        })
+        $(this).closest('.col-md-10').find('textarea').val(valuesArray.join(', '));
+    });
+
+    function ValidateProfileImage(fileName) {
+        debugger;
+        if (fileName == "")
+            return true;
+        var ext = fileName.split('.').pop().toLowerCase();
+        //var ext = fileUpload.substring(fileUpload.lastIndexOf('.') + 1).toLowerCase();
+        if (ext == "jpg" || ext == "jpeg" || ext == "png") {
+            $('#FileUploadMessage').hide();
+            return true;
+        }
+        else {
+            $('#ProfilePicFileUpload').val('');
+            $('#FileUploadMessage').show();
+            return false;
+        }
+    };
+
+    $('.deleteEducation').click(function () {
+        var div = $(this).closest('div');
+        var span = div.find("span")
+        if (span.hasClass("k-i-close")) {
+            span.removeClass("k-i-close").addClass("k-i-undo");
+            div.find("input:hidden:first").val('True');
+            return;
+        }
+        if (span.hasClass("k-i-undo")) {
+            span.removeClass("k-i-undo").addClass("k-i-close");
+            div.find("input:hidden:first").val('False');
+            return;
+        }
+    });
+
+    function FileUploadChange(input) {
+        var files = $(input)[0].files;
+        if (files.length > 0) {
+            $("#upload-file-info").html(files[0].name);
+            if (ValidateProfileImage(files[0].name))
+                PreviewProfileImage(files)
+        }
+        else {
+            $("#upload-file-info").html('');
+            $(input).val('');
+            $('#profileImage').attr('src', $('#ProfilePicUrlHidden').val());
+        }
+    }
+
+    function RemoveProfilePic() {
+        debugger;
+        var sex = $(".gender").find(":checked").val();
+        $('#ProfilePicFileUpload').val('');
+        $('#ProfilePicNameHidden').val('');
+        if (sex == "Male" || sex == '')
+            $('#profileImage').attr('src', '@(ConfigurationManager.AppSettings[WebsiteConstants.profileThumbnailImageFolder]+WebsiteConstants.DefaultProfilePicMale)')
+        else
+            $('#profileImage').attr('src', '@(ConfigurationManager.AppSettings[WebsiteConstants.profileThumbnailImageFolder]+WebsiteConstants.DefaultProfilePicFemale)')
+    }
+
+    function PreviewProfileImage(files) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            var image = $('#profileImage')
+            image.attr('src', e.target.result);
+        }
+        reader.readAsDataURL(files[0]);
+    }
+
+    function IntroductionVideoUploaderChange(e) {
+        if (e.files.length > 0) {
+            $('#ProfileIntroductionVideoPlayer').show().attr('src', window.URL.createObjectURL(e.files[0]));
+            $('#videoControlDiv').show();
+            $('#upload-video-file-info').html(e.files[0].name);
+        }
+        else {
+            $('#ProfileIntroductionVideoPlayer').hide().attr('src', '');
+            $('#upload-video-file-info').html('');
+            $('#videoControlDiv').hide();
+        }
+    }
+
+    //register custom validation rules
+    (function ($, kendo) {
+        $.extend(true, kendo.ui.validator, {
+            rules: { // custom rules
+                datevalidation: function (input, params) {
+                    //check for the rule attribute
+                    if (input.is("[name=CertificationYear]")) {
+                        return /^(?:(?:(?:0?[13578]|1[02])(\/|-|\.)31)\1|(?:(?:0?[1,3-9]|1[0-2])(\/|-|\.)(?:29|30)\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:0?2(\/|-|\.)29\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:(?:0?[1-9])|(?:1[0-2]))(\/|-|\.)(?:0?[1-9]|1\d|2[0-8])\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$/.test(input.val());
+                    }
+                    return true;
+                }
+            },
+            messages: { //custom rules messages
+                datevalidation: function (input) {
+                    // return the message text
+                    return "Enter valid certification date";
+                }
+            }
+        });
+    })(jQuery, kendo);
+
+    function RemoveIntroductionVideo() {
+        $('#ProfileIntroductionVideoPlayer').attr('src', '');
+        $('#VideoIntroduction').val('');
+        $('#videoControlDiv').hide();
+        $('#upload-video-file-info').html('');
+        $('#IntroductionVideoUploader').val('');
+    }
+</script>
+
+<style>
+    .accordion-group {
+        margin-bottom: 2px;
+        border: 1px solid #e5e5e5;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+    }
+
+    .accordion-heading {
+        border-bottom: 1px solid #e5e5e5;
+        height: 25px;
+        background: #e5e5e5;
+        padding: 2px 10px;
+    }
+
+    .accordion-inner {
+        padding: 15px 10px;
+    }
+</style>

@@ -1,0 +1,101 @@
+﻿
+@{
+    ViewBag.Title = "ClientReport";
+}
+
+<h2>ClientReport</h2>
+<div class="row">
+    @(Html.Kendo().DropDownList()
+              .Name("DateRangeTypeDropdown")
+              .SelectedIndex(0)
+              .DataTextField("Text")
+              .DataValueField("Value")
+              .HtmlAttributes(new { style = "width:100px;" })
+              .Events(events => events.Change("DateRangeTypeDropdownChange"))
+              .BindTo(new List<SelectListItem> {
+                  new SelectListItem { Text = "Day",Value="Day" },
+                  new SelectListItem { Text = "Week",Value="Week" },
+                  new SelectListItem { Text = "Month",Value="Month" },
+                  new SelectListItem { Text = "Year",Value="Year" },
+                  new SelectListItem { Text = "Custom",Value="Custom" }}))
+
+    <input type="text" id="FromDate" class="form-control dateTimePicker" style="display:inline-block;" />
+    <input type="text" id="ToDate" class="form-control dateTimePicker" style="display:none;" />
+
+    @(Html.Kendo().DropDownList()
+              .Name("ReportTypeDropdown")
+              .SelectedIndex(0)
+              .DataTextField("Text")
+              .DataValueField("Value")
+              .HtmlAttributes(new { style = "width:15s0px;" })
+              .BindTo(new List<SelectListItem> {
+                  new SelectListItem { Text = "Summary",Value="Summary" },
+                  new SelectListItem { Text = "TimeLog",Value="TimeLog" }}))
+</div>
+<div class="row">
+    <a class='k-button k-button-icontext' onclick='DownloadReportButtonClick(); return false;'>DownloadReport</a>
+    <a class='k-button k-button-icontext' onclick='ViewReportButtonClick(); return false;'>ViewReport</a>
+</div>
+
+
+<script type="text/javascript">
+    var _fromDate = null;
+    var _toDate = null;
+    $(document).ready(function () { $('.dateTimePicker').datepicker().val(moment().format("MM/DD/YYYY")).trigger('change'); });
+
+    function DateRangeTypeDropdownChange(e) {
+        var currentDate = moment().format("MM/DD/YYYY");
+        var toDate = $('#ToDate');
+        var fromDate = $('#FromDate');
+        if (e.sender.value() == 'Custom') {
+            toDate.css({ 'display': 'inline-block', 'maxWidth': 160 });
+            fromDate.css('maxWidth', 160)
+            fromDate.val(currentDate).trigger('change');
+            toDate.val(currentDate).trigger('change');
+        }
+        else {
+            toDate.hide();
+            fromDate.css('maxWidth', 280);
+            fromDate.val(currentDate).trigger('change');
+        }
+    }
+
+    $('#FromDate').change(function (e) {
+        var rangeType = $('#DateRangeTypeDropdown').val();
+        var value = $(this).val();
+        var fromDate = moment(value).startOf(rangeType).format("MM/DD/YYYY");
+        var toDate = moment(value).endOf(rangeType).format("MM/DD/YYYY");
+        if (rangeType != 'Custom') {
+            if (fromDate != 'Invalid date') {
+                _fromDate = moment(value).startOf(rangeType).format("MM/DD/YYYY");
+                _toDate = moment(value).endOf(rangeType).format("MM/DD/YYYY");
+                $('#FromDate').val(_fromDate + " To " + _toDate);
+            }
+        }
+        else
+            _fromDate = fromDate;
+        $('.datepicker').hide();
+        if (fromDate != 'Invalid date') RebindCaptureListView();
+    });
+
+    $('#ToDate').change(function () {
+        _toDate = $(this).val();
+        $('.datepicker').hide();
+        if (_toDate != 'Invalid date') RebindCaptureListView();
+    });
+
+    function DownloadReportButtonClick()
+    {
+        var reporttype = $('#ReportTypeDropdown').val();
+        var type = true;
+        window.location = "/Report/GetClientReport?reporttype=" + reporttype + "&fromdate=" + _fromDate + "&todate=" + _toDate + "&type=" + type;
+    }
+
+    function ViewReportButtonClick()
+    {
+        var reporttype = $('#ReportTypeDropdown').val();
+        var type = false;
+        var url = "/Report/GetClientReport?reporttype=" + reporttype + "&fromdate=" + _fromDate + "&todate=" + _toDate + "&type=" + type;
+        window.open(url, '_blank');
+    }
+</script>

@@ -1,0 +1,382 @@
+﻿@using System.Configuration
+@using PS.HireRocks.Web.Helpers
+@using PS.HireRocks.Data.Helpers
+@model PS.HireRocks.Model.MessageViewModel
+@{
+    ViewBag.Title = "My Messages";
+    Layout = "~/Views/Shared/_HomePageView.cshtml";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="chat mytop-7 bgColor">
+    <h4 id="PageHeading">Messages</h4>
+    <div id="MessageDiv">
+        @if (User.IsInRole(RoleConstants.Client))
+        {
+            <div class="row" style="margin-left:0;margin-right:0">
+                <div class="col-md-3" style="border:1px solid lightgray">
+                    @(Html.Kendo().DropDownListFor(m => m.JobId)
+                        .Name("JobsDropdownList")
+                        .DataTextField("Text")
+                        .DataValueField("Value")
+                        .DataSource(datasource => datasource.Read(read => read.Action("GetJobList", "Message")))
+                        .OptionLabel("Select job")
+                        .SelectedIndex(1)
+                        .HtmlAttributes(new { style = "margin-top:10px;width:100%" })
+                        .Events(events => events.DataBound("JobsDropdownDataBound")))<br />
+
+                    @Html.Label("Select worker", new { style = "margin-top:10px" })
+                    <div>
+                        @(Html.Kendo().ListView<PS.HireRocks.Model.GetWorkerViewModel>()
+                        .Name("WorkersListView")
+                        .TagName("WorkersView")
+                        .ClientTemplateId("WorkerListViewTemplate")
+                        .DataSource(datasource => datasource.Read(read => read.Action("GetWorkersList", "Message").Data("OnWorkersListViewBeforeReadStart")).Model(model => model.Id(m => m.WorkerId)))
+                        .Selectable(selection => selection.Mode(ListViewSelectionMode.Single))
+                        .Events(events => events.Change("OnWorkerListViewChange").DataBound("WorkersListViewDataBound"))
+                        .AutoBind(false)
+                        .HtmlAttributes(new { style = "display:block" }))
+                        @Html.ActionLink("Find worker", "FindWorker", "FindAndHireWorker", null, new { @class = "btn btn-default", style = "margin-top:10px;margin-bottom:10px;width:100%" })
+                    </div>
+                </div>
+                <div class="col-md-9" style="padding: 0; border: 1px solid lightgray">
+                    <div id="MessageContainerDiv" style="overflow-y: auto; height: 450px;">
+                        @(Html.Kendo().ListView<PS.HireRocks.Model.MessageViewModel>()
+                                      .Name("MessageList")
+                                      .TagName("MessageView")
+                                      .ClientTemplateId("MessageListViewTemplate")
+                                      .DataSource(datasource => datasource.Read(read => read.Action("GetMessageList", "Message").Data("OnMessagesListBeforeReadStart")).Model(model => model.Id(m => m.MessageId)))
+                                      .Events(events => events.DataBound("ClientMessageListDataBound"))
+                                      .AutoBind(false))
+                    </div>
+                    <div class="col-md-12">
+                        <div class="col-md-10" style="padding:5px">
+                            @Html.TextAreaFor(m => m.MessageText, new { @style = "width:100%;max-width:100%;padding: 0px ;border: 1px solid lightblue;", @class = "form-control", placeholder = "Type a message here" })
+                        </div>
+                        <div class="col-md-2" style="padding:5px"><input onclick="SendMessageToWorker();" type="button" value="Send" class="btn btn-primary" /></div>
+                    </div>
+                </div>
+            </div>
+        }
+        @if (User.IsInRole(RoleConstants.Worker))
+        {
+            <div class="row" style="margin-left:0;margin-right:0">
+                <div class="col-md-3" style="border:1px solid lightgray">
+                    @(Html.Kendo().DropDownListFor(m => m.JobId)
+                                .Name("WorkerJobsDropdownList")
+                                .DataTextField("Text")
+                                .DataValueField("Value")
+                                .DataSource(datasource => datasource.Read(read => read.Action("GetWorkerJobList", "Message")))
+                                .OptionLabel("Select job")
+                                .SelectedIndex(1)
+                                .Events(events => events.DataBound("WorkerJobsDropdownListDataBound"))
+                                .HtmlAttributes(new { style = "margin-top:10px;width:100%" }))<br /><br />
+
+                    @(Html.Kendo().ListView<PS.HireRocks.Model.GetWorkerViewModel>()
+                                .Name("ClientListView")
+                                .TagName("WorkersView")
+                                .ClientTemplateId("ClientListViewTemplate")
+                                .DataSource(datasource => datasource.Read(read => read.Action("GetClientInfo", "Message").Data("ClientListViewBeforeReadStart")).Model(model => model.Id(m => m.WorkerId)))
+                                .Events(events => events.DataBound("ClientListViewDataBound"))
+                                .AutoBind(false)
+                                .HtmlAttributes(new { style = "display:block;" }))
+                </div>
+                <div class="col-md-9" style="padding: 0; border: 1px solid lightgray">
+                    <div id="MessageContainerDiv" style="overflow-y: auto; height: 450px;">
+                        @(Html.Kendo().ListView<PS.HireRocks.Model.MessageViewModel>()
+                              .Name("WorkerMessageList")
+                              .TagName("MessageView")
+                              .ClientTemplateId("MessageListViewTemplate")
+                              .HtmlAttributes(new { border = 0 })
+                              .DataSource(datasource => datasource.Read(read => read.Action("GetWorkerMessageList", "Message").Data("OnWorkerMessageListBeforeReadStart")).Model(model => model.Id(m => m.MessageId)))
+                              .AutoBind(false)
+                              .Events(events => events.DataBound("WorkerMessageListDataBound")))
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="col-lg-10" style="padding:5px">
+                            @Html.TextAreaFor(m => m.MessageText, new { @style = "width:100%;max-width:100%;padding: 0px ;border: 1px solid lightblue;", @class = "form-control", placeholder = "Type a message here" })
+                        </div>
+                        <div class="col-lg-2" style="padding:5px"><input onclick="SendMessageToClient();" type="button" value="Send" class="btn btn-primary" /></div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <script type="text/x-kendo-tmpl" id="WorkerListViewTemplate">
+        <div>
+            <div id="SelectList" style="display:inline-table ;vertical-align:-webkit-baseline-middle">
+                <div style="display: inline-block; vertical-align: top;padding:2px">
+                    <img src='@ConfigurationManager.AppSettings[WebsiteConstants.profileThumbnailImageFolder]/#:ProfileImage#' style="height:60px;height:60px" />
+                </div>
+                <div style="display: inline-block; vertical-align: top;padding-left:2px">
+                    <label style="font-weight:bold">#:FirstName# </label><br />
+                    <label style="font-weight:normal;word-wrap:break-word;font-size:12px">#:Email#</label><br />
+                    <a href="" class="btn btn-default" style="display:${ IsHired == false? 'block' : 'none'};padding:5px;padding-top:0;padding-bottom:0;width:30px" onclick="HireWorkerClick(this); return false;">Hire</a>
+                </div>
+            </div>
+            <hr style="margin-top:0px;margin-bottom:0" />
+        </div>
+    </script>
+    <script type="text/x-kendo-tmpl" id="ClientListViewTemplate">
+        <div>
+            <div style="display:inline-table ;vertical-align:-webkit-baseline-middle">
+                <div style="display: inline-block; vertical-align: top;padding:2px">
+                    <img src='@ConfigurationManager.AppSettings[WebsiteConstants.profileThumbnailImageFolder]/#:ProfileImage#' style="height:60px;height:60px" />
+                </div>
+                <div style="display: inline-block; vertical-align: top;padding-left:2px">
+                    <label id="GetClientName" style="font-weight:bold">#:FirstName# </label><br />
+                    <label style="font-weight:normal;word-wrap:break-word;font-size:12px">#:Email#</label><br />
+                </div>
+            </div>
+            <hr style="margin-top:0px;margin-bottom:0" />
+        </div>
+    </script>
+    <script type="text/x-kendo-tmpl" id="MessageListViewTemplate">
+        <div class=#:MessageTemplateClassName# data-init="attachToScroller">
+            <label style="color:blue">#:MessageUserName#</label><br />
+            <div style=" background: aliceblue; border: #:MessageBorder#" class="messageTextDiv">
+                <label style="font-weight: normal">#:MessageText#</label><br />
+                <label style="font-weight: normal; color: lightblue;font-size: x-small">#:DateTime#</label>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/javascript">
+    function JobsDropdownDataBound(e) {
+        var jobsDropdown = $('#JobsDropdownList')
+        if (jobsDropdown.data("kendoDropDownList").dataSource.data().length > 0) {
+            jobsDropdown.data("kendoDropDownList").select(1);
+            jobsDropdown.trigger('change');
+        }
+    }
+
+    $('#JobsDropdownList').change(function () {
+        $("#MessageList").data("kendoListView").dataSource.data([]);
+        $("#WorkersListView").data("kendoListView").dataSource.data([]);
+        if ($("#JobsDropdownList").data("kendoDropDownList").dataItem().Value > 0)
+            $("#WorkersListView").data("kendoListView").dataSource.read();
+    });
+
+    function WorkersListViewDataBound() {
+        var workerId = '@Request.QueryString["workerId"]';
+        var workersListView = $("#WorkersListView").data("kendoListView");
+        var index = null;
+        if (workerId != '')
+            $.each(workersListView.dataSource.view(), function (itemIndex, value) { if (value.WorkerId == workerId) { index = itemIndex; return false; } });
+        if (index == null) workersListView.select(workersListView.element.children().first());
+        else workersListView.select(workersListView.element.children()[index]);
+    }
+
+    function OnMessagesListBeforeReadStart() {
+        var workerList = $("#WorkersListView").data("kendoListView");
+        var workerListData = workerList.dataSource.view()[$(workerList.select()).index()];
+        return {
+            jobId: $("#JobsDropdownList").data("kendoDropDownList").dataItem().Value,
+            workerId: workerListData.WorkerId,
+            workerName: workerListData.FirstName
+        }
+    }
+
+    function OnWorkersListViewBeforeReadStart() {
+        var JobDropDown = $("#JobsDropdownList").data("kendoDropDownList").dataItem();
+        if (JobDropDown != undefined) return { jobId: JobDropDown.Value, workerId: '@Request.QueryString["workerId"]' };
+    }
+
+    function OnWorkerListViewChange() {
+        $("#MessageList").data("kendoListView").dataSource.read();
+    }
+
+    function SendMessageToWorker() {
+        var workerList = $("#WorkersListView").data("kendoListView");
+        var messageText = $("#MessageText").val();
+        if (messageText == '')
+            return;
+        var workerListData = workerList.dataSource.view()[$(workerList.select()).index()].WorkerId;
+        var jsonData = JSON.stringify({
+            model: {
+                JobId: $("#JobsDropdownList").data("kendoDropDownList").dataItem().Value,
+                MessageToUserId: workerList.dataSource.view()[$(workerList.select()).index()].WorkerId,
+                MessageText: messageText
+            }
+        });
+        jQuery.ajax({
+            type: "POST",
+            url: '@Url.Action("InsertMessage", "Message")',
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            data: jsonData,
+            success: function (data) {
+                if (data.result == true) {
+                    var workerList = $("#WorkersListView").data("kendoListView");
+                    $("#MessageList").data("kendoListView").dataSource.read();
+                    messageHub.server.sendNewMessageNotification(workerList.dataSource.view()[$(workerList.select()).index()].UserName);
+                    $("#MessageText").val('');
+                }
+            },
+            error: function (errMsg) {
+                alert(errMsg);
+            }
+        });
+    }
+
+    function WorkerJobsDropdownListDataBound(e) {
+        var jobsDropdown = $('#WorkerJobsDropdownList')
+        if (jobsDropdown.data("kendoDropDownList").dataSource.data().length > 0) {
+            jobsDropdown.data("kendoDropDownList").select(1);
+            jobsDropdown.trigger('change');
+        }
+    }
+
+
+    $('#WorkerJobsDropdownList').change(function () {
+        $("#WorkerMessageList").data("kendoListView").dataSource.data([]);
+        var clientListView = $("#ClientListView").data("kendoListView").dataSource;
+        clientListView.data([]);
+        if ($("#WorkerJobsDropdownList").data("kendoDropDownList").dataItem().Value > 0)
+            clientListView.read();
+    });
+
+    function ClientListViewBeforeReadStart() {
+        return { jobId: $("#WorkerJobsDropdownList").data("kendoDropDownList").dataItem().Value };
+    }
+
+    function ClientListViewDataBound() {
+        $("#WorkerMessageList").data("kendoListView").dataSource.read();
+    }
+
+    function OnWorkerMessageListBeforeReadStart(e) {
+        return {
+            jobId: $("#WorkerJobsDropdownList").data("kendoDropDownList").dataItem().Value,
+            clientName: $("#GetClientName").text()
+        }
+    }
+
+    function SendMessageToClient() {
+        var clientList = $("#ClientListView").data("kendoListView");
+        var jsonData = JSON.stringify({
+            model: {
+                JobId: $("#WorkerJobsDropdownList").data("kendoDropDownList").dataItem().Value,
+                MessageToUserId: clientList.dataSource.view()[0].ClientId,
+                MessageText: $("#MessageText").val()
+            }
+        });
+        jQuery.ajax({
+            type: "POST",
+            url: '@Url.Action("InsertMessage", "Message")',
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            data: jsonData,
+            success: function (data) {
+                if (data.result == true) {
+                    var clientList = $("#ClientListView").data("kendoListView");
+                    $("#WorkerMessageList").data("kendoListView").dataSource.read();
+                    var workerList = $("#WorkersListView").data("kendoListView");
+                    messageHub.server.sendNewMessageNotification(clientList.dataSource.view()[0].UserName);
+                    $("#MessageText").val('');
+                }
+            },
+            error: function (errMsg) {
+                alert(errMsg);
+            }
+        });
+    }
+
+    function HireWorkerClick(button) {
+        window.location = "/FindAndHireWorker/HireWorker?workerId=" + $("#WorkersListView").data("kendoListView").dataSource.view()[$($(button).closest("[role='option']")).index()].WorkerId;
+        return false;
+    }
+
+    function WorkerMessageListDataBound() {
+        var listView = $('#MessageContainerDiv');
+        listView.scrollTop(listView[0].scrollHeight);
+        setTimeout(function () {
+            $.ajax({
+                url: '@Url.Action("UpdateMessageViewedStatus", "Message")',
+                type: "POST",
+                data: { jobId: $("#WorkerJobsDropdownList").data("kendoDropDownList").dataItem().Value },
+                success: function () {
+                    GetUnreadMessageCount();
+                    $('.messageTextDiv').css({ border: 0 })
+                }
+            })
+        }, 5000)
+    }
+
+    function ClientMessageListDataBound() {
+        var listView = $('#MessageContainerDiv');
+        listView.scrollTop(listView[0].scrollHeight);
+        setTimeout(function () {
+            $.ajax({
+                url: '@Url.Action("UpdateMessageViewedStatus", "Message")',
+                type: "POST",
+                data: {jobId: $("#JobsDropdownList").data("kendoDropDownList").dataItem().Value},
+                success: function () {
+                    GetUnreadMessageCount();
+                    $('.messageTextDiv').css({border:0})
+                }
+            })
+        },5000)
+    }
+
+    function GetUnreadMessageCount() {
+        $.ajax({
+            url: '@Url.Action("GetUnreadMessageCount", "Message")',
+            type: "GET",
+            success: function (data) {
+                var messageCount = parseInt(data.UnreadMessagesCount);
+                if (messageCount > 0)
+                    $('.messagesCount').html(messageCount).show();
+                else
+                    $('.messagesCount').html(0).hide();
+                $('.messageTextDiv').css({ border: 0 })
+            }
+        });
+    }
+    </script>
+
+
+    <style>
+        .Left {
+            float: left;
+            width: 70%;
+            padding: 7px;
+            margin-left: 5px;
+            margin-right: 5px;
+            margin-top: 2px;
+            margin-bottom: 2px;
+        }
+
+        .Right {
+            float: right;
+            width: 70%;
+            padding: 7px;
+            margin-left: 5px;
+            margin-right: 5px;
+            margin-top: 2px;
+            margin-bottom: 2px;
+        }
+    </style>
+
+    </section>>

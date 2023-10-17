@@ -1,0 +1,206 @@
+﻿<link href="~/Content/rateit.css" rel="stylesheet" />
+@model PS.HireRocks.Model.FindJobScreenViewModel
+@using PS.HireRocks.Model
+@{
+    ViewBag.Title = "Find Jobs";
+}
+<h4>Find jobs</h4>
+<hr />
+@{
+    var parameter = Request.QueryString["text"];
+
+}
+@if (Model != null)
+{
+    <div class="form-group row">
+        <div class="col-md-10">
+            @Html.HiddenFor(m => m.WorkerRate, new { @id = "WorkerRateHidden" })
+            @Html.TextBoxFor(m => m.FindJobFilters.JobName, new { id = "selector", @class = "form-control placeholder textboxfindjob", style = "display:inline" })
+            @Html.ValidationMessageFor(m => m.FindJobFilters.JobName)
+        </div>
+    </div>
+    <div class="row" style="margin-left:0;margin-right:0">
+        <div id="FiltersDiv" class="col-md-3" style="border:1px solid lightgray;padding-bottom:15px">
+            <h5>Select filters</h5>
+            @Html.LabelFor(m => m.FindJobFilters.JobCategoryId)
+            @Html.DropDownListFor(m => m.FindJobFilters.JobCategoryId, Model.JobCategoriesList, "Job category", new { @class = "form-control", style = "max-width:100%" })
+            @Html.LabelFor(m => m.FindJobFilters.JobSubCategoriesIds)
+            @(Html.Kendo().MultiSelect()
+            .Name("FindJobFilters_JobSubCategoriesIds")
+            .DataTextField("SubCategoryName")
+            .DataValueField("JobSubCategoryId")
+            .Placeholder("Job sub categories")
+            .AutoBind(false)
+            )
+            @Html.LabelFor(m => m.FindJobFilters.JobTypeId)
+            @Html.DropDownListFor(m => m.FindJobFilters.JobTypeId, Model.JobTypeList, "Job type", new { @class = "form-control", style = "max-width:100%" })
+            @Html.LabelFor(m => m.FindJobFilters.ExperienceLevelId)
+            @Html.DropDownListFor(m => m.FindJobFilters.ExperienceLevelId, Model.ExperienceLevelList, "Experience level", new { @class = "form-control", style = "max-width:100%" })
+        </div>
+        <div class="col-md-9" style="padding:0">
+            @(Html.Kendo().ListView<ViewJobViewModel>()
+            .Name("JobsList")
+            .TagName("div")
+            .ClientTemplateId("JobsListTemplate")
+            .DataSource(dataSource =>
+            {
+                dataSource.Read(read => read.Action("GetJobsList", "FindAndApplyJob").Data("GetFilterData"));
+                dataSource.PageSize(10);
+                dataSource.Model(model => model.Id(m => m.JobId));
+            })
+            .Pageable(pageable => pageable.ButtonCount(5).Enabled(true).PreviousNext(true).Refresh(true))
+            )
+        </div>
+        <div id="ViewJobPopup"></div>
+        <script type="text/x-kendo-tmpl" id="JobsListTemplate">
+            <div style="padding-left:10px;padding-right:10px">
+                <h3 data-idtest="1" style="color: \\#428bca">#:JobTitle#</h3>
+                <h5>#:JobDescription#</h5>
+                <span style="display: block; font-size: small; color: \\#428bca;">#:JobType#, #:JobCategory# > #:JobSubCategory#, Experience req.: #:ExperienceLevel#</span><br />
+                <input type="button" class="btn btn-default viewJob" value="View job details" onclick="ViewJob(this)" />
+                # if(ApplyButtonText=="Apply"){#<input type="submit" class="btn btn-primary applyJob" id="applyJob" onclick="applyJob(this)" value="#:ApplyButtonText#" />#} else {##:ApplyButtonText##}#
+                <hr />
+            </div>
+        </script>
+        <!--Bootstrap Modal for ApplyJob-->
+        <div class="modal fade" id="ApplyJobPopup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog" style="width:900px">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel"></h4>
+                    </div>
+                    <div class="modal-body" id="applyJobPopupBody">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+<script type="text/javascript">
+    function GetFilterData() {
+        return {
+            findJobFilters: {
+                JobName: $('.textboxfindjob').val(),
+                JobCategoryId: $('#FindJobFilters_JobCategoryId').val(),
+                JobSubCategoriesList: $('#FindJobFilters_JobSubCategoriesIds').data('kendoMultiSelect').value(),
+                JobTypeId: $('#FindJobFilters_JobTypeId').val(),
+                ExperienceLevelId: $('#FindJobFilters_ExperienceLevelId').val()
+            }
+        };
+    }
+
+    $('#FindJobFilters_JobCategoryId').change(function (e) {
+        $.ajax({
+            url: '@Url.Action("GetJobSubCategories")',
+            type: "get",
+            data: { jobCategoryId: $(this).val() },
+            success: function (data) {
+                if (data.result) {
+                    $('#FindJobFilters_JobSubCategoriesIds').data("kendoMultiSelect").dataSource.read();
+                    $('#FindJobFilters_JobSubCategoriesIds').data("kendoMultiSelect").value([]);
+                    $.each(data.data, function (index, value) {
+                        var result = $("#FindJobFilters_JobSubCategoriesIds").data("kendoMultiSelect").dataSource.add({ JobSubCategoryId: value.JobSubCategoryId, SubCategoryName: value.SubCategoryName });
+                    });
+                }
+                RebindJobsList();
+            }
+        });
+    });
+
+
+    $('#FindJobFilters_JobSubCategoriesIds,#FindJobFilters_JobTypeId,#FindJobFilters_ExperienceLevelId,#FindJobFilters_JobName').change(function (e) {
+        RebindJobsList();
+    });
+    $('.textboxfindjob').keypress(function (event) {
+       RebindJobsList();
+    });
+
+    $('#FindJobFilters_JobName').keypress(function (e) {
+        RebindJobsList();
+    });
+
+    function RebindJobsList() {
+        $("#JobsList").data("kendoListView").dataSource.read();
+    }
+
+    function applyJob(e) {
+        $('#applyJobPopupBody').load('@Url.Action("ApplyForJob","FindAndApplyJob")', null, function () {
+            var jobList = $("#JobsList").data("kendoListView");
+            var item = $(e).closest("[role='option']");
+            var data = jobList.dataSource.getByUid(item.data("uid"));
+            //$('#applyJobForm')[0].reset();
+            //$('#calculatedJobRate').val(CalculateFees($('#Rate').val()));
+            $('#ClientUserName').val(data.ClientUserName)
+            $('.validation-summary-errors').find('li').remove();
+            $('#ApplyJobPopup').modal().find('.modal-title').text(data.JobTitle);
+            $('#JobName').text(data.JobTitle);
+            $('#JobNameHidden').val(data.JobTitle);
+            $("#JobId").val(data.JobId)
+            $("#JobTypeName").val(data.JobType)
+            $("#JobTypeId").val(data.JobTypeId)
+            $("#LabelJobTypeName").text(data.JobType);
+            if (data.JobTypeId == '@((long)PS.HireRocks.Data.Helpers.JobTypeEnum.Hourly)') {
+                var hourlyRate = $("#WorkerRateHidden").val();
+                $("#Rate").data("kendoNumericTextBox").value(hourlyRate);
+            }
+            if (data.JobTypeId == '@((long)PS.HireRocks.Data.Helpers.JobTypeEnum.Fixed)') {
+                $("#Rate").data("kendoNumericTextBox").value(data.FixedRate);
+            }
+            $('#calculatedJobRate').val(CalculateFees($('#Rate').val()));
+            $('#applyJobForm').ajaxForm({
+                success: function (result) {
+                    $('#applyJobPopupBody').html(result);
+                    $('#calculatedJobRate').val(CalculateFees($('#Rate').val()));
+                    //$("#CoverLetter").data("kendoEditor").value('');
+                    var validationSummary = $(result).find('.validation-summary-errors');
+                    if (validationSummary.length == 0) {
+                        messageHub.server.sendNewNotification($('#ClientUserName').val());
+                        RebindJobsList();
+                        $('#closeApplyJobButton').trigger('click');
+                    }
+                }
+            });
+        });
+    }
+    function ViewJob(e) {
+        $('#ViewJobPopup').load('/Job/ViewJob/', { jobId: $("#JobsList").data("kendoListView").dataSource.getByUid($(e).closest("[role='option']").data("uid")).JobId }, function () { $('#viewJobPopup').modal(); });
+    };
+</script>
+<script>
+    $(document).ready(function () {
+        function GetParameterValues(param) {
+            var url = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+             for (var i = 0; i < url.length; i++) {
+                var urlparam = url[i].split('=');
+                if (urlparam[0] == param) {
+                    return decodeURIComponent(urlparam[1]);
+                }
+            }
+        }
+        var name = GetParameterValues('text');
+         if (name == "") {
+            $(".placeholder").attr("placeholder", "Find Job");
+        }
+        else {
+            $(".placeholder").attr("placeholder", "Find Job");
+            $(".placeholder").val(name);
+            $(".placeholder").trigger("keypress");
+        }
+       
+    });
+</script>
+
+<style>
+    #ViewJobPopup .modal-dialog {
+        width: 900px;
+        /*max-height: 1000px; /* your width */
+    }
+</style>
+
+

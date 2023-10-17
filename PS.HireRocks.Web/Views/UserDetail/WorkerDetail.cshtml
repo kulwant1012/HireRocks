@@ -1,0 +1,129 @@
+﻿@model PS.HireRocks.Model.GetUserByIdViewModel
+@using System.Configuration
+@using PS.HireRocks.Web.Helpers
+@using PS.HireRocks.Data.Helpers
+@{
+    ViewBag.Title = "WorkerDetail";
+}
+<link href="~/Content/rateit.css" rel="stylesheet" />
+<script src="~/Scripts/jquery.rateit.min.js"></script>
+<h4>Worker Detail</h4>
+
+<div class="row" style="margin-left: 0; margin-right: 0; border: 1px solid lightgray">
+    @Html.HiddenFor(m => m.TotalTimeBurned, new { id = "timeBurned" })
+        <div class="col-md-8" >
+            <div class="row" style="padding-top:5px;">
+                <div class="col-md-1"><img src="@ConfigurationManager.AppSettings[WebsiteConstants.profileThumbnailImageFolder]@Model.ProfileImage" style='height:80px;width:80px'></div>
+                <div class="col-md-8" style="padding-top:15px;padding-left:35px;"><a href="~/UserInformation/UserInformation">@Html.Label(@Model.FirstName, null, new { style = "color:#428bca;font-weight:inherit;font-size:24px;" }) @Html.Label(@Model.LastName, null, new { style = "color:#428bca;font-weight:inherit;font-size:24px;" })</a></div>
+            </div>
+            <hr />
+            <div class="row" style="margin-left:25px;margin-top:-15px;margin-bottom:-15px;">
+               @Html.Label(@Model.ProfileTitle, new { style = "font-weight:initial" })
+            </div><hr />
+            <div class="row" style="margin-left:25px">
+                    @Html.Label("Country:", new { style = "font-weight:inherit;color:darkgray;" })@Html.Label(@Model.Country, new { style = "color:darkgray" })
+             </div>
+                <div  class="row" style="margin-left:25px">
+                    @Html.Label("HourlyRate:", new { style = "font-weight:inherit;color:darkgray" }) <h style="font-weight:inherit;color:darkgray">@Model.UserHourlyRate</h>
+                </div>
+                <div  class="row" style="margin-left:25px">
+                    @Html.Label("Hours Burned:", new { style = "font-weight:inherit;color:darkgray" }) <label id="Time" style="font-weight:inherit;color:darkgray"></label>
+                </div>
+                <div class="row" style="margin-left:25px">
+                    @Html.Label("Jobs Completed:", new { style = "font-weight:inherit;color:darkgray" })<h style="font-weight:inherit;color:darkgray">@Model.JobsCompleted</h>
+                </div><hr />
+                <div class="row" style="margin-left:25px">
+                    @Html.Label("Rating:", new { style = "font-weight:inherit;color:darkgray" })
+                    <div class="rateit" data-rateit-resetable="false" data-rateit-ispreset="true" data-rateit-readonly="true" data-rateit-min="0" data-rateit-max="5" data-rateit-value="@Model.Rating" id="jobRating"></div>
+                </div>
+            </div>
+    <div class="col-md-4" style="margin-top:20px;" >
+        @Html.Label("Video Introduction:", new { style = "font-weight:inherit" })
+        <video src="@(Model.VideoIntroduction!=null?ConfigurationManager.AppSettings[WebsiteConstants.ServerAddress]+ConfigurationManager.AppSettings[WebsiteConstants.IntroductionVideoFolder]+Model.VideoIntroduction:"#")" id="ProfileIntroductionVideoPlayer" style="display: @(Model.VideoIntroduction!=null?"block":"none !important"); padding-top: 5px; width: 100%; height: auto" controls></video>
+    </div>
+</div>
+
+<div class="row" style="margin-left: 0; margin-right: 0; margin-top:20px" id="jobGrid">
+
+    @*@(Html.Kendo().Grid<PS.HireRocks.Model.WorkerJobsViewModel>()
+    .Name("WorkerJobs")
+    .Columns(columns =>
+    {
+        columns.Bound(m => m.JobTitle).Title("Job title").Width(200);
+        columns.Bound(m => m.StartDate).Format("{0:dd/MM/yyyy}").Title("Start date").Width(200);
+        columns.Bound(m => m.EndDate).Format("{0:dd/MM/yyyy}").Title("End date").Width(200);
+        columns.Bound(m => m.HourlyRate).Title("Hourly Rate").Width(200);
+        columns.Bound(m => m.FixedRate).Title("Fixed Rate").Width(200);
+        columns.Bound(m => m.ContractStatusId).Title("Job Status").Width(200);
+    })
+.DataSource(dataSource => dataSource.Ajax().Read(read => read.Action("GetWorkerJobs", "UserDetail", new {workerId=@Request.QueryString["workerId"]})))
+.Pageable(pageable => pageable.Refresh(true).PageSizes(true).ButtonCount(5))
+.Events(events => events.DataBound("onDataBound"))
+.Sortable()
+.Mobile()
+.Scrollable()
+
+    )*@
+
+    @(Html.Kendo().ListView<PS.HireRocks.Model.CaptureViewModel>()
+                              .Name("WorkerJobsListView")
+                              .TagName("div")
+                              .ClientTemplateId("WorkerJobsListViewTemplate")
+                              .DataSource(datasource => datasource.Read(read => read.Action("GetWorkerJobs", "UserDetail", new { workerId = @Request.QueryString["workerId"] })).Model(model => model.Id(m => m.CaptureId)))
+                              .Pageable()
+
+    )
+</div>
+
+
+<script type="text/x-kendo-tmpl" id="WorkerJobsListViewTemplate">
+    @*<div style="padding-left: 20px; padding-right: 10px; float: left; width: 300px; height: 200px;" class="divbutton">
+        <label style="font-weight: normal">#:JobTitle#</label><br />
+        <hr />
+    </div>*@
+    
+        <div class="col-md-8" style="margin-left: 0; margin-right: 0">
+            <label style="font-weight: normal">#:JobTitle#</label>
+        </div>
+        <div style="margin-left: 0; margin-right: 0">
+            @*<div class="rateit" data-rateit-resetable="false" data-rateit-ispreset="true" data-rateit-min="0" data-rateit-max="5" data-rateit-readonly="true" data-rateit-value=#:Rating# id="jobRating"></div><br />*@
+            <label>#:HourlyRate#</label><br />
+            <label>#:FixedRate#</label><br />
+            <label>#:kendo.toString(kendo.parseDate(StartDate), "yyyy/MM/dd")#</label><label>#:kendo.toString(kendo.parseDate(EndDate), "yyyy/MM/dd")#</label>
+        </div>  
+    <hr />
+</script>
+
+
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var duration = $("#timeBurned").val();
+            var milliseconds = parseInt((duration % 1000) / 100)
+               , seconds = parseInt((duration / 1000) % 60)
+               , minutes = parseInt((duration / (1000 * 60)) % 60)
+               , hours = parseInt((duration / (1000 * 60 * 60)) % 24);
+
+            hours = (hours < 10) ? "0" + hours : hours;
+            minutes = (minutes < 10) ? "0" + minutes : minutes;
+            seconds = (seconds < 10) ? "0" + seconds : seconds;
+
+            var totalTime = hours + "H:" + minutes + "M:" + seconds + "S";
+            var t = $("#Time").html(totalTime);
+        });
+
+        //function onDataBound(e) {
+        //    debugger;
+        //    var grid = e.sender;
+        //    if (grid.dataSource.total() == 0)
+        //    {
+        //        $("#jobGrid").hide();
+        //    }
+        //}
+    </script>
+
+
+
+

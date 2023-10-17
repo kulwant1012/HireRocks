@@ -1,0 +1,142 @@
+﻿@{
+    var jobcount = ViewBag.jobcount;
+}
+@using PS.HireRocks.Data.Helpers
+@{
+    ViewBag.Title = "My account";
+    Layout = "~/Views/Shared/_HomePageView.cshtml";
+}
+<section class="dashboardSection" id="loginForm">
+    <div class="tiles blue tile-group">
+        @if (User.IsInRole(RoleConstants.Client))
+        {
+            <div class="live-tile accent yellow exclude" data-link="/Job/MyJobs">
+                @*<div>*@
+                @*<span class="tile-title tile-main-title">My jobs</span>*@
+                <div>
+                    <img class="full" src="~/Content/images/MyJobs.jpg" />
+                </div>
+                <span class="tile-title" style="color: white;padding: 14px;text-align: center;">@jobcount Jobs posted</span>
+                @*<span class="tile-title">20 Jobs posted</span>
+                    </div>*@
+            </div>
+        }
+
+        @if (User.IsInRole(RoleConstants.Worker))
+        {
+            <div class="live-tile accent exclude" data-link="/Job/WorkerJobs">
+
+                @*<span class="tile-title tile-main-title">My jobs</span>*@
+                <div>
+                    <img class="full" src="~/Content/images/MyJobs.jpg" />
+                </div>
+                <span class="tile-title" style="color: white;padding: 14px;text-align: center;">@jobcount Jobs</span>
+
+                @*<span class="tile-title">20 Jobs posted</span>*@
+
+            </div>
+        }
+
+        <div class="live-tile accent exclude" data-link="@Url.Action("MyMessages", "Message")">
+            @*<span class="tile-title tile-main-title">Messages</span>*@
+            <div>
+                <img class="full" src="~/Content/images/Messages.jpg" />
+                @*<span class="tile-title">2 new Messages</span>*@
+                <span class="tile-title tileMessagesCount"><span class="messagesCount" style="font-size:40px;margin-left:10px">0</span>  new Messages</span>
+                @*<span class="tile-title" style="color: white;padding: 14px;text-align: center;">2 new Messages</span>*@
+            </div>
+        </div>
+
+        <div class="live-tile accent exclude" data-link="@Url.Action("Notifications", "Notifications")">
+            @*<span class="tile-title tile-main-title">Notifications</span>*@
+            <div>
+                <img class="full" src="~/Content/images/Notifications.jpg" />
+                <span class="tile-title tileNotificationsCount"><span class="notificationsCount" style="font-size:40px;margin-left:10px">0</span>  new Notifications</span>
+                @*<span class="tile-title">10 new Notifications</span>*@
+            </div>
+        </div>
+
+        <div class="live-tile accent exclude" data-link="@Url.Action("MyTeam", "Team")">
+            @*<span class="tile-title tile-main-title">My team</span>*@
+            <div>
+                <img class="full" src="~/Content/images/MyTeam.jpg" />
+                <span class="tile-title" style="        color: white;
+        padding: 14px;
+        text-align: center;">Add or remove workers</span>
+                @*<span class="tile-title">Add or remove workers</span>*@
+            </div>
+        </div>
+
+        <div class="live-tile accent exclude">
+            @*<span class="tile-title tile-main-title">Add payment details</span>*@
+            <div>
+                <img class="full" src="~/Content/images/AddPaymentDetails.jpg" />
+                <span class="tile-title" style="color: white;padding: 14px;text-align: center;">Add now</span>
+                @*<span class="tile-title">Add now</span>*@
+            </div>
+        </div>
+
+        <div class="live-tile accent exclude" data-link="@Url.Action("CompleteProfile","Account")">
+            @*<span class="tile-title tile-main-title">Edit my profile</span>*@
+            <div>
+                <img class="full" src="~/Content/images/EditProfile.jpg" />
+
+                @*<span class="tile-title">Add now</span>*@
+            </div>
+        </div>
+
+        @if (User.IsInRole(RoleConstants.Client))
+        {
+            <div class="live-tile white" data-mode="carousel" solid gray" data-direction="horizontal" data-delay="2000" data-link="@Url.Action("Report","Report")">
+                @*<span class="tile-title tile-main-title" style="color:gray">Reports</span>*@
+                <div>
+                    <img class="full" src="~/Content/images/Reports.jpg" />
+                    @*<span class="tile-title" style="color:gray">Post now</span>*@
+                    <span class="tile-title" style="color: white;padding: 14px;text-align: center;">Generate timesheet and payment reports</span>
+                </div>
+                <div>
+                    <img class="full" src="~/Content/images/Reports.jpg" />
+                    <span class="tile-title" style="color: white;padding: 14px;text-align: center;">Click to view what workers has done for your job</span>
+                </div>
+            </div>
+        }
+        @if (User.IsInRole(RoleConstants.Worker))
+        {
+            <div class="live-tile white" data-mode="carousel" data-direction="horizontal" data-delay="2000" data-link="@Url.Action("WorkerReport", "Report")">
+                @*<span class="tile-title tile-main-title" style="color:gray">Reports</span>*@
+                <div>
+                    <img class="full" src="~/Content/images/Reports.jpg" />
+                    @*<span class="tile-title" style="color:gray">Post now</span>*@
+                    <span class="tile-title" style="        color: white;
+        padding: 14px;
+        text-align: center;">Generate timesheet and payment reports</span>
+                </div>
+                <div>
+
+                    <img class="full" src="~/Content/images/Reports.jpg" />
+                    <span class="tile-title" style="color: white;padding: 14px;text-align: center;">Click to view what workers has done for your job</span>
+
+                </div>
+            </div>
+        }
+
+    </div>
+
+    <script type="text/javascript">
+        $(".live-tile, .flip-list").not(".exclude").liveTile();
+        $(".tiles").sortable();
+        $(".tiles").disableSelection();
+        $(".live-tile").click(function () { document.location = $(this).attr('data-link') }).css('cursor', 'pointer');
+    </script>
+
+    <style>
+        .tile-main-title {
+            font-size: 18px !important;
+            top: 0;
+            vertical-align: top;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            padding: 5px 10px;
+        }
+    </style>
+
+</section>

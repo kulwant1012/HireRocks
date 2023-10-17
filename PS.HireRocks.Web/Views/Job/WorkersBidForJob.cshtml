@@ -1,0 +1,142 @@
+﻿@using System.Configuration
+@using PS.HireRocks.Web.Helpers
+@model PS.HireRocks.Model.ContractViewModel
+@{
+    ViewBag.Title = "Applicants";
+}
+
+<h4 id="PageHeading">Applicants</h4>
+<hr />
+
+<div id="FindWorkerDiv">
+    <div class="row" style="margin-left:0;margin-right:0">
+        <div class="col-md-10" style="padding: 0; border: 1px solid lightgray;padding-bottom:15px">
+            @(Html.Kendo().ListView<PS.HireRocks.Model.ContractViewModel>()
+                .Name("WorkersListView")
+                .TagName("WorkersView")
+                .ClientTemplateId("WorkerListViewTemplate")
+                .DataSource(datasource => datasource.Read(read => read.Action("GetWorkersBidForJob", "Job", new { jobId = Request.QueryString["jobId"] })))
+                .HtmlAttributes(new { style = "display:block;border:0;margin-left:10px;margin-right:10px;" }))
+        </div>
+    </div>
+</div>
+<!--BootStrap Modal for Cover Letter-->
+<div class="modal fade" id="CoverLetterPopUp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Cover Letter</h4>
+            </div>
+            <div class="modal-body"></div>
+        </div>
+    </div>
+</div>
+
+<script type="text/x-kendo-tmpl" id="WorkerListViewTemplate">
+    <table style="width:100%"><tr><td>
+    <table role="grid" style="width:100%">
+        <tr>
+            <td style='width:80px'><img style='height:80px;width:80px' src='@ConfigurationManager.AppSettings[WebsiteConstants.profileThumbnailImageFolder]#:ProfileImage#' /></td>
+            <td colspan='3' style='border-left: 0px;'><h3 style='color:\\#428bca'>#: FirstName # #: LastName #</h3><h6 style='color:gray'>Skills: C\\#, ASP.NET</h6></td>
+        </tr>
+        <tr>
+            <td colspan='4' style='border-top: 0'><hr style='margin-bottom:5px;margin-top:5px;' />#:ProfileTitle# </td>
+        </tr>
+    </table>
+    <hr style='margin-top:10px;margin-bottom:10px' />
+    <table>
+        <tr><td>Attachments</td></tr>        
+            #if(AttachmentsList.length>0){for (var i=0,len=AttachmentsList.length; i <len; i++)
+            {#<tr><td><a download href="@ConfigurationManager.AppSettings[WebsiteConstants.ServerAddress]@ConfigurationManager.AppSettings[WebsiteConstants.AttachmentFolderName]${ AttachmentsList[i].AttachmentName }">${ AttachmentsList[i].AttachmentOriginalName }</a></td></tr> # }}
+            else{#<td>No attachments</td> #}#        
+    </table>
+    <hr style='margin-top:10px;margin-bottom:10px' />
+    <table style="width:100%">
+        <tr>
+            <td colspan='4' style='border-top:0'>
+                <span style='float:left;color:darkgray'>Country: #:Country#, Hourly rate: #:HourlyRate#$</span>
+                <span style='float:right'>
+                    <label style="display:none">#:CoverLetter#</label>                    
+                    #if(HireButtonText== "Hire"){#
+                    <input type="button" class="btn btn-primary" id="HireButton" value="Hire" onclick="HireWorker(this);" />#}
+                    else
+                    {#<label style="font-weight:normal">#:HireButtonText#</label>#}#
+                    <a href='\\#' class='k-button k-button-icontext k-grid-edit' onclick="ViewCoverLetter(this);">View Cover Letter</a>
+                    <a href='\\#' onclick="MessageButtonClick(this); return false;" class='k-button k-button-icontext k-grid-edit'>Message</a>                   
+                </span>
+            </td>
+        </tr>
+    </table>
+    </td></tr></table>
+</script>
+
+<!--Bootstrap Modal for HireWorker-->
+<div class="modal fade" id="HireWorkerPopup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">@Model.JobTitle</h4>
+            </div>
+            <div class="modal-body" id="HireWorkerPopupBody">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    function HireWorker(e) {
+        var WorkerListView = $("#WorkersListView").data("kendoListView");
+        var item = $(e).closest("[role='option']");
+        var data = WorkerListView.dataSource.getByUid(item.data("uid"));
+        $.ajax({
+            type: "GET",
+            data: { jobBidId: data.JobBidId, workerId: data.WorkerId },
+            url: '@Url.Action("GetWorkerBid", "Job")',
+            success: function (data) {
+                $('#HireWorkerPopup').modal().find('.modal-body').html(data);
+
+            }
+        });
+    }
+
+    function RequestDenied(e) {
+        var WorkerListView = $("#WorkersListView").data("kendoListView");
+        var item = $(e).closest("[role='option']");
+        var data = WorkerListView.dataSource.getByUid(item.data("uid"));
+        var jsonData = JSON.stringify({ jobBidId: data.JobBidId });
+        jQuery.ajax({
+            type: "POST",
+            url: '@Url.Action("DeniedJobRequest", "Job")',
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            data: jsonData,
+            success: function (data) {
+                if (data.result == true) {
+                    $("#WorkersListView").data("kendoListView").dataSource.read();
+                }
+            },
+            failure: function (errMsg) {
+                alert(errMsg);
+            }
+        });
+        return false;
+    }
+
+    function OnWorkerBidAccepted(e) {
+        $("#WorkersListView").data("kendoListView").dataSource.read();
+        if($('.field-validation-error').length==0)
+            messageHub.server.sendNewNotification($('#UserName').val());
+    }
+
+    function ViewCoverLetter(e) {
+        $("#CoverLetterPopUp").modal().find('.modal-body').html($("#WorkersListView").data("kendoListView").dataSource.getByUid($(e).closest("[role='option']").data("uid")).CoverLetter);
+    }
+
+    function MessageButtonClick(e) {
+        window.location = '/Message/MyMessages?workerId=' + $("#WorkersListView").data("kendoListView").dataSource.getByUid([$(e).closest("[role='option']").data("uid")]).WorkerId;
+    }
+</script>
+

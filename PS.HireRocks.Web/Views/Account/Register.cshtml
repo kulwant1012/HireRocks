@@ -1,0 +1,115 @@
+﻿@model PS.HireRocks.Model.RegisterViewModel
+@{
+     ViewBag.Title = "Register";
+}
+
+@using CaptchaMvc.HtmlHelpers;
+
+@if (Model != null && Model.IsRegisterationSuccessFull)
+{
+    <hr/>
+    <h5 class="success">@ViewBag.Message</h5>
+}
+else
+{ 
+<h2>@ViewBag.Title.</h2>
+    
+
+using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form"}))
+{
+    <!--Bootstrap Modal for license agreement-->
+    <div class="modal fade" id="LicenseAgreementPopup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title" id="myModalLabel">License agreement</h4>
+                </div>
+                <div id="content" class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    @Html.AntiForgeryToken()
+    <h4>Create a new account.</h4>
+    <hr />
+    @Html.ValidationSummary(true)
+    <div class="form-group">
+        @Html.LabelFor(m => m.FirstName, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.FirstName)
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.LastName, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.LastName)
+        </div>
+    </div> 
+    <div class="form-group">
+        @Html.LabelFor(m => m.AccountTypeId, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+        @Html.DropDownListFor(m=>m.AccountTypeId,Model.AccountTypeList,"Select Account type", new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.AccountTypeId)
+        </div>        
+    </div>
+    <div class="form-group">        
+        @Html.LabelFor(m => m.UserName, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.UserName)
+        </div>
+    </div>
+    <div class="form-group">        
+        @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Email)
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Password)
+        </div>        
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.ConfirmPassword)
+            @Html.Captcha("Try another", "Enter the text you see above:", 5, "Enter the text you see above ", true)   
+            <br/>
+            @Html.CheckBoxFor(m => Model.IsUserAgreed)
+            @Html.LabelFor(m => m.IsUserAgreed)
+            @Html.ValidationMessageFor(m => m.IsUserAgreed)<br/>
+            @Ajax.ActionLink("Read terms and conditions", "GetLicenseAgreement", ajaxOptions: new AjaxOptions { HttpMethod = "GET", InsertionMode = InsertionMode.Replace, UpdateTargetId = "content", OnSuccess = "OpenAgreementPopup" })
+        </div>        
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" id="submitButton" class="btn btn-default" value="Register" />
+        </div>
+    </div>
+}
+}
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+}
+
+<script type="text/javascript">
+    function OpenAgreementPopup() {
+        $("#LicenseAgreementPopup").modal();
+    };
+</script>

@@ -1,0 +1,123 @@
+﻿body {
+	padding-top: 60px;
+	padding-bottom: 20px;
+	/*background-image:url(images/Background.jpg)*/
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+	max-width: 280px;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+	color: #b94a48;
+}
+
+.field-validation-valid {
+	display: none;
+}
+
+input.input-validation-error {
+	border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+	border: 0 none;
+}
+
+.validation-summary-errors {
+	color: #b94a48;
+}
+
+.validation-summary-valid {
+	display: none;
+}
+
+.checkboxList label {
+	font-weight: 100;
+	color: #808080;
+	margin-left: 5px;
+}
+
+.checkboxList {
+	padding: 0px 10px;
+}
+
+.message-alert {
+	background: url(/Content/images/MessageAlert.png) no-repeat left;
+	display: block;
+	text-indent: -9999px;
+	margin-left: 0;
+}
+
+.notification-alert {
+	background: url(/Content/images/NotificationsAlert.png) no-repeat left;
+	display: block;
+	text-indent: -9999px;
+	margin-left: 0;
+}
+
+.notification-message-text {
+	color: #fff;
+	background: #dc0d17;
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	text-align: center;
+	top: 7px;
+	right: 0px;
+	font-size: 11px;
+	display: none;
+}
+
+.logo {
+	padding: 15px;
+	margin-top: 3px;
+	overflow: hidden;
+}
+
+	.logo img {
+		height: 50px;
+		width: 100px;
+		margin: -90px 0px -89px;
+	}
+
+.navbar.override {
+	min-height: 56px;
+}
+
+div.navbar-inverse {
+	background-color: #73be48 !important;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a {
+	color: black;
+}
+
+	.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:hover {
+		text-decoration: underline;
+	}
+
+.logoffform {
+	margin-top: 15px !important;
+}
+
+.logoffform {
+	margin-top: 15px;
+}
+a.userName {
+	color: black;
+}
+a.rr-1 {
+	color: black;
+	padding-left: 10px;
+}

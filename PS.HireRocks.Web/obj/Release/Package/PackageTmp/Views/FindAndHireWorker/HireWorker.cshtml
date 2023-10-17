@@ -1,0 +1,85 @@
+﻿@{
+    ViewBag.Title = "Hire Worker";
+}
+
+<h4>Hire Worker</h4>
+<hr />
+<h5 class="alert-success" id="SuccessMessage">@TempData[PS.HireRocks.Web.Helpers.SessionNameConstants.SuccessMessage]</h5>
+<div id="HireWorkerForm" style="display:none"></div>
+<div id="PostJobAlertDiv" style="display:none">
+    <h3>You already hired this user for all your jobs, or you didn't posted any job yet !</h3>
+    <h5>Post new job now and start hiring</h5>
+    @Html.ActionLink("Post now", "PostJob", "Job", null, new { @class = "btn btn-primary" })
+    <input type="button" value="Not now" class="btn btn-default" onclick="CancelHireWorkerClick();" />
+</div>
+<div id="ContractsGridDiv" style="display:none">
+        @Ajax.ActionLink("Hire", "HireWorkerPartial", routeValues: new { workerId = ViewData["WorkerId"] }, ajaxOptions: new AjaxOptions { HttpMethod = "GET", InsertionMode = InsertionMode.Replace, UpdateTargetId = "HireWorkerForm", OnComplete = "ShowHireWorkerForm" }, htmlAttributes: new { @class = "btn btn-primary" ,id="hireWorkerAction"})
+        <br /><br />
+        @Html.Hidden("WorkerId", ViewData["WorkerId"])
+        <span>Existing contracts with this worker</span>
+        @(Html.Kendo().Grid<PS.HireRocks.Model.ContractsGridViewModel>()
+        .Name("ContractsGrid")
+        .Columns(columns =>
+        {
+            columns.Bound(m => m.JobTitle).Title("Job title");
+            columns.Bound(m => m.StartDate).Format("{0:dd/MM/yyyy}").Title("Start date");
+            columns.Bound(m => m.JobRate).Title("Rate");
+            columns.Bound(m => m.JobType).Title("Job type");
+            columns.Bound(m => m.ContractStatusName).Title("Status");
+            columns.Command(command => command.Custom("Edit Contract").Click("EditContractClick").SendDataKeys(true));
+            columns.Bound(m => m.ContractId).ClientTemplate(Html.ActionLink("<span class='k-icon k-view'></span> Work Log", "Captures", "Capture", new { @contractId = "#=ContractId#"}, new { @class = "k-button k-button-icontext k-grid-edit" }).ToHtmlString()).Title("Work Log");
+        })
+        .DataSource(dataSource => dataSource.Ajax().Read(read => read.Action("GetContractsGridData", "FindAndHireWorker").Data("GetWorkerId")).Model(model => model.Id(m => m.ContractId)))
+        .Pageable(pageable => pageable.ButtonCount(5).Enabled(true).PageSizes(true).Refresh(true))
+        .Events(events => events.DataBound("ContractsGridDataBound"))
+        )
+</div>
+<script type="text/javascript">
+    function GetWorkerId() {
+        return { workerId: $("#WorkerId").val() };
+    }
+
+    $(window).resize(function () {
+        kendo.resize($('#FindWorkerFilter_Rating'));
+    })
+
+
+    function ShowHireWorkerForm(isFormSubmitted) {      
+        $('#ContractsGridDiv').hide();
+        $('#HireWorkerForm').show();
+        var test = $('#UserName').val();
+        if(isFormSubmitted=='true')
+            messageHub.server.sendNewNotification($('#UserName').val());
+    }
+
+    function CancelHireWorkerClick() {
+        $('#HireWorkerForm').empty().hide();
+        var grid = $("#ContractsGrid").data("kendoGrid");
+        grid.dataSource.read();
+    }
+
+    function EditContractClick(e) {
+        debugger;
+        e.preventDefault();
+        var tr = $(e.target).closest("tr");
+        var data = this.dataItem(tr);
+        $.ajax({
+            url: '@Url.Action("HireWorkerPartial")',
+            data: { workerId:'@Request.QueryString["workerId"]',contractId: data.ContractId },
+                success: function (result) {
+                    $('#ContractsGridDiv').hide();
+                    $('#HireWorkerForm').html(result).show();
+                    kendo.resize($('#FindWorkerFilter_Rating'));
+                }
+            })
+        }
+
+        function ContractsGridDataBound() {
+            var grid = $('#ContractsGrid');
+            if (grid.data("kendoGrid").dataSource.total() == 0)
+                $('#hireWorkerAction').trigger("click");
+            else
+                $('#ContractsGridDiv').show();
+        }
+    </script>
+

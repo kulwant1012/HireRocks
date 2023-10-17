@@ -1,0 +1,180 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+     Layout = "~/Views/Shared/_HomePageView.cshtml";
+}
+
+@using PS.HireRocks.Data.Helpers
+<section class="dashboardSection" id="loginForm">
+    <div class="tiles blue tile-group">
+
+        <div class="live-tile accent green exclude" data-mode="carousel" data-pause-onhover="true" data-direction="horizontal" data-delay="2500" data-link="/MyAccount/Index">
+            @*<span class="tile-title tile-main-title">My Account</span>*@
+            <div>
+                <img class="full" src="../content/images/UserAccounts.png" />
+                @*<span class="tile-title">Messages</span>*@
+            </div>
+            <div>
+                <img class="full" src="../content/images/My-Account.jpg" />
+                @*<span class="tile-title">Notifications</span>*@
+            </div>
+        </div>
+
+        <div class="live-tile accent green exclude">
+            <div>
+                @*<span class="tile-title tile-main-title">Readymade tools</span>*@
+                <img class="full" src="~/Content/images/Readymade-tools.jpg" />
+                @*<span class="tile-title">300 tools available</span>*@
+            </div>
+        </div>
+
+        <div class="live-tile accent" data-mode="carousel" data-pause-onhover="true" data-direction="horizontal" data-delay="2500" data-link="/Message/MyMessages">
+            @*<span class="tile-title tile-main-title">Messages</span>*@
+            <div>
+                <img class="full" src="~/Content/images/Messages.jpg" />
+                <span class="tile-title tileMessagesCount"><span class="messagesCount" style="font-size:40px;margin-left:10px">0</span>  new Messages</span>
+            </div>
+        </div>
+
+        <div class="live-tile accent exclude" data-link="@Url.Action("Notifications", "Notifications")">
+            @*<span class="tile-title tile-main-title">Notifications</span>*@
+            <div>
+                <img class="full" src="~/Content/images/Notifications.jpg" />
+                <span class="tile-title tileNotificationsCount"><span class="notificationsCount" style="font-size:40px;margin-left:10px">0</span>  new Notifications</span>
+            </div>
+        </div>
+
+        @if (User.IsInRole(RoleConstants.Client))
+        {
+            <div class="live-tile accent exclude" data-link="/FindAndHireWorker/FindWorker">
+                @*<span class="tile-title tile-main-title">Find worker</span>*@
+                <div>
+                    <img class="full" src="~/Content/images/find-worker.jpg" />
+                    @*<span class="tile-title">Find now</span>*@
+                </div>
+            </div>
+            <div class="live-tile accent exclude">
+                @*<span class="tile-title tile-main-title" >Hire organization</span>*@
+                <div>
+                    <img class="full" src="~/Content/images/hire-organization.jpg" />
+                    <span class="tile-title" style="color: white;padding: 14px;text-align: center;">Find now</span>
+                    @*<span class="tile-title">Find now</span>*@
+                </div>
+            </div>
+            <div class="live-tile white" data-mode="carousel" data-direction="horizontal" data-delay="2000" data-link="/Job/Postjob">
+                @*<span class="tile-title tile-main-title" style="color:gray">Post job</span>*@
+                <div>
+                    <img class="full" src="~/Content/images/post-job.jpg" />
+                    <span class="tile-title" style="color: white;padding: 14px;text-align: center;">Post now</span>
+                    @*<span class="tile-title" style="color:gray">Post now</span>*@
+                </div>
+                <div>
+                    <img class="full" src="~/Content/images/post-job.jpg" />
+                    <span class="tile-title" style="color: white;padding: 11px;text-align: center;">Post job and let the job done by experienced workers</span>
+                    @*<span class="tile-title" style="color:gray">Post job on Rire Rock and let the job done by experienced workers</span>*@
+                </div>
+            </div>
+        }
+
+        @if (User.IsInRole(RoleConstants.Worker))
+        {
+            <div class="live-tile accent exclude" data-link="@Url.Action("FindJobs", "FindAndApplyJob")">
+                @*<span class="tile-title tile-main-title">Find job</span>*@
+                <div>
+                    <img class="full" src="~/Content/images/Find-job.jpg" />
+                </div>
+            </div>
+
+            <div class="live-tile accent exclude" data-link="@Url.Action("", "")">
+                @*<span class="tile-title tile-main-title">Hire Company Worker</span>*@
+                <div>
+                    <img class="full" src="~/Content/images/hire-organization.jpg" />
+                </div>
+            </div>
+        }
+        <div class="live-tile accent exclude" data-link="@Url.Action("GetTracker","Home")">
+            @*<span class="tile-title tile-main-title">Hire Rocks tracker</span>*@
+            <div>
+                <img class="full" src="~/Content/images/HireRocks-Tracker.jpg" />
+            </div>
+        </div>
+
+        <div class="live-tile accent exclude" data-link="@Url.Action("Help","Help")">
+            @*<span class="tile-title tile-main-title">Help</span>*@
+            <div>
+                <img class="full" src="~/Content/images/Help.jpg" />
+            </div>
+        </div>
+
+
+        @*<div class="red live-tile" data-mode="flip" data-delay="4000">
+                <div>
+                    <img class="full" src="/images/sample/3tw.gif" alt="3" />
+                    <span class="tile-title">flip tile front</span>
+                </div>
+                <div>
+                    <img class="full" src="/images/sample/4tw.gif" alt="4" />
+                    <span class="tile-title">flip tile back</span>
+                </div>
+            </div>
+            <div class="live-tile" data-mode="carousel" data-direction="horizontal" data-delay="2500">
+                <div>
+                    <img class="full" src="/images/sample/1tw.gif" alt="1" />
+                    <span class="tile-title">carousel slide 1</span>
+                </div>
+                <div>
+                    <img class="full" src="/images/sample/2t.gif" alt="2" />
+                    <span class="tile-title accent">carousel slide 2</span>
+                </div>
+                <div>
+                    <img class="full" src="/images/sample/3tw.gif" alt="3" />
+                    <span class="tile-title">carousel slide 3</span>
+                </div>
+                <div>
+                    <img class="full" src="/images/sample/4t.gif" alt="4" />
+                    <span class="tile-title accent">carousel slide 4</span>
+                </div>
+            </div>
+            <div class="list-tile mango">
+                <span class="tile-title">flip list</span>
+                <ul class="flip-list fourTiles" data-mode="flip-list" data-delay="2000">
+                    <li>
+                        <div><img class="full" src="/images/sample/1t.gif" alt="1" /></div>
+                        <div><img class="full" src="/images/sample/1tw.gif" alt="1" /></div>
+                    </li>
+                    <li>
+                        <div><img class="full" src="/images/sample/2t.gif" alt="2" /></div>
+                        <div><img class="full" src="/images/sample/2tw.gif" alt="2" /></div>
+                    </li>
+                    <li>
+                        <div><img class="full" src="/images/sample/3t.gif" alt="3" /></div>
+                        <div><img class="full" src="/images/sample/3tw.gif" alt="3" /></div>
+                    </li>
+                    <li data-direction="horizontal">
+                        <div><img class="full" src="/images/sample/4t.gif" alt="4" /></div>
+                        <div><img class="full" src="/images/sample/4tw.gif" alt="4" /></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="live-tile accent green exclude">
+                <span class="tile-title">static tile</span>
+                <p>Static tiles can take advantage of theming too!</p>
+            </div>*@
+    </div>
+    </section>
+    <!-- Activate live tiles -->
+    <script type="text/javascript">
+        $(".live-tile, .flip-list").not(".exclude").liveTile();
+        $(".tiles").sortable();
+        $(".tiles").disableSelection();
+        $(".live-tile").click(function () { document.location = $(this).attr('data-link'); }).css('cursor', 'pointer');
+    </script>
+
+    <style>
+        .tile-main-title {
+            font-size: 18px !important;
+            top: 0;
+            vertical-align: top;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            padding: 5px 10px
+        }
+    </style>

@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "My Jobs";
+}
+<h4>My jobs</h4>
+<hr />
+
+@(Html.Kendo().Grid<PS.HireRocks.Model.WorkerJobsViewModel>().Columns(columns =>
+{
+    columns.Bound(m => m.JobTitle).Title("Job Title");
+    columns.Bound(m => m.StartDate).Format("{0:dd/MM/yyyy}").Title("Start date");
+    columns.Bound(m => m.HourlyRate).Title("Job Rate");
+    columns.Bound(m => m.JobTypeName).Title("Job type");
+    columns.Bound(m => m.ContractStatus).Title("Job Status");
+    columns.Bound(m => m.ContractId).ClientTemplate("<input type='button' class='btn btn-default' onclick = 'ButtonViewLogClick(this);' value='Work log'/>").Title("");
+    columns.Bound(m => m.ContractId).ClientTemplate("<input type='button' class='btn btn-default' onclick = 'ButtonManageContractClick(this);' value='Manage contract'/>").Title("");
+})
+.DataSource(dataSource => dataSource.Ajax().Read(read => read.Action("GetWorkerJobs", "Job")))
+.Name("WorkerJobs")
+.Pageable(pageable => pageable.Refresh(true).PageSizes(true).ButtonCount(5))
+.Sortable()
+)
+
+<script type="text/javascript">
+    function ButtonManageContractClick(button) {
+        debugger;
+        window.location = "/WorkerContract/ManageContract?contractId=" + GetContractId(button);
+    }
+
+    function ButtonViewLogClick(button) {
+        window.location = "/Capture/Captures?contractId=" + GetContractId(button);
+    }
+
+    function GetContractId(button) {
+       return $("#WorkerJobs").data("kendoGrid").dataItem($(button).closest("[role='row']")).ContractId
+    }
+</script>
+  @*columns.Bound(m => m.ContractId).ClientTemplate(Html.ActionLink("<span class='k-icon k-view'></span> Work Log", "Captures", "Capture", new { @contractId = "#=ContractId#" }, new { @class = "k-button k-button-icontext k-grid-edit" }).ToHtmlString()).Title("Work Log");
+    columns.Bound(m => m.ContractId).ClientTemplate(Html.ActionLink("<span class='k-icon k-view'></span> View contract", "Captures", "Capture", new { @contractId = "#=ContractId#" }, new { @class = "k-button k-button-icontext k-grid-edit" }).ToHtmlString()).Title("Work Log");*@

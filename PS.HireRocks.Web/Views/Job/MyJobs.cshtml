@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "My Jobs";
+}
+@Html.AntiForgeryToken()
+<h4>My Jobs</h4>
+<hr />
+<div id="viewJobContent" style="position:relative"></div>
+<div class="col-lg-12" style="padding:0">
+    @Html.ActionLink("Post new job", "PostJob", null, htmlAttributes: new { @class="btn btn-default"})
+</div>
+<br />
+@(Html.Kendo().Grid<PS.HireRocks.Model.GetJobsViewModel>().Columns(columns =>
+{
+    columns.Bound(m => m.JobId).Hidden();
+    columns.Bound(m => m.JobTitle).Title("Title");
+    columns.Bound(m => m.JobStartDate).Format("{0:dd/MM/yyyy}").Title("Start date");
+    columns.Bound(m => m.JobEndDate).Format("{0:dd/MM/yyyy}").Title("End date");
+    columns.Bound(m => m.Active).Title("Active?");
+    columns.Bound(m => m.HiringClosed).Title("Hiring closed?");
+    columns.Bound(m => m.JobId).ClientTemplate(Ajax.ActionLink("Details", "ViewJob", ajaxOptions: new AjaxOptions { HttpMethod = "Get", InsertionMode = InsertionMode.Replace, OnComplete = "ViewJobRequestComplete", UpdateTargetId = "#\\#viewJobContent" }, routeValues: new { @jobId = "#=JobId#" }, htmlAttributes: new { @class = "k-button" }).ToHtmlString()).Title("View");
+    columns.Bound(m => m.JobId).ClientTemplate(Html.ActionLink("<span class='k-icon k-edit'></span> Edit", "PostJob", "Job", new { @jobId = "#=JobId#" }, new { @class = "k-button k-button-icontext k-grid-edit" }).ToHtmlString()).Title("Edit");
+    columns.Bound(m => m.JobId).ClientTemplate(Html.ActionLink("Applicants", "WorkersBidForJob", "Job", new { @jobId = "#=JobId#", @JobTitle = "#=JobTitle#" }, new { @class = "k-button" }).ToHtmlString()).Title("Applicants");
+    columns.Bound(m => m.JobId).ClientTemplate(Html.ActionLink("Worklog", "ClientCapturesReview", "Capture", new { @jobId = "#=JobId#" }, new { @class = "k-button" }).ToHtmlString()).Title("Work Log").Width(100);
+})
+.DataSource(dataSource => dataSource.Ajax().Read(read => read.Action("GetJobs", "Job")))                                   
+.Name("MyJobs")
+.Pageable(pageable => pageable.Refresh(true).PageSizes(true).ButtonCount(5))
+.Sortable()                          
+)
+<br />
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#backButton").show();
+    });
+
+    function ViewJobRequestComplete() {
+        $('#viewJobPopup').modal();
+    }
+</script>
+
+
+
+
+                
+
+
+
