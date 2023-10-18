@@ -1,0 +1,104 @@
+﻿<Page xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"  x:Class="PS.Tracker.View.ProjectElementsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      DataContext="{Binding ProjectElementViewModel,Source={StaticResource Locator}}">
+    <Page.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVisibilityConverter"/>        
+    </Page.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <telerik:RadTileView ItemsSource="{Binding WorkerJobList}"                              
+                             IsSelectionEnabled="True"
+                             SelectedValuePath="ContractId"
+                             SelectedValue="{Binding Path=SelectedContractId}"
+                             RowHeight="200"
+                             MaxColumns="2"
+                             MinimizedItemsPosition="Bottom"
+                             SelectionMode="Single">
+            <telerik:RadTileView.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding JobTitle}"/>
+                </DataTemplate>
+            </telerik:RadTileView.ItemTemplate>
+
+            <telerik:RadTileView.ContentTemplate>
+                <DataTemplate>
+                    <telerik:RadFluidContentControl ContentChangeMode="Automatic">
+                        <telerik:RadFluidContentControl.LargeContent>
+                            <Grid Margin="7">
+                                <Grid.Resources>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="Foreground" Value="Silver"/>
+                                        <Setter Property="TextWrapping" Value="Wrap"/>
+                                    </Style>
+                                </Grid.Resources>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="300"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid Grid.Column="0">
+                                    <StackPanel HorizontalAlignment="Left">
+                                        <TextBlock Text="Job Title: " FontWeight="Bold"/>
+                                        <TextBlock Text="{Binding JobTitle}"/>
+
+                                        <TextBlock Text="Job Start Date: " FontWeight="Bold"/>
+                                        <TextBlock Text="{Binding JobStartDate}"/>
+
+                                        <TextBlock Text="Weekly Limit: " FontWeight="Bold"/>
+                                        <TextBlock Text="{Binding HoursLimit}" />
+
+                                        <TextBlock Text="Job Type: " FontWeight="Bold"/>
+                                        <TextBlock Text="{Binding JobTypeName }" />
+
+                                        <TextBlock Text="Total Burned Hours: " FontWeight="Bold"/>
+                                        <TextBlock Text="{Binding TotalBurnedHours }" />
+
+                                        <TextBlock Text="Weekly Burned Hours: " FontWeight="Bold"/>
+                                        <TextBlock Text="{Binding WeeklyBurnedHours }" />
+
+                                        <TextBlock Text="Today Burned Hours: " FontWeight="Bold"/>
+                                        <TextBlock Text="{Binding TodayBurnedHours }" />
+                                    </StackPanel>
+                                </Grid>
+                                <Grid Grid.Column="1">
+                                    <Image VerticalAlignment="Top" 
+                                           HorizontalAlignment="Right" 
+                                           Source="{Binding LastCaptureUrl}" 
+                                           Height="250" 
+                                           Width="230"></Image>
+                                </Grid>
+                            </Grid>
+                        </telerik:RadFluidContentControl.LargeContent>
+                    </telerik:RadFluidContentControl>
+                </DataTemplate>
+            </telerik:RadTileView.ContentTemplate>
+        </telerik:RadTileView>
+        <Border Height="35" Grid.Row="1" >
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <telerik:RadButton Grid.Column="0" 
+                                   HorizontalAlignment="Left" 
+                                   Content="Reload Jobs" 
+                                   Command="{Binding RefreshJobsCommand}" 
+                                   Margin="5"></telerik:RadButton>
+                <telerik:RadButton Grid.Column="1" 
+                                   Visibility="{Binding IsStartTaskButtonVisible,Converter={StaticResource BoolToVisibilityConverter}}" 
+                                   ToolTip="Start" 
+                                   Command="{Binding StartTaskCommand}" 
+                                   CommandParameter="{Binding StartButtonText}" 
+                                   HorizontalAlignment="Right" 
+                                   Margin="5"                                    
+                                   Content="{Binding StartButtonText}">                    
+                </telerik:RadButton>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>
