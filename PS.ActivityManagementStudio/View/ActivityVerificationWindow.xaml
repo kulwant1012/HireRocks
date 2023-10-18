@@ -1,0 +1,302 @@
+﻿<Window xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"  
+        x:Class="PS.ActivityManagementStudio.View.ActivityVerificationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ActivityCaptures" WindowState="Maximized"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        DataContext="{Binding ActivityVerificationModel,Source={StaticResource Locator}}" x:Name="Window"
+        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+        xmlns:telerikNavigation="clr-namespace:Telerik.Windows.Controls.TileView;assembly=Telerik.Windows.Controls.Navigation"
+        xmlns:wpfdude= "clr-namespace:PS.ActivityManagementStudio.ViewModel"
+        >
+    <Window.Resources>
+        <Style x:Key="TtileViewItemHeaderStyleRed" TargetType="{x:Type telerikNavigation:TileViewItemHeader}">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="Yellow" Offset="0.75" />
+                        <GradientStop Color="White" Offset="1.0"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="TtileViewItemHeaderStyleGray" TargetType="{x:Type telerikNavigation:TileViewItemHeader}">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="Yellow" Offset="0.75" />
+                        <GradientStop Color="White" Offset="1.0"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>       
+    </Window.Resources>
+
+
+    <Grid x:Name="Main">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <telerik:RadToolBar x:Name="radToolBar" Grid.Row="0" HorizontalAlignment="Stretch" Margin="-1 -2 -1 0" MinWidth="510" BorderBrush="Gray">
+            <CheckBox Content="Allowed captures" IsChecked="{Binding ViewAllowedCaptures}"/>
+            <telerik:RadToolBarSeparator />
+            <CheckBox Content="All keyboard and filtered text" IsChecked="{Binding ViewFilteredText}"/>
+            <telerik:RadToolBarSeparator/>
+            <CheckBox Content="Compress Repeat Keywords" IsChecked="{Binding CompressRepeatKeywords}"/>
+            <telerik:RadToolBarSeparator/>
+            <Button Command="{Binding CreateVideoCommand}" Content="Create video"/>
+            <telerik:RadToolBarSeparator/>
+            <Button Command="{Binding RefreshCapturesListCommand}" Content="Refresh screen"/>
+            <telerik:RadToolBarSeparator/>
+            <Button Command="{Binding ShowValidityCheckBoxCommand}" Content="Change capture validity" Visibility="{Binding IsRoleManager,Converter={StaticResource BoolToVisibilityConverter}}"/>
+            <telerik:RadToolBarSeparator/>
+            <Button Command="{Binding ShowAcceptCheckBoxCommand}" Content="Accept captures" Visibility="{Binding IsRoleManager,Converter={StaticResource BoolToVisibilityConverter}}"/>
+        </telerik:RadToolBar>
+        <Grid Margin="5" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="25*" />
+                <ColumnDefinition Width="163*"/>
+                <ColumnDefinition Width="562*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0" Grid.ColumnSpan="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="50*"/>
+                </Grid.RowDefinitions>
+                <Border Grid.Row="0" BorderBrush="LightBlue" BorderThickness="1.5,1.5,1.5,0">
+                    <ScrollViewer VerticalScrollBarVisibility="Auto" telerik:StyleManager.Theme="Windows8">
+                        <StackPanel Orientation="Vertical" Margin="4">
+                            <TextBlock Text="Users" FontFamily="Calisto MT" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="13" TextWrapping="Wrap"/>
+                            <telerik:RadTileView x:Name="tileViewUserList" ItemsSource="{Binding UserList}"   
+                                 ScrollViewer.VerticalScrollBarVisibility="Auto" IsSelectionEnabled="True" 
+                                 MaximizeMode="Zero" MaxColumns="2" RowHeight="100" ColumnWidth="150"
+                                 SelectedValuePath="Id" SelectedValue="{Binding Path=SelectedUser, Mode=TwoWay}">
+                                <telerik:RadTileView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid >
+                                            <TextBlock Text="{Binding FirstName}" FontFamily="Calisto MT" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="13" TextWrapping="Wrap"/>
+                                        </Grid>
+                                    </DataTemplate>
+                                </telerik:RadTileView.ItemTemplate>
+                                <telerik:RadTileView.ContentTemplate>
+                                    <DataTemplate>
+                                        <Grid>
+                                            <TextBlock Text="{Binding FirstName}" FontFamily="Calisto MT" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="13" TextWrapping="Wrap"/>
+                                        </Grid>
+                                    </DataTemplate>
+                                </telerik:RadTileView.ContentTemplate>
+                            </telerik:RadTileView>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Border>
+
+                <Border Grid.Row="1" BorderBrush="LightBlue" BorderThickness="1.5,1.5,1.5,0">
+                    <ScrollViewer VerticalScrollBarVisibility="Auto" telerik:StyleManager.Theme="Windows8">
+                        <StackPanel Orientation="Vertical" Margin="4">
+                            <TextBlock Text="Activities" FontFamily="Calisto MT" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="13" TextWrapping="Wrap"/>
+                            <telerik:RadTileView x:Name="tileViewActivityList" ItemsSource="{Binding ActivityList}" IsSelectionEnabled="True" 
+                                 VerticalAlignment="Top" MaximizeMode="Zero" MaxColumns="2" RowHeight="100" ColumnWidth="150"
+                                 SelectedValuePath="Id" SelectedValue="{Binding Path=SelectedActivity, Mode=TwoWay}">
+                                <telerik:RadTileView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid >
+                                            <TextBlock Text="{Binding ActivityName}" FontFamily="Calisto MT" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="13" TextWrapping="Wrap"/>
+                                        </Grid>
+                                    </DataTemplate>
+                                </telerik:RadTileView.ItemTemplate>
+                                <telerik:RadTileView.ContentTemplate>
+                                    <DataTemplate>
+                                        <Grid>
+                                            <TextBlock Text="{Binding ActivityType}" FontFamily="Calisto MT" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="13" TextWrapping="Wrap"/>
+                                        </Grid>
+                                    </DataTemplate>
+                                </telerik:RadTileView.ContentTemplate>
+                            </telerik:RadTileView>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Border>
+            </Grid>
+
+            <Grid Grid.Column="2">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="116"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Border Grid.Row="0" BorderBrush="LightBlue" BorderThickness="0,1.5,1.5,1.5" telerik:StyleManager.Theme="Windows8">
+                        <telerik:RadTimeBar x:Name="radTimeBar" Margin="5,0,0,0" Grid.Row="0" Height="100" 
+                            Visibility="{Binding ViewFilteredText, Converter={StaticResource BoolToVisibilityReverseConverter}, UpdateSourceTrigger=PropertyChanged}"
+                            PeriodStart="{Binding PeriodStart, Mode=TwoWay}" 
+                            PeriodEnd="{Binding PeriodEnd, Mode=TwoWay}"
+                            VisiblePeriodStart="{Binding VisiblePeriodStart, Mode=TwoWay}" 
+                            VisiblePeriodEnd="{Binding VisiblePeriodEnd, Mode=TwoWay}"
+                            SelectionStart="{Binding SelectedStartDate, Mode=TwoWay}"
+                            SelectionEnd="{Binding SelectedEndDate, Mode=TwoWay}"
+                            MinSelectionRange="{Binding MinSelectionRange, Mode=TwoWay}"
+                            IsSnapToIntervalEnabled="True">
+                            <telerik:RadTimeBar.Intervals>
+                                <telerik:QuarterInterval />
+                                <telerik:MonthInterval />
+                                <telerik:WeekInterval />
+                                <telerik:DayInterval />
+                                <telerik:HourInterval/>
+                            </telerik:RadTimeBar.Intervals>
+                        </telerik:RadTimeBar>
+                    </Border>
+
+                    <telerik:RadTileView x:Name="tileViewActivityCaptures" Grid.Row="1" SelectedValuePath="Id"
+                                         SelectedValue="{Binding SelectedActivityCapture}" ItemsSource="{Binding ActivityCaptureFilteredList}" PreservePositionWhenMaximized="True"
+                                 Visibility="{Binding ViewFilteredText, Converter={StaticResource BoolToVisibilityReverseConverter}, UpdateSourceTrigger=PropertyChanged}"
+                                 MinimizedColumnWidth="190" MinimizedRowHeight="190" IsAutoScrollingEnabled="True" 
+                                 RowHeight="190" ColumnWidth="190" >
+                        <telerik:RadTileView.HeaderStyle>
+                            <Style TargetType="{x:Type telerikNavigation:TileViewItemHeader}">
+                                <Setter Property="Background" Value="{Binding CaptureColor}"/>
+                            </Style>
+                        </telerik:RadTileView.HeaderStyle>
+
+
+                        <telerik:RadTileView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid >
+                                    <StackPanel Orientation="Vertical">
+                                        <TextBlock x:Name="Id" Text="{Binding Id}" Visibility="Collapsed"/>
+                                        <CheckBox IsChecked="{Binding VerificationStatus.IsValid}" Content="Is Valid" Visibility="{Binding  DataContext.IsChangingValidity,ElementName=Main,Converter={StaticResource BoolToVisibilityConverter}}" Command="{Binding DataContext.UpdateStatusOfCaptureCommand,ElementName=Main}" CommandParameter="{Binding ElementName=Id, Path=Text}"/>
+                                        <CheckBox IsChecked="{Binding VerificationStatus.IsAccepted}" Content="Is Accepted" Visibility="{Binding DataContext.IsChangingAcceptance,ElementName=Main,Converter={StaticResource BoolToVisibilityConverter}}" Command="{Binding DataContext.UpdateStatusOfCaptureCommand,ElementName=Main}" CommandParameter="{Binding ElementName=Id, Path=Text}"/>
+                                    </StackPanel>
+                                </Grid>
+                            </DataTemplate>
+                        </telerik:RadTileView.ItemTemplate>
+                        <telerik:RadTileView.ContentTemplate >
+                            <DataTemplate>
+                                <telerik:RadFluidContentControl ContentChangeMode="Automatic" Transition="PerspectiveRotation" MouseEnter="RadFluidContentControl_MouseEnter_1"
+                                                                MouseLeave="RadFluidContentControl_MouseLeave_1">
+                                    <telerik:RadFluidContentControl.Content>
+                                        <Image Source="{Binding ThumbnailImage}" />
+                                    </telerik:RadFluidContentControl.Content>
+
+                                    <telerik:RadFluidContentControl.LargeContent>
+                                        <Grid Background="Black">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="65*"/>
+                                                <RowDefinition Height="35*"/>
+                                            </Grid.RowDefinitions>
+
+                                            <Grid Grid.Row="0">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition />
+
+                                                </Grid.ColumnDefinitions>
+                                                <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" telerik:StyleManager.Theme="Windows8">
+                                                    <Image Grid.Column="0" Source="{Binding FullImage}" Stretch="None" Margin="10" VerticalAlignment="Top" />
+                                                    <ScrollViewer.Resources>
+                                                        <sys:Double x:Key="{x:Static SystemParameters.VerticalScrollBarWidthKey}">3</sys:Double>
+                                                    </ScrollViewer.Resources>
+                                                </ScrollViewer>
+                                            </Grid>
+
+                                            <Grid Grid.Row="1">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition/>
+                                                    <ColumnDefinition/>
+                                                </Grid.ColumnDefinitions>
+
+                                                <Border Grid.Column="0" BorderBrush="LightGray" BorderThickness=".5" Margin="10" Height="130">
+                                                    <Grid>
+                                                        <StackPanel Orientation="Vertical" Margin="5">
+                                                            <StackPanel Orientation="Horizontal" Margin="4">
+                                                                <TextBlock Text="Mouse clicks : " Foreground="LightGray" FontWeight="Bold" HorizontalAlignment="Center"/>
+                                                                <TextBlock Text="{Binding Mouse}" TextWrapping="Wrap" Foreground="LightGray" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+                                                            </StackPanel>
+                                                            <StackPanel Orientation="Horizontal" Margin="4">
+                                                                <TextBlock Text="Keyboard input : " Foreground="LightGray" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                                <StackPanel Orientation="Vertical" Width="400">
+                                                                    <TextBlock Text="{Binding Keyboard}" TextWrapping="Wrap" Foreground="LightGray" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+                                                                </StackPanel>
+                                                            </StackPanel>
+                                                            <StackPanel Orientation="Horizontal" Margin="4">
+                                                                <TextBlock Text="Date of capture : " Foreground="LightGray" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                                <TextBlock Text="{Binding CaptureDateTime}" TextWrapping="Wrap" Foreground="LightGray" />
+                                                            </StackPanel>
+                                                            <StackPanel Orientation="Horizontal" Margin="4">
+                                                                <telerik:RadButton Content="Delete Activity" Command="{Binding DataContext.DeleteActivityCommand, ElementName=Window}" CommandParameter="{Binding Id}"></telerik:RadButton>
+                                                            </StackPanel>
+                                                        </StackPanel>
+                                                    </Grid>
+                                                </Border>
+
+                                                <Border Grid.Column="1" BorderBrush="LightGray" BorderThickness=".5" Margin="10" Height="130">
+                                                    <Grid >
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition Height="25"/>
+                                                            <RowDefinition Height="*"/>
+                                                        </Grid.RowDefinitions>
+                                                        <TextBlock Grid.Row="0" Text="Matched Keywords" HorizontalAlignment="Center" Foreground="LightGray" Margin="2"/>
+                                                        <ListView Grid.Row="1" ItemsSource="{Binding MatchedKeywordList}">
+                                                            <ListView.View>
+                                                                <GridView AllowsColumnReorder="true" >
+                                                                    <GridViewColumn DisplayMemberBinding="{Binding Path=CapturedData}" Header="Keyword" />
+                                                                    <GridViewColumn DisplayMemberBinding="{Binding Path=BeginTime}" Header="Begin Time" />
+                                                                    <GridViewColumn DisplayMemberBinding="{Binding Path=EndTime}" Header="End Time" />
+                                                                </GridView>
+                                                            </ListView.View>
+                                                        </ListView>
+                                                    </Grid>
+                                                </Border>
+                                            </Grid>
+                                            <StackPanel Grid.Row="1" Orientation="Horizontal">
+
+                                            </StackPanel>
+                                        </Grid>
+                                    </telerik:RadFluidContentControl.LargeContent>
+                                </telerik:RadFluidContentControl>
+                            </DataTemplate>
+                        </telerik:RadTileView.ContentTemplate>
+                    </telerik:RadTileView>
+
+                    <Grid Grid.Row="1" Visibility="{Binding ViewFilteredText, Converter={StaticResource BoolToVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
+                        <ScrollViewer HorizontalScrollBarVisibility="Auto" >
+                            <StackPanel Orientation="Vertical" Margin="10">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="All Keyboard capture: " FontWeight="Bold" Foreground="Black"/>
+                                    <TextBlock Text="{Binding AllKeyboardText}" Foreground="Gray" TextWrapping="Wrap"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="All matched keywords: " FontWeight="Bold" Foreground="Black"/>
+                                    <TextBlock Text="{Binding AllFilteredText}" Foreground="Gray"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Compressed All matched keywords: " FontWeight="Bold" Foreground="Black"/>
+                                    <TextBlock Text="{Binding CompressedFilteredText}" Foreground="Gray"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Total Time Consumed: " FontWeight="Bold" Foreground="Black"/>
+                                    <TextBlock Text="{Binding TotalTimeConsumed}" Foreground="Gray"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Total keywords created (matched): " FontWeight="Bold" Foreground="Black"/>
+                                    <TextBlock Text="{Binding TotalKeywordsCreated}" Foreground="Gray"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Total Creation Time Consumed: " FontWeight="Bold" Foreground="Black"/>
+                                    <TextBlock Text="{Binding TotalCreationTimeConsumed}" Foreground="Gray"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </ScrollViewer>
+                    </Grid>
+
+                    <telerik:RadButton Margin="10,0,0,0" Padding="5" HorizontalAlignment="Left" Content="Update captures" Grid.Row="2"
+                                       Visibility="{Binding IsUpdateButtonVisible,Converter={StaticResource BoolToVisibilityConverter}}"
+                                       Command="{Binding ChangeVerificationStatusCommand}" 
+        				               telerik:StyleManager.Theme="Windows8"/>
+                </Grid>
+            </Grid>
+        </Grid>
+        <telerik:RadBusyIndicator IsBusy="{Binding IsBusy}" telerik:StyleManager.Theme="Windows8" Grid.Row="1"
+				IsIndeterminate="True" >
+        </telerik:RadBusyIndicator>
+    </Grid>
+</Window>

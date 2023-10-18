@@ -1,0 +1,886 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/PS.Azure.Web" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.169.235.121:84/PSService/Services/PSService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" />
+  <xs:import schemaLocation="http://192.169.235.121:84/PSService/Services/PSService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS.Common" />
+  <xs:import schemaLocation="http://192.169.235.121:84/PSService/Services/PSService.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AVS" />
+  <xs:import schemaLocation="http://192.169.235.121:84/PSService/Services/PSService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities" />
+  <xs:import schemaLocation="http://192.169.235.121:84/PSService/Services/PSService.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.Money" />
+  <xs:import schemaLocation="http://192.169.235.121:84/PSService/Services/PSService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="OperationResultOfActivityCompositiont5HEkg3_S">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ActivityComposition" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" minOccurs="0" name="Value" nillable="true" type="q1:ActivityComposition" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfActivityCompositiont5HEkg3_S" nillable="true" type="tns:OperationResultOfActivityCompositiont5HEkg3_S" />
+  <xs:complexType name="OperationResultOfUsert5HEkg3_S">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="User" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" minOccurs="0" name="Value" nillable="true" type="q2:User" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfUsert5HEkg3_S" nillable="true" type="tns:OperationResultOfUsert5HEkg3_S" />
+  <xs:complexType name="OperationResultOfAOSQSpacet5HEkg3_S">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="AOSQSpace" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" minOccurs="0" name="Value" nillable="true" type="q3:AOSQSpace" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfAOSQSpacet5HEkg3_S" nillable="true" type="tns:OperationResultOfAOSQSpacet5HEkg3_S" />
+  <xs:complexType name="OperationResultOfActivityt5HEkg3_S">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Activity" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" minOccurs="0" name="Value" nillable="true" type="q4:Activity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfActivityt5HEkg3_S" nillable="true" type="tns:OperationResultOfActivityt5HEkg3_S" />
+  <xs:complexType name="OperationResultOfActivityStatust5HEkg3_S">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ActivityStatus" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" minOccurs="0" name="Value" nillable="true" type="q5:ActivityStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfActivityStatust5HEkg3_S" nillable="true" type="tns:OperationResultOfActivityStatust5HEkg3_S" />
+  <xs:complexType name="OperationResultOfActivityUsert5HEkg3_S">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ActivityUser" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" minOccurs="0" name="Value" nillable="true" type="q6:ActivityUser" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfActivityUsert5HEkg3_S" nillable="true" type="tns:OperationResultOfActivityUsert5HEkg3_S" />
+  <xs:complexType name="OperationResultOfArrayOfUsert5HEkg3_S">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfUser" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" minOccurs="0" name="Value" nillable="true" type="q7:ArrayOfUser" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfUsert5HEkg3_S" nillable="true" type="tns:OperationResultOfArrayOfUsert5HEkg3_S" />
+  <xs:complexType name="OperationResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResult" nillable="true" type="tns:OperationResult" />
+  <xs:complexType name="OperationResultOfArrayOfAOSQSpacet5HEkg3_S">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfAOSQSpace" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" minOccurs="0" name="Value" nillable="true" type="q8:ArrayOfAOSQSpace" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfAOSQSpacet5HEkg3_S" nillable="true" type="tns:OperationResultOfArrayOfAOSQSpacet5HEkg3_S" />
+  <xs:complexType name="OperationResultOfArrayOfActivityt5HEkg3_S">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfActivity" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" minOccurs="0" name="Value" nillable="true" type="q9:ArrayOfActivity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfActivityt5HEkg3_S" nillable="true" type="tns:OperationResultOfArrayOfActivityt5HEkg3_S" />
+  <xs:complexType name="OperationResultOfArrayOfActivityCompositiont5HEkg3_S">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfActivityComposition" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" minOccurs="0" name="Value" nillable="true" type="q10:ArrayOfActivityComposition" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfActivityCompositiont5HEkg3_S" nillable="true" type="tns:OperationResultOfArrayOfActivityCompositiont5HEkg3_S" />
+  <xs:complexType name="OperationResultOfArrayOfActivityStatust5HEkg3_S">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfActivityStatus" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" minOccurs="0" name="Value" nillable="true" type="q11:ArrayOfActivityStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfActivityStatust5HEkg3_S" nillable="true" type="tns:OperationResultOfArrayOfActivityStatust5HEkg3_S" />
+  <xs:complexType name="OperationResultOfActivityCommonANkqkxzR">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ActivityCommon" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS.Common" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS.Common" minOccurs="0" name="Value" nillable="true" type="q12:ActivityCommon" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfActivityCommonANkqkxzR" nillable="true" type="tns:OperationResultOfActivityCommonANkqkxzR" />
+  <xs:complexType name="OperationResultOfQSpaceCommonANkqkxzR">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="QSpaceCommon" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS.Common" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS.Common" minOccurs="0" name="Value" nillable="true" type="q13:QSpaceCommon" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfQSpaceCommonANkqkxzR" nillable="true" type="tns:OperationResultOfQSpaceCommonANkqkxzR" />
+  <xs:complexType name="OperationResultOfUserCommonANkqkxzR">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="UserCommon" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS.Common" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS.Common" minOccurs="0" name="Value" nillable="true" type="q14:UserCommon" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfUserCommonANkqkxzR" nillable="true" type="tns:OperationResultOfUserCommonANkqkxzR" />
+  <xs:complexType name="OperationResultOfArrayOfActivityCommonANkqkxzR">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfActivityCommon" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS.Common" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS.Common" minOccurs="0" name="Value" nillable="true" type="q15:ArrayOfActivityCommon" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfActivityCommonANkqkxzR" nillable="true" type="tns:OperationResultOfArrayOfActivityCommonANkqkxzR" />
+  <xs:complexType name="OperationResultOfArrayOfQSpaceCommonANkqkxzR">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfQSpaceCommon" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS.Common" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS.Common" minOccurs="0" name="Value" nillable="true" type="q16:ArrayOfQSpaceCommon" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfQSpaceCommonANkqkxzR" nillable="true" type="tns:OperationResultOfArrayOfQSpaceCommonANkqkxzR" />
+  <xs:complexType name="OperationResultOfArrayOfUserCommonANkqkxzR">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfUserCommon" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS.Common" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS.Common" minOccurs="0" name="Value" nillable="true" type="q17:ArrayOfUserCommon" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfUserCommonANkqkxzR" nillable="true" type="tns:OperationResultOfArrayOfUserCommonANkqkxzR" />
+  <xs:complexType name="OperationResultOfArrayOfActivityUsert5HEkg3_S">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfActivityUser" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" minOccurs="0" name="Value" nillable="true" type="q18:ArrayOfActivityUser" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfActivityUsert5HEkg3_S" nillable="true" type="tns:OperationResultOfArrayOfActivityUsert5HEkg3_S" />
+  <xs:complexType name="OperationResultOfActivityToolt5HEkg3_S">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ActivityTool" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" minOccurs="0" name="Value" nillable="true" type="q19:ActivityTool" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfActivityToolt5HEkg3_S" nillable="true" type="tns:OperationResultOfActivityToolt5HEkg3_S" />
+  <xs:complexType name="OperationResultOfArrayOfActivityToolt5HEkg3_S">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfActivityTool" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" minOccurs="0" name="Value" nillable="true" type="q20:ArrayOfActivityTool" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfActivityToolt5HEkg3_S" nillable="true" type="tns:OperationResultOfArrayOfActivityToolt5HEkg3_S" />
+  <xs:complexType name="OperationResultOfAllCaptureTimet5HEkg3_S">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="AllCaptureTime" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" minOccurs="0" name="Value" nillable="true" type="q21:AllCaptureTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfAllCaptureTimet5HEkg3_S" nillable="true" type="tns:OperationResultOfAllCaptureTimet5HEkg3_S" />
+  <xs:complexType name="OperationResultOfAllowedTimet5HEkg3_S">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="AllowedTime" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" minOccurs="0" name="Value" nillable="true" type="q22:AllowedTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfAllowedTimet5HEkg3_S" nillable="true" type="tns:OperationResultOfAllowedTimet5HEkg3_S" />
+  <xs:complexType name="OperationResultOfKeywordDictionaryt5HEkg3_S">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="KeywordDictionary" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" minOccurs="0" name="Value" nillable="true" type="q23:KeywordDictionary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfKeywordDictionaryt5HEkg3_S" nillable="true" type="tns:OperationResultOfKeywordDictionaryt5HEkg3_S" />
+  <xs:complexType name="OperationResultOfArrayOfAllCaptureTimet5HEkg3_S">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfAllCaptureTime" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" minOccurs="0" name="Value" nillable="true" type="q24:ArrayOfAllCaptureTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfAllCaptureTimet5HEkg3_S" nillable="true" type="tns:OperationResultOfArrayOfAllCaptureTimet5HEkg3_S" />
+  <xs:complexType name="OperationResultOfArrayOfAllowedTimet5HEkg3_S">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfAllowedTime" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" minOccurs="0" name="Value" nillable="true" type="q25:ArrayOfAllowedTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfAllowedTimet5HEkg3_S" nillable="true" type="tns:OperationResultOfArrayOfAllowedTimet5HEkg3_S" />
+  <xs:complexType name="OperationResultOfArrayOfKeywordDictionaryt5HEkg3_S">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfKeywordDictionary" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" minOccurs="0" name="Value" nillable="true" type="q26:ArrayOfKeywordDictionary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfKeywordDictionaryt5HEkg3_S" nillable="true" type="tns:OperationResultOfArrayOfKeywordDictionaryt5HEkg3_S" />
+  <xs:complexType name="OperationResultOfActivityPriorityt5HEkg3_S">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ActivityPriority" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" minOccurs="0" name="Value" nillable="true" type="q27:ActivityPriority" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfActivityPriorityt5HEkg3_S" nillable="true" type="tns:OperationResultOfActivityPriorityt5HEkg3_S" />
+  <xs:complexType name="OperationResultOfArrayOfActivityPriorityt5HEkg3_S">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfActivityPriority" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" minOccurs="0" name="Value" nillable="true" type="q28:ArrayOfActivityPriority" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfActivityPriorityt5HEkg3_S" nillable="true" type="tns:OperationResultOfArrayOfActivityPriorityt5HEkg3_S" />
+  <xs:complexType name="OperationResultOfArrayOfReportst5HEkg3_S">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfReports" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" minOccurs="0" name="Value" nillable="true" type="q29:ArrayOfReports" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfReportst5HEkg3_S" nillable="true" type="tns:OperationResultOfArrayOfReportst5HEkg3_S" />
+  <xs:complexType name="OperationResultOfEmailTemplatet5HEkg3_S">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="EmailTemplate" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" minOccurs="0" name="Value" nillable="true" type="q30:EmailTemplate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfEmailTemplatet5HEkg3_S" nillable="true" type="tns:OperationResultOfEmailTemplatet5HEkg3_S" />
+  <xs:complexType name="OperationResultOfActivityCaptureOxWNFsiI">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ActivityCapture" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AVS" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AVS" minOccurs="0" name="Value" nillable="true" type="q31:ActivityCapture" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfActivityCaptureOxWNFsiI" nillable="true" type="tns:OperationResultOfActivityCaptureOxWNFsiI" />
+  <xs:complexType name="OperationResultOfArrayOfActivityCaptureOxWNFsiI">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfActivityCapture" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AVS" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AVS" minOccurs="0" name="Value" nillable="true" type="q32:ArrayOfActivityCapture" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfActivityCaptureOxWNFsiI" nillable="true" type="tns:OperationResultOfArrayOfActivityCaptureOxWNFsiI" />
+  <xs:complexType name="OperationResultOfMatchedKeywordOxWNFsiI">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MatchedKeyword" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AVS" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AVS" minOccurs="0" name="Value" nillable="true" type="q33:MatchedKeyword" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfMatchedKeywordOxWNFsiI" nillable="true" type="tns:OperationResultOfMatchedKeywordOxWNFsiI" />
+  <xs:complexType name="OperationResultOfArrayOfMatchedKeywordOxWNFsiI">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfMatchedKeyword" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AVS" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AVS" minOccurs="0" name="Value" nillable="true" type="q34:ArrayOfMatchedKeyword" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfMatchedKeywordOxWNFsiI" nillable="true" type="tns:OperationResultOfArrayOfMatchedKeywordOxWNFsiI" />
+  <xs:complexType name="OperationResultOfBackupTaskMS1Xxfzk">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="BackupTask" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/PS.Data.Entities" minOccurs="0" name="Value" nillable="true" type="q35:BackupTask" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfBackupTaskMS1Xxfzk" nillable="true" type="tns:OperationResultOfBackupTaskMS1Xxfzk" />
+  <xs:complexType name="OperationResultOfArrayOfBackupTaskMS1Xxfzk">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfBackupTask" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/PS.Data.Entities" minOccurs="0" name="Value" nillable="true" type="q36:ArrayOfBackupTask" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfBackupTaskMS1Xxfzk" nillable="true" type="tns:OperationResultOfArrayOfBackupTaskMS1Xxfzk" />
+  <xs:complexType name="OperationResultOfBackupActionMS1Xxfzk">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="BackupAction" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/PS.Data.Entities" minOccurs="0" name="Value" nillable="true" type="q37:BackupAction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfBackupActionMS1Xxfzk" nillable="true" type="tns:OperationResultOfBackupActionMS1Xxfzk" />
+  <xs:complexType name="OperationResultOfArrayOfBackupActionMS1Xxfzk">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfBackupAction" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/PS.Data.Entities" minOccurs="0" name="Value" nillable="true" type="q38:ArrayOfBackupAction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfBackupActionMS1Xxfzk" nillable="true" type="tns:OperationResultOfArrayOfBackupActionMS1Xxfzk" />
+  <xs:complexType name="OperationResultOfResourceMS1Xxfzk">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Resource" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/PS.Data.Entities" minOccurs="0" name="Value" nillable="true" type="q39:Resource" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfResourceMS1Xxfzk" nillable="true" type="tns:OperationResultOfResourceMS1Xxfzk" />
+  <xs:complexType name="OperationResultOfArrayOfResourceMS1Xxfzk">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfResource" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/PS.Data.Entities" minOccurs="0" name="Value" nillable="true" type="q40:ArrayOfResource" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfResourceMS1Xxfzk" nillable="true" type="tns:OperationResultOfArrayOfResourceMS1Xxfzk" />
+  <xs:complexType name="OperationResultOfArrayOfCompanyMS1Xxfzk">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfCompany" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/PS.Data.Entities" minOccurs="0" name="Value" nillable="true" type="q41:ArrayOfCompany" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfCompanyMS1Xxfzk" nillable="true" type="tns:OperationResultOfArrayOfCompanyMS1Xxfzk" />
+  <xs:complexType name="OperationResultOfCompanyMS1Xxfzk">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Company" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/PS.Data.Entities" minOccurs="0" name="Value" nillable="true" type="q42:Company" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfCompanyMS1Xxfzk" nillable="true" type="tns:OperationResultOfCompanyMS1Xxfzk" />
+  <xs:complexType name="OperationResultOfArrayOfBrandMS1Xxfzk">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfBrand" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/PS.Data.Entities" minOccurs="0" name="Value" nillable="true" type="q43:ArrayOfBrand" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfBrandMS1Xxfzk" nillable="true" type="tns:OperationResultOfArrayOfBrandMS1Xxfzk" />
+  <xs:complexType name="OperationResultOfstring">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="string" Namespace="http://www.w3.org/2001/XMLSchema" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfstring" nillable="true" type="tns:OperationResultOfstring" />
+  <xs:complexType name="OperationResultOfAddMediaFileMS1Xxfzk">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="AddMediaFile" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/PS.Data.Entities" minOccurs="0" name="Value" nillable="true" type="q44:AddMediaFile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfAddMediaFileMS1Xxfzk" nillable="true" type="tns:OperationResultOfAddMediaFileMS1Xxfzk" />
+  <xs:complexType name="OperationResultOfdouble">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="double" Namespace="http://www.w3.org/2001/XMLSchema" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Value" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfdouble" nillable="true" type="tns:OperationResultOfdouble" />
+  <xs:complexType name="OperationResultOfArrayOfMoneyTransactionxqSogmmF">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfMoneyTransaction" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.Money" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/PS.Data.Entities.Money" minOccurs="0" name="Value" nillable="true" type="q45:ArrayOfMoneyTransaction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfMoneyTransactionxqSogmmF" nillable="true" type="tns:OperationResultOfArrayOfMoneyTransactionxqSogmmF" />
+  <xs:complexType name="OperationResultOfBankAccountxqSogmmF">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="BankAccount" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.Money" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/PS.Data.Entities.Money" minOccurs="0" name="Value" nillable="true" type="q46:BankAccount" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfBankAccountxqSogmmF" nillable="true" type="tns:OperationResultOfBankAccountxqSogmmF" />
+  <xs:complexType name="OperationResultOfArrayOfBankAccountxqSogmmF">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfBankAccount" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.Money" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/PS.Data.Entities.Money" minOccurs="0" name="Value" nillable="true" type="q47:ArrayOfBankAccount" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfBankAccountxqSogmmF" nillable="true" type="tns:OperationResultOfArrayOfBankAccountxqSogmmF" />
+  <xs:complexType name="OperationResultOfResourceTypeItemMS1Xxfzk">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ResourceTypeItem" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/PS.Data.Entities" minOccurs="0" name="Value" nillable="true" type="q48:ResourceTypeItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfResourceTypeItemMS1Xxfzk" nillable="true" type="tns:OperationResultOfResourceTypeItemMS1Xxfzk" />
+  <xs:complexType name="OperationResultOfArrayOfResourceTypeItemMS1Xxfzk">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfResourceTypeItem" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/PS.Data.Entities" minOccurs="0" name="Value" nillable="true" type="q49:ArrayOfResourceTypeItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfResourceTypeItemMS1Xxfzk" nillable="true" type="tns:OperationResultOfArrayOfResourceTypeItemMS1Xxfzk" />
+  <xs:complexType name="OperationResultOfResourceCategoryItemMS1Xxfzk">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ResourceCategoryItem" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/PS.Data.Entities" minOccurs="0" name="Value" nillable="true" type="q50:ResourceCategoryItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfResourceCategoryItemMS1Xxfzk" nillable="true" type="tns:OperationResultOfResourceCategoryItemMS1Xxfzk" />
+  <xs:complexType name="OperationResultOfArrayOfResourceCategoryItemMS1Xxfzk">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfResourceCategoryItem" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/PS.Data.Entities" minOccurs="0" name="Value" nillable="true" type="q51:ArrayOfResourceCategoryItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfResourceCategoryItemMS1Xxfzk" nillable="true" type="tns:OperationResultOfArrayOfResourceCategoryItemMS1Xxfzk" />
+  <xs:complexType name="OperationResultOfArrayOfstringuHEDJ7Dj">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfstring" Namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q52="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Value" nillable="true" type="q52:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfstringuHEDJ7Dj" nillable="true" type="tns:OperationResultOfArrayOfstringuHEDJ7Dj" />
+  <xs:complexType name="OperationResultOfQSpaceMS1Xxfzk">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="QSpace" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/PS.Data.Entities" minOccurs="0" name="Value" nillable="true" type="q53:QSpace" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfQSpaceMS1Xxfzk" nillable="true" type="tns:OperationResultOfQSpaceMS1Xxfzk" />
+  <xs:complexType name="OperationResultOfArrayOfQSpaceMS1Xxfzk">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfQSpace" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/PS.Data.Entities" minOccurs="0" name="Value" nillable="true" type="q54:ArrayOfQSpace" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfQSpaceMS1Xxfzk" nillable="true" type="tns:OperationResultOfArrayOfQSpaceMS1Xxfzk" />
+  <xs:complexType name="OperationResultOfTaskMS1Xxfzk">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Task" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/PS.Data.Entities" minOccurs="0" name="Value" nillable="true" type="q55:Task" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfTaskMS1Xxfzk" nillable="true" type="tns:OperationResultOfTaskMS1Xxfzk" />
+  <xs:complexType name="OperationResultOfArrayOfTaskMS1Xxfzk">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfTask" Namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsErrorReturned" type="xs:boolean" />
+      <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/PS.Data.Entities" minOccurs="0" name="Value" nillable="true" type="q56:ArrayOfTask" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfTaskMS1Xxfzk" nillable="true" type="tns:OperationResultOfArrayOfTaskMS1Xxfzk" />
+</xs:schema>

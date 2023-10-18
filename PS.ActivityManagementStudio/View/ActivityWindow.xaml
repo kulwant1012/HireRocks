@@ -1,0 +1,365 @@
+﻿<Window xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"  
+        x:Class="PS.ActivityManagementStudio.View.ActivityWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        DataContext="{Binding ActivityViewModel,Source={StaticResource Locator}}"
+        Title="Activities" WindowState="Maximized">
+    <Grid x:Name="Main">
+        <Grid.Resources>
+            <Style x:Key="RadUniformGridStyle" TargetType="telerik:RadUniformGrid">
+                <Setter Property="Rows" Value="10"/>
+                <Setter Property="ChildrenFlow" Value="Horizontal" />
+                <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Visible"/>
+            </Style>
+
+            <Style TargetType="telerik:RadClock" x:Key="RadClockStyle">
+                <Setter Property="Header" Value="Clock" />
+
+                <Setter Property="ItemsPanel">
+                    <Setter.Value>
+                        <ItemsPanelTemplate>
+                            <telerik:RadUniformGrid x:Name="uniformGrid" Style="{StaticResource RadUniformGridStyle}" />
+                        </ItemsPanelTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="TitleTextBlockStyleHeading" TargetType="TextBlock">
+                <Setter Property="FontSize" Value="13"/>
+                <Setter Property="FontFamily" Value="Segoe UI Regular"/>
+                <Setter Property="Foreground" Value="#2e2e2e"/>
+            </Style>
+
+            <Style x:Key="TitleTextBlockStyleContent" TargetType="TextBox">
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="FontFamily" Value="Segoe UI Regular"/>
+                <Setter Property="Foreground" Value="Blue"/>
+                <Setter Property="Height" Value="25"/>
+            </Style>
+
+            <Style x:Key="ContentStyle" TargetType="TextBlock">
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="FontFamily" Value="Segoe UI Regular"/>
+                <Setter Property="Foreground" Value="Blue"/>
+                <Setter Property="Height" Value="25"/>
+            </Style>
+
+            <Style x:Key="RadExpanderStyle" TargetType="telerik:RadExpander">
+                <Setter Property="telerik:StyleManager.Theme" Value="Windows8"/>
+            </Style>
+
+            <Style x:Key="RadButtonStyle" TargetType="telerik:RadButton">
+                <Setter Property="telerik:StyleManager.Theme" Value="Windows8"/>
+            </Style>
+
+            <Style x:Key="RadTimePickerStyle" TargetType="telerik:RadTimePicker">
+                <Setter Property="telerik:StyleManager.Theme" Value="Windows8"/>
+            </Style>
+        </Grid.Resources>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="{Binding Message}" Foreground="Red" HorizontalAlignment="Center" Width="auto"/>
+        <telerik:RadButton Grid.Row="0" Padding="5" Margin="20,1" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="Add Activity"
+                           Visibility="{Binding IsModificationButtonVisibe,Converter={StaticResource BoolToVisibilityConverter}}"                 
+                           Command="{Binding DataContext.OpenAddActivityWindow,ElementName=Main}" Style="{StaticResource RadButtonStyle}"/>
+
+
+        <telerik:RadTileView x:Name="tileView" Grid.Row="1" ItemsSource="{Binding ActivityList}" PreservePositionWhenMaximized="True"
+                                 MinimizedColumnWidth="200" MinimizedRowHeight="200" IsAutoScrollingEnabled="True"
+                                 RowHeight="200" ColumnWidth="200" Margin="10" >
+            <telerik:RadTileView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="{Binding Name}"/>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </telerik:RadTileView.ItemTemplate>
+            <telerik:RadTileView.ContentTemplate>
+                <DataTemplate>
+                    <telerik:RadFluidContentControl ContentChangeMode="Automatic" TransitionDuration="0:0:1">
+                        <telerik:RadFluidContentControl.LargeContent>
+                            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" telerik:StyleManager.Theme="Windows8">
+                                <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="20,8,0,0" HorizontalAlignment="Left">
+                                        <StackPanel Orientation="Vertical" Margin="5,0" Width="200">
+                                            <TextBlock Style="{StaticResource TitleTextBlockStyleHeading}" Text="Activity Name" />
+                                            <TextBlock Style="{StaticResource ContentStyle}" Text="{Binding Name}" />
+                                        </StackPanel>
+                                        <StackPanel Orientation="Vertical" Margin="5,0" Width="200">
+                                            <TextBlock Style="{StaticResource TitleTextBlockStyleHeading}" Text="Capture Interval (In seconds)" />
+                                            <TextBlock Text="{Binding CaptureInterval, Mode=TwoWay}" Style="{StaticResource ContentStyle}" />
+                                        </StackPanel>
+                                    </StackPanel>
+
+                                    <Border Grid.Row="1" VerticalAlignment="Top" Height="1" Background="Gray"/>
+                                    <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="20,8,0,0" HorizontalAlignment="Left">
+                                        <StackPanel Orientation="Vertical" Margin="5,0" Width="200">
+                                            <TextBlock Style="{StaticResource TitleTextBlockStyleHeading}" Text="Select QSpace" />
+                                            <TextBlock Text="{Binding QSpaceName}" Style="{StaticResource ContentStyle}"/>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Vertical" Margin="5,0">
+                                            <telerik:RadExpander VerticalAlignment="Bottom" IsExpanded="True"  ExpandDirection="Down" Style="{StaticResource RadExpanderStyle}">
+                                                <telerik:RadExpander.Header>
+                                                    <TextBlock Text="Assigned Keyword Dictionary" />
+                                                </telerik:RadExpander.Header>
+                                                <telerik:RadExpander.Content>
+                                                    <ListBox ItemsSource="{Binding KeywordDictionariesList,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,NotifyOnSourceUpdated=True}" Width="200">
+                                                        <ListBox.ItemTemplate>
+                                                            <DataTemplate>
+                                                                <TextBlock Text="{Binding DictionaryName}"/>
+                                                            </DataTemplate>
+                                                        </ListBox.ItemTemplate>
+                                                    </ListBox>
+                                                </telerik:RadExpander.Content>
+                                            </telerik:RadExpander>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Vertical" Margin="5,0" Width="200">
+                                            <telerik:RadExpander x:Name="radExpander" VerticalAlignment="Bottom" IsExpanded="True"  ExpandDirection="Down" Style="{StaticResource RadExpanderStyle}">
+                                                <telerik:RadExpander.Header>
+                                                    <TextBlock x:Name="expanderCaption" Text="Assigned Activity Tool" />
+                                                </telerik:RadExpander.Header>
+                                                <telerik:RadExpander.Content>
+                                                    <ListBox ItemsSource="{Binding ActivityToolsList,UpdateSourceTrigger=PropertyChanged}">
+                                                        <ListBox.ItemTemplate>
+                                                            <DataTemplate>
+                                                                <TextBlock Text="{Binding ToolDescription}"/>
+                                                            </DataTemplate>
+                                                        </ListBox.ItemTemplate>
+                                                    </ListBox>
+                                                </telerik:RadExpander.Content>
+                                            </telerik:RadExpander>
+                                        </StackPanel>
+                                    </StackPanel>
+
+                                    <Border Grid.Row="2" VerticalAlignment="Top" Height="1" Background="Gray"/>
+                                    <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="20,8,0,0" HorizontalAlignment="Left">
+                                        <StackPanel Margin="5,0" Width="200">
+                                            <TextBlock Style="{StaticResource TitleTextBlockStyleHeading}" Text="Start Date" />
+                                            <TextBlock Style="{StaticResource ContentStyle}" Text="{Binding StartDate}" />
+                                        </StackPanel>
+                                        <StackPanel Margin="5,0" Width="200">
+                                            <TextBlock Style="{StaticResource TitleTextBlockStyleHeading}" Text="Due Date" />
+                                            <TextBlock Style="{StaticResource ContentStyle}" Text="{Binding DueDate}" />
+                                        </StackPanel>
+                                        <StackPanel Margin="5,0" Width="200">
+                                            <TextBlock Style="{StaticResource TitleTextBlockStyleHeading}" Text="Completion Date" />
+                                            <TextBlock Style="{StaticResource ContentStyle}" Text="{Binding CompletionDate}" />
+                                        </StackPanel>
+                                    </StackPanel>
+
+                                    <Border Grid.Row="3" VerticalAlignment="Top" Height="1" Background="Gray"/>
+                                    <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="20,8,0,0" HorizontalAlignment="Left">
+                                        <StackPanel Margin="5,0" Width="200">
+                                            <TextBlock Style="{StaticResource TitleTextBlockStyleHeading}" Text="Actual Duration" />
+                                            <TextBlock Style="{StaticResource ContentStyle}" Text="{Binding ActualDuration}" />
+                                        </StackPanel>
+                                        <StackPanel Margin="5,0" Width="200">
+                                            <TextBlock Style="{StaticResource TitleTextBlockStyleHeading}" Text="Original Estimate" />
+                                            <TextBlock Style="{StaticResource ContentStyle}" Text="{Binding EstimatedDuration}" />
+                                        </StackPanel>
+                                        <StackPanel Margin="5,0" Width="200">
+                                            <TextBlock Style="{StaticResource TitleTextBlockStyleHeading}" Text="Remaining Estimate" />
+                                            <TextBlock Style="{StaticResource ContentStyle}" Text="{Binding RemainingDuration}" />
+                                        </StackPanel>
+                                    </StackPanel>
+
+                                    <StackPanel Grid.Row="4" Orientation="Horizontal" Margin="20,8,0,0" HorizontalAlignment="Left">
+                                        <!--<StackPanel Margin="5,0" Width="200">
+                                            <TextBlock Style="{StaticResource TitleTextBlockStyleHeading}" Text="Minimum Duration" />
+                                            <TextBlock Style="{StaticResource ContentStyle}" Text="{Binding MinimumDuration}" />
+                                        </StackPanel>
+                                        <StackPanel Margin="5,0" Width="200">
+                                            <TextBlock Style="{StaticResource TitleTextBlockStyleHeading}" Text="Maximum Duration" />
+                                            <TextBlock Style="{StaticResource ContentStyle}" Text="{Binding MaximumDuration}" />
+                                        </StackPanel>
+                                        <StackPanel Margin="5,0" Width="200">
+                                            <TextBlock Style="{StaticResource TitleTextBlockStyleHeading}" Text="Optimum Duration" />
+                                            <TextBlock Style="{StaticResource ContentStyle}" Text="{Binding OptimumDuration}" />
+                                        </StackPanel>-->
+                                    </StackPanel>
+
+                                    <Border Grid.Row="5" VerticalAlignment="Top" Height="1" Background="Gray"/>
+                                    <StackPanel Grid.Row="5" Orientation="Horizontal" Margin="20,8,0,0" HorizontalAlignment="Left">
+                                        <StackPanel Orientation="Horizontal">
+                                            <StackPanel Orientation="Vertical" Margin="5,0" Width="200">
+                                                <TextBlock Style="{StaticResource TitleTextBlockStyleHeading}" Text="Assigned To" />
+                                                <TextBlock Style="{StaticResource ContentStyle}" Text="{Binding AssignedTo}" />
+                                            </StackPanel>
+                                            <StackPanel Orientation="Vertical" Margin="5,0" Width="200">
+                                                <TextBlock Style="{StaticResource TitleTextBlockStyleHeading}" Text="Requested By" />
+                                                <TextBlock Style="{StaticResource ContentStyle}" Text="{Binding ReportedBy}" />
+                                            </StackPanel>
+                                            <StackPanel Orientation="Vertical" Margin="5,0" Width="200">
+                                                <TextBlock Style="{StaticResource TitleTextBlockStyleHeading}" Text="Priority" />
+                                                <TextBlock Style="{StaticResource ContentStyle}" Text="{Binding AssignedPriority}" />
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </StackPanel>
+
+                                    <Border Grid.Row="6" VerticalAlignment="Top" Height="1" Background="Gray"/>
+                                    <StackPanel Grid.Row="6" Orientation="Horizontal" Margin="20,8,0,0" HorizontalAlignment="Left">
+                                        <!--<StackPanel Orientation="Horizontal" Margin="5,0"  Width="200">
+                                            <telerik:RadExpander VerticalAlignment="Top" IsExpanded="True"  ExpandDirection="Down" Style="{StaticResource RadExpanderStyle}">
+                                                <telerik:RadExpander.Header>
+                                                    <TextBlock Text="All time collection" />
+                                                </telerik:RadExpander.Header>
+                                                <telerik:RadExpander.Content>
+                                                    <StackPanel Width="200" Orientation="Horizontal">
+                                                        <StackPanel Orientation="Vertical" Width="95">
+                                                            <TextBlock Style="{StaticResource TitleTextBlockStyleHeading}" Text="From" />
+                                                            <TextBlock Style="{StaticResource ContentStyle}" Text="{Binding AllCaptureTime.TimeFrom}" />
+                                                        </StackPanel>
+                                                        <StackPanel Orientation="Vertical" Width="95" Margin="5,0,0,0">
+                                                            <TextBlock Style="{StaticResource TitleTextBlockStyleHeading}" Text="To" />
+                                                            <TextBlock Style="{StaticResource ContentStyle}" Text="{Binding AllCaptureTime.TimeTo}" />
+                                                        </StackPanel>
+                                                    </StackPanel>
+                                                </telerik:RadExpander.Content>
+                                            </telerik:RadExpander>
+                                            <telerik:RadExpander VerticalAlignment="Top" IsExpanded="False"  ExpandDirection="Down" Style="{StaticResource RadExpanderStyle}">
+                                                <telerik:RadExpander.Header>
+                                                    <TextBlock Text="Add all time collection" />
+                                                </telerik:RadExpander.Header>
+                                                <telerik:RadExpander.Content>
+                                                    <Border BorderBrush="Gray" BorderThickness=".5">
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <StackPanel Orientation="Vertical" Margin="2">
+                                                                <TextBlock Text="{Binding AllTimeCollection}" TextWrapping="Wrap" />
+                                                            </StackPanel>
+                                                        </StackPanel>
+                                                    </Border>
+                                                </telerik:RadExpander.Content>
+                                            </telerik:RadExpander>
+                                        </StackPanel>-->
+                                        <!--<StackPanel Orientation="Horizontal" Margin="5,0" Width="200">
+                                            <telerik:RadExpander VerticalAlignment="Top" IsExpanded="True"  ExpandDirection="Down" Style="{StaticResource RadExpanderStyle}">
+                                                <telerik:RadExpander.Header>
+                                                    <TextBlock Text="Allowed time collection" />
+                                                </telerik:RadExpander.Header>
+                                                <telerik:RadExpander.Content>
+                                                    <StackPanel Width="200" Orientation="Horizontal">
+                                                        <StackPanel Orientation="Vertical" Width="95">
+                                                            <TextBlock Style="{StaticResource TitleTextBlockStyleHeading}" Text="From" />
+                                                            <TextBlock Style="{StaticResource ContentStyle}" Text="{Binding AllowedTime.TimeFrom}" />
+                                                        </StackPanel>
+                                                        <StackPanel Orientation="Vertical" Width="95" Margin="5,0,0,0">
+                                                            <TextBlock Style="{StaticResource TitleTextBlockStyleHeading}" Text="To" />
+                                                            <TextBlock Style="{StaticResource ContentStyle}" Text="{Binding AllowedTime.TimeTo}" />
+                                                        </StackPanel>
+                                                    </StackPanel>
+                                                </telerik:RadExpander.Content>
+                                            </telerik:RadExpander>
+                                            <telerik:RadExpander VerticalAlignment="Top" IsExpanded="False"  ExpandDirection="Down"  Width="200" Style="{StaticResource RadExpanderStyle}">
+                                                <telerik:RadExpander.Header>
+                                                    <TextBlock Text="Add allowed time collection" />
+                                                </telerik:RadExpander.Header>
+                                                <telerik:RadExpander.Content>
+                                                    <Border BorderBrush="Gray" BorderThickness=".5">
+                                                        <StackPanel Orientation="Horizontal">
+                                                            <StackPanel Orientation="Vertical" Margin="2">
+                                                                <TextBlock Text="{Binding AllowedTimeCollection}" TextWrapping="Wrap"/>
+                                                            </StackPanel>
+                                                        </StackPanel>
+                                                    </Border>
+                                                </telerik:RadExpander.Content>
+                                            </telerik:RadExpander>
+                                        </StackPanel>-->
+                                        <StackPanel Orientation="Vertical" Margin="5,0" Width="200">
+                                            <TextBlock Style="{StaticResource TitleTextBlockStyleHeading}" Text="Activity Status" />
+                                            <TextBlock Style="{StaticResource ContentStyle}" Text="{Binding ActivityStatusName}" />
+                                        </StackPanel>
+                                        <StackPanel Orientation="Vertical" Margin="5,0" Width="200">
+                                            <TextBlock Style="{StaticResource TitleTextBlockStyleHeading}" Text="Sequence" />
+                                            <TextBlock Style="{StaticResource ContentStyle}" Text="{Binding Sequence}" />
+                                        </StackPanel>
+                                        <StackPanel Orientation="Vertical" Margin="5,0" Width="200">
+                                            <TextBlock Style="{StaticResource TitleTextBlockStyleHeading}" Text="Variation Factor" />
+                                            <TextBlock Style="{StaticResource ContentStyle}" Text="{Binding VariationFactor}" />
+                                        </StackPanel>
+                                    </StackPanel>
+
+
+                                    <Border Grid.Row="7" VerticalAlignment="Top" Height="1" Background="Gray"/>
+                                    <StackPanel Grid.Row="7" Orientation="Horizontal" Margin="20,8,0,0" HorizontalAlignment="Left">                                        
+                                        <StackPanel Orientation="Vertical" Margin="5,0" Width="200">
+                                            <TextBlock Style="{StaticResource TitleTextBlockStyleHeading}" Text="Additional Time" />
+                                            <TextBlock Style="{StaticResource ContentStyle}" Text="{Binding AdditionalTime}" />
+                                        </StackPanel>
+                                        <StackPanel Orientation="Vertical" Margin="5,0" Width="200">
+                                            <TextBlock Style="{StaticResource TitleTextBlockStyleHeading}" Text="Percent Completed" />
+                                            <TextBlock Style="{StaticResource ContentStyle}" Text="{Binding PercentCompleted}" />
+                                        </StackPanel>
+                                    </StackPanel>
+                                    
+                                    <!--<StackPanel Grid.Row="7" Orientation="Horizontal" Margin="20,8,0,0" HorizontalAlignment="Left">
+                                        <StackPanel Orientation="Vertical" Margin="5,0" Width="200">
+                                            <TextBlock Style="{StaticResource TitleTextBlockStyleHeading}" Text="Release" />
+                                            <TextBlock Style="{StaticResource ContentStyle}" Text="{Binding ReleaseName}" />
+                                        </StackPanel>
+                                        <StackPanel Orientation="Vertical" Margin="5,0" Width="200">
+                                            <TextBlock Style="{StaticResource TitleTextBlockStyleHeading}" Text="Work Flow Step" />
+                                            <TextBlock Style="{StaticResource ContentStyle}" Text="{Binding WorkFlowStepName}" />
+                                        </StackPanel>
+                                       
+                                    </StackPanel>-->
+
+                                    <Border Grid.Row="8" VerticalAlignment="Top" Height="1" Background="Gray"/>
+                                    <StackPanel Grid.Row="8" Orientation="Vertical" Margin="20,8,0,0">
+                                        <TextBlock Style="{StaticResource TitleTextBlockStyleHeading}" Text="Description" />
+                                        <TextBlock Text="{Binding Description}" TextWrapping="Wrap" Style="{StaticResource ContentStyle}" Height="40"/>
+
+                                        <TextBlock Style="{StaticResource TitleTextBlockStyleHeading}" Text="Expected Output" />
+                                        <TextBlock Text="{Binding ExpectedOutput}" TextWrapping="Wrap" Style="{StaticResource ContentStyle}" Height="40"/>
+
+                                        <TextBlock Style="{StaticResource TitleTextBlockStyleHeading}" Text="Actual Output" />
+                                        <TextBlock Text="{Binding ActualOutput}" TextWrapping="Wrap" Style="{StaticResource ContentStyle}" Height="40"/>
+                                    </StackPanel>
+
+                                    <Border Grid.Row="9" VerticalAlignment="Top" Height="1" Background="Gray"/>
+                                    <StackPanel Grid.Row="9"  Margin="20,8,0,0" Orientation="Horizontal" HorizontalAlignment="Right">
+                                        <!--<StackPanel Orientation="Vertical" Margin="5,0">
+                                            <TextBlock Style="{StaticResource TitleTextBlockStyleHeading}" Text="Publically Viewable" />
+                                            <TextBlock Text="{Binding PubliclyViewable}" Style="{StaticResource ContentStyle}"/>
+                                        </StackPanel>-->
+                                        <telerik:RadButton Padding="5" Margin="0,0,20,20" HorizontalAlignment="Right" Content="Delete Activity"
+                                                           Command="{Binding DataContext.DeleteActivityCommand,ElementName=Main}" CommandParameter="{Binding}"
+        				                                   Style="{StaticResource RadButtonStyle}" Visibility="{Binding DataContext.IsModificationButtonVisibe,ElementName=Main,Converter={StaticResource BoolToVisibilityConverter}}"/>
+                                        <telerik:RadButton Padding="5" Margin="0,0,20,20" HorizontalAlignment="Right" Content="Edit Activity"
+                                                           Command="{Binding DataContext.OpenEditActivityWindow,ElementName=Main}" CommandParameter="{Binding}"
+        				                                   Style="{StaticResource RadButtonStyle}" Visibility="{Binding DataContext.IsModificationButtonVisibe,ElementName=Main,Converter={StaticResource BoolToVisibilityConverter}}"/>
+                                    </StackPanel>
+                                </Grid>
+                                <ScrollViewer.Resources>
+                                    <sys:Double x:Key="{x:Static SystemParameters.VerticalScrollBarWidthKey}">3</sys:Double>
+                                </ScrollViewer.Resources>
+                            </ScrollViewer>
+                        </telerik:RadFluidContentControl.LargeContent>
+                    </telerik:RadFluidContentControl>
+                </DataTemplate>
+            </telerik:RadTileView.ContentTemplate>
+        </telerik:RadTileView>
+
+        <telerik:RadBusyIndicator Grid.Row="1" IsBusy="{Binding IsBusy}" telerik:StyleManager.Theme="Windows8"
+				IsIndeterminate="True" >
+        </telerik:RadBusyIndicator>
+    </Grid>
+</Window>

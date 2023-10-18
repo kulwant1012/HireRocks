@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS.Common" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS.Common" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.169.235.121:84/PSService/Services/PSService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://192.169.235.121:84/PSService/Services/PSService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities" />
+  <xs:complexType name="ActivityCommon">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/PS.Data.Entities" base="q1:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AOSActivityId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ActivityStatusId" nillable="true" type="xs:string" />
+          <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ActivityToolId" nillable="true" type="q2:ArrayOfstring" />
+          <xs:element minOccurs="0" name="ActualDuration" type="xs:int" />
+          <xs:element minOccurs="0" name="AllCaptureTimeID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AllowedCaptureTimeId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AssignedTo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CompletionDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DueDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="EstimatedDuration" type="xs:int" />
+          <xs:element minOccurs="0" name="IsCompleted" type="xs:boolean" />
+          <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="KeywordDictionaryId" nillable="true" type="q3:ArrayOfstring" />
+          <xs:element minOccurs="0" name="MaximumDuration" type="xs:int" />
+          <xs:element minOccurs="0" name="MinimumDuration" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Notes" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OptimumDuration" type="xs:int" />
+          <xs:element minOccurs="0" name="OtnActivityId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PercentCompleted" type="xs:int" />
+          <xs:element minOccurs="0" name="Priority" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Project" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PubliclyViewable" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Release" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RemainingDuration" type="xs:int" />
+          <xs:element minOccurs="0" name="ReportedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Sequence" type="xs:int" />
+          <xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="WorkFlowStep" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ActivityCommon" nillable="true" type="tns:ActivityCommon" />
+  <xs:complexType name="QSpaceCommon">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/PS.Data.Entities" base="q4:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AOSQSpaceId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DueDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OtnQSpaceId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ParentQSpaceId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="QSpaceName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="QSpaceType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="QSpaceCommon" nillable="true" type="tns:QSpaceCommon" />
+  <xs:complexType name="UserCommon">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/PS.Data.Entities" base="q5:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsLocked" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LoginId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OTNUserId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RavenUserId" nillable="true" type="xs:string" />
+          <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="SecurityRoles" nillable="true" type="q6:ArrayOfint" />
+          <xs:element minOccurs="0" name="UseWindowsAuthentication" type="xs:boolean" />
+          <xs:element minOccurs="0" name="WindowsId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserCommon" nillable="true" type="tns:UserCommon" />
+  <xs:complexType name="ArrayOfActivityCommon">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ActivityCommon" nillable="true" type="tns:ActivityCommon" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfActivityCommon" nillable="true" type="tns:ArrayOfActivityCommon" />
+  <xs:complexType name="ArrayOfQSpaceCommon">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="QSpaceCommon" nillable="true" type="tns:QSpaceCommon" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfQSpaceCommon" nillable="true" type="tns:ArrayOfQSpaceCommon" />
+  <xs:complexType name="ArrayOfUserCommon">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserCommon" nillable="true" type="tns:UserCommon" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserCommon" nillable="true" type="tns:ArrayOfUserCommon" />
+</xs:schema>

@@ -1,0 +1,1716 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.169.235.121:84/PSService/Services/PSService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" />
+  <xs:import schemaLocation="http://192.169.235.121:84/PSService/Services/PSService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" />
+  <xs:import schemaLocation="http://192.169.235.121:84/PSService/Services/PSService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://192.169.235.121:84/PSService/Services/PSService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS.Common" />
+  <xs:import schemaLocation="http://192.169.235.121:84/PSService/Services/PSService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS.OTN_WorksnapsCommon" />
+  <xs:import schemaLocation="http://192.169.235.121:84/PSService/Services/PSService.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AVS" />
+  <xs:import schemaLocation="http://192.169.235.121:84/PSService/Services/PSService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities" />
+  <xs:import schemaLocation="http://192.169.235.121:84/PSService/Services/PSService.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.Money" />
+  <xs:element name="AddOrUpdateActivityComposition">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" minOccurs="0" name="activityComposition" nillable="true" type="q1:ActivityComposition" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrUpdateActivityCompositionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="AddOrUpdateActivityCompositionResult" nillable="true" type="q2:OperationResultOfActivityCompositiont5HEkg3_S" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrUpdateUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" minOccurs="0" name="user" nillable="true" type="q3:User" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrUpdateUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="AddOrUpdateUserResult" nillable="true" type="q4:OperationResultOfUsert5HEkg3_S" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrUpdateQSpace">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" minOccurs="0" name="aosQSpace" nillable="true" type="q5:AOSQSpace" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrUpdateQSpaceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="AddOrUpdateQSpaceResult" nillable="true" type="q6:OperationResultOfAOSQSpacet5HEkg3_S" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrUpdateActivity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" minOccurs="0" name="activity" nillable="true" type="q7:Activity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrUpdateActivityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="AddOrUpdateActivityResult" nillable="true" type="q8:OperationResultOfActivityt5HEkg3_S" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrUpdateActivityStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" minOccurs="0" name="activityStatus" nillable="true" type="q9:ActivityStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrUpdateActivityStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="AddOrUpdateActivityStatusResult" nillable="true" type="q10:OperationResultOfActivityStatust5HEkg3_S" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrUpdateActivityUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" minOccurs="0" name="activityUser" nillable="true" type="q11:ActivityUser" />
+        <xs:element minOccurs="0" name="isAssignedToChanged" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrUpdateActivityUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="AddOrUpdateActivityUserResult" nillable="true" type="q12:OperationResultOfActivityUsert5HEkg3_S" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUser">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetUserResult" nillable="true" type="q13:OperationResultOfArrayOfUsert5HEkg3_S" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetUserOffline">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetUserOfflineResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="SetUserOfflineResult" nillable="true" type="q14:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetQSpaces">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetQSpacesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetQSpacesResult" nillable="true" type="q15:OperationResultOfArrayOfAOSQSpacet5HEkg3_S" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActivitiesByQSpaceIdAndActivityId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="qSpaceId" nillable="true" type="xs:string" />
+        <xs:element xmlns:q16="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="activityIds" nillable="true" type="q16:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActivitiesByQSpaceIdAndActivityIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetActivitiesByQSpaceIdAndActivityIdResult" nillable="true" type="q17:OperationResultOfArrayOfActivityt5HEkg3_S" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActivityCompositionsByActivityIds">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="activityIds" nillable="true" type="q18:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActivityCompositionsByActivityIdsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetActivityCompositionsByActivityIdsResult" nillable="true" type="q19:OperationResultOfArrayOfActivityCompositiont5HEkg3_S" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActivityStatus">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActivityStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetActivityStatusResult" nillable="true" type="q20:OperationResultOfArrayOfActivityStatust5HEkg3_S" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AOSSignIn">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="login" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AOSSignInResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="AOSSignInResult" nillable="true" type="q21:OperationResultOfUsert5HEkg3_S" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrUpdateCommonActivity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS.Common" minOccurs="0" name="activityCommon" nillable="true" type="q22:ActivityCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrUpdateCommonActivityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="AddOrUpdateCommonActivityResult" nillable="true" type="q23:OperationResultOfActivityCommonANkqkxzR" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrUpdateCommonQSpace">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS.Common" minOccurs="0" name="qSpaceCommon" nillable="true" type="q24:QSpaceCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrUpdateCommonQSpaceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="AddOrUpdateCommonQSpaceResult" nillable="true" type="q25:OperationResultOfQSpaceCommonANkqkxzR" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrUpdateCommonUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS.Common" minOccurs="0" name="userCommon" nillable="true" type="q26:UserCommon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrUpdateCommonUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="AddOrUpdateCommonUserResult" nillable="true" type="q27:OperationResultOfUserCommonANkqkxzR" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommonActivities">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommonActivitiesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetCommonActivitiesResult" nillable="true" type="q28:OperationResultOfArrayOfActivityCommonANkqkxzR" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommonQSpaces">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommonQSpacesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetCommonQSpacesResult" nillable="true" type="q29:OperationResultOfArrayOfQSpaceCommonANkqkxzR" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommonUsers">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommonUsersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetCommonUsersResult" nillable="true" type="q30:OperationResultOfArrayOfUserCommonANkqkxzR" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserActivitiesByUserId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserActivitiesByUserIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetUserActivitiesByUserIdResult" nillable="true" type="q31:OperationResultOfArrayOfActivityUsert5HEkg3_S" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActivitiesById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="activityIds" nillable="true" type="q32:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActivitiesByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetActivitiesByIdResult" nillable="true" type="q33:OperationResultOfArrayOfActivityt5HEkg3_S" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActivitiesByOTNActivityIds">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="otnActivityIds" nillable="true" type="q34:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActivitiesByOTNActivityIdsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetActivitiesByOTNActivityIdsResult" nillable="true" type="q35:OperationResultOfArrayOfActivityt5HEkg3_S" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrUpdateActivityTool">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" minOccurs="0" name="activityTool" nillable="true" type="q36:ActivityTool" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrUpdateActivityToolResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="AddOrUpdateActivityToolResult" nillable="true" type="q37:OperationResultOfActivityToolt5HEkg3_S" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActivityToolsById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="toolIds" nillable="true" type="q38:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActivityToolsByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetActivityToolsByIdResult" nillable="true" type="q39:OperationResultOfArrayOfActivityToolt5HEkg3_S" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllActivityTools">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllActivityToolsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetAllActivityToolsResult" nillable="true" type="q40:OperationResultOfArrayOfActivityToolt5HEkg3_S" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrUpdateAllCaptureTime">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" minOccurs="0" name="allCaptureTime" nillable="true" type="q41:AllCaptureTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrUpdateAllCaptureTimeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="AddOrUpdateAllCaptureTimeResult" nillable="true" type="q42:OperationResultOfAllCaptureTimet5HEkg3_S" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrUpdateAllowedTime">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" minOccurs="0" name="allowedTime" nillable="true" type="q43:AllowedTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrUpdateAllowedTimeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="AddOrUpdateAllowedTimeResult" nillable="true" type="q44:OperationResultOfAllowedTimet5HEkg3_S" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrUpdateKeywordDictionary">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" minOccurs="0" name="keywordDictionary" nillable="true" type="q45:KeywordDictionary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrUpdateKeywordDictionaryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="AddOrUpdateKeywordDictionaryResult" nillable="true" type="q46:OperationResultOfKeywordDictionaryt5HEkg3_S" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllTimeCollectionById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="collectionId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllTimeCollectionByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetAllTimeCollectionByIdResult" nillable="true" type="q47:OperationResultOfAllCaptureTimet5HEkg3_S" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllowedTimeCollectionById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="collectionId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllowedTimeCollectionByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetAllowedTimeCollectionByIdResult" nillable="true" type="q48:OperationResultOfAllowedTimet5HEkg3_S" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllTimeCollection">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllTimeCollectionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetAllTimeCollectionResult" nillable="true" type="q49:OperationResultOfArrayOfAllCaptureTimet5HEkg3_S" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllowedTimeCollection">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllowedTimeCollectionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetAllowedTimeCollectionResult" nillable="true" type="q50:OperationResultOfArrayOfAllowedTimet5HEkg3_S" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetKeywordDictionariesByIds">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="dictionaryIds" nillable="true" type="q51:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetKeywordDictionariesByIdsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetKeywordDictionariesByIdsResult" nillable="true" type="q52:OperationResultOfArrayOfKeywordDictionaryt5HEkg3_S" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetKeywordDictionaries">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetKeywordDictionariesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetKeywordDictionariesResult" nillable="true" type="q53:OperationResultOfArrayOfKeywordDictionaryt5HEkg3_S" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActivityUserByActivityId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="activityId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActivityUserByActivityIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetActivityUserByActivityIdResult" nillable="true" type="q54:OperationResultOfActivityUsert5HEkg3_S" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActivityTools">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActivityToolsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetActivityToolsResult" nillable="true" type="q55:OperationResultOfArrayOfActivityToolt5HEkg3_S" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActiveActivitiesByQSpaceIdAndActivityId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="qSpaceId" nillable="true" type="xs:string" />
+        <xs:element xmlns:q56="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="activityIds" nillable="true" type="q56:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActiveActivitiesByQSpaceIdAndActivityIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetActiveActivitiesByQSpaceIdAndActivityIdResult" nillable="true" type="q57:OperationResultOfArrayOfActivityt5HEkg3_S" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActivityUsers">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActivityUsersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetActivityUsersResult" nillable="true" type="q58:OperationResultOfArrayOfActivityUsert5HEkg3_S" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrUpdatePriority">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" minOccurs="0" name="activityPriority" nillable="true" type="q59:ActivityPriority" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrUpdatePriorityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="AddOrUpdatePriorityResult" nillable="true" type="q60:OperationResultOfActivityPriorityt5HEkg3_S" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActivityPriorities">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActivityPrioritiesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetActivityPrioritiesResult" nillable="true" type="q61:OperationResultOfArrayOfActivityPriorityt5HEkg3_S" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActivities">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActivitiesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetActivitiesResult" nillable="true" type="q62:OperationResultOfArrayOfActivityt5HEkg3_S" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActivityByActivityId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="activityId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActivityByActivityIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetActivityByActivityIdResult" nillable="true" type="q63:OperationResultOfActivityt5HEkg3_S" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActivityCompositionByActivityId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="activityId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActivityCompositionByActivityIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetActivityCompositionByActivityIdResult" nillable="true" type="q64:OperationResultOfActivityCompositiont5HEkg3_S" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateActivityViewStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q65="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="activityIds" nillable="true" type="q65:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateActivityViewStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="UpdateActivityViewStatusResult" nillable="true" type="q66:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteActivityByActivityId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="activityId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteActivityByActivityIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="DeleteActivityByActivityIdResult" nillable="true" type="q67:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReportData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="qSpaceId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="activityId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fromDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="toDate" nillable="true" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReportDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetReportDataResult" nillable="true" type="q68:OperationResultOfArrayOfReportst5HEkg3_S" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersByQSpaceId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="qSpaceId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersByQSpaceIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetUsersByQSpaceIdResult" nillable="true" type="q69:OperationResultOfArrayOfUsert5HEkg3_S" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActivitiesByQSpaceAndUserId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="qSpaceId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActivitiesByQSpaceAndUserIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q70="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetActivitiesByQSpaceAndUserIdResult" nillable="true" type="q70:OperationResultOfArrayOfActivityt5HEkg3_S" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertDefaultData">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertDefaultDataResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmailTemplateById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="templateId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmailTemplateByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetEmailTemplateByIdResult" nillable="true" type="q71:OperationResultOfEmailTemplatet5HEkg3_S" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrUpdateOTNWorksnapsCommonUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS.OTN_WorksnapsCommon" minOccurs="0" name="otnWorksnapsCommonUser" nillable="true" type="q72:OTNWorksnapsCommonUser" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrUpdateOTNWorksnapsCommonUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="AddOrUpdateOTNWorksnapsCommonUserResult" nillable="true" type="q73:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrUpdateOTNWorksnapsActivity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q74="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS.OTN_WorksnapsCommon" minOccurs="0" name="otnWorksnapsActivity" nillable="true" type="q74:OTNWorksnapsActivity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrUpdateOTNWorksnapsActivityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="AddOrUpdateOTNWorksnapsActivityResult" nillable="true" type="q75:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrUpdateOTNWorksnapsWorkLog">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS.OTN_WorksnapsCommon" minOccurs="0" name="otnWorksnapsWorklog" nillable="true" type="q76:OTNWorksnapsWorklog" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrUpdateOTNWorksnapsWorkLogResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="AddOrUpdateOTNWorksnapsWorkLogResult" nillable="true" type="q77:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrUpdateOTNWorksnapsQSpace">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q78="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS.OTN_WorksnapsCommon" minOccurs="0" name="qSpace" nillable="true" type="q78:OTNWorksnapsQSpace" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrUpdateOTNWorksnapsQSpaceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q79="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="AddOrUpdateOTNWorksnapsQSpaceResult" nillable="true" type="q79:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrUpdateOTNWorksnapsLastSyncDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q80="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS.OTN_WorksnapsCommon" minOccurs="0" name="lastSyncDate" nillable="true" type="q80:LastSyncDate" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrUpdateOTNWorksnapsLastSyncDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q81="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="AddOrUpdateOTNWorksnapsLastSyncDateResult" nillable="true" type="q81:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteCapturedInformation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteCapturedInformationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q82="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="DeleteCapturedInformationResult" nillable="true" type="q82:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCapturedInformation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q83="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AVS" minOccurs="0" name="activityCapture" nillable="true" type="q83:ActivityCapture" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCapturedInformationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q84="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="AddCapturedInformationResult" nillable="true" type="q84:OperationResultOfActivityCaptureOxWNFsiI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActivityCaptures">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="startDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="endDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="activityUserId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActivityCapturesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q85="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetActivityCapturesResult" nillable="true" type="q85:OperationResultOfArrayOfActivityCaptureOxWNFsiI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrUpdateMatchedKeyword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q86="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AVS" minOccurs="0" name="matchedKeyword" nillable="true" type="q86:MatchedKeyword" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrUpdateMatchedKeywordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q87="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="AddOrUpdateMatchedKeywordResult" nillable="true" type="q87:OperationResultOfMatchedKeywordOxWNFsiI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMatchedKeywordByIds">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q88="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="matchedKeywordIds" nillable="true" type="q88:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMatchedKeywordByIdsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q89="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetMatchedKeywordByIdsResult" nillable="true" type="q89:OperationResultOfArrayOfMatchedKeywordOxWNFsiI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateVerificationStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="entityId" nillable="true" type="xs:string" />
+        <xs:element xmlns:q90="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AVS" minOccurs="0" name="verificationStatus" nillable="true" type="q90:VerificationStatus" />
+        <xs:element minOccurs="0" name="isCaptureAcceptanceChanged" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateVerificationStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q91="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="UpdateVerificationStatusResult" nillable="true" type="q91:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActivityCapturesByActivityId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="activityId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActivityCapturesByActivityIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q92="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetActivityCapturesByActivityIdResult" nillable="true" type="q92:OperationResultOfArrayOfActivityCaptureOxWNFsiI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StartBackupTask">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="backupTaskId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StartBackupTaskResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q93="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="StartBackupTaskResult" nillable="true" type="q93:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBackupTaskById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="backupTaskId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBackupTaskByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q94="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetBackupTaskByIdResult" nillable="true" type="q94:OperationResultOfBackupTaskMS1Xxfzk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllBackupTasks">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllBackupTasksResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q95="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetAllBackupTasksResult" nillable="true" type="q95:OperationResultOfArrayOfBackupTaskMS1Xxfzk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertOrUpdateBackupTask">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q96="http://schemas.datacontract.org/2004/07/PS.Data.Entities" minOccurs="0" name="backupTask" nillable="true" type="q96:BackupTask" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertOrUpdateBackupTaskResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q97="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="InsertOrUpdateBackupTaskResult" nillable="true" type="q97:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteBackupTask">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteBackupTaskResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q98="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="DeleteBackupTaskResult" nillable="true" type="q98:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBackupActionById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="backupActionId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBackupActionByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q99="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetBackupActionByIdResult" nillable="true" type="q99:OperationResultOfBackupActionMS1Xxfzk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllBackupActions">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllBackupActionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q100="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetAllBackupActionsResult" nillable="true" type="q100:OperationResultOfArrayOfBackupActionMS1Xxfzk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertOrUpdateBackupAction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q101="http://schemas.datacontract.org/2004/07/PS.Data.Entities" minOccurs="0" name="backupAction" nillable="true" type="q101:BackupAction" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertOrUpdateBackupActionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q102="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="InsertOrUpdateBackupActionResult" nillable="true" type="q102:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteBackupAction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="backupActionId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteBackupActionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q103="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="DeleteBackupActionResult" nillable="true" type="q103:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteAllBackupActions">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteAllBackupActionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q104="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="DeleteAllBackupActionsResult" nillable="true" type="q104:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrUpdateResource">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q105="http://schemas.datacontract.org/2004/07/PS.Data.Entities" minOccurs="0" name="resource" nillable="true" type="q105:Resource" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrUpdateResourceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q106="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="AddOrUpdateResourceResult" nillable="true" type="q106:OperationResultOfResourceMS1Xxfzk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetResources">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="searchText" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetResourcesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q107="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetResourcesResult" nillable="true" type="q107:OperationResultOfArrayOfResourceMS1Xxfzk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteResourceEntry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteResourceEntryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q108="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="DeleteResourceEntryResult" nillable="true" type="q108:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyByName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="searchText" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyByNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q109="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetCompanyByNameResult" nillable="true" type="q109:OperationResultOfArrayOfCompanyMS1Xxfzk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrUpdateCompany">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q110="http://schemas.datacontract.org/2004/07/PS.Data.Entities" minOccurs="0" name="company" nillable="true" type="q110:Company" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrUpdateCompanyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q111="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="AddOrUpdateCompanyResult" nillable="true" type="q111:OperationResultOfCompanyMS1Xxfzk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteCompanyEntry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteCompanyEntryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q112="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="DeleteCompanyEntryResult" nillable="true" type="q112:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddBrand">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q113="http://schemas.datacontract.org/2004/07/PS.Data.Entities" minOccurs="0" name="brand" nillable="true" type="q113:ArrayOfBrand" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddBrandResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q114="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="AddBrandResult" nillable="true" type="q114:OperationResultOfArrayOfBrandMS1Xxfzk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ShowData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="value" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ShowDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q115="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="ShowDataResult" nillable="true" type="q115:OperationResultOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InitializeRavenDb">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="connectionString" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InitializeRavenDbResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q116="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="InitializeRavenDbResult" nillable="true" type="q116:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendEmails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cutTime" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendEmailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q117="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="SendEmailsResult" nillable="true" type="q117:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveMedia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveMediaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q118="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="RemoveMediaResult" nillable="true" type="q118:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UploadMedia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q119="http://schemas.datacontract.org/2004/07/PS.Data.Entities" minOccurs="0" name="addMediaFile" nillable="true" type="q119:AddMediaFile" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UploadMediaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q120="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="UploadMediaResult" nillable="true" type="q120:OperationResultOfAddMediaFileMS1Xxfzk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBalance">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBalanceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q121="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetBalanceResult" nillable="true" type="q121:OperationResultOfdouble" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadMoney">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="amount" type="xs:double" />
+        <xs:element xmlns:q122="http://schemas.datacontract.org/2004/07/PS.Data.Entities.Money" minOccurs="0" name="moneyLoadDetail" nillable="true" type="q122:MoneyLoadDetail" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pushChannel" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadMoneyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q123="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="LoadMoneyResult" nillable="true" type="q123:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TransferMoney">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="amount" type="xs:double" />
+        <xs:element xmlns:q124="http://schemas.datacontract.org/2004/07/PS.Data.Entities.Money" minOccurs="0" name="moneyTransferDetail" nillable="true" type="q124:MoneyTransferDetail" />
+        <xs:element minOccurs="0" name="fromUserId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="toUserId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pushChannel" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TransferMoneyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q125="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="TransferMoneyResult" nillable="true" type="q125:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WithdrawMoney">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="amount" type="xs:double" />
+        <xs:element xmlns:q126="http://schemas.datacontract.org/2004/07/PS.Data.Entities.Money" minOccurs="0" name="moneyWithdrawDetail" nillable="true" type="q126:MoneyWithdrawDetail" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pushChannel" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WithdrawMoneyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q127="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="WithdrawMoneyResult" nillable="true" type="q127:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPendingTransactions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPendingTransactionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q128="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetPendingTransactionsResult" nillable="true" type="q128:OperationResultOfArrayOfMoneyTransactionxqSogmmF" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPendingTransactionsAmount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPendingTransactionsAmountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q129="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetPendingTransactionsAmountResult" nillable="true" type="q129:OperationResultOfdouble" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllTransactions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllTransactionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q130="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetAllTransactionsResult" nillable="true" type="q130:OperationResultOfArrayOfMoneyTransactionxqSogmmF" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBankAccountById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bankAccountId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBankAccountByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q131="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetBankAccountByIdResult" nillable="true" type="q131:OperationResultOfBankAccountxqSogmmF" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllBankAccounts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllBankAccountsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q132="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetAllBankAccountsResult" nillable="true" type="q132:OperationResultOfArrayOfBankAccountxqSogmmF" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVerifiedBankAccounts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVerifiedBankAccountsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q133="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetVerifiedBankAccountsResult" nillable="true" type="q133:OperationResultOfArrayOfBankAccountxqSogmmF" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertOrUpdateBankAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q134="http://schemas.datacontract.org/2004/07/PS.Data.Entities.Money" minOccurs="0" name="bankAccount" nillable="true" type="q134:BankAccount" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertOrUpdateBankAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q135="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="InsertOrUpdateBankAccountResult" nillable="true" type="q135:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteBankAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bankAccountId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteBankAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q136="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="DeleteBankAccountResult" nillable="true" type="q136:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoVerificationTransactions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bankAccountId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoVerificationTransactionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q137="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="DoVerificationTransactionsResult" nillable="true" type="q137:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifyBankAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bankAccountId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="transaction1Amount" type="xs:float" />
+        <xs:element minOccurs="0" name="transaction2Amount" type="xs:float" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifyBankAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q138="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="VerifyBankAccountResult" nillable="true" type="q138:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetResourceTypeById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetResourceTypeByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q139="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetResourceTypeByIdResult" nillable="true" type="q139:OperationResultOfResourceTypeItemMS1Xxfzk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetResourceTypeByNameStartWith">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nameStartWithString" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetResourceTypeByNameStartWithResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q140="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetResourceTypeByNameStartWithResult" nillable="true" type="q140:OperationResultOfArrayOfResourceTypeItemMS1Xxfzk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllResourceTypes">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllResourceTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q141="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetAllResourceTypesResult" nillable="true" type="q141:OperationResultOfArrayOfResourceTypeItemMS1Xxfzk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateResourceType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q142="http://schemas.datacontract.org/2004/07/PS.Data.Entities" minOccurs="0" name="resourceType" nillable="true" type="q142:ResourceTypeItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateResourceTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q143="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="CreateResourceTypeResult" nillable="true" type="q143:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteResourceType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q144="http://schemas.datacontract.org/2004/07/PS.Data.Entities" minOccurs="0" name="resourceType" nillable="true" type="q144:ResourceTypeItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteResourceTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q145="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="DeleteResourceTypeResult" nillable="true" type="q145:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetResourceCategoryById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetResourceCategoryByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q146="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetResourceCategoryByIdResult" nillable="true" type="q146:OperationResultOfResourceCategoryItemMS1Xxfzk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetResourceCategoriesByTypeId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="typeId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetResourceCategoriesByTypeIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q147="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetResourceCategoriesByTypeIdResult" nillable="true" type="q147:OperationResultOfArrayOfResourceCategoryItemMS1Xxfzk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetResourceCategoriesByNameStartWith">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nameStartWithString" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetResourceCategoriesByNameStartWithResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q148="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetResourceCategoriesByNameStartWithResult" nillable="true" type="q148:OperationResultOfArrayOfResourceCategoryItemMS1Xxfzk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllResourceCategories">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllResourceCategoriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q149="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetAllResourceCategoriesResult" nillable="true" type="q149:OperationResultOfArrayOfResourceCategoryItemMS1Xxfzk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateResourceCategory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q150="http://schemas.datacontract.org/2004/07/PS.Data.Entities" minOccurs="0" name="resourceCategory" nillable="true" type="q150:ResourceCategoryItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateResourceCategoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q151="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="CreateResourceCategoryResult" nillable="true" type="q151:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteResourceCategory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q152="http://schemas.datacontract.org/2004/07/PS.Data.Entities" minOccurs="0" name="resourceCategory" nillable="true" type="q152:ResourceCategoryItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteResourceCategoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q153="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="DeleteResourceCategoryResult" nillable="true" type="q153:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetResourceById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetResourceByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q154="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetResourceByIdResult" nillable="true" type="q154:OperationResultOfResourceMS1Xxfzk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetResourcesByNameStartWith">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nameStartWithString" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetResourcesByNameStartWithResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q155="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetResourcesByNameStartWithResult" nillable="true" type="q155:OperationResultOfArrayOfResourceMS1Xxfzk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetResourcesSearchSuggestions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nameStartWithString" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="suggestionsCount" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetResourcesSearchSuggestionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q156="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetResourcesSearchSuggestionsResult" nillable="true" type="q156:OperationResultOfArrayOfstringuHEDJ7Dj" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllResources">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllResourcesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q157="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetAllResourcesResult" nillable="true" type="q157:OperationResultOfArrayOfResourceMS1Xxfzk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateResource">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q158="http://schemas.datacontract.org/2004/07/PS.Data.Entities" minOccurs="0" name="resource" nillable="true" type="q158:Resource" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateResourceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q159="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="CreateResourceResult" nillable="true" type="q159:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteResource">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q160="http://schemas.datacontract.org/2004/07/PS.Data.Entities" minOccurs="0" name="resource" nillable="true" type="q160:Resource" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteResourceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q161="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="DeleteResourceResult" nillable="true" type="q161:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetQSpaceById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetQSpaceByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q162="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetQSpaceByIdResult" nillable="true" type="q162:OperationResultOfQSpaceMS1Xxfzk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllQSpaces">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllQSpacesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q163="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetAllQSpacesResult" nillable="true" type="q163:OperationResultOfArrayOfQSpaceMS1Xxfzk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertOrUpdate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q164="http://schemas.datacontract.org/2004/07/PS.Data.Entities" minOccurs="0" name="qSpace" nillable="true" type="q164:QSpace" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertOrUpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q165="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="InsertOrUpdateResult" nillable="true" type="q165:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteQSpace">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteQSpaceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q166="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="DeleteQSpaceResult" nillable="true" type="q166:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTasksById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTasksByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q167="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetTasksByIdResult" nillable="true" type="q167:OperationResultOfTaskMS1Xxfzk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllTasks">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllTasksResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q168="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="GetAllTasksResult" nillable="true" type="q168:OperationResultOfArrayOfTaskMS1Xxfzk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertOrUpdateTask">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q169="http://schemas.datacontract.org/2004/07/PS.Data.Entities" minOccurs="0" name="task" nillable="true" type="q169:Task" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertOrUpdateTaskResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q170="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="InsertOrUpdateTaskResult" nillable="true" type="q170:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteTask">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteTaskResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q171="http://schemas.datacontract.org/2004/07/PS.Azure.Web" minOccurs="0" name="DeleteTaskResult" nillable="true" type="q171:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

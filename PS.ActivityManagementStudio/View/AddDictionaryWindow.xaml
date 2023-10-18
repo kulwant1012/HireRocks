@@ -1,0 +1,63 @@
+﻿<Window xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" 
+    x:Class="PS.ActivityManagementStudio.View.AddDictionaryWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:w="clr-namespace:PS.ActivityManagementStudio.Helpers" 
+        WindowStartupLocation="CenterScreen"  WindowState="Maximized" Background="WhiteSmoke"
+        Title="Add Dictionary" 
+        DataContext="{Binding DictionaryModel, Source={StaticResource Locator}}">
+    <Grid  x:Name="Main">
+        <StackPanel VerticalAlignment="Center">
+            <Border Margin="5,5,0,5" BorderThickness="1" BorderBrush="Gray" Height="200" Width="350">
+                <Grid Width="320" VerticalAlignment="Center" Height="200" HorizontalAlignment="Center" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding Message}" VerticalAlignment="Top" Foreground="Red" Height="20"/>
+                    <TextBlock Grid.Row="0" Grid.Column="1" Text="Add Dictionary" VerticalAlignment="Center" FontWeight="Bold" Margin="20"/>
+
+                    <Grid Grid.Row="1" HorizontalAlignment="Right" Width="320">
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="200"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.ColumnSpan="1" Grid.RowSpan="2">
+                        </Grid>
+
+                        <Label Grid.Row="0" Grid.Column="1" Content="Dictionary Name:" />
+                        <TextBox Text="{Binding KeywordDictionaryModel.DictionaryName}" Grid.Row="0" Grid.Column="2" Height="30" BorderBrush="WhiteSmoke" BorderThickness="2" ></TextBox>
+                        <Label Grid.Row="1" Grid.Column="1" Content="Key Word:"/>
+                        <TextBox Grid.Row="2" Grid.Column="2" Height="30" Text="{Binding Keyword}" BorderBrush="WhiteSmoke" BorderThickness="2"></TextBox>
+                    </Grid>
+                    <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
+                        <telerik:RadButton Name="AddKeyWord"  Content="Add Keyword" Height="30" Width="100" Command="{Binding AddKeywordCommand}" ></telerik:RadButton>
+                        <telerik:RadButton Name="AddDictionary" Content="Add Dictionary"  Height="30" Width="100" Command="{Binding AddUpdateDictionaryCommand}" ></telerik:RadButton>
+                    </StackPanel>
+                </Grid>
+            </Border>
+            <Border Margin="5,0,0,5" BorderThickness="1" BorderBrush="Gray" Height="200" Width="350">
+                <Grid Width="350" Height="200">
+
+                    <telerik:RadExpander Header="List of Keywords" IsExpanded="True" ExpandDirection="Down" BorderBrush="Gray" BorderThickness="1" >
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="{Binding KeywordDictionaryModel.DictionaryName}" FontWeight="Bold"/>
+                            <ListView x:Name="listDictionary" ItemsSource="{Binding KeywordDictionaryModel.keywordList}" BorderThickness="0" ScrollViewer.HorizontalScrollBarVisibility="Auto" Width="335" Height="165"
+                         SelectedIndex="{Binding KeywordIndex, Mode=TwoWay}"   SelectedItem="{Binding Keyword, Mode=TwoWay}" >
+                            </ListView>
+                        </StackPanel>
+                    </telerik:RadExpander>
+                </Grid>
+            </Border>
+        </StackPanel>
+
+    </Grid>
+</Window>

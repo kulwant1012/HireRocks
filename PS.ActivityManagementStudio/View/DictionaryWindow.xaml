@@ -1,0 +1,107 @@
+﻿<Window x:Class="PS.ActivityManagementStudio.View.DictionaryWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        DataContext="{Binding DictionaryModel,Source={StaticResource Locator}}"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        Title="Dictionaries" WindowState="Maximized">
+    <Grid x:Name="Main">
+        <Grid.Resources>
+            <Style x:Key="TitleTextBlockStyleHeading" TargetType="TextBlock">
+                <Setter Property="FontSize" Value="13"/>
+                <Setter Property="FontFamily" Value="Segoe UI Regular"/>
+                <Setter Property="Foreground" Value="#2e2e2e"/>
+            </Style>
+
+            <Style x:Key="TitleTextBlockStyleContent" TargetType="TextBlock">
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="FontFamily" Value="Segoe UI Regular"/>
+                <Setter Property="Foreground" Value="Blue"/>
+                <Setter Property="Height" Value="25"/>
+            </Style>
+
+            <Style x:Key="RadButtonStyle">
+                <Setter Property="telerik:StyleManager.Theme" Value="Windows8"/>
+            </Style>
+        </Grid.Resources>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <telerik:RadButton Grid.Row="0" Width="120" Margin="20,1" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="Add Dictionary"
+                                            Command="{Binding DataContext.OpenAddDictionaryCommand,ElementName=Main}" Style="{StaticResource RadButtonStyle}"/>
+
+        <telerik:RadTileView x:Name="radTileView" Grid.Row="1" ItemsSource="{Binding KeywordDictionaryList}" PreservePositionWhenMaximized="True" IsSelectionEnabled="True" 
+                                 MinimizedColumnWidth="150" MinimizedRowHeight="150" IsAutoScrollingEnabled="True" TilesSelectionChanged="RadTileView_TileSelectionChanged_1" 
+                                 RowHeight="200" ColumnWidth="200" Margin="10" telerik:StyleManager.Theme="Windows8">
+
+            <telerik:RadTileView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="{Binding DictionaryName}"/>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </telerik:RadTileView.ItemTemplate>
+            <telerik:RadTileView.ContentTemplate>
+                <DataTemplate>
+                    <telerik:RadFluidContentControl Transition="PerspectiveRotation" MouseEnter="RadTileViewItem_MouseEnter_1" >
+                        <telerik:RadFluidContentControl.LargeContent>
+                            <StackPanel VerticalAlignment="Center" Margin="20">
+                                <Grid >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="70"/>
+                                    </Grid.RowDefinitions>
+                                    <StackPanel Grid.Row="0" Orientation="Vertical" Margin="20,10,0,0" HorizontalAlignment="Left">
+                                        <TextBlock Style="{StaticResource TitleTextBlockStyleHeading}" Text="Dictionary Name" />
+                                        <TextBlock Text="{Binding DictionaryName, Mode=TwoWay}" Style="{StaticResource TitleTextBlockStyleContent}"/>
+                                    </StackPanel>
+
+                                    <StackPanel Grid.Row="3" Orientation="Horizontal">
+
+                                        <StackPanel Orientation="Vertical" Margin="20" Width="1070">
+                                            <TextBlock Text="Keywords" Style="{StaticResource TitleTextBlockStyleHeading}"/>
+                                            <ListView ItemsSource="{Binding keywordList}" ScrollViewer.HorizontalScrollBarVisibility="Auto" Width="auto" Height="300"/>
+                                        </StackPanel>
+                                    </StackPanel>
+
+                                    <telerik:RadButton Width="130" Height="40" Margin="0,0,20,20" HorizontalAlignment="Right" Content="Edit Dictionary"
+                                                            Command="{Binding DataContext.OpenUpdateDictionaryCommand,ElementName=Main}" VerticalAlignment="Bottom" Grid.Row="4"
+        				                                    CommandParameter="{Binding}" Style="{StaticResource RadButtonStyle}"/>
+                                </Grid>
+                            </StackPanel>
+                        </telerik:RadFluidContentControl.LargeContent>
+                        <telerik:RadFluidContentControl.Content>
+                            <Grid x:Name="contentGrid">
+
+                                <StackPanel VerticalAlignment="Center">
+                                    <StackPanel  Orientation="Horizontal" HorizontalAlignment="Left" >
+                                        <TextBlock Style="{StaticResource TitleTextBlockStyleHeading}" Text="Dictionary Name" />
+                                        <TextBlock Text="{Binding DictionaryName, Mode=TwoWay}" Style="{StaticResource TitleTextBlockStyleContent}"/>
+                                    </StackPanel>
+
+                                    <StackPanel Orientation="Vertical">
+                                        <ListView ItemsSource="{Binding keywordList}" ScrollViewer.HorizontalScrollBarVisibility="Auto" Margin="10" Width="auto" Height="100"/>
+                                    </StackPanel>
+
+                                </StackPanel>
+
+
+                            </Grid>
+                        </telerik:RadFluidContentControl.Content>
+                    </telerik:RadFluidContentControl>
+
+                </DataTemplate>
+
+            </telerik:RadTileView.ContentTemplate>
+
+        </telerik:RadTileView>
+
+    </Grid>
+</Window>

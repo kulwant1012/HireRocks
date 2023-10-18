@@ -1,0 +1,380 @@
+﻿<Window x:Class="PS.ActivityManagementStudio.View.AddUpdateActivityWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="{Binding WindowTitle}" WindowState="Maximized"
+        DataContext="{Binding ActivityViewModel, Source={StaticResource Locator}}"
+        xmlns:cmd="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.WPF45"
+        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib" Name="Window">
+
+    <Window.Resources>
+        <ControlTemplate x:Key="TextBoxErrorTemplate" TargetType="Control">
+            <StackPanel>
+                <TextBlock VerticalAlignment="Top" HorizontalAlignment="Right"
+                      Margin="5,0,0,0" Foreground="Red" 
+                      Text="{Binding ElementName=MyAdorner, Path=AdornedElement.(Validation.Errors)[0].ErrorContent}">
+                </TextBlock>
+                <Border BorderBrush="Red" BorderThickness="1" >
+                    <AdornedElementPlaceholder Name="MyAdorner" ></AdornedElementPlaceholder>
+                </Border>
+            </StackPanel>
+        </ControlTemplate>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.Resources>
+            <Style x:Key="TitleTextBlockStyle" TargetType="TextBlock">
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="FontFamily" Value="Segoe UI Regular"/>
+                <Setter Property="Foreground" Value="#2e2e2e"/>
+            </Style>
+
+            <Style x:Key="TitleEditTextBoxStyle" TargetType="TextBox">
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="FontFamily" Value="Segoe UI Regular"/>
+                <Setter Property="Foreground" Value="Black"/>
+                <Setter Property="Width" Value="300"/>
+                <Setter Property="Height" Value="25"/>
+            </Style>
+
+            <Style x:Key="RadUniformGridStyle" TargetType="telerik:RadUniformGrid">
+                <Setter Property="Rows" Value="10"/>
+                <Setter Property="ChildrenFlow" Value="Horizontal" />
+                <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Visible"/>
+            </Style>
+
+            <Style TargetType="telerik:RadClock" x:Key="RadClockStyle">
+                <Setter Property="Header" Value="Clock" />
+
+                <Setter Property="ItemsPanel">
+                    <Setter.Value>
+                        <ItemsPanelTemplate>
+                            <telerik:RadUniformGrid x:Name="uniformGrid" Style="{StaticResource RadUniformGridStyle}" />
+                        </ItemsPanelTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="RadTimePickerStyle" TargetType="telerik:RadTimePicker">
+                <Setter Property="telerik:StyleManager.Theme" Value="Windows8"/>
+            </Style>
+
+            <Style x:Key="RadExpanderStyle" TargetType="telerik:RadExpander">
+                <Setter Property="telerik:StyleManager.Theme" Value="Windows8"/>
+            </Style>
+
+            <Style x:Key="RadButtonStyle" TargetType="telerik:RadButton">
+                <Setter Property="telerik:StyleManager.Theme" Value="Windows8"/>
+            </Style>
+
+            <DataTemplate x:Key="SelectionBoxTemplate">
+                <TextBlock Text="{Binding QSpaceName}" Foreground="Green" FontWeight="Bold"/>
+            </DataTemplate>
+
+            <Style x:Key="RadComboBoxStyle" TargetType="telerik:RadComboBox">
+                <Setter Property="telerik:StyleManager.Theme" Value="Windows8"/>
+            </Style>
+
+            <Style x:Key="RadDatePickerStyle" TargetType="telerik:RadDatePicker">
+                <Setter Property="telerik:StyleManager.Theme" Value="Windows8"/>
+            </Style>
+        </Grid.Resources>
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto" telerik:StyleManager.Theme="Windows8">
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Text="{Binding Message}" Foreground="Red" HorizontalAlignment="Right"/>
+                <StackPanel VerticalAlignment="Bottom">
+                    <TextBlock Text="Add Activity" FontSize="20" FontFamily="Segoe UI Regular" Foreground="White"/>
+                    <Grid x:Name="PreviewGrid" VerticalAlignment="Center">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid Opacity="0.8" Background="#ffffff" Height="43">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                        </Grid>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="20,8,0,0" HorizontalAlignment="Left">
+                                <StackPanel Orientation="Vertical" Margin="5,0">
+                                    <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="Activity Name" />
+                                    <TextBox Text="{Binding ActivityModel.Name,Mode=TwoWay,ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{StaticResource TextBoxErrorTemplate}" Style="{StaticResource TitleEditTextBoxStyle}" Width="200"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Vertical" Margin="5,0" Width="200">
+                                    <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="Capture Interval (In seconds)" />
+                                    <TextBox Text="{Binding ActivityModel.CaptureInterval, Mode=TwoWay,TargetNullValue=''}"  Validation.ErrorTemplate="{StaticResource TextBoxErrorTemplate}" Style="{StaticResource TitleEditTextBoxStyle}" Width="200"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Vertical" Margin="5,0" Width="200">
+                                    <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="Capture Type" />
+                                    <telerik:RadComboBox Width="200" 
+                                        SelectedItem="{Binding Path=ActivityModel.ActivityCaptureType}"                                                  
+                                        ItemsSource="{Binding ActivityCaptureTypeList,UpdateSourceTrigger=PropertyChanged,NotifyOnSourceUpdated=True}"/>
+                                </StackPanel>
+                            </StackPanel>
+
+                            <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="20,8,0,0" HorizontalAlignment="Left">
+                                <StackPanel Orientation="Vertical" Margin="5,0">
+                                    <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="Select QSpace" />
+                                    <telerik:RadComboBox Width="200" Style="{StaticResource RadComboBoxStyle}"
+                            DisplayMemberPath="QSpaceName"
+                            SelectedValuePath="Id" 
+                            SelectedValue="{Binding Path=ActivityModel.Project}"                                                  
+                            ItemsSource="{Binding QSpaceList,UpdateSourceTrigger=PropertyChanged,NotifyOnSourceUpdated=True}"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Vertical" Margin="5,0" Width="200">
+                                    <telerik:RadExpander VerticalAlignment="Bottom" IsExpanded="False"  ExpandDirection="Down"  Style="{StaticResource RadExpanderStyle}">
+                                        <telerik:RadExpander.Header>
+                                            <TextBlock Text="Select Keyword Dictionary" />
+                                        </telerik:RadExpander.Header>
+                                        <telerik:RadExpander.Content>
+                                            <ListBox ItemsSource="{Binding DictionaryList,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,NotifyOnSourceUpdated=True}" MaxHeight="100">
+                                                <ListBox.ItemTemplate>
+                                                    <DataTemplate>
+                                                        <CheckBox Content="{Binding DictionaryName}" IsChecked="{Binding IsChecked,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,NotifyOnSourceUpdated=True}"/>
+                                                    </DataTemplate>
+                                                </ListBox.ItemTemplate>
+                                            </ListBox>
+                                        </telerik:RadExpander.Content>
+                                    </telerik:RadExpander>
+                                </StackPanel>
+                                <StackPanel Orientation="Vertical" Margin="5,0" Width="200">
+                                    <telerik:RadExpander x:Name="radExpander" VerticalAlignment="Bottom" IsExpanded="False"  ExpandDirection="Down"  Style="{StaticResource RadExpanderStyle}">
+                                        <telerik:RadExpander.Header>
+                                            <TextBlock x:Name="expanderCaption" Text="Select Activity Tool" />
+                                        </telerik:RadExpander.Header>
+                                        <telerik:RadExpander.Content>
+                                            <ListBox ItemsSource="{Binding ActivityToolList}" MaxHeight="100" telerik:StyleManager.Theme="Windows8">
+                                                <ListBox.ItemTemplate>
+                                                    <DataTemplate>
+                                                        <CheckBox Content="{Binding ToolDescription}" IsChecked="{Binding IsChecked,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,NotifyOnSourceUpdated=True}" />
+                                                    </DataTemplate>
+                                                </ListBox.ItemTemplate>
+                                            </ListBox>
+                                        </telerik:RadExpander.Content>
+                                    </telerik:RadExpander>
+                                </StackPanel>
+                            </StackPanel>
+
+                            <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="20,8,0,0" HorizontalAlignment="Left">
+                                <StackPanel Margin="5,0">
+                                    <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="Start Date" />
+                                    <telerik:RadDatePicker SelectedDate="{Binding ActivityModel.StartDate, Mode=TwoWay,TargetNullValue=''}" Width="200" Style="{StaticResource RadDatePickerStyle}"/>
+                                </StackPanel>
+                                <StackPanel Margin="5,0">
+                                    <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="Due Date" />
+                                    <telerik:RadDatePicker SelectedDate="{Binding ActivityModel.DueDate, Mode=TwoWay,TargetNullValue=''}" Width="200" Style="{StaticResource RadDatePickerStyle}"/>
+                                </StackPanel>
+                                <StackPanel Margin="5,0">
+                                    <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="Completion Date" />
+                                    <telerik:RadDatePicker SelectedDate="{Binding ActivityModel.CompletionDate, Mode=TwoWay,TargetNullValue=''}" Width="200" Style="{StaticResource RadDatePickerStyle}"/>
+                                </StackPanel>
+                            </StackPanel>
+
+                            <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="20,8,0,0" HorizontalAlignment="Left">
+                                <StackPanel Margin="5,0">
+                                    <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="Actual Duration (Hours)" />
+                                    <TextBox Text="{Binding ActivityModel.ActualDuration, Mode=TwoWay, TargetNullValue=''}" IsReadOnly="True" TextWrapping="Wrap" Width="200" Style="{StaticResource TitleEditTextBoxStyle}"/>
+                                </StackPanel>
+                                <StackPanel Margin="5,0">
+                                    <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="Original Estimate (Hours)" />
+                                    <TextBox Text="{Binding ActivityModel.EstimatedDuration, Mode=TwoWay,TargetNullValue=''}" Validation.ErrorTemplate="{StaticResource TextBoxErrorTemplate}" TextWrapping="Wrap" Width="200" Style="{StaticResource TitleEditTextBoxStyle}"/>
+                                </StackPanel>
+                                <StackPanel Margin="5,0">
+                                    <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="Remaining Estimate (Hours)" />
+                                    <TextBox Text="{Binding ActivityModel.RemainingDuration, Mode=TwoWay,TargetNullValue=''}" IsReadOnly="True" Width="200" Style="{StaticResource TitleEditTextBoxStyle}"/>
+                                </StackPanel>
+                            </StackPanel>
+
+                            <!--<StackPanel Grid.Row="4" Orientation="Horizontal" Margin="20,8,0,0" HorizontalAlignment="Left">
+                                <StackPanel Margin="5,0">
+                                    <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="Minimum Duration (Hours)" />
+                                    <TextBox Text="{Binding ActivityModel.MinimumDuration, Mode=TwoWay,ValidatesOnDataErrors=True,TargetNullValue=''}"  Validation.ErrorTemplate="{StaticResource TextBoxErrorTemplate}" TextWrapping="Wrap" Width="200" Style="{StaticResource TitleEditTextBoxStyle}"/>
+                                </StackPanel>
+                                <StackPanel Margin="5,0">
+                                    <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="Maximum Duration (Hours)" />
+                                    <TextBox Text="{Binding ActivityModel.MaximumDuration, Mode=TwoWay,ValidatesOnDataErrors=True,TargetNullValue=''}"  Validation.ErrorTemplate="{StaticResource TextBoxErrorTemplate}" TextWrapping="Wrap" Width="200" Style="{StaticResource TitleEditTextBoxStyle}"/>
+                                </StackPanel>
+                                <StackPanel Margin="5,0">
+                                    <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="Optimum Duration (Hours)" />
+                                    <TextBox Text="{Binding ActivityModel.OptimumDuration, Mode=TwoWay,ValidatesOnDataErrors=True,TargetNullValue=''}"  Validation.ErrorTemplate="{StaticResource TextBoxErrorTemplate}" Width="200" Style="{StaticResource TitleEditTextBoxStyle}"/>
+                                </StackPanel>
+                            </StackPanel>-->
+
+                            <StackPanel Grid.Row="5" Orientation="Horizontal" Margin="20,8,0,0" HorizontalAlignment="Left">
+                                <StackPanel Orientation="Horizontal">
+                                    <StackPanel Orientation="Vertical" Margin="5,0">
+                                        <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="Assigned To" />
+                                        <telerik:RadComboBox Width="200" Style="{StaticResource RadComboBoxStyle}"
+                                    DisplayMemberPath="FirstName"
+                                    SelectedValuePath="Id"
+                                    SelectedValue="{Binding Path=ActivityModel.AssignedToId, Mode=TwoWay,ValidatesOnDataErrors=True}"
+                                    ItemsSource="{Binding UserList,UpdateSourceTrigger=PropertyChanged,NotifyOnSourceUpdated=True}"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Vertical" Margin="5,0">
+                                        <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="Requested By" />
+                                        <telerik:RadComboBox Width="200" Style="{StaticResource RadComboBoxStyle}"
+                                    DisplayMemberPath="FirstName"
+                                    SelectedValuePath="Id"
+                                    SelectedValue="{Binding Path=ActivityModel.ReportedById, Mode=TwoWay,ValidatesOnDataErrors=True}"
+                                    ItemsSource="{Binding UserList,UpdateSourceTrigger=PropertyChanged,NotifyOnSourceUpdated=True}"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Vertical" Margin="5,0">
+                                        <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="Priority" />
+                                        <telerik:RadComboBox Width="200" Style="{StaticResource RadComboBoxStyle}"
+                                     DisplayMemberPath="PriorityName"
+                                     SelectedValuePath="Id"
+                                     SelectedValue="{Binding Path=ActivityModel.Priority, Mode=TwoWay,ValidatesOnDataErrors=True}"
+                                     ItemsSource="{Binding PriorityList, UpdateSourceTrigger=PropertyChanged,NotifyOnSourceUpdated=True}"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </StackPanel>
+
+                            <StackPanel Grid.Row="6" Orientation="Horizontal" Margin="20,8,0,0" HorizontalAlignment="Left">
+                                <!--<StackPanel Orientation="Horizontal" Margin="5,0"  Width="200">
+                                    <telerik:RadExpander VerticalAlignment="Top" IsExpanded="True"  ExpandDirection="Down" Style="{StaticResource RadExpanderStyle}">
+                                        <telerik:RadExpander.Header>
+                                            <TextBlock Text="All time collection" />
+                                        </telerik:RadExpander.Header>
+                                        <telerik:RadExpander.Content>
+                                            <StackPanel Width="200" Orientation="Horizontal">
+                                                <StackPanel Orientation="Vertical" Width="95">
+                                                    <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="From" />
+                                                    <telerik:RadTimePicker x:Name="RadTimePicker" SelectedValue="{Binding ActivityModel.AllCaptureTime.TimeFrom}" TimeInterval="0:10:0" Style="{StaticResource RadTimePickerStyle}" ClockStyle="{StaticResource RadClockStyle}"/>
+                                                </StackPanel>
+                                                <StackPanel Orientation="Vertical" Width="95" Margin="5,0,0,0">
+                                                    <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="To" />
+                                                    <telerik:RadTimePicker SelectedValue="{Binding ActivityModel.AllCaptureTime.TimeTo,Mode=TwoWay,ValidatesOnDataErrors=True}" TimeInterval="0:10:0" Style="{StaticResource RadTimePickerStyle}" ClockStyle="{StaticResource RadClockStyle}"/>
+                                                </StackPanel>
+                                            </StackPanel>
+                                        </telerik:RadExpander.Content>
+                                    </telerik:RadExpander>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="5,0" Width="200">
+                                    <telerik:RadExpander VerticalAlignment="Top" IsExpanded="True"  ExpandDirection="Down" Style="{StaticResource RadExpanderStyle}">
+                                        <telerik:RadExpander.Header>
+                                            <TextBlock Text="Allowed time collection" />
+                                        </telerik:RadExpander.Header>
+                                        <telerik:RadExpander.Content>
+                                            <StackPanel Width="200" Orientation="Horizontal">
+                                                <StackPanel Orientation="Vertical" Width="95">
+                                                    <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="From" />
+                                                    <telerik:RadTimePicker SelectedValue="{Binding ActivityModel.AllowedTime.TimeFrom}" TimeInterval="0:10:0" Style="{StaticResource RadTimePickerStyle}" ClockStyle="{StaticResource RadClockStyle}"/>
+                                                </StackPanel>
+                                                <StackPanel Orientation="Vertical" Width="95" Margin="5,0,0,0">
+                                                    <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="To" />
+                                                    <telerik:RadTimePicker SelectedValue="{Binding ActivityModel.AllowedTime.TimeTo}" TimeInterval="0:10:0" Style="{StaticResource RadTimePickerStyle}" ClockStyle="{StaticResource RadClockStyle}"/>
+                                                </StackPanel>
+                                            </StackPanel>
+                                        </telerik:RadExpander.Content>
+                                    </telerik:RadExpander>
+                                </StackPanel>-->
+                                <StackPanel Orientation="Vertical" Margin="5,0">
+                                    <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="Activity Status" />
+                                    <telerik:RadComboBox Width="200" Style="{StaticResource RadComboBoxStyle}"
+                                DisplayMemberPath="StatusName"
+                                SelectedValuePath="Id"
+                                SelectedValue="{Binding Path=ActivityModel.ActivityStatusId, Mode=TwoWay}"
+                                ItemsSource="{Binding ActivityStatusList,UpdateSourceTrigger=PropertyChanged,NotifyOnSourceUpdated=True}"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Vertical" Margin="5,0">
+                                    <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="Sequence" />
+                                    <TextBox Text="{Binding ActivityModel.Sequence,Mode=TwoWay,ValidatesOnDataErrors=True,TargetNullValue=''}"  Validation.ErrorTemplate="{StaticResource TextBoxErrorTemplate}" Width="200" Style="{StaticResource TitleEditTextBoxStyle}"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Vertical" Margin="5,0">
+                                    <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="Variation Factor (%)" />
+                                    <TextBox Text="{Binding ActivityModel.VariationFactor,Mode=TwoWay,ValidatesOnDataErrors=True,TargetNullValue=''}"  Validation.ErrorTemplate="{StaticResource TextBoxErrorTemplate}" Width="200" Style="{StaticResource TitleEditTextBoxStyle}"/>
+                                </StackPanel>
+                            </StackPanel>
+
+                            <!--<StackPanel Grid.Row="7" Orientation="Horizontal" Margin="20,8,0,0" HorizontalAlignment="Left">
+                               <StackPanel Orientation="Vertical" Margin="5,0">
+                                    <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="Release" />
+                                    <telerik:RadComboBox Width="200" Style="{StaticResource RadComboBoxStyle}"
+                                DisplayMemberPath="name"
+                                SelectedValuePath="id"
+                                SelectedValue="{Binding Path=ActivityModel.Release, Mode=TwoWay}"
+                                ItemsSource="{Binding ReleaseList,UpdateSourceTrigger=PropertyChanged,NotifyOnSourceUpdated=True}" />
+                                </StackPanel>-->
+                            <!--<StackPanel Orientation="Vertical" Margin="5,0">
+                                    <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="Work Flow Step" />
+                                    <telerik:RadComboBox Width="200" Style="{StaticResource RadComboBoxStyle}"
+                                DisplayMemberPath="name"
+                                SelectedValuePath="id"
+                                SelectedValue="{Binding Path=ActivityModel.WorkFlowStep, Mode=TwoWay,ValidatesOnDataErrors=True}"
+                                ItemsSource="{Binding WorkFlowSteps.workflow_steps,UpdateSourceTrigger=PropertyChanged,NotifyOnSourceUpdated=True}"/>
+                                </StackPanel>
+                            </StackPanel>-->
+
+                            <StackPanel Grid.Row="7" Margin="20,8,0,0" Orientation="Vertical">
+                                <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="Requirements details" />
+                                <TextBox  Text="{Binding ActivityModel.Description, Mode=TwoWay}" Width="auto" TextWrapping="Wrap" AcceptsReturn="True" Style="{StaticResource TitleEditTextBoxStyle}" Height="50"/>
+
+                                <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="Expected Output" />
+                                <TextBox  Text="{Binding ActivityModel.ExpectedOutput, Mode=TwoWay}" Width="auto" TextWrapping="Wrap" AcceptsReturn="True" Style="{StaticResource TitleEditTextBoxStyle}" Height="50"/>
+
+                                <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="Actual Output" />
+                                <TextBox  Text="{Binding ActivityModel.ActualOutput, Mode=TwoWay}" Width="auto" TextWrapping="Wrap" AcceptsReturn="True" Style="{StaticResource TitleEditTextBoxStyle}" Height="50"/>
+                            </StackPanel>
+
+                            <StackPanel Grid.Row="8" Margin="20,8,0,0" Orientation="Vertical">
+                                <!--<Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>-->
+
+                                <telerik:RadButton Content="Upload attachment" Command="{Binding UplaodCommand}" Width="130" HorizontalAlignment="Left" Style="{StaticResource RadButtonStyle}"></telerik:RadButton>
+
+                                <ListView AllowDrop="True" Drop="UIElement_OnDrop" Margin="0,5,0,0" ItemsSource="{Binding Attachments, UpdateSourceTrigger=PropertyChanged}" Height="60" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                                    <ListView.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="{Binding }"></TextBlock>
+                                                <telerik:RadButton Content="Remove" CommandParameter="{Binding }" Margin="2" Command="{Binding DataContext.RemoveAttachmentCommand, ElementName=Window}" Style="{StaticResource RadButtonStyle}"></telerik:RadButton>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ListView.ItemTemplate>
+                                </ListView>
+                                <!--</Grid>-->
+                            </StackPanel>
+
+                            <StackPanel Grid.Row="9"  Margin="20,8,0,0">
+                                <telerik:RadButton Padding="5" HorizontalAlignment="Right" Content="{Binding ButtonText}"
+                                Command="{Binding AddActivityCommand}" Style="{StaticResource RadButtonStyle}"/>
+                            </StackPanel>
+                        </Grid>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+            <ScrollViewer.Resources>
+                <sys:Double x:Key="{x:Static SystemParameters.VerticalScrollBarWidthKey}">5</sys:Double>
+            </ScrollViewer.Resources>
+        </ScrollViewer>
+
+        <telerik:RadBusyIndicator Grid.Row="1" IsBusy="{Binding IsBusy}" telerik:StyleManager.Theme="Windows8"
+				IsIndeterminate="True" >
+        </telerik:RadBusyIndicator>
+    </Grid>
+</Window>
+        

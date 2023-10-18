@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS.OTN_WorksnapsCommon" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS.OTN_WorksnapsCommon" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.169.235.121:84/PSService/Services/PSService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities" />
+  <xs:import schemaLocation="http://192.169.235.121:84/PSService/Services/PSService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="OTNWorksnapsCommonUser">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/PS.Data.Entities" base="q1:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="OTNId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WorksnapsId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WorksnapsProjectId" type="xs:int" />
+          <xs:element minOccurs="0" name="WorksnapsRole" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="first_name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="hourly_rate" type="xs:decimal" />
+          <xs:element minOccurs="0" name="is_active" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_locked" type="xs:boolean" />
+          <xs:element minOccurs="0" name="last_name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="login" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="login_id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="security_roles" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="timezone_id" type="xs:int" />
+          <xs:element minOccurs="0" name="use_windows_auth" type="xs:boolean" />
+          <xs:element minOccurs="0" name="windows_id" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OTNWorksnapsCommonUser" nillable="true" type="tns:OTNWorksnapsCommonUser" />
+  <xs:complexType name="OTNWorksnapsActivity">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/PS.Data.Entities" base="q2:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="OtnId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WSUserId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WSprojectId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WorksnapsId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="actual_duration" type="xs:float" />
+          <xs:element minOccurs="0" name="assigned_to" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="completion_date" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="due_date" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="estimated_duration" type="xs:float" />
+          <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="priority" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="project" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="publicly_viewable" type="xs:boolean" />
+          <xs:element minOccurs="0" name="release" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="remaining_duration" type="xs:float" />
+          <xs:element minOccurs="0" name="reported_by" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="start_date" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="workflow_step" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OTNWorksnapsActivity" nillable="true" type="tns:OTNWorksnapsActivity" />
+  <xs:complexType name="OTNWorksnapsWorklog">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/PS.Data.Entities" base="q3:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DateWorked" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Duration" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ItemType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OtnId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RemainingTimeDuration" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TimeUnitId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WorkLogTypeId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WorkSnapsHours" nillable="true" type="xs:string" />
+          <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="WorkSnapsId" nillable="true" type="q4:ArrayOfstring" />
+          <xs:element minOccurs="0" name="WorkSnapsProjectId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WorkSnapsTaskId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WorkSnapsUserId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WorksnapsCoomment" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OTNWorksnapsWorklog" nillable="true" type="tns:OTNWorksnapsWorklog" />
+  <xs:complexType name="OTNWorksnapsQSpace">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/PS.Data.Entities" base="q5:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DueDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OtnId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="WorkSnapsId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OTNWorksnapsQSpace" nillable="true" type="tns:OTNWorksnapsQSpace" />
+  <xs:complexType name="LastSyncDate">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/PS.Data.Entities" base="q6:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="LastSyncTime" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LastSyncDate" nillable="true" type="tns:LastSyncDate" />
+</xs:schema>

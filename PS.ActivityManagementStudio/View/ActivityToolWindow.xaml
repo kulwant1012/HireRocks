@@ -1,0 +1,73 @@
+﻿<Window x:Class="PS.ActivityManagementStudio.View.ActivityToolWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Activity Tools" WindowState="Maximized"
+        DataContext="{Binding ActivityToolViewModel,Source={StaticResource Locator}}"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation">
+    <Grid x:Name="Main">
+        <Grid.Resources>
+            <Style x:Key="Window8Style">
+                <Setter Property="telerik:StyleManager.Theme" Value="Windows8"/>
+            </Style>
+
+            <Style x:Key="ContentStyle" TargetType="TextBlock">
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="FontFamily" Value="Segoe UI Regular"/>
+                <Setter Property="Foreground" Value="Blue"/>
+                <Setter Property="Height" Value="25"/>
+            </Style>
+
+            <Style x:Key="TitleTextBlockStyleHeading" TargetType="TextBlock">
+                <Setter Property="FontSize" Value="13"/>
+                <Setter Property="FontFamily" Value="Segoe UI Regular"/>
+                <Setter Property="Foreground" Value="#2e2e2e"/>
+            </Style>
+        </Grid.Resources>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <telerik:RadButton Grid.Row="0" Content="Add tool" VerticalAlignment="Bottom" Margin="8" Padding="5" Style="{StaticResource Window8Style}" Command="{Binding OpenAddToolWindowCommand}" HorizontalAlignment="Right" />
+
+        <telerik:RadTileView Grid.Row="1" ItemsSource="{Binding ActivityToolsList}" RowHeight="300" ColumnWidth="300" Style="{StaticResource Window8Style}"
+                             MinimizedColumnWidth="300" MinimizedRowHeight="300" IsAutoScrollingEnabled="True" Margin="10" MaximizeMode="Zero">
+            <telerik:RadTileView.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding ToolDescription}"/>
+                </DataTemplate>
+            </telerik:RadTileView.ItemTemplate>
+
+            <telerik:RadTileView.ContentTemplate>
+                <DataTemplate>
+                    <telerik:RadFluidContentControl ContentChangeMode="Automatic">
+                        <telerik:RadFluidContentControl.LargeContent>
+                            <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+
+                                <StackPanel Grid.Row="0" Orientation="Vertical" Margin="5">
+                                    <TextBlock Text="Tool Name" Style="{StaticResource TitleTextBlockStyleHeading}"/>
+                                    <TextBlock Text="{Binding ToolName}" Style="{StaticResource ContentStyle}"/>
+                                </StackPanel>
+                                <StackPanel Grid.Row="1" Orientation="Vertical" Margin="5">
+                                    <TextBlock Text="Tool Description" Style="{StaticResource TitleTextBlockStyleHeading}"/>
+                                    <TextBlock Text="{Binding ToolDescription}" Style="{StaticResource ContentStyle}"/>
+                                </StackPanel>
+                                <telerik:RadButton Grid.Row="2" Content="Edit tool" Padding="5" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="5" Command="{Binding DataContext.OpenUpdateToolWindowCommand,ElementName=Main}" CommandParameter="{Binding}" Style="{StaticResource Window8Style}"/>
+                            </Grid>
+                        </telerik:RadFluidContentControl.LargeContent>
+                    </telerik:RadFluidContentControl>
+                </DataTemplate>
+            </telerik:RadTileView.ContentTemplate>
+        </telerik:RadTileView>
+
+        <telerik:RadBusyIndicator Grid.Row="1" IsBusy="{Binding IsBusy}" telerik:StyleManager.Theme="Windows8"
+				IsIndeterminate="True" >
+        </telerik:RadBusyIndicator>
+    </Grid>
+</Window>

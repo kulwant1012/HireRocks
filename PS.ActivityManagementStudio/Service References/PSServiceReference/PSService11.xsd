@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AVS" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AVS" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.169.235.121:84/PSService/Services/PSService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://192.169.235.121:84/PSService/Services/PSService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://192.169.235.121:84/PSService/Services/PSService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities" />
+  <xs:complexType name="ActivityCapture">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/PS.Data.Entities" base="q1:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ActivityDetails" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ActivityUserID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CaptureDateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FullImage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsSyncToOTN" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Keyboard" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="KeywordsMatchCount" type="xs:int" />
+          <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="MatchedKeywordIds" nillable="true" type="q2:ArrayOfstring" />
+          <xs:element minOccurs="0" name="Mouse" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ThumbnailImage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TimeBurned" type="ser:duration" />
+          <xs:element minOccurs="0" name="VerificationStatus" nillable="true" type="tns:VerificationStatus" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ActivityCapture" nillable="true" type="tns:ActivityCapture" />
+  <xs:complexType name="VerificationStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IsAccepted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsOverdue" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsValid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="VerifierComments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VerifierId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VerificationStatus" nillable="true" type="tns:VerificationStatus" />
+  <xs:complexType name="ArrayOfActivityCapture">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ActivityCapture" nillable="true" type="tns:ActivityCapture" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfActivityCapture" nillable="true" type="tns:ArrayOfActivityCapture" />
+  <xs:complexType name="MatchedKeyword">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/PS.Data.Entities" base="q3:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BeginTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CapturedData" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EndTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="KeywordDictionaryId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MatchedKeyword" nillable="true" type="tns:MatchedKeyword" />
+  <xs:complexType name="ArrayOfMatchedKeyword">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MatchedKeyword" nillable="true" type="tns:MatchedKeyword" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMatchedKeyword" nillable="true" type="tns:ArrayOfMatchedKeyword" />
+</xs:schema>

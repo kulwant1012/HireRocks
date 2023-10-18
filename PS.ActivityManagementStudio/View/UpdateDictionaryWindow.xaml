@@ -1,0 +1,63 @@
+﻿<Window x:Class="PS.ActivityManagementStudio.View.UpdateDictionaryWindow"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:w="clr-namespace:PS.ActivityManagementStudio.Helpers" 
+        WindowStartupLocation="CenterScreen" Background="WhiteSmoke" WindowState="Maximized"
+        Title="Update Dictionary" 
+        DataContext="{Binding DictionaryModel, Source={StaticResource Locator}}">
+    <Grid>
+        <Grid.Resources>
+            <Style x:Key="Windows8Theme">
+                <Setter Property="telerik:StyleManager.Theme" Value="Windows8"/>
+            </Style>
+        </Grid.Resources>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Grid Margin="5" Width="300" Height="200" >
+                <telerik:RadExpander Header="List of Keywords" IsExpanded="True" ExpandDirection="Down" BorderBrush="Gray" BorderThickness="1" Style="{StaticResource Windows8Theme}">
+                    <ListView x:Name="listDictionary" ItemsSource="{Binding KeywordDictionaryModel.keywordList}" BorderThickness="0" ScrollViewer.HorizontalScrollBarVisibility="Auto" Width="290" Height="165"
+                         SelectedIndex="{Binding KeywordIndex, Mode=TwoWay}"   SelectedItem="{Binding Keyword, Mode=TwoWay}" >
+                    </ListView>
+                </telerik:RadExpander>
+            </Grid>
+            <Border BorderBrush="Gray" Height="200" BorderThickness="1">
+                <Grid Width="315" VerticalAlignment="Center" Height="200" HorizontalAlignment="Center" Margin="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding Message}" VerticalAlignment="Top" Foreground="Red" Height="20"/>
+                    <TextBlock Grid.Row="0" Grid.Column="1" Text="Update Dictionary" VerticalAlignment="Center" FontWeight="Bold" Margin="20"/>
+
+                    <Grid Grid.Row="1" HorizontalAlignment="Right" Width="320">
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="200"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid Grid.ColumnSpan="1" Grid.RowSpan="2">
+
+                        </Grid>
+
+                        <Label Grid.Row="0" Grid.Column="1" Content="Dictionary Name:" />
+                        <TextBox Text="{Binding KeywordDictionaryModel.DictionaryName}" Grid.Row="0" Grid.Column="2" Height="30" BorderBrush="WhiteSmoke" BorderThickness="2" ></TextBox>
+                        <Label Grid.Row="1" Grid.Column="1" Content="Keyword:"/>
+                        <TextBox Grid.Row="2" Grid.Column="2" Height="30" Text="{Binding Keyword}" BorderBrush="WhiteSmoke" BorderThickness="2"></TextBox>
+                    </Grid>
+                    <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
+                        <telerik:RadButton Name="UpdateKeyWord"  Content="Update Keyword" Height="30" Width="100" Command="{Binding UpdateKeywordCommand}" Style="{StaticResource Windows8Theme}"></telerik:RadButton>
+                        <telerik:RadButton Name="UpdateDictionary" Content="Update Dictionary"  Height="30" Width="110" Command="{Binding AddUpdateDictionaryCommand}" Style="{StaticResource Windows8Theme}" Margin="10"></telerik:RadButton>
+                    </StackPanel>
+                </Grid>
+            </Border>
+        </StackPanel>
+    </Grid>
+</Window>

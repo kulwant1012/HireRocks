@@ -1,0 +1,108 @@
+﻿<Window x:Class="PS.ActivityManagementStudio.View.QSpaceWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        DataContext="{Binding QSpaceViewModel,Source={StaticResource Locator}}"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        Title="QSpaces" WindowState="Maximized">
+    <Grid x:Name="Main">
+        <Grid.Resources>
+            <Style x:Key="TitleTextBlockStyleHeading" TargetType="TextBlock">
+                <Setter Property="FontSize" Value="13"/>
+                <Setter Property="FontFamily" Value="Segoe UI Regular"/>
+                <Setter Property="Foreground" Value="#2e2e2e"/>
+
+            </Style>
+
+            <Style x:Key="TitleTextBlockStyleContent" TargetType="TextBlock">
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="FontFamily" Value="Segoe UI Regular"/>
+                <Setter Property="Foreground" Value="Blue"/>
+                <Setter Property="Height" Value="25"/>
+            </Style>
+
+            <Style x:Key="RadButtonStyle" TargetType="telerik:RadButton">
+                <Setter Property="telerik:StyleManager.Theme" Value="Windows8"/>
+            </Style>
+        </Grid.Resources>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <telerik:RadButton Grid.Row="0" Width="auto" Padding="5" Margin="20,1" HorizontalAlignment="Right" VerticalAlignment="Center" Content="Add QSpace"
+                                            Command="{Binding DataContext.OpenAddQSpaceScreenCommand,ElementName=Main}" 
+        				                    Style="{StaticResource RadButtonStyle}"/>
+        <Border Width="auto" Grid.Row="0" VerticalAlignment="Bottom" BorderThickness=".5" BorderBrush="LightBlue"/>
+        <telerik:RadTileView x:Name="TileViewQSpaces" Grid.Row="1" ItemsSource="{Binding QSpaceList}" PreservePositionWhenMaximized="True"
+                                 MinimizedColumnWidth="200" MinimizedRowHeight="200" IsAutoScrollingEnabled="True"
+                                 RowHeight="200" ColumnWidth="200" Margin="10" >
+            <telerik:RadTileView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="{Binding QSpaceName}"/>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </telerik:RadTileView.ItemTemplate>
+            <telerik:RadTileView.ContentTemplate>
+                <DataTemplate>
+                    <telerik:RadFluidContentControl ContentChangeMode="Automatic" TransitionDuration="0:0:1">
+                        <telerik:RadFluidContentControl.LargeContent>
+                            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" telerik:StyleManager.Theme="Windows8">
+                                <StackPanel VerticalAlignment="Center" Margin="20">
+
+                                    <Grid >
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="70"/>
+                                        </Grid.RowDefinitions>
+                                        <StackPanel Grid.Row="0" Orientation="Vertical" Margin="20,10,0,0" HorizontalAlignment="Left">
+                                            <TextBlock Style="{StaticResource TitleTextBlockStyleHeading}" Text="QSpace Name" />
+                                            <TextBlock Text="{Binding QSpaceName,Mode=TwoWay}" Style="{StaticResource TitleTextBlockStyleContent}"/>
+                                        </StackPanel>
+
+                                        <StackPanel Grid.Row="1" Orientation="Vertical" Margin="20,10,0,0" HorizontalAlignment="Left">
+                                            <TextBlock Style="{StaticResource TitleTextBlockStyleHeading}" Text="QSpace Type" />
+                                            <TextBlock Text="{Binding QSpaceType,Mode=TwoWay}" Style="{StaticResource TitleTextBlockStyleContent}"/>
+                                        </StackPanel>
+
+                                        <StackPanel Grid.Row="2" Orientation="Vertical" Margin="20,10,0,0" HorizontalAlignment="Left">
+                                            <TextBlock Text="Description" Style="{StaticResource TitleTextBlockStyleHeading}"/>
+                                            <TextBlock Text="{Binding Description, Mode=TwoWay}" Style="{StaticResource TitleTextBlockStyleContent}" Width="400" Height="60" TextWrapping="Wrap"/>
+                                        </StackPanel>
+
+                                        <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="20,10,0,0">
+                                            <StackPanel Orientation="Vertical" Width="200">
+                                                <TextBlock Text="Start Date" Style="{StaticResource TitleTextBlockStyleHeading}"/>
+                                                <TextBlock Text="{Binding StartDate}" Style="{StaticResource TitleTextBlockStyleContent}"/>
+                                            </StackPanel>
+
+                                            <StackPanel Orientation="Vertical" Margin="20,0,0,0" Width="200">
+                                                <TextBlock Text="Due Date" Style="{StaticResource TitleTextBlockStyleHeading}"/>
+                                                <TextBlock Text="{Binding DueDate}" Style="{StaticResource TitleTextBlockStyleContent}"/>
+                                            </StackPanel>
+                                        </StackPanel>
+
+                                        <telerik:RadButton Padding="5" Margin="0,0,20,20" HorizontalAlignment="Right" Content="Edit QSpace"
+                                                            Command="{Binding DataContext.OpenUpdateQSpaceScreenCommand,ElementName=Main}" VerticalAlignment="Bottom" Grid.Row="4"
+        				                                    Style="{StaticResource RadButtonStyle}" CommandParameter="{Binding}"/>
+                                    </Grid>
+                                </StackPanel>
+                            </ScrollViewer>
+                        </telerik:RadFluidContentControl.LargeContent>
+                    </telerik:RadFluidContentControl>
+                </DataTemplate>
+            </telerik:RadTileView.ContentTemplate>
+        </telerik:RadTileView>
+
+        <telerik:RadBusyIndicator Grid.Row="1" IsBusy="{Binding IsBusy}" telerik:StyleManager.Theme="Windows8"
+				IsIndeterminate="True" >
+        </telerik:RadBusyIndicator>
+    </Grid>
+</Window>

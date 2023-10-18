@@ -1,0 +1,720 @@
+C:\Hirerocks\PS.ActivityManagementStudio\obj\Debug\PS.ActivityManagementStudio.csprojResolveAssemblyReference.cache
+C:\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\ActivityToolWindow.baml
+C:\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\ActivityWindow.baml
+C:\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddUpdateActivityToolWindow.baml
+C:\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddUpdateQSpaceWindow.baml
+C:\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddActivityWindow.baml
+C:\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\DictionaryWindow.baml
+C:\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\MainWindow.baml
+C:\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\QSpaceWindow.baml
+C:\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\ReportsWindow.baml
+C:\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\UserWindow.baml
+C:\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\ActivityToolWindow.g.cs
+C:\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\ActivityVerificationWindow.g.cs
+C:\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\ActivityWindow.g.cs
+C:\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddDictionaryWindow.g.cs
+C:\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddUpdateActivityToolWindow.g.cs
+C:\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddUpdateQSpaceWindow.g.cs
+C:\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddActivityWindow.g.cs
+C:\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddUpdateUsersWindow.g.cs
+C:\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\DictionaryWindow.g.cs
+C:\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\LoginWindow.g.cs
+C:\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\MainWindow.g.cs
+C:\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\QSpaceWindow.g.cs
+C:\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\ReportsWindow.g.cs
+C:\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\UpdateDictionaryWindow.g.cs
+C:\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\UserWindow.g.cs
+C:\Hirerocks\PS.ActivityManagementStudio\obj\Debug\App.g.cs
+C:\Hirerocks\PS.ActivityManagementStudio\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Hirerocks\PS.ActivityManagementStudio\obj\Debug\Activity management system_MarkupCompile.cache
+C:\Hirerocks\PS.ActivityManagementStudio\obj\Debug\Activity management system_MarkupCompile.lref
+C:\Hirerocks\PS.ActivityManagementStudio\obj\Debug\App.baml
+C:\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\ActivityVerificationWindow.baml
+C:\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddDictionaryWindow.baml
+C:\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddUpdateUsersWindow.baml
+C:\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\LoginWindow.baml
+C:\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\UpdateDictionaryWindow.baml
+C:\Hirerocks\PS.ActivityManagementStudio\obj\Debug\Activity management system.g.resources
+C:\Hirerocks\PS.ActivityManagementStudio\obj\Debug\PS.ActivityManagementStudio.Properties.Resources.resources
+C:\Hirerocks\PS.ActivityManagementStudio\obj\Debug\PS.ActivityManagementStudio.csproj.GenerateResource.Cache
+C:\Hirerocks\PS.ActivityManagementStudio\obj\Debug\PS.ActivityManagementStudio.csproj.CoreCompileInputs.cache
+C:\Hirerocks\PS.ActivityManagementStudio\obj\Debug\Activity management system.TrustInfo.xml
+C:\Hirerocks\PS.ActivityManagementStudio\obj\Debug\Activity management system.exe
+C:\Hirerocks\PS.ActivityManagementStudio\obj\Debug\Activity management system.pdb
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Activity management system.exe.config
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Activity management system.exe.manifest
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Activity management system.application
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Activity management system.exe
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Activity management system.pdb
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\AviFile.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\GalaSoft.MvvmLight.Extras.WPF45.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\GalaSoft.MvvmLight.WPF45.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.AspNet.SignalR.Client.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.Data.Edm.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.Data.OData.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.Data.Services.Client.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.WindowsAzure.Configuration.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.WindowsAzure.Storage.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Newtonsoft.Json.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\PS.Data.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Raven.Abstractions.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Raven.Client.Lightweight.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\System.Spatial.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\System.Windows.Interactivity.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.DataVisualization.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.GridView.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.Input.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.Navigation.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Data.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ServiceStack.Interfaces.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\PS.Data.pdb
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\PS.Data.dll.config
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\GalaSoft.MvvmLight.Extras.WPF45.xml
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\GalaSoft.MvvmLight.WPF45.xml
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.AspNet.SignalR.Client.xml
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.Data.Edm.xml
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.Data.OData.xml
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.Data.Services.Client.xml
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.WindowsAzure.Configuration.xml
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.WindowsAzure.Storage.xml
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Newtonsoft.Json.xml
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Raven.Abstractions.xml
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Raven.Client.Lightweight.xml
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\System.Spatial.xml
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\System.Windows.Interactivity.xml
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.pdb
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.xml
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.DataVisualization.pdb
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.DataVisualization.xml
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.GridView.pdb
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.GridView.xml
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.Input.pdb
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.Input.xml
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.Navigation.pdb
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.Navigation.xml
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Data.pdb
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Data.xml
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ServiceStack.Interfaces.xml
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\de\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\es\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\fr\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\it\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ja\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ko\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ru\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\de\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\es\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\fr\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\it\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ja\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ko\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ru\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\de\Microsoft.Data.Services.Client.resources.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\es\Microsoft.Data.Services.Client.resources.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\fr\Microsoft.Data.Services.Client.resources.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\it\Microsoft.Data.Services.Client.resources.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ja\Microsoft.Data.Services.Client.resources.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ko\Microsoft.Data.Services.Client.resources.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ru\Microsoft.Data.Services.Client.resources.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\de\System.Spatial.resources.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\es\System.Spatial.resources.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\fr\System.Spatial.resources.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\it\System.Spatial.resources.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ja\System.Spatial.resources.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ko\System.Spatial.resources.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ru\System.Spatial.resources.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\zh-Hans\System.Spatial.resources.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\zh-Hant\System.Spatial.resources.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\de\Telerik.Windows.Controls.resources.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\es\Telerik.Windows.Controls.resources.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\fr\Telerik.Windows.Controls.resources.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\it\Telerik.Windows.Controls.resources.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\nl\Telerik.Windows.Controls.resources.dll
+C:\Hirerocks\PS.ActivityManagementStudio\bin\Debug\tr\Telerik.Windows.Controls.resources.dll
+C:\Hirerocks\PS.ActivityManagementStudio\obj\Debug\Activity management system.exe.manifest
+C:\Hirerocks\PS.ActivityManagementStudio\obj\Debug\Activity management system.application
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Activity management system.exe.config
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Activity management system.exe.manifest
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Activity management system.application
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Activity management system.exe
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Activity management system.pdb
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\AviFile.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\GalaSoft.MvvmLight.Extras.WPF45.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\GalaSoft.MvvmLight.WPF45.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.AspNet.SignalR.Client.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.Data.Edm.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.Data.OData.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.Data.Services.Client.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.WindowsAzure.Configuration.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.WindowsAzure.Storage.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Newtonsoft.Json.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\PS.Data.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Raven.Abstractions.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Raven.Client.Lightweight.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\System.Spatial.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\System.Windows.Interactivity.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.DataVisualization.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.GridView.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.Input.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.Navigation.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Data.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ServiceStack.Interfaces.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\PS.Data.pdb
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\PS.Data.dll.config
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\GalaSoft.MvvmLight.Extras.WPF45.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\GalaSoft.MvvmLight.WPF45.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.AspNet.SignalR.Client.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.Data.Edm.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.Data.OData.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.Data.Services.Client.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.WindowsAzure.Configuration.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.WindowsAzure.Storage.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Newtonsoft.Json.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Raven.Abstractions.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Raven.Client.Lightweight.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\System.Spatial.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\System.Windows.Interactivity.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.pdb
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.DataVisualization.pdb
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.DataVisualization.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.GridView.pdb
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.GridView.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.Input.pdb
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.Input.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.Navigation.pdb
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.Navigation.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Data.pdb
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Data.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ServiceStack.Interfaces.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\de\Microsoft.Data.Edm.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\es\Microsoft.Data.Edm.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\fr\Microsoft.Data.Edm.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\it\Microsoft.Data.Edm.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ja\Microsoft.Data.Edm.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ko\Microsoft.Data.Edm.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ru\Microsoft.Data.Edm.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\de\Microsoft.Data.OData.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\es\Microsoft.Data.OData.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\fr\Microsoft.Data.OData.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\it\Microsoft.Data.OData.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ja\Microsoft.Data.OData.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ko\Microsoft.Data.OData.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ru\Microsoft.Data.OData.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\de\Microsoft.Data.Services.Client.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\es\Microsoft.Data.Services.Client.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\fr\Microsoft.Data.Services.Client.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\it\Microsoft.Data.Services.Client.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ja\Microsoft.Data.Services.Client.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ko\Microsoft.Data.Services.Client.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ru\Microsoft.Data.Services.Client.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\de\System.Spatial.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\es\System.Spatial.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\fr\System.Spatial.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\it\System.Spatial.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ja\System.Spatial.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ko\System.Spatial.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ru\System.Spatial.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\zh-Hans\System.Spatial.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\zh-Hant\System.Spatial.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\de\Telerik.Windows.Controls.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\es\Telerik.Windows.Controls.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\fr\Telerik.Windows.Controls.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\it\Telerik.Windows.Controls.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\nl\Telerik.Windows.Controls.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\bin\Debug\tr\Telerik.Windows.Controls.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\obj\Debug\PS.ActivityManagementStudio.csprojAssemblyReference.cache
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\ActivityToolWindow.baml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\ActivityWindow.baml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddUpdateActivityToolWindow.baml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddUpdateQSpaceWindow.baml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddActivityWindow.baml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\DictionaryWindow.baml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\MainWindow.baml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\QSpaceWindow.baml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\ReportsWindow.baml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\UserWindow.baml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\ActivityToolWindow.g.cs
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\ActivityVerificationWindow.g.cs
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\ActivityWindow.g.cs
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddDictionaryWindow.g.cs
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddUpdateActivityToolWindow.g.cs
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddUpdateQSpaceWindow.g.cs
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddActivityWindow.g.cs
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddUpdateUsersWindow.g.cs
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\DictionaryWindow.g.cs
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\LoginWindow.g.cs
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\MainWindow.g.cs
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\QSpaceWindow.g.cs
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\ReportsWindow.g.cs
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\UpdateDictionaryWindow.g.cs
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\UserWindow.g.cs
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\obj\Debug\App.g.cs
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\obj\Debug\Activity management system_MarkupCompile.cache
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\obj\Debug\Activity management system_MarkupCompile.lref
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\obj\Debug\App.baml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\ActivityVerificationWindow.baml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddDictionaryWindow.baml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddUpdateUsersWindow.baml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\LoginWindow.baml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\UpdateDictionaryWindow.baml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\obj\Debug\Activity management system.g.resources
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\obj\Debug\PS.ActivityManagementStudio.Properties.Resources.resources
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\obj\Debug\PS.ActivityManagementStudio.csproj.GenerateResource.cache
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\obj\Debug\PS.ActivityManagementStudio.csproj.CoreCompileInputs.cache
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\obj\Debug\Activity management system.TrustInfo.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\obj\Debug\Activity management system.exe.manifest
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\obj\Debug\Activity management system.application
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\obj\Debug\PS.ActivityManagementStudio.csproj.CopyComplete
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\obj\Debug\Activity management system.exe
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityManagementStudio\obj\Debug\Activity management system.pdb
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Activity management system.exe.config
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Activity management system.exe.manifest
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Activity management system.application
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Activity management system.exe
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Activity management system.pdb
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\AviFile.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\GalaSoft.MvvmLight.Extras.WPF45.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\GalaSoft.MvvmLight.WPF45.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.AspNet.SignalR.Client.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.Data.Edm.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.Data.OData.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.Data.Services.Client.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.WindowsAzure.Configuration.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.WindowsAzure.Storage.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Newtonsoft.Json.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\PS.Data.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Raven.Abstractions.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Raven.Client.Lightweight.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\System.Spatial.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\System.Windows.Interactivity.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.DataVisualization.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.GridView.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.Input.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.Navigation.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Data.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ServiceStack.Interfaces.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\PS.Data.pdb
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\GalaSoft.MvvmLight.Extras.WPF45.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\GalaSoft.MvvmLight.WPF45.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.AspNet.SignalR.Client.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.Data.Edm.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.Data.OData.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.Data.Services.Client.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.WindowsAzure.Configuration.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.WindowsAzure.Storage.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Newtonsoft.Json.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Raven.Abstractions.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Raven.Client.Lightweight.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\System.Spatial.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\System.Windows.Interactivity.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.pdb
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.DataVisualization.pdb
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.DataVisualization.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.GridView.pdb
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.GridView.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.Input.pdb
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.Input.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.Navigation.pdb
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.Navigation.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Data.pdb
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Data.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ServiceStack.Interfaces.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\de\Microsoft.Data.Edm.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\es\Microsoft.Data.Edm.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\fr\Microsoft.Data.Edm.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\it\Microsoft.Data.Edm.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ja\Microsoft.Data.Edm.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ko\Microsoft.Data.Edm.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ru\Microsoft.Data.Edm.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\zh-Hans\Microsoft.Data.Edm.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\zh-Hant\Microsoft.Data.Edm.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\de\Microsoft.Data.OData.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\es\Microsoft.Data.OData.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\fr\Microsoft.Data.OData.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\it\Microsoft.Data.OData.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ja\Microsoft.Data.OData.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ko\Microsoft.Data.OData.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ru\Microsoft.Data.OData.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\zh-Hans\Microsoft.Data.OData.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\zh-Hant\Microsoft.Data.OData.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\de\Microsoft.Data.Services.Client.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\es\Microsoft.Data.Services.Client.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\fr\Microsoft.Data.Services.Client.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\it\Microsoft.Data.Services.Client.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ja\Microsoft.Data.Services.Client.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ko\Microsoft.Data.Services.Client.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ru\Microsoft.Data.Services.Client.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\de\System.Spatial.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\es\System.Spatial.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\fr\System.Spatial.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\it\System.Spatial.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ja\System.Spatial.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ko\System.Spatial.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ru\System.Spatial.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\zh-Hans\System.Spatial.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\zh-Hant\System.Spatial.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\de\Telerik.Windows.Controls.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\es\Telerik.Windows.Controls.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\fr\Telerik.Windows.Controls.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\it\Telerik.Windows.Controls.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\nl\Telerik.Windows.Controls.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\tr\Telerik.Windows.Controls.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\PS.ActivityManagementStudio.csprojResolveAssemblyReference.cache
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\ActivityToolWindow.baml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\ActivityWindow.baml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddUpdateActivityToolWindow.baml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddUpdateQSpaceWindow.baml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddActivityWindow.baml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\DictionaryWindow.baml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\MainWindow.baml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\QSpaceWindow.baml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\ReportsWindow.baml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\UserWindow.baml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\ActivityToolWindow.g.cs
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\ActivityVerificationWindow.g.cs
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\ActivityWindow.g.cs
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddDictionaryWindow.g.cs
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddUpdateActivityToolWindow.g.cs
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddUpdateQSpaceWindow.g.cs
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddActivityWindow.g.cs
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddUpdateUsersWindow.g.cs
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\DictionaryWindow.g.cs
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\LoginWindow.g.cs
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\MainWindow.g.cs
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\QSpaceWindow.g.cs
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\ReportsWindow.g.cs
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\UpdateDictionaryWindow.g.cs
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\UserWindow.g.cs
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\App.g.cs
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\Activity management system_MarkupCompile.cache
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\Activity management system_MarkupCompile.lref
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\App.baml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\ActivityVerificationWindow.baml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddDictionaryWindow.baml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddUpdateUsersWindow.baml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\LoginWindow.baml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\UpdateDictionaryWindow.baml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\Activity management system.g.resources
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\PS.ActivityManagementStudio.Properties.Resources.resources
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\PS.ActivityManagementStudio.csproj.GenerateResource.Cache
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\Activity management system.TrustInfo.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\Activity management system.exe.manifest
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\Activity management system.application
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\Activity management system.exe
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\Activity management system.pdb
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Activity management system.exe.config
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Activity management system.exe.manifest
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Activity management system.application
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Activity management system.exe
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Activity management system.pdb
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\AviFile.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\GalaSoft.MvvmLight.Extras.WPF45.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\GalaSoft.MvvmLight.WPF45.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.AspNet.SignalR.Client.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.Data.Edm.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.Data.OData.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.Data.Services.Client.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.WindowsAzure.Configuration.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.WindowsAzure.Storage.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Newtonsoft.Json.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\PS.Data.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Raven.Abstractions.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Raven.Client.Lightweight.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\System.Spatial.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\System.Windows.Interactivity.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.DataVisualization.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.GridView.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.Input.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.Navigation.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Data.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ServiceStack.Interfaces.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\PS.Data.pdb
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\PS.Data.dll.config
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\GalaSoft.MvvmLight.Extras.WPF45.xml
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\GalaSoft.MvvmLight.WPF45.xml
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.AspNet.SignalR.Client.xml
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.Data.Edm.xml
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.Data.OData.xml
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.Data.Services.Client.xml
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.WindowsAzure.Configuration.xml
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.WindowsAzure.Storage.xml
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Newtonsoft.Json.xml
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Raven.Abstractions.xml
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Raven.Client.Lightweight.xml
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\System.Spatial.xml
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\System.Windows.Interactivity.xml
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.pdb
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.xml
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.DataVisualization.pdb
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.DataVisualization.xml
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.GridView.pdb
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.GridView.xml
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.Input.pdb
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.Input.xml
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.Navigation.pdb
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.Navigation.xml
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Data.pdb
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Data.xml
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ServiceStack.Interfaces.xml
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\de\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\es\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\fr\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\it\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ja\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ko\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ru\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\de\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\es\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\fr\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\it\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ja\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ko\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ru\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\de\Microsoft.Data.Services.Client.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\es\Microsoft.Data.Services.Client.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\fr\Microsoft.Data.Services.Client.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\it\Microsoft.Data.Services.Client.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ja\Microsoft.Data.Services.Client.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ko\Microsoft.Data.Services.Client.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ru\Microsoft.Data.Services.Client.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\de\System.Spatial.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\es\System.Spatial.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\fr\System.Spatial.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\it\System.Spatial.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ja\System.Spatial.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ko\System.Spatial.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ru\System.Spatial.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\zh-Hans\System.Spatial.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\zh-Hant\System.Spatial.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\de\Telerik.Windows.Controls.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\es\Telerik.Windows.Controls.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\fr\Telerik.Windows.Controls.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\it\Telerik.Windows.Controls.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\nl\Telerik.Windows.Controls.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\tr\Telerik.Windows.Controls.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\PS.ActivityManagementStudio.csprojAssemblyReference.cache
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\ActivityToolWindow.baml
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\ActivityWindow.baml
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddUpdateActivityToolWindow.baml
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddUpdateQSpaceWindow.baml
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddActivityWindow.baml
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\DictionaryWindow.baml
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\MainWindow.baml
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\QSpaceWindow.baml
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\ReportsWindow.baml
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\UserWindow.baml
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\ActivityToolWindow.g.cs
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\ActivityVerificationWindow.g.cs
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\ActivityWindow.g.cs
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddDictionaryWindow.g.cs
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddUpdateActivityToolWindow.g.cs
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddUpdateQSpaceWindow.g.cs
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddActivityWindow.g.cs
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddUpdateUsersWindow.g.cs
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\DictionaryWindow.g.cs
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\LoginWindow.g.cs
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\MainWindow.g.cs
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\QSpaceWindow.g.cs
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\ReportsWindow.g.cs
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\UpdateDictionaryWindow.g.cs
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\UserWindow.g.cs
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\App.g.cs
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\Activity management system_MarkupCompile.cache
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\Activity management system_MarkupCompile.lref
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\App.baml
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\ActivityVerificationWindow.baml
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddDictionaryWindow.baml
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddUpdateUsersWindow.baml
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\LoginWindow.baml
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\UpdateDictionaryWindow.baml
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\Activity management system.g.resources
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\PS.ActivityManagementStudio.Properties.Resources.resources
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\PS.ActivityManagementStudio.csproj.GenerateResource.cache
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\Activity management system.TrustInfo.xml
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\Activity management system.exe.manifest
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\Activity management system.application
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\PS.ActivityManagementStudio.csproj.CopyComplete
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\Activity management system.exe
+C:\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\Activity management system.pdb
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Activity management system.exe.config
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Activity management system.exe.manifest
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Activity management system.application
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Activity management system.exe
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Activity management system.pdb
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\AviFile.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\GalaSoft.MvvmLight.Extras.WPF45.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\GalaSoft.MvvmLight.WPF45.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.AspNet.SignalR.Client.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.Data.Edm.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.Data.OData.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.Data.Services.Client.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.WindowsAzure.Configuration.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.WindowsAzure.Storage.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Newtonsoft.Json.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\PS.Data.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Raven.Abstractions.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Raven.Client.Lightweight.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\System.Spatial.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\System.Windows.Interactivity.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.DataVisualization.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.GridView.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.Input.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.Navigation.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Data.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ServiceStack.Interfaces.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\PS.Data.pdb
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\PS.Data.dll.config
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\GalaSoft.MvvmLight.Extras.WPF45.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\GalaSoft.MvvmLight.WPF45.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.AspNet.SignalR.Client.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.Data.Edm.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.Data.OData.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.Data.Services.Client.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.WindowsAzure.Configuration.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Microsoft.WindowsAzure.Storage.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Newtonsoft.Json.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Raven.Abstractions.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Raven.Client.Lightweight.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\System.Spatial.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\System.Windows.Interactivity.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.pdb
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.DataVisualization.pdb
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.DataVisualization.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.GridView.pdb
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.GridView.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.Input.pdb
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.Input.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.Navigation.pdb
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Controls.Navigation.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Data.pdb
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\Telerik.Windows.Data.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ServiceStack.Interfaces.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\de\Microsoft.Data.Edm.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\es\Microsoft.Data.Edm.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\fr\Microsoft.Data.Edm.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\it\Microsoft.Data.Edm.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ja\Microsoft.Data.Edm.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ko\Microsoft.Data.Edm.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ru\Microsoft.Data.Edm.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\de\Microsoft.Data.OData.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\es\Microsoft.Data.OData.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\fr\Microsoft.Data.OData.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\it\Microsoft.Data.OData.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ja\Microsoft.Data.OData.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ko\Microsoft.Data.OData.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ru\Microsoft.Data.OData.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\de\Microsoft.Data.Services.Client.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\es\Microsoft.Data.Services.Client.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\fr\Microsoft.Data.Services.Client.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\it\Microsoft.Data.Services.Client.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ja\Microsoft.Data.Services.Client.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ko\Microsoft.Data.Services.Client.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ru\Microsoft.Data.Services.Client.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\de\System.Spatial.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\es\System.Spatial.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\fr\System.Spatial.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\it\System.Spatial.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ja\System.Spatial.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ko\System.Spatial.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\ru\System.Spatial.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\zh-Hans\System.Spatial.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\zh-Hant\System.Spatial.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\de\Telerik.Windows.Controls.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\es\Telerik.Windows.Controls.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\fr\Telerik.Windows.Controls.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\it\Telerik.Windows.Controls.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\nl\Telerik.Windows.Controls.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\bin\Debug\tr\Telerik.Windows.Controls.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\PS.ActivityManagementStudio.csproj.AssemblyReference.cache
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\ActivityToolWindow.baml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\ActivityWindow.baml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddUpdateActivityToolWindow.baml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddUpdateQSpaceWindow.baml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddActivityWindow.baml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\DictionaryWindow.baml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\MainWindow.baml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\QSpaceWindow.baml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\ReportsWindow.baml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\UserWindow.baml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\ActivityToolWindow.g.cs
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\ActivityVerificationWindow.g.cs
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\ActivityWindow.g.cs
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddDictionaryWindow.g.cs
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddUpdateActivityToolWindow.g.cs
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddUpdateQSpaceWindow.g.cs
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddActivityWindow.g.cs
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddUpdateUsersWindow.g.cs
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\DictionaryWindow.g.cs
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\LoginWindow.g.cs
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\MainWindow.g.cs
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\QSpaceWindow.g.cs
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\ReportsWindow.g.cs
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\UpdateDictionaryWindow.g.cs
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\UserWindow.g.cs
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\App.g.cs
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\Activity management system_MarkupCompile.cache
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\Activity management system_MarkupCompile.lref
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\App.baml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\ActivityVerificationWindow.baml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddDictionaryWindow.baml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\AddUpdateUsersWindow.baml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\LoginWindow.baml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\View\UpdateDictionaryWindow.baml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\Activity management system.g.resources
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\PS.ActivityManagementStudio.Properties.Resources.resources
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\PS.ActivityManagementStudio.csproj.GenerateResource.cache
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\PS.ActivityManagementStudio.csproj.CoreCompileInputs.cache
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\Activity management system.TrustInfo.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\Activity management system.exe.manifest
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\Activity management system.application
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\PS.ActivityManagementStudio.csproj.CopyComplete
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\Activity management system.exe
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityManagementStudio\obj\Debug\Activity management system.pdb

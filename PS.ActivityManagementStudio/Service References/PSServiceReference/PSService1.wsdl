@@ -1,0 +1,2460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PSService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://192.169.235.121:84/PSService/Services/PSService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://192.169.235.121:84/PSService/Services/PSService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://192.169.235.121:84/PSService/Services/PSService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS" />
+      <xsd:import schemaLocation="http://192.169.235.121:84/PSService/Services/PSService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities" />
+      <xsd:import schemaLocation="http://192.169.235.121:84/PSService/Services/PSService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://192.169.235.121:84/PSService/Services/PSService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/PS.Azure.Web" />
+      <xsd:import schemaLocation="http://192.169.235.121:84/PSService/Services/PSService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS.Common" />
+      <xsd:import schemaLocation="http://192.169.235.121:84/PSService/Services/PSService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AOS.OTN_WorksnapsCommon" />
+      <xsd:import schemaLocation="http://192.169.235.121:84/PSService/Services/PSService.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.AVS" />
+      <xsd:import schemaLocation="http://192.169.235.121:84/PSService/Services/PSService.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.Money" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IActivityOptimizationSystemService_AddOrUpdateActivityComposition_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrUpdateActivityComposition" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_AddOrUpdateActivityComposition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrUpdateActivityCompositionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_AddOrUpdateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrUpdateUser" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_AddOrUpdateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrUpdateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_AddOrUpdateQSpace_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrUpdateQSpace" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_AddOrUpdateQSpace_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrUpdateQSpaceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_AddOrUpdateActivity_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrUpdateActivity" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_AddOrUpdateActivity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrUpdateActivityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_AddOrUpdateActivityStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrUpdateActivityStatus" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_AddOrUpdateActivityStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrUpdateActivityStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_AddOrUpdateActivityUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrUpdateActivityUser" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_AddOrUpdateActivityUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrUpdateActivityUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUser" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_SetUserOffline_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserOffline" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_SetUserOffline_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserOfflineResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetQSpaces_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQSpaces" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetQSpaces_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQSpacesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetActivitiesByQSpaceIdAndActivityId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivitiesByQSpaceIdAndActivityId" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetActivitiesByQSpaceIdAndActivityId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivitiesByQSpaceIdAndActivityIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetActivityCompositionsByActivityIds_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivityCompositionsByActivityIds" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetActivityCompositionsByActivityIds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivityCompositionsByActivityIdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetActivityStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivityStatus" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetActivityStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivityStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_AOSSignIn_InputMessage">
+    <wsdl:part name="parameters" element="tns:AOSSignIn" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_AOSSignIn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AOSSignInResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_AddOrUpdateCommonActivity_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrUpdateCommonActivity" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_AddOrUpdateCommonActivity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrUpdateCommonActivityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_AddOrUpdateCommonQSpace_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrUpdateCommonQSpace" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_AddOrUpdateCommonQSpace_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrUpdateCommonQSpaceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_AddOrUpdateCommonUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrUpdateCommonUser" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_AddOrUpdateCommonUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrUpdateCommonUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetCommonActivities_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommonActivities" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetCommonActivities_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommonActivitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetCommonQSpaces_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommonQSpaces" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetCommonQSpaces_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommonQSpacesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetCommonUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommonUsers" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetCommonUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommonUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetUserActivitiesByUserId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserActivitiesByUserId" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetUserActivitiesByUserId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserActivitiesByUserIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetActivitiesById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivitiesById" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetActivitiesById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivitiesByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetActivitiesByOTNActivityIds_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivitiesByOTNActivityIds" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetActivitiesByOTNActivityIds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivitiesByOTNActivityIdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_AddOrUpdateActivityTool_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrUpdateActivityTool" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_AddOrUpdateActivityTool_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrUpdateActivityToolResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetActivityToolsById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivityToolsById" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetActivityToolsById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivityToolsByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetAllActivityTools_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllActivityTools" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetAllActivityTools_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllActivityToolsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_AddOrUpdateAllCaptureTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrUpdateAllCaptureTime" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_AddOrUpdateAllCaptureTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrUpdateAllCaptureTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_AddOrUpdateAllowedTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrUpdateAllowedTime" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_AddOrUpdateAllowedTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrUpdateAllowedTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_AddOrUpdateKeywordDictionary_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrUpdateKeywordDictionary" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_AddOrUpdateKeywordDictionary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrUpdateKeywordDictionaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetAllTimeCollectionById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllTimeCollectionById" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetAllTimeCollectionById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllTimeCollectionByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetAllowedTimeCollectionById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllowedTimeCollectionById" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetAllowedTimeCollectionById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllowedTimeCollectionByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetAllTimeCollection_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllTimeCollection" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetAllTimeCollection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllTimeCollectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetAllowedTimeCollection_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllowedTimeCollection" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetAllowedTimeCollection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllowedTimeCollectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetKeywordDictionariesByIds_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetKeywordDictionariesByIds" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetKeywordDictionariesByIds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetKeywordDictionariesByIdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetKeywordDictionaries_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetKeywordDictionaries" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetKeywordDictionaries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetKeywordDictionariesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetActivityUserByActivityId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivityUserByActivityId" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetActivityUserByActivityId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivityUserByActivityIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetActivityTools_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivityTools" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetActivityTools_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivityToolsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetActiveActivitiesByQSpaceIdAndActivityId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActiveActivitiesByQSpaceIdAndActivityId" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetActiveActivitiesByQSpaceIdAndActivityId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActiveActivitiesByQSpaceIdAndActivityIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetActivityUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivityUsers" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetActivityUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivityUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_AddOrUpdatePriority_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrUpdatePriority" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_AddOrUpdatePriority_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrUpdatePriorityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetActivityPriorities_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivityPriorities" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetActivityPriorities_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivityPrioritiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetActivities_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivities" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetActivities_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetActivityByActivityId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivityByActivityId" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetActivityByActivityId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivityByActivityIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetActivityCompositionByActivityId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivityCompositionByActivityId" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetActivityCompositionByActivityId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivityCompositionByActivityIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_UpdateActivityViewStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateActivityViewStatus" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_UpdateActivityViewStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateActivityViewStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_DeleteActivityByActivityId_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteActivityByActivityId" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_DeleteActivityByActivityId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteActivityByActivityIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetReportData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReportData" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetReportData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReportDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetUsersByQSpaceId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersByQSpaceId" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetUsersByQSpaceId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersByQSpaceIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetActivitiesByQSpaceAndUserId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivitiesByQSpaceAndUserId" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetActivitiesByQSpaceAndUserId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivitiesByQSpaceAndUserIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_InsertDefaultData_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertDefaultData" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_InsertDefaultData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertDefaultDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetEmailTemplateById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmailTemplateById" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemService_GetEmailTemplateById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmailTemplateByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemWithWorksnapsService_AddOrUpdateOTNWorksnapsCommonUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrUpdateOTNWorksnapsCommonUser" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemWithWorksnapsService_AddOrUpdateOTNWorksnapsCommonUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrUpdateOTNWorksnapsCommonUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemWithWorksnapsService_AddOrUpdateOTNWorksnapsActivity_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrUpdateOTNWorksnapsActivity" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemWithWorksnapsService_AddOrUpdateOTNWorksnapsActivity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrUpdateOTNWorksnapsActivityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemWithWorksnapsService_AddOrUpdateOTNWorksnapsWorkLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrUpdateOTNWorksnapsWorkLog" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemWithWorksnapsService_AddOrUpdateOTNWorksnapsWorkLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrUpdateOTNWorksnapsWorkLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemWithWorksnapsService_AddOrUpdateOTNWorksnapsQSpace_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrUpdateOTNWorksnapsQSpace" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemWithWorksnapsService_AddOrUpdateOTNWorksnapsQSpace_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrUpdateOTNWorksnapsQSpaceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemWithWorksnapsService_AddOrUpdateOTNWorksnapsLastSyncDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrUpdateOTNWorksnapsLastSyncDate" />
+  </wsdl:message>
+  <wsdl:message name="IActivityOptimizationSystemWithWorksnapsService_AddOrUpdateOTNWorksnapsLastSyncDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrUpdateOTNWorksnapsLastSyncDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityVerificationService_DeleteCapturedInformation_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCapturedInformation" />
+  </wsdl:message>
+  <wsdl:message name="IActivityVerificationService_DeleteCapturedInformation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCapturedInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityVerificationService_AddCapturedInformation_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCapturedInformation" />
+  </wsdl:message>
+  <wsdl:message name="IActivityVerificationService_AddCapturedInformation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCapturedInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityVerificationService_GetActivityCaptures_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivityCaptures" />
+  </wsdl:message>
+  <wsdl:message name="IActivityVerificationService_GetActivityCaptures_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivityCapturesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityVerificationService_AddOrUpdateMatchedKeyword_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrUpdateMatchedKeyword" />
+  </wsdl:message>
+  <wsdl:message name="IActivityVerificationService_AddOrUpdateMatchedKeyword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrUpdateMatchedKeywordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityVerificationService_GetMatchedKeywordByIds_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMatchedKeywordByIds" />
+  </wsdl:message>
+  <wsdl:message name="IActivityVerificationService_GetMatchedKeywordByIds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMatchedKeywordByIdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityVerificationService_UpdateVerificationStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateVerificationStatus" />
+  </wsdl:message>
+  <wsdl:message name="IActivityVerificationService_UpdateVerificationStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateVerificationStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActivityVerificationService_GetActivityCapturesByActivityId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivityCapturesByActivityId" />
+  </wsdl:message>
+  <wsdl:message name="IActivityVerificationService_GetActivityCapturesByActivityId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivityCapturesByActivityIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackupService_StartBackupTask_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartBackupTask" />
+  </wsdl:message>
+  <wsdl:message name="IBackupService_StartBackupTask_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartBackupTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackupService_GetBackupTaskById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBackupTaskById" />
+  </wsdl:message>
+  <wsdl:message name="IBackupService_GetBackupTaskById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBackupTaskByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackupService_GetAllBackupTasks_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllBackupTasks" />
+  </wsdl:message>
+  <wsdl:message name="IBackupService_GetAllBackupTasks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllBackupTasksResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackupService_InsertOrUpdateBackupTask_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertOrUpdateBackupTask" />
+  </wsdl:message>
+  <wsdl:message name="IBackupService_InsertOrUpdateBackupTask_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertOrUpdateBackupTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackupService_DeleteBackupTask_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBackupTask" />
+  </wsdl:message>
+  <wsdl:message name="IBackupService_DeleteBackupTask_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBackupTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackupService_GetBackupActionById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBackupActionById" />
+  </wsdl:message>
+  <wsdl:message name="IBackupService_GetBackupActionById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBackupActionByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackupService_GetAllBackupActions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllBackupActions" />
+  </wsdl:message>
+  <wsdl:message name="IBackupService_GetAllBackupActions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllBackupActionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackupService_InsertOrUpdateBackupAction_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertOrUpdateBackupAction" />
+  </wsdl:message>
+  <wsdl:message name="IBackupService_InsertOrUpdateBackupAction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertOrUpdateBackupActionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackupService_DeleteBackupAction_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBackupAction" />
+  </wsdl:message>
+  <wsdl:message name="IBackupService_DeleteBackupAction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBackupActionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBackupService_DeleteAllBackupActions_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAllBackupActions" />
+  </wsdl:message>
+  <wsdl:message name="IBackupService_DeleteAllBackupActions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAllBackupActionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_AddOrUpdateResource_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrUpdateResource" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_AddOrUpdateResource_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrUpdateResourceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_GetResources_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetResources" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_GetResources_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetResourcesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_DeleteResourceEntry_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteResourceEntry" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_DeleteResourceEntry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteResourceEntryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_GetCompanyByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyByName" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_GetCompanyByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_AddOrUpdateCompany_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrUpdateCompany" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_AddOrUpdateCompany_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrUpdateCompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_DeleteCompanyEntry_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCompanyEntry" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_DeleteCompanyEntry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCompanyEntryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_AddBrand_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddBrand" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_AddBrand_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddBrandResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_ShowData_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShowData" />
+  </wsdl:message>
+  <wsdl:message name="IDataEntryService_ShowData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInitializationService_InitializeRavenDb_InputMessage">
+    <wsdl:part name="parameters" element="tns:InitializeRavenDb" />
+  </wsdl:message>
+  <wsdl:message name="IInitializationService_InitializeRavenDb_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InitializeRavenDbResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInitializationService_SendEmails_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendEmails" />
+  </wsdl:message>
+  <wsdl:message name="IInitializationService_SendEmails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendEmailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMediaElementService_RemoveMedia_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveMedia" />
+  </wsdl:message>
+  <wsdl:message name="IMediaElementService_RemoveMedia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveMediaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMediaElementService_UploadMedia_InputMessage">
+    <wsdl:part name="parameters" element="tns:UploadMedia" />
+  </wsdl:message>
+  <wsdl:message name="IMediaElementService_UploadMedia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UploadMediaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWalletService_GetBalance_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBalance" />
+  </wsdl:message>
+  <wsdl:message name="IWalletService_GetBalance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBalanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWalletService_LoadMoney_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadMoney" />
+  </wsdl:message>
+  <wsdl:message name="IWalletService_LoadMoney_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadMoneyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWalletService_TransferMoney_InputMessage">
+    <wsdl:part name="parameters" element="tns:TransferMoney" />
+  </wsdl:message>
+  <wsdl:message name="IWalletService_TransferMoney_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TransferMoneyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWalletService_WithdrawMoney_InputMessage">
+    <wsdl:part name="parameters" element="tns:WithdrawMoney" />
+  </wsdl:message>
+  <wsdl:message name="IWalletService_WithdrawMoney_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WithdrawMoneyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWalletService_GetPendingTransactions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPendingTransactions" />
+  </wsdl:message>
+  <wsdl:message name="IWalletService_GetPendingTransactions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPendingTransactionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWalletService_GetPendingTransactionsAmount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPendingTransactionsAmount" />
+  </wsdl:message>
+  <wsdl:message name="IWalletService_GetPendingTransactionsAmount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPendingTransactionsAmountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWalletService_GetAllTransactions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllTransactions" />
+  </wsdl:message>
+  <wsdl:message name="IWalletService_GetAllTransactions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllTransactionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWalletService_GetBankAccountById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBankAccountById" />
+  </wsdl:message>
+  <wsdl:message name="IWalletService_GetBankAccountById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBankAccountByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWalletService_GetAllBankAccounts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllBankAccounts" />
+  </wsdl:message>
+  <wsdl:message name="IWalletService_GetAllBankAccounts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllBankAccountsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWalletService_GetVerifiedBankAccounts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVerifiedBankAccounts" />
+  </wsdl:message>
+  <wsdl:message name="IWalletService_GetVerifiedBankAccounts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVerifiedBankAccountsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWalletService_InsertOrUpdateBankAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertOrUpdateBankAccount" />
+  </wsdl:message>
+  <wsdl:message name="IWalletService_InsertOrUpdateBankAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertOrUpdateBankAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWalletService_DeleteBankAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBankAccount" />
+  </wsdl:message>
+  <wsdl:message name="IWalletService_DeleteBankAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBankAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWalletService_DoVerificationTransactions_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoVerificationTransactions" />
+  </wsdl:message>
+  <wsdl:message name="IWalletService_DoVerificationTransactions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoVerificationTransactionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWalletService_VerifyBankAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyBankAccount" />
+  </wsdl:message>
+  <wsdl:message name="IWalletService_VerifyBankAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyBankAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IResourceTypeService_GetResourceTypeById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetResourceTypeById" />
+  </wsdl:message>
+  <wsdl:message name="IResourceTypeService_GetResourceTypeById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetResourceTypeByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IResourceTypeService_GetResourceTypeByNameStartWith_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetResourceTypeByNameStartWith" />
+  </wsdl:message>
+  <wsdl:message name="IResourceTypeService_GetResourceTypeByNameStartWith_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetResourceTypeByNameStartWithResponse" />
+  </wsdl:message>
+  <wsdl:message name="IResourceTypeService_GetAllResourceTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllResourceTypes" />
+  </wsdl:message>
+  <wsdl:message name="IResourceTypeService_GetAllResourceTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllResourceTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IResourceTypeService_CreateResourceType_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateResourceType" />
+  </wsdl:message>
+  <wsdl:message name="IResourceTypeService_CreateResourceType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateResourceTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IResourceTypeService_DeleteResourceType_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteResourceType" />
+  </wsdl:message>
+  <wsdl:message name="IResourceTypeService_DeleteResourceType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteResourceTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IResourceCategoryService_GetResourceCategoryById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetResourceCategoryById" />
+  </wsdl:message>
+  <wsdl:message name="IResourceCategoryService_GetResourceCategoryById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetResourceCategoryByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IResourceCategoryService_GetResourceCategoriesByTypeId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetResourceCategoriesByTypeId" />
+  </wsdl:message>
+  <wsdl:message name="IResourceCategoryService_GetResourceCategoriesByTypeId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetResourceCategoriesByTypeIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IResourceCategoryService_GetResourceCategoriesByNameStartWith_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetResourceCategoriesByNameStartWith" />
+  </wsdl:message>
+  <wsdl:message name="IResourceCategoryService_GetResourceCategoriesByNameStartWith_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetResourceCategoriesByNameStartWithResponse" />
+  </wsdl:message>
+  <wsdl:message name="IResourceCategoryService_GetAllResourceCategories_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllResourceCategories" />
+  </wsdl:message>
+  <wsdl:message name="IResourceCategoryService_GetAllResourceCategories_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllResourceCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IResourceCategoryService_CreateResourceCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateResourceCategory" />
+  </wsdl:message>
+  <wsdl:message name="IResourceCategoryService_CreateResourceCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateResourceCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IResourceCategoryService_DeleteResourceCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteResourceCategory" />
+  </wsdl:message>
+  <wsdl:message name="IResourceCategoryService_DeleteResourceCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteResourceCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IResourcesService_GetResourceById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetResourceById" />
+  </wsdl:message>
+  <wsdl:message name="IResourcesService_GetResourceById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetResourceByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IResourcesService_GetResourcesByNameStartWith_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetResourcesByNameStartWith" />
+  </wsdl:message>
+  <wsdl:message name="IResourcesService_GetResourcesByNameStartWith_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetResourcesByNameStartWithResponse" />
+  </wsdl:message>
+  <wsdl:message name="IResourcesService_GetResourcesSearchSuggestions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetResourcesSearchSuggestions" />
+  </wsdl:message>
+  <wsdl:message name="IResourcesService_GetResourcesSearchSuggestions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetResourcesSearchSuggestionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IResourcesService_GetAllResources_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllResources" />
+  </wsdl:message>
+  <wsdl:message name="IResourcesService_GetAllResources_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllResourcesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IResourcesService_CreateResource_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateResource" />
+  </wsdl:message>
+  <wsdl:message name="IResourcesService_CreateResource_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateResourceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IResourcesService_DeleteResource_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteResource" />
+  </wsdl:message>
+  <wsdl:message name="IResourcesService_DeleteResource_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteResourceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQSpacesService_GetQSpaceById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQSpaceById" />
+  </wsdl:message>
+  <wsdl:message name="IQSpacesService_GetQSpaceById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQSpaceByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQSpacesService_GetAllQSpaces_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllQSpaces" />
+  </wsdl:message>
+  <wsdl:message name="IQSpacesService_GetAllQSpaces_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllQSpacesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQSpacesService_InsertOrUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertOrUpdate" />
+  </wsdl:message>
+  <wsdl:message name="IQSpacesService_InsertOrUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertOrUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQSpacesService_DeleteQSpace_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteQSpace" />
+  </wsdl:message>
+  <wsdl:message name="IQSpacesService_DeleteQSpace_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteQSpaceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITasksService_GetTasksById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTasksById" />
+  </wsdl:message>
+  <wsdl:message name="ITasksService_GetTasksById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTasksByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITasksService_GetAllTasks_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllTasks" />
+  </wsdl:message>
+  <wsdl:message name="ITasksService_GetAllTasks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllTasksResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITasksService_InsertOrUpdateTask_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertOrUpdateTask" />
+  </wsdl:message>
+  <wsdl:message name="ITasksService_InsertOrUpdateTask_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertOrUpdateTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITasksService_DeleteTask_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTask" />
+  </wsdl:message>
+  <wsdl:message name="ITasksService_DeleteTask_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTaskResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IActivityOptimizationSystemService">
+    <wsdl:operation name="AddOrUpdateActivityComposition">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/AddOrUpdateActivityComposition" message="tns:IActivityOptimizationSystemService_AddOrUpdateActivityComposition_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/AddOrUpdateActivityCompositionResponse" message="tns:IActivityOptimizationSystemService_AddOrUpdateActivityComposition_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOrUpdateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/AddOrUpdateUser" message="tns:IActivityOptimizationSystemService_AddOrUpdateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/AddOrUpdateUserResponse" message="tns:IActivityOptimizationSystemService_AddOrUpdateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOrUpdateQSpace">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/AddOrUpdateQSpace" message="tns:IActivityOptimizationSystemService_AddOrUpdateQSpace_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/AddOrUpdateQSpaceResponse" message="tns:IActivityOptimizationSystemService_AddOrUpdateQSpace_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOrUpdateActivity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/AddOrUpdateActivity" message="tns:IActivityOptimizationSystemService_AddOrUpdateActivity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/AddOrUpdateActivityResponse" message="tns:IActivityOptimizationSystemService_AddOrUpdateActivity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOrUpdateActivityStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/AddOrUpdateActivityStatus" message="tns:IActivityOptimizationSystemService_AddOrUpdateActivityStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/AddOrUpdateActivityStatusResponse" message="tns:IActivityOptimizationSystemService_AddOrUpdateActivityStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOrUpdateActivityUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/AddOrUpdateActivityUser" message="tns:IActivityOptimizationSystemService_AddOrUpdateActivityUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/AddOrUpdateActivityUserResponse" message="tns:IActivityOptimizationSystemService_AddOrUpdateActivityUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetUser" message="tns:IActivityOptimizationSystemService_GetUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetUserResponse" message="tns:IActivityOptimizationSystemService_GetUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUserOffline">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/SetUserOffline" message="tns:IActivityOptimizationSystemService_SetUserOffline_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/SetUserOfflineResponse" message="tns:IActivityOptimizationSystemService_SetUserOffline_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQSpaces">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetQSpaces" message="tns:IActivityOptimizationSystemService_GetQSpaces_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetQSpacesResponse" message="tns:IActivityOptimizationSystemService_GetQSpaces_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActivitiesByQSpaceIdAndActivityId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetActivitiesByQSpaceIdAndActivityId" message="tns:IActivityOptimizationSystemService_GetActivitiesByQSpaceIdAndActivityId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetActivitiesByQSpaceIdAndActivityIdResponse" message="tns:IActivityOptimizationSystemService_GetActivitiesByQSpaceIdAndActivityId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActivityCompositionsByActivityIds">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetActivityCompositionsByActivityIds" message="tns:IActivityOptimizationSystemService_GetActivityCompositionsByActivityIds_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetActivityCompositionsByActivityIdsResponse" message="tns:IActivityOptimizationSystemService_GetActivityCompositionsByActivityIds_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActivityStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetActivityStatus" message="tns:IActivityOptimizationSystemService_GetActivityStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetActivityStatusResponse" message="tns:IActivityOptimizationSystemService_GetActivityStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AOSSignIn">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/AOSSignIn" message="tns:IActivityOptimizationSystemService_AOSSignIn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/AOSSignInResponse" message="tns:IActivityOptimizationSystemService_AOSSignIn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOrUpdateCommonActivity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/AddOrUpdateCommonActivity" message="tns:IActivityOptimizationSystemService_AddOrUpdateCommonActivity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/AddOrUpdateCommonActivityResponse" message="tns:IActivityOptimizationSystemService_AddOrUpdateCommonActivity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOrUpdateCommonQSpace">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/AddOrUpdateCommonQSpace" message="tns:IActivityOptimizationSystemService_AddOrUpdateCommonQSpace_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/AddOrUpdateCommonQSpaceResponse" message="tns:IActivityOptimizationSystemService_AddOrUpdateCommonQSpace_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOrUpdateCommonUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/AddOrUpdateCommonUser" message="tns:IActivityOptimizationSystemService_AddOrUpdateCommonUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/AddOrUpdateCommonUserResponse" message="tns:IActivityOptimizationSystemService_AddOrUpdateCommonUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommonActivities">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetCommonActivities" message="tns:IActivityOptimizationSystemService_GetCommonActivities_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetCommonActivitiesResponse" message="tns:IActivityOptimizationSystemService_GetCommonActivities_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommonQSpaces">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetCommonQSpaces" message="tns:IActivityOptimizationSystemService_GetCommonQSpaces_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetCommonQSpacesResponse" message="tns:IActivityOptimizationSystemService_GetCommonQSpaces_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommonUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetCommonUsers" message="tns:IActivityOptimizationSystemService_GetCommonUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetCommonUsersResponse" message="tns:IActivityOptimizationSystemService_GetCommonUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserActivitiesByUserId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetUserActivitiesByUserId" message="tns:IActivityOptimizationSystemService_GetUserActivitiesByUserId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetUserActivitiesByUserIdResponse" message="tns:IActivityOptimizationSystemService_GetUserActivitiesByUserId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActivitiesById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetActivitiesById" message="tns:IActivityOptimizationSystemService_GetActivitiesById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetActivitiesByIdResponse" message="tns:IActivityOptimizationSystemService_GetActivitiesById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActivitiesByOTNActivityIds">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetActivitiesByOTNActivityIds" message="tns:IActivityOptimizationSystemService_GetActivitiesByOTNActivityIds_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetActivitiesByOTNActivityIdsResponse" message="tns:IActivityOptimizationSystemService_GetActivitiesByOTNActivityIds_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOrUpdateActivityTool">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/AddOrUpdateActivityTool" message="tns:IActivityOptimizationSystemService_AddOrUpdateActivityTool_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/AddOrUpdateActivityToolResponse" message="tns:IActivityOptimizationSystemService_AddOrUpdateActivityTool_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActivityToolsById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetActivityToolsById" message="tns:IActivityOptimizationSystemService_GetActivityToolsById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetActivityToolsByIdResponse" message="tns:IActivityOptimizationSystemService_GetActivityToolsById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllActivityTools">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetAllActivityTools" message="tns:IActivityOptimizationSystemService_GetAllActivityTools_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetAllActivityToolsResponse" message="tns:IActivityOptimizationSystemService_GetAllActivityTools_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOrUpdateAllCaptureTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/AddOrUpdateAllCaptureTime" message="tns:IActivityOptimizationSystemService_AddOrUpdateAllCaptureTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/AddOrUpdateAllCaptureTimeResponse" message="tns:IActivityOptimizationSystemService_AddOrUpdateAllCaptureTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOrUpdateAllowedTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/AddOrUpdateAllowedTime" message="tns:IActivityOptimizationSystemService_AddOrUpdateAllowedTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/AddOrUpdateAllowedTimeResponse" message="tns:IActivityOptimizationSystemService_AddOrUpdateAllowedTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOrUpdateKeywordDictionary">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/AddOrUpdateKeywordDictionary" message="tns:IActivityOptimizationSystemService_AddOrUpdateKeywordDictionary_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/AddOrUpdateKeywordDictionaryResponse" message="tns:IActivityOptimizationSystemService_AddOrUpdateKeywordDictionary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTimeCollectionById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetAllTimeCollectionById" message="tns:IActivityOptimizationSystemService_GetAllTimeCollectionById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetAllTimeCollectionByIdResponse" message="tns:IActivityOptimizationSystemService_GetAllTimeCollectionById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllowedTimeCollectionById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetAllowedTimeCollectionById" message="tns:IActivityOptimizationSystemService_GetAllowedTimeCollectionById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetAllowedTimeCollectionByIdResponse" message="tns:IActivityOptimizationSystemService_GetAllowedTimeCollectionById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTimeCollection">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetAllTimeCollection" message="tns:IActivityOptimizationSystemService_GetAllTimeCollection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetAllTimeCollectionResponse" message="tns:IActivityOptimizationSystemService_GetAllTimeCollection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllowedTimeCollection">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetAllowedTimeCollection" message="tns:IActivityOptimizationSystemService_GetAllowedTimeCollection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetAllowedTimeCollectionResponse" message="tns:IActivityOptimizationSystemService_GetAllowedTimeCollection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetKeywordDictionariesByIds">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetKeywordDictionariesByIds" message="tns:IActivityOptimizationSystemService_GetKeywordDictionariesByIds_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetKeywordDictionariesByIdsResponse" message="tns:IActivityOptimizationSystemService_GetKeywordDictionariesByIds_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetKeywordDictionaries">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetKeywordDictionaries" message="tns:IActivityOptimizationSystemService_GetKeywordDictionaries_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetKeywordDictionariesResponse" message="tns:IActivityOptimizationSystemService_GetKeywordDictionaries_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActivityUserByActivityId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetActivityUserByActivityId" message="tns:IActivityOptimizationSystemService_GetActivityUserByActivityId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetActivityUserByActivityIdResponse" message="tns:IActivityOptimizationSystemService_GetActivityUserByActivityId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActivityTools">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetActivityTools" message="tns:IActivityOptimizationSystemService_GetActivityTools_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetActivityToolsResponse" message="tns:IActivityOptimizationSystemService_GetActivityTools_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveActivitiesByQSpaceIdAndActivityId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetActiveActivitiesByQSpaceIdAndActivityId" message="tns:IActivityOptimizationSystemService_GetActiveActivitiesByQSpaceIdAndActivityId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetActiveActivitiesByQSpaceIdAndActivityIdResponse" message="tns:IActivityOptimizationSystemService_GetActiveActivitiesByQSpaceIdAndActivityId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActivityUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetActivityUsers" message="tns:IActivityOptimizationSystemService_GetActivityUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetActivityUsersResponse" message="tns:IActivityOptimizationSystemService_GetActivityUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOrUpdatePriority">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/AddOrUpdatePriority" message="tns:IActivityOptimizationSystemService_AddOrUpdatePriority_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/AddOrUpdatePriorityResponse" message="tns:IActivityOptimizationSystemService_AddOrUpdatePriority_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActivityPriorities">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetActivityPriorities" message="tns:IActivityOptimizationSystemService_GetActivityPriorities_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetActivityPrioritiesResponse" message="tns:IActivityOptimizationSystemService_GetActivityPriorities_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActivities">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetActivities" message="tns:IActivityOptimizationSystemService_GetActivities_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetActivitiesResponse" message="tns:IActivityOptimizationSystemService_GetActivities_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActivityByActivityId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetActivityByActivityId" message="tns:IActivityOptimizationSystemService_GetActivityByActivityId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetActivityByActivityIdResponse" message="tns:IActivityOptimizationSystemService_GetActivityByActivityId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActivityCompositionByActivityId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetActivityCompositionByActivityId" message="tns:IActivityOptimizationSystemService_GetActivityCompositionByActivityId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetActivityCompositionByActivityIdResponse" message="tns:IActivityOptimizationSystemService_GetActivityCompositionByActivityId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateActivityViewStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/UpdateActivityViewStatus" message="tns:IActivityOptimizationSystemService_UpdateActivityViewStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/UpdateActivityViewStatusResponse" message="tns:IActivityOptimizationSystemService_UpdateActivityViewStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteActivityByActivityId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/DeleteActivityByActivityId" message="tns:IActivityOptimizationSystemService_DeleteActivityByActivityId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/DeleteActivityByActivityIdResponse" message="tns:IActivityOptimizationSystemService_DeleteActivityByActivityId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReportData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetReportData" message="tns:IActivityOptimizationSystemService_GetReportData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetReportDataResponse" message="tns:IActivityOptimizationSystemService_GetReportData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersByQSpaceId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetUsersByQSpaceId" message="tns:IActivityOptimizationSystemService_GetUsersByQSpaceId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetUsersByQSpaceIdResponse" message="tns:IActivityOptimizationSystemService_GetUsersByQSpaceId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActivitiesByQSpaceAndUserId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetActivitiesByQSpaceAndUserId" message="tns:IActivityOptimizationSystemService_GetActivitiesByQSpaceAndUserId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetActivitiesByQSpaceAndUserIdResponse" message="tns:IActivityOptimizationSystemService_GetActivitiesByQSpaceAndUserId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDefaultData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/InsertDefaultData" message="tns:IActivityOptimizationSystemService_InsertDefaultData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/InsertDefaultDataResponse" message="tns:IActivityOptimizationSystemService_InsertDefaultData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailTemplateById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetEmailTemplateById" message="tns:IActivityOptimizationSystemService_GetEmailTemplateById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemService/GetEmailTemplateByIdResponse" message="tns:IActivityOptimizationSystemService_GetEmailTemplateById_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IActivityOptimizationSystemWithWorksnapsService">
+    <wsdl:operation name="AddOrUpdateOTNWorksnapsCommonUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemWithWorksnapsService/AddOrUpdateOTNWorksnapsCommonUser" message="tns:IActivityOptimizationSystemWithWorksnapsService_AddOrUpdateOTNWorksnapsCommonUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemWithWorksnapsService/AddOrUpdateOTNWorksnapsCommonUserResponse" message="tns:IActivityOptimizationSystemWithWorksnapsService_AddOrUpdateOTNWorksnapsCommonUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOrUpdateOTNWorksnapsActivity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemWithWorksnapsService/AddOrUpdateOTNWorksnapsActivity" message="tns:IActivityOptimizationSystemWithWorksnapsService_AddOrUpdateOTNWorksnapsActivity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemWithWorksnapsService/AddOrUpdateOTNWorksnapsActivityResponse" message="tns:IActivityOptimizationSystemWithWorksnapsService_AddOrUpdateOTNWorksnapsActivity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOrUpdateOTNWorksnapsWorkLog">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemWithWorksnapsService/AddOrUpdateOTNWorksnapsWorkLog" message="tns:IActivityOptimizationSystemWithWorksnapsService_AddOrUpdateOTNWorksnapsWorkLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemWithWorksnapsService/AddOrUpdateOTNWorksnapsWorkLogResponse" message="tns:IActivityOptimizationSystemWithWorksnapsService_AddOrUpdateOTNWorksnapsWorkLog_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOrUpdateOTNWorksnapsQSpace">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemWithWorksnapsService/AddOrUpdateOTNWorksnapsQSpace" message="tns:IActivityOptimizationSystemWithWorksnapsService_AddOrUpdateOTNWorksnapsQSpace_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemWithWorksnapsService/AddOrUpdateOTNWorksnapsQSpaceResponse" message="tns:IActivityOptimizationSystemWithWorksnapsService_AddOrUpdateOTNWorksnapsQSpace_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOrUpdateOTNWorksnapsLastSyncDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityOptimizationSystemWithWorksnapsService/AddOrUpdateOTNWorksnapsLastSyncDate" message="tns:IActivityOptimizationSystemWithWorksnapsService_AddOrUpdateOTNWorksnapsLastSyncDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityOptimizationSystemWithWorksnapsService/AddOrUpdateOTNWorksnapsLastSyncDateResponse" message="tns:IActivityOptimizationSystemWithWorksnapsService_AddOrUpdateOTNWorksnapsLastSyncDate_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IActivityVerificationService">
+    <wsdl:operation name="DeleteCapturedInformation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityVerificationService/DeleteCapturedInformation" message="tns:IActivityVerificationService_DeleteCapturedInformation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityVerificationService/DeleteCapturedInformationResponse" message="tns:IActivityVerificationService_DeleteCapturedInformation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCapturedInformation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityVerificationService/AddCapturedInformation" message="tns:IActivityVerificationService_AddCapturedInformation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityVerificationService/AddCapturedInformationResponse" message="tns:IActivityVerificationService_AddCapturedInformation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActivityCaptures">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityVerificationService/GetActivityCaptures" message="tns:IActivityVerificationService_GetActivityCaptures_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityVerificationService/GetActivityCapturesResponse" message="tns:IActivityVerificationService_GetActivityCaptures_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOrUpdateMatchedKeyword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityVerificationService/AddOrUpdateMatchedKeyword" message="tns:IActivityVerificationService_AddOrUpdateMatchedKeyword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityVerificationService/AddOrUpdateMatchedKeywordResponse" message="tns:IActivityVerificationService_AddOrUpdateMatchedKeyword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMatchedKeywordByIds">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityVerificationService/GetMatchedKeywordByIds" message="tns:IActivityVerificationService_GetMatchedKeywordByIds_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityVerificationService/GetMatchedKeywordByIdsResponse" message="tns:IActivityVerificationService_GetMatchedKeywordByIds_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVerificationStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityVerificationService/UpdateVerificationStatus" message="tns:IActivityVerificationService_UpdateVerificationStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityVerificationService/UpdateVerificationStatusResponse" message="tns:IActivityVerificationService_UpdateVerificationStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActivityCapturesByActivityId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActivityVerificationService/GetActivityCapturesByActivityId" message="tns:IActivityVerificationService_GetActivityCapturesByActivityId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActivityVerificationService/GetActivityCapturesByActivityIdResponse" message="tns:IActivityVerificationService_GetActivityCapturesByActivityId_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IBackupService">
+    <wsdl:operation name="StartBackupTask">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackupService/StartBackupTask" message="tns:IBackupService_StartBackupTask_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackupService/StartBackupTaskResponse" message="tns:IBackupService_StartBackupTask_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBackupTaskById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackupService/GetBackupTaskById" message="tns:IBackupService_GetBackupTaskById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackupService/GetBackupTaskByIdResponse" message="tns:IBackupService_GetBackupTaskById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllBackupTasks">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackupService/GetAllBackupTasks" message="tns:IBackupService_GetAllBackupTasks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackupService/GetAllBackupTasksResponse" message="tns:IBackupService_GetAllBackupTasks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertOrUpdateBackupTask">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackupService/InsertOrUpdateBackupTask" message="tns:IBackupService_InsertOrUpdateBackupTask_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackupService/InsertOrUpdateBackupTaskResponse" message="tns:IBackupService_InsertOrUpdateBackupTask_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBackupTask">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackupService/DeleteBackupTask" message="tns:IBackupService_DeleteBackupTask_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackupService/DeleteBackupTaskResponse" message="tns:IBackupService_DeleteBackupTask_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBackupActionById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackupService/GetBackupActionById" message="tns:IBackupService_GetBackupActionById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackupService/GetBackupActionByIdResponse" message="tns:IBackupService_GetBackupActionById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllBackupActions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackupService/GetAllBackupActions" message="tns:IBackupService_GetAllBackupActions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackupService/GetAllBackupActionsResponse" message="tns:IBackupService_GetAllBackupActions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertOrUpdateBackupAction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackupService/InsertOrUpdateBackupAction" message="tns:IBackupService_InsertOrUpdateBackupAction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackupService/InsertOrUpdateBackupActionResponse" message="tns:IBackupService_InsertOrUpdateBackupAction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBackupAction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackupService/DeleteBackupAction" message="tns:IBackupService_DeleteBackupAction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackupService/DeleteBackupActionResponse" message="tns:IBackupService_DeleteBackupAction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAllBackupActions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBackupService/DeleteAllBackupActions" message="tns:IBackupService_DeleteAllBackupActions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBackupService/DeleteAllBackupActionsResponse" message="tns:IBackupService_DeleteAllBackupActions_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IDataEntryService">
+    <wsdl:operation name="AddOrUpdateResource">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataEntryService/AddOrUpdateResource" message="tns:IDataEntryService_AddOrUpdateResource_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataEntryService/AddOrUpdateResourceResponse" message="tns:IDataEntryService_AddOrUpdateResource_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResources">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataEntryService/GetResources" message="tns:IDataEntryService_GetResources_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataEntryService/GetResourcesResponse" message="tns:IDataEntryService_GetResources_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteResourceEntry">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataEntryService/DeleteResourceEntry" message="tns:IDataEntryService_DeleteResourceEntry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataEntryService/DeleteResourceEntryResponse" message="tns:IDataEntryService_DeleteResourceEntry_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataEntryService/GetCompanyByName" message="tns:IDataEntryService_GetCompanyByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataEntryService/GetCompanyByNameResponse" message="tns:IDataEntryService_GetCompanyByName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOrUpdateCompany">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataEntryService/AddOrUpdateCompany" message="tns:IDataEntryService_AddOrUpdateCompany_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataEntryService/AddOrUpdateCompanyResponse" message="tns:IDataEntryService_AddOrUpdateCompany_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCompanyEntry">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataEntryService/DeleteCompanyEntry" message="tns:IDataEntryService_DeleteCompanyEntry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataEntryService/DeleteCompanyEntryResponse" message="tns:IDataEntryService_DeleteCompanyEntry_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddBrand">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataEntryService/AddBrand" message="tns:IDataEntryService_AddBrand_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataEntryService/AddBrandResponse" message="tns:IDataEntryService_AddBrand_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataEntryService/ShowData" message="tns:IDataEntryService_ShowData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataEntryService/ShowDataResponse" message="tns:IDataEntryService_ShowData_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IInitializationService">
+    <wsdl:operation name="InitializeRavenDb">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInitializationService/InitializeRavenDb" message="tns:IInitializationService_InitializeRavenDb_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInitializationService/InitializeRavenDbResponse" message="tns:IInitializationService_InitializeRavenDb_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInitializationService/SendEmails" message="tns:IInitializationService_SendEmails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInitializationService/SendEmailsResponse" message="tns:IInitializationService_SendEmails_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IMediaElementService">
+    <wsdl:operation name="RemoveMedia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMediaElementService/RemoveMedia" message="tns:IMediaElementService_RemoveMedia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMediaElementService/RemoveMediaResponse" message="tns:IMediaElementService_RemoveMedia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadMedia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMediaElementService/UploadMedia" message="tns:IMediaElementService_UploadMedia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMediaElementService/UploadMediaResponse" message="tns:IMediaElementService_UploadMedia_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IWalletService">
+    <wsdl:operation name="GetBalance">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWalletService/GetBalance" message="tns:IWalletService_GetBalance_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWalletService/GetBalanceResponse" message="tns:IWalletService_GetBalance_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadMoney">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWalletService/LoadMoney" message="tns:IWalletService_LoadMoney_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWalletService/LoadMoneyResponse" message="tns:IWalletService_LoadMoney_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TransferMoney">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWalletService/TransferMoney" message="tns:IWalletService_TransferMoney_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWalletService/TransferMoneyResponse" message="tns:IWalletService_TransferMoney_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WithdrawMoney">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWalletService/WithdrawMoney" message="tns:IWalletService_WithdrawMoney_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWalletService/WithdrawMoneyResponse" message="tns:IWalletService_WithdrawMoney_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPendingTransactions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWalletService/GetPendingTransactions" message="tns:IWalletService_GetPendingTransactions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWalletService/GetPendingTransactionsResponse" message="tns:IWalletService_GetPendingTransactions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPendingTransactionsAmount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWalletService/GetPendingTransactionsAmount" message="tns:IWalletService_GetPendingTransactionsAmount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWalletService/GetPendingTransactionsAmountResponse" message="tns:IWalletService_GetPendingTransactionsAmount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTransactions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWalletService/GetAllTransactions" message="tns:IWalletService_GetAllTransactions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWalletService/GetAllTransactionsResponse" message="tns:IWalletService_GetAllTransactions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBankAccountById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWalletService/GetBankAccountById" message="tns:IWalletService_GetBankAccountById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWalletService/GetBankAccountByIdResponse" message="tns:IWalletService_GetBankAccountById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllBankAccounts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWalletService/GetAllBankAccounts" message="tns:IWalletService_GetAllBankAccounts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWalletService/GetAllBankAccountsResponse" message="tns:IWalletService_GetAllBankAccounts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVerifiedBankAccounts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWalletService/GetVerifiedBankAccounts" message="tns:IWalletService_GetVerifiedBankAccounts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWalletService/GetVerifiedBankAccountsResponse" message="tns:IWalletService_GetVerifiedBankAccounts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertOrUpdateBankAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWalletService/InsertOrUpdateBankAccount" message="tns:IWalletService_InsertOrUpdateBankAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWalletService/InsertOrUpdateBankAccountResponse" message="tns:IWalletService_InsertOrUpdateBankAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBankAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWalletService/DeleteBankAccount" message="tns:IWalletService_DeleteBankAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWalletService/DeleteBankAccountResponse" message="tns:IWalletService_DeleteBankAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoVerificationTransactions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWalletService/DoVerificationTransactions" message="tns:IWalletService_DoVerificationTransactions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWalletService/DoVerificationTransactionsResponse" message="tns:IWalletService_DoVerificationTransactions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyBankAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWalletService/VerifyBankAccount" message="tns:IWalletService_VerifyBankAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWalletService/VerifyBankAccountResponse" message="tns:IWalletService_VerifyBankAccount_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IResourceTypeService">
+    <wsdl:operation name="GetResourceTypeById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IResourceTypeService/GetResourceTypeById" message="tns:IResourceTypeService_GetResourceTypeById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IResourceTypeService/GetResourceTypeByIdResponse" message="tns:IResourceTypeService_GetResourceTypeById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResourceTypeByNameStartWith">
+      <wsdl:input wsaw:Action="http://tempuri.org/IResourceTypeService/GetResourceTypeByNameStartWith" message="tns:IResourceTypeService_GetResourceTypeByNameStartWith_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IResourceTypeService/GetResourceTypeByNameStartWithResponse" message="tns:IResourceTypeService_GetResourceTypeByNameStartWith_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllResourceTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IResourceTypeService/GetAllResourceTypes" message="tns:IResourceTypeService_GetAllResourceTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IResourceTypeService/GetAllResourceTypesResponse" message="tns:IResourceTypeService_GetAllResourceTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateResourceType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IResourceTypeService/CreateResourceType" message="tns:IResourceTypeService_CreateResourceType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IResourceTypeService/CreateResourceTypeResponse" message="tns:IResourceTypeService_CreateResourceType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteResourceType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IResourceTypeService/DeleteResourceType" message="tns:IResourceTypeService_DeleteResourceType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IResourceTypeService/DeleteResourceTypeResponse" message="tns:IResourceTypeService_DeleteResourceType_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IResourceCategoryService">
+    <wsdl:operation name="GetResourceCategoryById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IResourceCategoryService/GetResourceCategoryById" message="tns:IResourceCategoryService_GetResourceCategoryById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IResourceCategoryService/GetResourceCategoryByIdResponse" message="tns:IResourceCategoryService_GetResourceCategoryById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResourceCategoriesByTypeId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IResourceCategoryService/GetResourceCategoriesByTypeId" message="tns:IResourceCategoryService_GetResourceCategoriesByTypeId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IResourceCategoryService/GetResourceCategoriesByTypeIdResponse" message="tns:IResourceCategoryService_GetResourceCategoriesByTypeId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResourceCategoriesByNameStartWith">
+      <wsdl:input wsaw:Action="http://tempuri.org/IResourceCategoryService/GetResourceCategoriesByNameStartWith" message="tns:IResourceCategoryService_GetResourceCategoriesByNameStartWith_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IResourceCategoryService/GetResourceCategoriesByNameStartWithResponse" message="tns:IResourceCategoryService_GetResourceCategoriesByNameStartWith_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllResourceCategories">
+      <wsdl:input wsaw:Action="http://tempuri.org/IResourceCategoryService/GetAllResourceCategories" message="tns:IResourceCategoryService_GetAllResourceCategories_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IResourceCategoryService/GetAllResourceCategoriesResponse" message="tns:IResourceCategoryService_GetAllResourceCategories_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateResourceCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IResourceCategoryService/CreateResourceCategory" message="tns:IResourceCategoryService_CreateResourceCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IResourceCategoryService/CreateResourceCategoryResponse" message="tns:IResourceCategoryService_CreateResourceCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteResourceCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IResourceCategoryService/DeleteResourceCategory" message="tns:IResourceCategoryService_DeleteResourceCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IResourceCategoryService/DeleteResourceCategoryResponse" message="tns:IResourceCategoryService_DeleteResourceCategory_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IResourcesService">
+    <wsdl:operation name="GetResourceById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IResourcesService/GetResourceById" message="tns:IResourcesService_GetResourceById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IResourcesService/GetResourceByIdResponse" message="tns:IResourcesService_GetResourceById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResourcesByNameStartWith">
+      <wsdl:input wsaw:Action="http://tempuri.org/IResourcesService/GetResourcesByNameStartWith" message="tns:IResourcesService_GetResourcesByNameStartWith_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IResourcesService/GetResourcesByNameStartWithResponse" message="tns:IResourcesService_GetResourcesByNameStartWith_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResourcesSearchSuggestions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IResourcesService/GetResourcesSearchSuggestions" message="tns:IResourcesService_GetResourcesSearchSuggestions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IResourcesService/GetResourcesSearchSuggestionsResponse" message="tns:IResourcesService_GetResourcesSearchSuggestions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllResources">
+      <wsdl:input wsaw:Action="http://tempuri.org/IResourcesService/GetAllResources" message="tns:IResourcesService_GetAllResources_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IResourcesService/GetAllResourcesResponse" message="tns:IResourcesService_GetAllResources_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateResource">
+      <wsdl:input wsaw:Action="http://tempuri.org/IResourcesService/CreateResource" message="tns:IResourcesService_CreateResource_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IResourcesService/CreateResourceResponse" message="tns:IResourcesService_CreateResource_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteResource">
+      <wsdl:input wsaw:Action="http://tempuri.org/IResourcesService/DeleteResource" message="tns:IResourcesService_DeleteResource_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IResourcesService/DeleteResourceResponse" message="tns:IResourcesService_DeleteResource_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IQSpacesService">
+    <wsdl:operation name="GetQSpaceById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQSpacesService/GetQSpaceById" message="tns:IQSpacesService_GetQSpaceById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQSpacesService/GetQSpaceByIdResponse" message="tns:IQSpacesService_GetQSpaceById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllQSpaces">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQSpacesService/GetAllQSpaces" message="tns:IQSpacesService_GetAllQSpaces_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQSpacesService/GetAllQSpacesResponse" message="tns:IQSpacesService_GetAllQSpaces_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertOrUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQSpacesService/InsertOrUpdate" message="tns:IQSpacesService_InsertOrUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQSpacesService/InsertOrUpdateResponse" message="tns:IQSpacesService_InsertOrUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteQSpace">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQSpacesService/DeleteQSpace" message="tns:IQSpacesService_DeleteQSpace_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQSpacesService/DeleteQSpaceResponse" message="tns:IQSpacesService_DeleteQSpace_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ITasksService">
+    <wsdl:operation name="GetTasksById">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITasksService/GetTasksById" message="tns:ITasksService_GetTasksById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITasksService/GetTasksByIdResponse" message="tns:ITasksService_GetTasksById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTasks">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITasksService/GetAllTasks" message="tns:ITasksService_GetAllTasks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITasksService/GetAllTasksResponse" message="tns:ITasksService_GetAllTasks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertOrUpdateTask">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITasksService/InsertOrUpdateTask" message="tns:ITasksService_InsertOrUpdateTask_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITasksService/InsertOrUpdateTaskResponse" message="tns:ITasksService_InsertOrUpdateTask_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTask">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITasksService/DeleteTask" message="tns:ITasksService_DeleteTask_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITasksService/DeleteTaskResponse" message="tns:ITasksService_DeleteTask_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IActivityOptimizationSystemService" type="tns:IActivityOptimizationSystemService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddOrUpdateActivityComposition">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/AddOrUpdateActivityComposition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOrUpdateUser">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/AddOrUpdateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOrUpdateQSpace">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/AddOrUpdateQSpace" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOrUpdateActivity">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/AddOrUpdateActivity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOrUpdateActivityStatus">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/AddOrUpdateActivityStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOrUpdateActivityUser">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/AddOrUpdateActivityUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/GetUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUserOffline">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/SetUserOffline" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQSpaces">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/GetQSpaces" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActivitiesByQSpaceIdAndActivityId">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/GetActivitiesByQSpaceIdAndActivityId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActivityCompositionsByActivityIds">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/GetActivityCompositionsByActivityIds" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActivityStatus">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/GetActivityStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AOSSignIn">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/AOSSignIn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOrUpdateCommonActivity">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/AddOrUpdateCommonActivity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOrUpdateCommonQSpace">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/AddOrUpdateCommonQSpace" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOrUpdateCommonUser">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/AddOrUpdateCommonUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommonActivities">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/GetCommonActivities" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommonQSpaces">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/GetCommonQSpaces" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommonUsers">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/GetCommonUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserActivitiesByUserId">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/GetUserActivitiesByUserId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActivitiesById">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/GetActivitiesById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActivitiesByOTNActivityIds">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/GetActivitiesByOTNActivityIds" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOrUpdateActivityTool">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/AddOrUpdateActivityTool" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActivityToolsById">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/GetActivityToolsById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllActivityTools">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/GetAllActivityTools" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOrUpdateAllCaptureTime">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/AddOrUpdateAllCaptureTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOrUpdateAllowedTime">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/AddOrUpdateAllowedTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOrUpdateKeywordDictionary">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/AddOrUpdateKeywordDictionary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTimeCollectionById">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/GetAllTimeCollectionById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllowedTimeCollectionById">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/GetAllowedTimeCollectionById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTimeCollection">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/GetAllTimeCollection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllowedTimeCollection">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/GetAllowedTimeCollection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKeywordDictionariesByIds">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/GetKeywordDictionariesByIds" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKeywordDictionaries">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/GetKeywordDictionaries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActivityUserByActivityId">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/GetActivityUserByActivityId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActivityTools">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/GetActivityTools" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveActivitiesByQSpaceIdAndActivityId">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/GetActiveActivitiesByQSpaceIdAndActivityId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActivityUsers">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/GetActivityUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOrUpdatePriority">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/AddOrUpdatePriority" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActivityPriorities">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/GetActivityPriorities" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActivities">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/GetActivities" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActivityByActivityId">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/GetActivityByActivityId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActivityCompositionByActivityId">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/GetActivityCompositionByActivityId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateActivityViewStatus">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/UpdateActivityViewStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteActivityByActivityId">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/DeleteActivityByActivityId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReportData">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/GetReportData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersByQSpaceId">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/GetUsersByQSpaceId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActivitiesByQSpaceAndUserId">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/GetActivitiesByQSpaceAndUserId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDefaultData">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/InsertDefaultData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailTemplateById">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemService/GetEmailTemplateById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IActivityOptimizationSystemWithWorksnapsService" type="tns:IActivityOptimizationSystemWithWorksnapsService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddOrUpdateOTNWorksnapsCommonUser">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemWithWorksnapsService/AddOrUpdateOTNWorksnapsCommonUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOrUpdateOTNWorksnapsActivity">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemWithWorksnapsService/AddOrUpdateOTNWorksnapsActivity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOrUpdateOTNWorksnapsWorkLog">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemWithWorksnapsService/AddOrUpdateOTNWorksnapsWorkLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOrUpdateOTNWorksnapsQSpace">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemWithWorksnapsService/AddOrUpdateOTNWorksnapsQSpace" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOrUpdateOTNWorksnapsLastSyncDate">
+      <soap:operation soapAction="http://tempuri.org/IActivityOptimizationSystemWithWorksnapsService/AddOrUpdateOTNWorksnapsLastSyncDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IActivityVerificationService" type="tns:IActivityVerificationService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DeleteCapturedInformation">
+      <soap:operation soapAction="http://tempuri.org/IActivityVerificationService/DeleteCapturedInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCapturedInformation">
+      <soap:operation soapAction="http://tempuri.org/IActivityVerificationService/AddCapturedInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActivityCaptures">
+      <soap:operation soapAction="http://tempuri.org/IActivityVerificationService/GetActivityCaptures" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOrUpdateMatchedKeyword">
+      <soap:operation soapAction="http://tempuri.org/IActivityVerificationService/AddOrUpdateMatchedKeyword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMatchedKeywordByIds">
+      <soap:operation soapAction="http://tempuri.org/IActivityVerificationService/GetMatchedKeywordByIds" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVerificationStatus">
+      <soap:operation soapAction="http://tempuri.org/IActivityVerificationService/UpdateVerificationStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActivityCapturesByActivityId">
+      <soap:operation soapAction="http://tempuri.org/IActivityVerificationService/GetActivityCapturesByActivityId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IBackupService" type="tns:IBackupService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="StartBackupTask">
+      <soap:operation soapAction="http://tempuri.org/IBackupService/StartBackupTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBackupTaskById">
+      <soap:operation soapAction="http://tempuri.org/IBackupService/GetBackupTaskById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllBackupTasks">
+      <soap:operation soapAction="http://tempuri.org/IBackupService/GetAllBackupTasks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertOrUpdateBackupTask">
+      <soap:operation soapAction="http://tempuri.org/IBackupService/InsertOrUpdateBackupTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBackupTask">
+      <soap:operation soapAction="http://tempuri.org/IBackupService/DeleteBackupTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBackupActionById">
+      <soap:operation soapAction="http://tempuri.org/IBackupService/GetBackupActionById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllBackupActions">
+      <soap:operation soapAction="http://tempuri.org/IBackupService/GetAllBackupActions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertOrUpdateBackupAction">
+      <soap:operation soapAction="http://tempuri.org/IBackupService/InsertOrUpdateBackupAction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBackupAction">
+      <soap:operation soapAction="http://tempuri.org/IBackupService/DeleteBackupAction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAllBackupActions">
+      <soap:operation soapAction="http://tempuri.org/IBackupService/DeleteAllBackupActions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IDataEntryService" type="tns:IDataEntryService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddOrUpdateResource">
+      <soap:operation soapAction="http://tempuri.org/IDataEntryService/AddOrUpdateResource" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResources">
+      <soap:operation soapAction="http://tempuri.org/IDataEntryService/GetResources" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteResourceEntry">
+      <soap:operation soapAction="http://tempuri.org/IDataEntryService/DeleteResourceEntry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyByName">
+      <soap:operation soapAction="http://tempuri.org/IDataEntryService/GetCompanyByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOrUpdateCompany">
+      <soap:operation soapAction="http://tempuri.org/IDataEntryService/AddOrUpdateCompany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCompanyEntry">
+      <soap:operation soapAction="http://tempuri.org/IDataEntryService/DeleteCompanyEntry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddBrand">
+      <soap:operation soapAction="http://tempuri.org/IDataEntryService/AddBrand" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowData">
+      <soap:operation soapAction="http://tempuri.org/IDataEntryService/ShowData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IInitializationService" type="tns:IInitializationService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InitializeRavenDb">
+      <soap:operation soapAction="http://tempuri.org/IInitializationService/InitializeRavenDb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmails">
+      <soap:operation soapAction="http://tempuri.org/IInitializationService/SendEmails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IMediaElementService" type="tns:IMediaElementService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RemoveMedia">
+      <soap:operation soapAction="http://tempuri.org/IMediaElementService/RemoveMedia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadMedia">
+      <soap:operation soapAction="http://tempuri.org/IMediaElementService/UploadMedia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IWalletService" type="tns:IWalletService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetBalance">
+      <soap:operation soapAction="http://tempuri.org/IWalletService/GetBalance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadMoney">
+      <soap:operation soapAction="http://tempuri.org/IWalletService/LoadMoney" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransferMoney">
+      <soap:operation soapAction="http://tempuri.org/IWalletService/TransferMoney" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WithdrawMoney">
+      <soap:operation soapAction="http://tempuri.org/IWalletService/WithdrawMoney" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPendingTransactions">
+      <soap:operation soapAction="http://tempuri.org/IWalletService/GetPendingTransactions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPendingTransactionsAmount">
+      <soap:operation soapAction="http://tempuri.org/IWalletService/GetPendingTransactionsAmount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTransactions">
+      <soap:operation soapAction="http://tempuri.org/IWalletService/GetAllTransactions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBankAccountById">
+      <soap:operation soapAction="http://tempuri.org/IWalletService/GetBankAccountById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllBankAccounts">
+      <soap:operation soapAction="http://tempuri.org/IWalletService/GetAllBankAccounts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVerifiedBankAccounts">
+      <soap:operation soapAction="http://tempuri.org/IWalletService/GetVerifiedBankAccounts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertOrUpdateBankAccount">
+      <soap:operation soapAction="http://tempuri.org/IWalletService/InsertOrUpdateBankAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBankAccount">
+      <soap:operation soapAction="http://tempuri.org/IWalletService/DeleteBankAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoVerificationTransactions">
+      <soap:operation soapAction="http://tempuri.org/IWalletService/DoVerificationTransactions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyBankAccount">
+      <soap:operation soapAction="http://tempuri.org/IWalletService/VerifyBankAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IResourceTypeService" type="tns:IResourceTypeService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetResourceTypeById">
+      <soap:operation soapAction="http://tempuri.org/IResourceTypeService/GetResourceTypeById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResourceTypeByNameStartWith">
+      <soap:operation soapAction="http://tempuri.org/IResourceTypeService/GetResourceTypeByNameStartWith" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllResourceTypes">
+      <soap:operation soapAction="http://tempuri.org/IResourceTypeService/GetAllResourceTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateResourceType">
+      <soap:operation soapAction="http://tempuri.org/IResourceTypeService/CreateResourceType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteResourceType">
+      <soap:operation soapAction="http://tempuri.org/IResourceTypeService/DeleteResourceType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IResourceCategoryService" type="tns:IResourceCategoryService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetResourceCategoryById">
+      <soap:operation soapAction="http://tempuri.org/IResourceCategoryService/GetResourceCategoryById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResourceCategoriesByTypeId">
+      <soap:operation soapAction="http://tempuri.org/IResourceCategoryService/GetResourceCategoriesByTypeId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResourceCategoriesByNameStartWith">
+      <soap:operation soapAction="http://tempuri.org/IResourceCategoryService/GetResourceCategoriesByNameStartWith" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllResourceCategories">
+      <soap:operation soapAction="http://tempuri.org/IResourceCategoryService/GetAllResourceCategories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateResourceCategory">
+      <soap:operation soapAction="http://tempuri.org/IResourceCategoryService/CreateResourceCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteResourceCategory">
+      <soap:operation soapAction="http://tempuri.org/IResourceCategoryService/DeleteResourceCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IResourcesService" type="tns:IResourcesService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetResourceById">
+      <soap:operation soapAction="http://tempuri.org/IResourcesService/GetResourceById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResourcesByNameStartWith">
+      <soap:operation soapAction="http://tempuri.org/IResourcesService/GetResourcesByNameStartWith" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResourcesSearchSuggestions">
+      <soap:operation soapAction="http://tempuri.org/IResourcesService/GetResourcesSearchSuggestions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllResources">
+      <soap:operation soapAction="http://tempuri.org/IResourcesService/GetAllResources" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateResource">
+      <soap:operation soapAction="http://tempuri.org/IResourcesService/CreateResource" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteResource">
+      <soap:operation soapAction="http://tempuri.org/IResourcesService/DeleteResource" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IQSpacesService" type="tns:IQSpacesService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetQSpaceById">
+      <soap:operation soapAction="http://tempuri.org/IQSpacesService/GetQSpaceById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllQSpaces">
+      <soap:operation soapAction="http://tempuri.org/IQSpacesService/GetAllQSpaces" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertOrUpdate">
+      <soap:operation soapAction="http://tempuri.org/IQSpacesService/InsertOrUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteQSpace">
+      <soap:operation soapAction="http://tempuri.org/IQSpacesService/DeleteQSpace" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_ITasksService" type="tns:ITasksService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetTasksById">
+      <soap:operation soapAction="http://tempuri.org/ITasksService/GetTasksById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTasks">
+      <soap:operation soapAction="http://tempuri.org/ITasksService/GetAllTasks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertOrUpdateTask">
+      <soap:operation soapAction="http://tempuri.org/ITasksService/InsertOrUpdateTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTask">
+      <soap:operation soapAction="http://tempuri.org/ITasksService/DeleteTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PSService">
+    <wsdl:port name="BasicHttpBinding_IActivityOptimizationSystemService" binding="tns:BasicHttpBinding_IActivityOptimizationSystemService">
+      <soap:address location="http://192.169.235.121:84/PSService/Services/PSService.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IActivityOptimizationSystemWithWorksnapsService" binding="tns:BasicHttpBinding_IActivityOptimizationSystemWithWorksnapsService">
+      <soap:address location="http://192.169.235.121:84/PSService/Services/PSService.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IActivityVerificationService" binding="tns:BasicHttpBinding_IActivityVerificationService">
+      <soap:address location="http://192.169.235.121:84/PSService/Services/PSService.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IBackupService" binding="tns:BasicHttpBinding_IBackupService">
+      <soap:address location="http://192.169.235.121:84/PSService/Services/PSService.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IDataEntryService" binding="tns:BasicHttpBinding_IDataEntryService">
+      <soap:address location="http://192.169.235.121:84/PSService/Services/PSService.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IInitializationService" binding="tns:BasicHttpBinding_IInitializationService">
+      <soap:address location="http://192.169.235.121:84/PSService/Services/PSService.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IMediaElementService" binding="tns:BasicHttpBinding_IMediaElementService">
+      <soap:address location="http://192.169.235.121:84/PSService/Services/PSService.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IWalletService" binding="tns:BasicHttpBinding_IWalletService">
+      <soap:address location="http://192.169.235.121:84/PSService/Services/PSService.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IResourceTypeService" binding="tns:BasicHttpBinding_IResourceTypeService">
+      <soap:address location="http://192.169.235.121:84/PSService/Services/PSService.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IResourceCategoryService" binding="tns:BasicHttpBinding_IResourceCategoryService">
+      <soap:address location="http://192.169.235.121:84/PSService/Services/PSService.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IResourcesService" binding="tns:BasicHttpBinding_IResourcesService">
+      <soap:address location="http://192.169.235.121:84/PSService/Services/PSService.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IQSpacesService" binding="tns:BasicHttpBinding_IQSpacesService">
+      <soap:address location="http://192.169.235.121:84/PSService/Services/PSService.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_ITasksService" binding="tns:BasicHttpBinding_ITasksService">
+      <soap:address location="http://192.169.235.121:84/PSService/Services/PSService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

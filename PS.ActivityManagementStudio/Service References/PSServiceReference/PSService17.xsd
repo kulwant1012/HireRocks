@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/PS.Data.Entities.Money" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities.Money" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.169.235.121:84/PSService/Services/PSService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities" />
+  <xs:import schemaLocation="http://192.169.235.121:84/PSService/Services/PSService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="MoneyLoadDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreditCard" nillable="true" type="tns:CreditCardInfo" />
+      <xs:element minOccurs="0" name="Memo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MoneyLoadType" type="tns:MoneyLoadType" />
+      <xs:element minOccurs="0" name="PayPal" nillable="true" type="tns:PayPalInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MoneyLoadDetail" nillable="true" type="tns:MoneyLoadDetail" />
+  <xs:complexType name="CreditCardInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/PS.Data.Entities" base="q1:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CVV" type="xs:int" />
+          <xs:element minOccurs="0" name="CardHolder" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Number" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ValidToMonth" type="xs:int" />
+          <xs:element minOccurs="0" name="ValidToYear" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CreditCardInfo" nillable="true" type="tns:CreditCardInfo" />
+  <xs:simpleType name="MoneyLoadType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PayPal" />
+      <xs:enumeration value="CreditCard" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="MoneyLoadType" nillable="true" type="tns:MoneyLoadType" />
+  <xs:complexType name="PayPalInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/PS.Data.Entities" base="q2:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="PayPalAccount" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PayPalInfo" nillable="true" type="tns:PayPalInfo" />
+  <xs:complexType name="MoneyTransferDetail">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/PS.Data.Entities" base="q3:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Memo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Type" type="tns:MoneyTransferType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MoneyTransferDetail" nillable="true" type="tns:MoneyTransferDetail" />
+  <xs:simpleType name="MoneyTransferType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="TransferAsBonus" />
+      <xs:enumeration value="TransferAsFixedPrice" />
+      <xs:enumeration value="TransferAsHourly" />
+      <xs:enumeration value="TransferAsPresent" />
+      <xs:enumeration value="Other" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="MoneyTransferType" nillable="true" type="tns:MoneyTransferType" />
+  <xs:complexType name="MoneyWithdrawDetail">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/PS.Data.Entities" base="q4:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BankAccount" nillable="true" type="tns:BankAccount" />
+          <xs:element minOccurs="0" name="Memo" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MoneyWithdrawDetail" nillable="true" type="tns:MoneyWithdrawDetail" />
+  <xs:complexType name="BankAccount">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/PS.Data.Entities" base="q5:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AccountNickName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AccountNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AccountType" type="q5:BankAccountType" />
+          <xs:element minOccurs="0" name="BankAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BankName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreatedDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FIId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FIOrganization" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FIUrl" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LegalNameOnBankAccount" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OFXAppId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OFXAppVersion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OFXPassword" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OFXUser" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OFXVersion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RoutingNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Status" type="q5:BankAccountStatus" />
+          <xs:element minOccurs="0" name="UpdatedDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="VerificationAttemptsLeft" type="xs:int" />
+          <xs:element minOccurs="0" name="VerificationTransaction1Amount" nillable="true" type="xs:float" />
+          <xs:element minOccurs="0" name="VerificationTransaction2Amount" nillable="true" type="xs:float" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BankAccount" nillable="true" type="tns:BankAccount" />
+  <xs:complexType name="ArrayOfMoneyTransaction">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MoneyTransaction" nillable="true" type="tns:MoneyTransaction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMoneyTransaction" nillable="true" type="tns:ArrayOfMoneyTransaction" />
+  <xs:complexType name="MoneyTransaction">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/PS.Data.Entities" base="q6:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Amount" type="xs:double" />
+          <xs:element minOccurs="0" name="DatePosted" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DateUpdated" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FromUserId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MoneyLoadDetail" nillable="true" type="tns:MoneyLoadDetail" />
+          <xs:element minOccurs="0" name="MoneyTransferDetail" nillable="true" type="tns:MoneyTransferDetail" />
+          <xs:element minOccurs="0" name="MoneyWithdrawDetail" nillable="true" type="tns:MoneyWithdrawDetail" />
+          <xs:element minOccurs="0" name="PushChannel" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Status" type="tns:MoneyTransactionStatus" />
+          <xs:element minOccurs="0" name="ToUserId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Type" type="tns:MoneyTransactionType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MoneyTransaction" nillable="true" type="tns:MoneyTransaction" />
+  <xs:simpleType name="MoneyTransactionStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="InProcess" />
+      <xs:enumeration value="Processed" />
+      <xs:enumeration value="Error">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="MoneyTransactionStatus" nillable="true" type="tns:MoneyTransactionStatus" />
+  <xs:simpleType name="MoneyTransactionType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="LoadMoney" />
+      <xs:enumeration value="TransferMoney" />
+      <xs:enumeration value="WithdrawMoney" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="MoneyTransactionType" nillable="true" type="tns:MoneyTransactionType" />
+  <xs:complexType name="ArrayOfBankAccount">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BankAccount" nillable="true" type="tns:BankAccount" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBankAccount" nillable="true" type="tns:ArrayOfBankAccount" />
+</xs:schema>
