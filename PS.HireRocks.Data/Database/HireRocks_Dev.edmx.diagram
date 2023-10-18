@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="29132161b63f487bbed27c65fbec8789" Name="Diagram1" ZoomLevel="85">
+        <EntityTypeShape EntityType="HireRocks_DevModel.AspNetRole" Width="1.5" PointX="0.75" PointY="24.625" />
+        <EntityTypeShape EntityType="HireRocks_DevModel.AspNetUserClaim" Width="1.5" PointX="5.25" PointY="38.5" />
+        <EntityTypeShape EntityType="HireRocks_DevModel.AspNetUserLogin" Width="1.5" PointX="5.25" PointY="21.5" />
+        <EntityTypeShape EntityType="HireRocks_DevModel.AspNetUser" Width="1.5" PointX="3" PointY="18.25" />
+        <EntityTypeShape EntityType="HireRocks_DevModel.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="HireRocks_DevModel.Capture" Width="1.5" PointX="2.75" PointY="4.75" />
+        <EntityTypeShape EntityType="HireRocks_DevModel.Certification" Width="1.5" PointX="4.75" PointY="4.75" />
+        <EntityTypeShape EntityType="HireRocks_DevModel.Company" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="HireRocks_DevModel.ContractDenyReason" Width="1.5" PointX="3" PointY="33" />
+        <EntityTypeShape EntityType="HireRocks_DevModel.ContractEndReason" Width="1.5" PointX="3" PointY="35.625" />
+        <EntityTypeShape EntityType="HireRocks_DevModel.Contract" Width="1.5" PointX="10.5" PointY="19.875" />
+        <EntityTypeShape EntityType="HireRocks_DevModel.ContractStatu" Width="1.5" PointX="8.25" PointY="15" />
+        <EntityTypeShape EntityType="HireRocks_DevModel.DegreeType" Width="1.5" PointX="0.75" PointY="1.5" />
+        <EntityTypeShape EntityType="HireRocks_DevModel.Education" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="HireRocks_DevModel.ExceptionLog" Width="1.5" PointX="6.75" PointY="3.75" />
+        <EntityTypeShape EntityType="HireRocks_DevModel.ExperienceLevel" Width="1.5" PointX="6" PointY="10.25" />
+        <EntityTypeShape EntityType="HireRocks_DevModel.JobAttachment" Width="1.5" PointX="10.5" PointY="29.875" />
+        <EntityTypeShape EntityType="HireRocks_DevModel.JobCategory" Width="1.5" PointX="3.75" PointY="29.875" />
+        <EntityTypeShape EntityType="HireRocks_DevModel.Job" Width="1.5" PointX="8.25" PointY="19.5" />
+        <EntityTypeShape EntityType="HireRocks_DevModel.JobsBidAttachment" Width="1.5" PointX="15.75" PointY="18" />
+        <EntityTypeShape EntityType="HireRocks_DevModel.JobsBid" Width="1.5" PointX="13.5" PointY="17.5" />
+        <EntityTypeShape EntityType="HireRocks_DevModel.JobSubCategory" Width="1.5" PointX="6" PointY="29.625" />
+        <EntityTypeShape EntityType="HireRocks_DevModel.JobType" Width="1.5" PointX="6" PointY="32.75" />
+        <EntityTypeShape EntityType="HireRocks_DevModel.Language" Width="1.5" PointX="6.75" PointY="6.75" />
+        <EntityTypeShape EntityType="HireRocks_DevModel.LicenseAgreement" Width="5.75" PointX="15" PointY="0.5" />
+        <EntityTypeShape EntityType="HireRocks_DevModel.MessageLabel" Width="1.5" PointX="13.25" PointY="26.125" />
+        <EntityTypeShape EntityType="HireRocks_DevModel.Message" Width="1.5" PointX="15.5" PointY="25.125" />
+        <EntityTypeShape EntityType="HireRocks_DevModel.Notification" Width="1.5" PointX="5.25" PointY="13.625" />
+        <EntityTypeShape EntityType="HireRocks_DevModel.PaymentMethod" Width="1.5" PointX="0.75" PointY="8.75" />
+        <EntityTypeShape EntityType="HireRocks_DevModel.ReadyMadeTool" Width="1.5" PointX="5.25" PointY="41.25" />
+        <EntityTypeShape EntityType="HireRocks_DevModel.Skill" Width="1.5" PointX="2.75" PointY="8.75" />
+        <EntityTypeShape EntityType="HireRocks_DevModel.Team" Width="1.5" PointX="5.25" PointY="44.5" />
+        <EntityTypeShape EntityType="HireRocks_DevModel.TimeSheet" Width="1.5" PointX="8.75" PointY="3.75" />
+        <EntityTypeShape EntityType="HireRocks_DevModel.TimeUnit" Width="1.5" PointX="6" PointY="27" />
+        <EntityTypeShape EntityType="HireRocks_DevModel.TransactionStatu" Width="1.5" PointX="8.75" PointY="5.75" />
+        <EntityTypeShape EntityType="HireRocks_DevModel.UserPortfolio" Width="1.5" PointX="15.75" PointY="21.5" />
+        <EntityTypeShape EntityType="HireRocks_DevModel.UserProfile" Width="1.5" PointX="5.25" PointY="16.75" />
+        <EntityTypeShape EntityType="HireRocks_DevModel.UserRating" Width="1.5" PointX="12.75" PointY="21.25" />
+        <EntityTypeShape EntityType="HireRocks_DevModel.WorkerHourlyRate" Width="1.5" PointX="12.75" PointY="29.375" />
+        <EntityTypeShape EntityType="HireRocks_DevModel.WorkerType" Width="1.5" PointX="6" PointY="24.25" />
+        <AssociationConnector Association="HireRocks_DevModel.FK_ContractDenyReason_RoleId" />
+        <AssociationConnector Association="HireRocks_DevModel.FK_RoleId" />
+        <AssociationConnector Association="HireRocks_DevModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_User_Id" />
+        <AssociationConnector Association="HireRocks_DevModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="HireRocks_DevModel.FK_ContractAspNetUser" />
+        <AssociationConnector Association="HireRocks_DevModel.FK_CreatedByUserId" />
+        <AssociationConnector Association="HireRocks_DevModel.FK_JobAspNetUser" />
+        <AssociationConnector Association="HireRocks_DevModel.FK_JobsBid_AspNetUsers" />
+        <AssociationConnector Association="HireRocks_DevModel.FK_MessageAspNetUser" />
+        <AssociationConnector Association="HireRocks_DevModel.FK_MessageAspNetUser1" />
+        <AssociationConnector Association="HireRocks_DevModel.FK_ModifiedByUserId" />
+        <AssociationConnector Association="HireRocks_DevModel.FK_NotificationAspNetUser" />
+        <AssociationConnector Association="HireRocks_DevModel.FK_ReadyMadeToolAspNetUser" />
+        <AssociationConnector Association="HireRocks_DevModel.FK_TeamAspNetUser" />
+        <AssociationConnector Association="HireRocks_DevModel.FK_TeamAspNetUser1" />
+        <AssociationConnector Association="HireRocks_DevModel.FK_UserId" />
+        <AssociationConnector Association="HireRocks_DevModel.FK_UserPortfolioAspNetUser" />
+        <AssociationConnector Association="HireRocks_DevModel.FK_UserProfileAspNetUser" />
+        <AssociationConnector Association="HireRocks_DevModel.FK__UserRatin__Contr__589C25F3" />
+        <AssociationConnector Association="HireRocks_DevModel.FK_ContractContractStatus" />
+        <AssociationConnector Association="HireRocks_DevModel.FK_ContractId" />
+        <AssociationConnector Association="HireRocks_DevModel.FK_ContractJob" />
+        <AssociationConnector Association="HireRocks_DevModel.FK_ContractTimeUnits" />
+        <AssociationConnector Association="HireRocks_DevModel.FK_UserPortfolioContract" />
+        <AssociationConnector Association="HireRocks_DevModel.FK_EducationDegreeType" />
+        <AssociationConnector Association="HireRocks_DevModel.FK_JobExperienceLevel" />
+        <AssociationConnector Association="HireRocks_DevModel.FK_JobAttachmentsJob" />
+        <AssociationConnector Association="HireRocks_DevModel.FK_JobSubCategoryJobCategory" />
+        <AssociationConnector Association="HireRocks_DevModel.FK_JobFreelancersType" />
+        <AssociationConnector Association="HireRocks_DevModel.FK_JobJobSubCategory" />
+        <AssociationConnector Association="HireRocks_DevModel.FK_JobJobType" />
+        <AssociationConnector Association="HireRocks_DevModel.FK_JobsBid_Jobs" />
+        <AssociationConnector Association="HireRocks_DevModel.FK_JobTimeUnits" />
+        <AssociationConnector Association="HireRocks_DevModel.FK_Messages_Jobs" />
+        <AssociationConnector Association="HireRocks_DevModel.FK_JobsBidAttachments_JobsBid" />
+        <AssociationConnector Association="HireRocks_DevModel.FK_MessagesMessageLabels" />
+        <AssociationConnector Association="HireRocks_DevModel.AspNetUserRoles" />
+        <AssociationConnector Association="HireRocks_DevModel.FK_Contracts_ContractId" />
+        <EntityTypeShape EntityType="HireRocks_DevModel.AccountType" Width="1.5" PointX="6.25" PointY="48.25" />
+        <EntityTypeShape EntityType="HireRocks_DevModel.Memo" Width="1.5" PointX="0.75" PointY="11.875" />
+        <EntityTypeShape EntityType="HireRocks_DevModel.UserAccountType" Width="1.5" PointX="8.5" PointY="28" />
+        <AssociationConnector Association="HireRocks_DevModel.FK_UserAccountType_AccountType" />
+        <AssociationConnector Association="HireRocks_DevModel.FK_UserAccountType_AspNetUsers" />
+        <AssociationConnector Association="HireRocks_DevModel.FK_Capture_Memo" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,23 @@
+﻿@model PS.Data.Entities.BackupTask
+
+@{
+    ViewBag.Title = "Create Task";
+}
+
+<h2>Create Task</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    Html.RenderPartial("AddOrEditTask", Model);
+}
+
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,553 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7B2BF73A-DAFC-4E11-86B3-C94DEE326D86}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PS.Azure.Web</RootNamespace>
+    <AssemblyName>PS.Azure.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=2.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.1.1\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb, Version=2.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.1.1\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Edm, Version=5.6.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Data.Edm.5.6.1\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.6.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Data.OData.5.6.1\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services, Version=5.6.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Data.Services.5.6.1\lib\net40\Microsoft.Data.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.3.0.0-rc2\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.0-rc2\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.0-rc2\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Optimization, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Web.Optimization.0.1\lib\net40\Microsoft.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Configuration, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.WindowsAzure.ConfigurationManager.2.0.3\lib\net40\Microsoft.WindowsAzure.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Storage, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WindowsAzure.Storage.4.1.0\lib\net40\Microsoft.WindowsAzure.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Raven.Abstractions, Version=2.5.0.0, Culture=neutral, PublicKeyToken=37f41c7f99471593, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\RavenDB.Client.2.5.2908\lib\net45\Raven.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Raven.Client.Lightweight, Version=2.5.0.0, Culture=neutral, PublicKeyToken=37f41c7f99471593, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\RavenDB.Client.2.5.2908\lib\net45\Raven.Client.Lightweight.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.27-beta\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.0\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.27-beta\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Spatial, Version=5.6.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\System.Spatial.5.6.1\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.0\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.0\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\Eqoria.Win8\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Web.Optimization, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Web.Optimization.0.0.8\lib\net40\Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AzureBlobUploader.cs" />
+    <Compile Include="Controllers\BackupsController.cs" />
+    <Compile Include="Controllers\UploadController.cs" />
+    <Compile Include="NotificaitonHub.cs" />
+    <Compile Include="ServiceInterfaces\IBackupService.cs" />
+    <Compile Include="ServiceInterfaces\IBankService.cs" />
+    <Compile Include="ServiceInterfaces\IDataEntryService.cs" />
+    <Compile Include="ServiceInterfaces\IInitializationService.cs" />
+    <Compile Include="ServiceInterfaces\IMoneyService.cs" />
+    <Compile Include="ServiceInterfaces\IWalletService.cs" />
+    <Compile Include="ServiceInterfaces\IResourcesService.cs" />
+    <Compile Include="ServiceInterfaces\INotification.cs" />
+    <Compile Include="Services\ActivityOptimizationSystemService.svc.cs">
+      <DependentUpon>ActivityOptimizationSystemService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\ActivityOptimizationSystemWithWorksnapsService.svc.cs">
+      <DependentUpon>ActivityOptimizationSystemWithWorksnapsService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\ActivityVerificationService.svc.cs">
+      <DependentUpon>ActivityVerificationService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\BackupService.svc.cs">
+      <DependentUpon>BackupService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\DataEntryService.svc.cs">
+      <DependentUpon>DataEntryService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceInterfaces\IMediaElementService.cs" />
+    <Compile Include="ServiceInterfaces\IActivityVerificationService.cs" />
+    <Compile Include="ServiceInterfaces\IActivityOptimizationSystemService.cs" />
+    <Compile Include="ServiceInterfaces\IActivityOptimizationSystemWithWorksnapsService.cs" />
+    <Compile Include="Services\InitializeService.svc.cs">
+      <DependentUpon>InitializeService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceInterfaces\ISyncHoursInformationWithOTN.cs" />
+    <Compile Include="Services\MediaElementService.svc.cs">
+      <DependentUpon>MediaElementService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\UsersService.svc.cs">
+      <DependentUpon>UsersService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\WalletService.svc.cs">
+      <DependentUpon>WalletService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\ResourcesService.svc.cs">
+      <DependentUpon>ResourcesService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\PSService.svc.cs">
+      <DependentUpon>PSService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs" />
+    <Compile Include="Utils\ConfirmationCodeEmailSender.cs" />
+    <Compile Include="Views\OperationResult.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceInterfaces\IPSService.cs" />
+    <Compile Include="ServiceInterfaces\IExperienceService.cs" />
+    <Compile Include="ServiceInterfaces\IGroupsService.cs" />
+    <Compile Include="ServiceInterfaces\IQSpacesService.cs" />
+    <Compile Include="ServiceInterfaces\IStructuresService.cs" />
+    <Compile Include="ServiceInterfaces\ITasksService.cs" />
+    <Compile Include="ServiceInterfaces\IUsersService.cs" />
+    <Compile Include="Utils\EmailSender.cs" />
+    <Compile Include="Utils\RandomPasswordGenerator.cs" />
+    <Compile Include="Utils\RandomPasswordOptions.cs" />
+    <Compile Include="ViewModel\BackupsViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Content\css\bootstrap-responsive.css" />
+    <Content Include="Content\css\bootstrap-responsive.min.css" />
+    <Content Include="Content\css\bootstrap.css" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\style.css" />
+    <Content Include="Content\img\apple-touch-icon-114-precomposed.png" />
+    <Content Include="Content\img\apple-touch-icon-144-precomposed.png" />
+    <Content Include="Content\img\apple-touch-icon-57-precomposed.png" />
+    <Content Include="Content\img\apple-touch-icon-72-precomposed.png" />
+    <Content Include="Content\img\favicon.png" />
+    <Content Include="Content\img\glyphicons-halflings-white.png" />
+    <Content Include="Content\img\glyphicons-halflings.png" />
+    <Content Include="Content\js\bootstrap.min.js" />
+    <Content Include="Content\js\html5shiv.js" />
+    <Content Include="Content\js\jquery.min.js" />
+    <Content Include="Content\js\less-1.3.3.min.js" />
+    <Content Include="Content\js\scripts.js" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <None Include="Properties\PublishProfiles\acsservice - FTP %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\acsservice - FTP %283%29.pubxml" />
+    <None Include="Properties\PublishProfiles\acsservice - FTP %284%29.pubxml" />
+    <None Include="Properties\PublishProfiles\acsservice - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\acsservice - Web Deploy %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\acsservice - Web Deploy %283%29.pubxml" />
+    <None Include="Properties\PublishProfiles\acsservice - Web Deploy %284%29.pubxml" />
+    <None Include="Properties\PublishProfiles\acsservice - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\ams1-dev - FTP %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\ams1-dev - FTP %283%29.pubxml" />
+    <None Include="Properties\PublishProfiles\ams1-dev - FTP %284%29.pubxml" />
+    <None Include="Properties\PublishProfiles\ams1-dev - FTP %285%29.pubxml" />
+    <None Include="Properties\PublishProfiles\ams1-dev - FTP %286%29.pubxml" />
+    <None Include="Properties\PublishProfiles\ams1-dev - Web Deploy %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\ams1-dev - Web Deploy %283%29.pubxml" />
+    <None Include="Properties\PublishProfiles\ams1-dev - Web Deploy %284%29.pubxml" />
+    <None Include="Properties\PublishProfiles\ams1-dev - Web Deploy %285%29.pubxml" />
+    <None Include="Properties\PublishProfiles\ams1-dev - Web Deploy %286%29.pubxml" />
+    <None Include="Properties\PublishProfiles\ams1-qa - FTP %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\ams1-qa - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\ams1-qa - Web Deploy %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\ams1-qa - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\EqoriaService.pubxml" />
+    <None Include="Properties\PublishProfiles\eqoriawebsite - FTP %286%29.pubxml" />
+    <None Include="Properties\PublishProfiles\eqoriawebsite - FTP %287%29.pubxml" />
+    <None Include="Properties\PublishProfiles\eqoriawebsite - Web Deploy %286%29.pubxml" />
+    <None Include="Properties\PublishProfiles\eqoriawebsite - Web Deploy %287%29.pubxml" />
+    <None Include="Properties\PublishProfiles\Local.pubxml" />
+    <None Include="Properties\PublishProfiles\PSWeb.pubxml" />
+    <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Email\dailyWorkProgressTemplate.html" />
+    <Content Include="Email\images\complete copy.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Email\images\footer.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Email\images\header.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Email\images\line.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Email\newUserEmail.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Email\Template.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Email\welcomeEmail.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\jquery-1.8.2.js" />
+    <Content Include="Scripts\jquery-1.8.2.min.js" />
+    <None Include="Scripts\jquery-2.1.1.intellisense.js" />
+    <Content Include="Scripts\jquery-2.1.1.js" />
+    <Content Include="Scripts\jquery-2.1.1.min.js" />
+    <Content Include="Scripts\jquery.signalR-1.0.0.js" />
+    <Content Include="Scripts\jquery.signalR-1.0.0.min.js" />
+    <Content Include="Scripts\jquery.signalR-1.0.1.js" />
+    <Content Include="Scripts\jquery.signalR-1.0.1.min.js" />
+    <Content Include="Scripts\jquery.signalR-2.1.1.js" />
+    <Content Include="Scripts\jquery.signalR-2.1.1.min.js" />
+    <Content Include="Services\ActivityOptimizationSystemService.svc" />
+    <Content Include="Services\ActivityOptimizationSystemWithWorksnapsService.svc" />
+    <Content Include="Services\ActivityVerificationService.svc" />
+    <Content Include="Services\BackupService.svc" />
+    <Content Include="Services\DataEntryService.svc" />
+    <Content Include="Services\InitializeService.svc" />
+    <Content Include="Services\MediaElementService.svc" />
+    <Content Include="Services\UsersService.svc" />
+    <Content Include="Services\WalletService.svc" />
+    <Content Include="Services\ResourcesService.svc" />
+    <Content Include="Services\PSService.svc" />
+    <Content Include="Global.asax" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Scripts\jquery-2.1.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\less\accordion.less" />
+    <Content Include="Content\less\alerts.less" />
+    <Content Include="Content\less\bootstrap.less" />
+    <Content Include="Content\less\breadcrumbs.less" />
+    <Content Include="Content\less\button-groups.less" />
+    <Content Include="Content\less\buttons.less" />
+    <Content Include="Content\less\carousel.less" />
+    <Content Include="Content\less\close.less" />
+    <Content Include="Content\less\code.less" />
+    <Content Include="Content\less\component-animations.less" />
+    <Content Include="Content\less\dropdowns.less" />
+    <Content Include="Content\less\forms.less" />
+    <Content Include="Content\less\grid.less" />
+    <Content Include="Content\less\hero-unit.less" />
+    <Content Include="Content\less\labels-badges.less" />
+    <Content Include="Content\less\layouts.less" />
+    <Content Include="Content\less\media.less" />
+    <Content Include="Content\less\mixins.less" />
+    <Content Include="Content\less\modals.less" />
+    <Content Include="Content\less\navbar.less" />
+    <Content Include="Content\less\navs.less" />
+    <Content Include="Content\less\pager.less" />
+    <Content Include="Content\less\pagination.less" />
+    <Content Include="Content\less\popovers.less" />
+    <Content Include="Content\less\progress-bars.less" />
+    <Content Include="Content\less\reset.less" />
+    <Content Include="Content\less\responsive-1200px-min.less" />
+    <Content Include="Content\less\responsive-767px-max.less" />
+    <Content Include="Content\less\responsive-768px-979px.less" />
+    <Content Include="Content\less\responsive-navbar.less" />
+    <Content Include="Content\less\responsive-utilities.less" />
+    <Content Include="Content\less\responsive.less" />
+    <Content Include="Content\less\scaffolding.less" />
+    <Content Include="Content\less\sprites.less" />
+    <Content Include="Content\less\tables.less" />
+    <Content Include="Content\less\thumbnails.less" />
+    <Content Include="Content\less\tooltip.less" />
+    <Content Include="Content\less\type.less" />
+    <Content Include="Content\less\utilities.less" />
+    <Content Include="Content\less\variables.less" />
+    <Content Include="Content\less\wells.less" />
+    <None Include="Properties\PublishProfiles\eqoria - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\eqoria - Web Deploy %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\eqoria - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\eqoriaweb - FTP %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\eqoriaweb - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\eqoriaweb - Web Deploy %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\eqoriaweb - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\eqoriawebapi - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\eqoriawebapi - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\eqoriawebsite - FTP %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\eqoriawebsite - FTP %283%29.pubxml" />
+    <None Include="Properties\PublishProfiles\eqoriawebsite - FTP %284%29.pubxml" />
+    <None Include="Properties\PublishProfiles\eqoriawebsite - FTP %285%29.pubxml" />
+    <None Include="Properties\PublishProfiles\eqoriawebsite - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\eqoriawebsite - Web Deploy %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\eqoriawebsite - Web Deploy %283%29.pubxml" />
+    <None Include="Properties\PublishProfiles\eqoriawebsite - Web Deploy %284%29.pubxml" />
+    <None Include="Properties\PublishProfiles\eqoriawebsite - Web Deploy %285%29.pubxml" />
+    <None Include="Properties\PublishProfiles\eqoriawebsite - Web Deploy.pubxml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Backups\Index.cshtml" />
+    <Content Include="Views\Backups\CreateTask.cshtml" />
+    <Content Include="Views\Backups\EditTask.cshtml" />
+    <Content Include="Views\Backups\AddOrEditTask.cshtml" />
+    <Content Include="Views\Backups\BackupDetails.cshtml" />
+    <None Include="Properties\PublishProfiles\eqroiawebsitetest - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\eqroiawebsitetest - Web Deploy.pubxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PS.Data\PS.Data.csproj">
+      <Project>{6445465b-7654-40f9-9d96-1371e088d73d}</Project>
+      <Name>PS.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.17-beta\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.17-beta\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.17-beta\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.17-beta\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

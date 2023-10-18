@@ -1,0 +1,1426 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HireRocks_DevModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="AspNetRoles">
+      <EntityTypeMapping TypeName="HireRocks_DevModel.AspNetRole">
+        <MappingFragment StoreEntitySet="AspNetRoles">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserClaims">
+      <EntityTypeMapping TypeName="HireRocks_DevModel.AspNetUserClaim">
+        <MappingFragment StoreEntitySet="AspNetUserClaims">
+          <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+          <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserLogins">
+      <EntityTypeMapping TypeName="HireRocks_DevModel.AspNetUserLogin">
+        <MappingFragment StoreEntitySet="AspNetUserLogins">
+          <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+          <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUsers">
+      <EntityTypeMapping TypeName="HireRocks_DevModel.AspNetUser">
+        <MappingFragment StoreEntitySet="AspNetUsers">
+          <ScalarProperty Name="IsProfileCompleted" ColumnName="IsProfileCompleted" />
+          <ScalarProperty Name="ForgotPasswordToken" ColumnName="ForgotPasswordToken" />
+          <ScalarProperty Name="PhoneVerificationCode" ColumnName="PhoneVerificationCode" />
+          <ScalarProperty Name="EmailVerificationCode" ColumnName="EmailVerificationCode" />
+          <ScalarProperty Name="Discriminator" ColumnName="Discriminator" />
+          <ScalarProperty Name="IsPhoneVerified" ColumnName="IsPhoneVerified" />
+          <ScalarProperty Name="IsEmailVerified" ColumnName="IsEmailVerified" />
+          <ScalarProperty Name="ProfilePic" ColumnName="ProfilePic" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="CellPhone" ColumnName="CellPhone" />
+          <ScalarProperty Name="WorkPhone" ColumnName="WorkPhone" />
+          <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
+          <ScalarProperty Name="Country2" ColumnName="Country2" />
+          <ScalarProperty Name="Country1" ColumnName="Country1" />
+          <ScalarProperty Name="State2" ColumnName="State2" />
+          <ScalarProperty Name="State1" ColumnName="State1" />
+          <ScalarProperty Name="City2" ColumnName="City2" />
+          <ScalarProperty Name="City1" ColumnName="City1" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C__MigrationHistory">
+      <EntityTypeMapping TypeName="HireRocks_DevModel.C__MigrationHistory">
+        <MappingFragment StoreEntitySet="C__MigrationHistory">
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Captures">
+      <EntityTypeMapping TypeName="HireRocks_DevModel.Capture">
+        <MappingFragment StoreEntitySet="Capture">
+          <ScalarProperty Name="MemoId" ColumnName="MemoId" />
+          <ScalarProperty Name="IsRejected" ColumnName="IsRejected" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="TimeBurned" ColumnName="TimeBurned" />
+          <ScalarProperty Name="CaptureDate" ColumnName="CaptureDate" />
+          <ScalarProperty Name="ScreenCaptureFullImage" ColumnName="ScreenCaptureFullImage" />
+          <ScalarProperty Name="ScreenCaptureThumbnailImage" ColumnName="ScreenCaptureThumbnailImage" />
+          <ScalarProperty Name="MouseCapture" ColumnName="MouseCapture" />
+          <ScalarProperty Name="KeyboardCapture" ColumnName="KeyboardCapture" />
+          <ScalarProperty Name="MouseCount" ColumnName="MouseCount" />
+          <ScalarProperty Name="KeyCount" ColumnName="KeyCount" />
+          <ScalarProperty Name="CaptureId" ColumnName="CaptureId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Certifications">
+      <EntityTypeMapping TypeName="HireRocks_DevModel.Certification">
+        <MappingFragment StoreEntitySet="Certification">
+          <ScalarProperty Name="CertificationNumber" ColumnName="CertificationNumber" />
+          <ScalarProperty Name="CertificationDate" ColumnName="CertificationDate" />
+          <ScalarProperty Name="CertificationName" ColumnName="CertificationName" />
+          <ScalarProperty Name="CertificationId" ColumnName="CertificationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Companies">
+      <EntityTypeMapping TypeName="HireRocks_DevModel.Company">
+        <MappingFragment StoreEntitySet="Companies">
+          <ScalarProperty Name="CompanyLogo" ColumnName="CompanyLogo" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="CompanyAddress" ColumnName="CompanyAddress" />
+          <ScalarProperty Name="CompanyOwner" ColumnName="CompanyOwner" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContractDenyReasons">
+      <EntityTypeMapping TypeName="HireRocks_DevModel.ContractDenyReason">
+        <MappingFragment StoreEntitySet="ContractDenyReasons">
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="DenyReason" ColumnName="DenyReason" />
+          <ScalarProperty Name="ContractDenyReasonId" ColumnName="ContractDenyReasonId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContractEndReasons">
+      <EntityTypeMapping TypeName="HireRocks_DevModel.ContractEndReason">
+        <MappingFragment StoreEntitySet="ContractEndReasons">
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="EndReason" ColumnName="EndReason" />
+          <ScalarProperty Name="ContractEndReasonId" ColumnName="ContractEndReasonId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contracts">
+      <EntityTypeMapping TypeName="HireRocks_DevModel.Contract">
+        <MappingFragment StoreEntitySet="Contracts">
+          <ScalarProperty Name="HourlyRate" ColumnName="HourlyRate" />
+          <ScalarProperty Name="ModifiedByUserId" ColumnName="ModifiedByUserId" />
+          <ScalarProperty Name="CreatedByUserId" ColumnName="CreatedByUserId" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="FixedRate" ColumnName="FixedRate" />
+          <ScalarProperty Name="WorkerId" ColumnName="WorkerId" />
+          <ScalarProperty Name="JobRating" ColumnName="JobRating" />
+          <ScalarProperty Name="EndReason" ColumnName="EndReason" />
+          <ScalarProperty Name="HoursLimit" ColumnName="HoursLimit" />
+          <ScalarProperty Name="ContractStatusId" ColumnName="ContractStatusId" />
+          <ScalarProperty Name="TimeUnitId" ColumnName="TimeUnitId" />
+          <ScalarProperty Name="ActualDuration" ColumnName="ActualDuration" />
+          <ScalarProperty Name="EstimateDuration" ColumnName="EstimateDuration" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContractStatus">
+      <EntityTypeMapping TypeName="HireRocks_DevModel.ContractStatu">
+        <MappingFragment StoreEntitySet="ContractStatus">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ContractStatusName" ColumnName="ContractStatusName" />
+          <ScalarProperty Name="ContractStatusId" ColumnName="ContractStatusId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DegreeTypes">
+      <EntityTypeMapping TypeName="HireRocks_DevModel.DegreeType">
+        <MappingFragment StoreEntitySet="DegreeTypes">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="DegreeTypeName" ColumnName="DegreeTypeName" />
+          <ScalarProperty Name="DegreeTypeId" ColumnName="DegreeTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Educations">
+      <EntityTypeMapping TypeName="HireRocks_DevModel.Education">
+        <MappingFragment StoreEntitySet="Educations">
+          <ScalarProperty Name="Percentage" ColumnName="Percentage" />
+          <ScalarProperty Name="DegreeEndDate" ColumnName="DegreeEndDate" />
+          <ScalarProperty Name="DegreeStartDate" ColumnName="DegreeStartDate" />
+          <ScalarProperty Name="DegreeName" ColumnName="DegreeName" />
+          <ScalarProperty Name="DegreeTypeId" ColumnName="DegreeTypeId" />
+          <ScalarProperty Name="EducationId" ColumnName="EducationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExceptionLogs">
+      <EntityTypeMapping TypeName="HireRocks_DevModel.ExceptionLog">
+        <MappingFragment StoreEntitySet="ExceptionLogs">
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="Exception" ColumnName="Exception" />
+          <ScalarProperty Name="ExceptionLogId" ColumnName="ExceptionLogId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExperienceLevels">
+      <EntityTypeMapping TypeName="HireRocks_DevModel.ExperienceLevel">
+        <MappingFragment StoreEntitySet="ExperienceLevels">
+          <ScalarProperty Name="ExperienceHigherRange" ColumnName="ExperienceHigherRange" />
+          <ScalarProperty Name="ExperienceLowerRange" ColumnName="ExperienceLowerRange" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="LevelName" ColumnName="LevelName" />
+          <ScalarProperty Name="ExperianceLevelId" ColumnName="ExperianceLevelId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JobAttachments">
+      <EntityTypeMapping TypeName="HireRocks_DevModel.JobAttachment">
+        <MappingFragment StoreEntitySet="JobAttachments">
+          <ScalarProperty Name="AttachmentOriginalName" ColumnName="AttachmentOriginalName" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="AttachmentName" ColumnName="AttachmentName" />
+          <ScalarProperty Name="JobAttachmentId" ColumnName="JobAttachmentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JobCategories">
+      <EntityTypeMapping TypeName="HireRocks_DevModel.JobCategory">
+        <MappingFragment StoreEntitySet="JobCategories">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CategoryDescription" ColumnName="CategoryDescription" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="JobCategoryId" ColumnName="JobCategoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Jobs">
+      <EntityTypeMapping TypeName="HireRocks_DevModel.Job">
+        <MappingFragment StoreEntitySet="Jobs">
+          <ScalarProperty Name="FixedRate" ColumnName="FixedRate" />
+          <ScalarProperty Name="Locality_PRF" ColumnName="Locality_PRF" />
+          <ScalarProperty Name="Max_PRF_Rate" ColumnName="Max_PRF_Rate" />
+          <ScalarProperty Name="Min_PRF_Rate" ColumnName="Min_PRF_Rate" />
+          <ScalarProperty Name="JobPostDate" ColumnName="JobPostDate" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="TimeUnitId" ColumnName="TimeUnitId" />
+          <ScalarProperty Name="EstimateDuration" ColumnName="EstimateDuration" />
+          <ScalarProperty Name="JobEndDate" ColumnName="JobEndDate" />
+          <ScalarProperty Name="JobStartDate" ColumnName="JobStartDate" />
+          <ScalarProperty Name="SkillsRequiredForJobIds" ColumnName="SkillsRequiredForJobIds" />
+          <ScalarProperty Name="JobSubCategoryId" ColumnName="JobSubCategoryId" />
+          <ScalarProperty Name="JobTypeId" ColumnName="JobTypeId" />
+          <ScalarProperty Name="ExperienceLevelExperianceLevelId" ColumnName="ExperienceLevelExperianceLevelId" />
+          <ScalarProperty Name="WorkerTypeId" ColumnName="WorkerTypeId" />
+          <ScalarProperty Name="IsHiringClosed" ColumnName="IsHiringClosed" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="JobDescription" ColumnName="JobDescription" />
+          <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JobsBidAttachments">
+      <EntityTypeMapping TypeName="HireRocks_DevModel.JobsBidAttachment">
+        <MappingFragment StoreEntitySet="JobsBidAttachments">
+          <ScalarProperty Name="JobBidId" ColumnName="JobBidId" />
+          <ScalarProperty Name="AttachmentOriginalName" ColumnName="AttachmentOriginalName" />
+          <ScalarProperty Name="AttachmentName" ColumnName="AttachmentName" />
+          <ScalarProperty Name="JobBidAttachmentId" ColumnName="JobBidAttachmentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JobsBids">
+      <EntityTypeMapping TypeName="HireRocks_DevModel.JobsBid">
+        <MappingFragment StoreEntitySet="JobsBids">
+          <ScalarProperty Name="CoverLetter" ColumnName="CoverLetter" />
+          <ScalarProperty Name="IsDenied" ColumnName="IsDenied" />
+          <ScalarProperty Name="IsHired" ColumnName="IsHired" />
+          <ScalarProperty Name="WorkerId" ColumnName="WorkerId" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="JobBidId" ColumnName="JobBidId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JobSubCategories">
+      <EntityTypeMapping TypeName="HireRocks_DevModel.JobSubCategory">
+        <MappingFragment StoreEntitySet="JobSubCategories">
+          <ScalarProperty Name="JobCategoryId" ColumnName="JobCategoryId" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="SubCategoryDescription" ColumnName="SubCategoryDescription" />
+          <ScalarProperty Name="SubCategoryName" ColumnName="SubCategoryName" />
+          <ScalarProperty Name="JobSubCategoryId" ColumnName="JobSubCategoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JobTypes">
+      <EntityTypeMapping TypeName="HireRocks_DevModel.JobType">
+        <MappingFragment StoreEntitySet="JobTypes">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="JobTypeName" ColumnName="JobTypeName" />
+          <ScalarProperty Name="JobTypeId" ColumnName="JobTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Languages">
+      <EntityTypeMapping TypeName="HireRocks_DevModel.Language">
+        <MappingFragment StoreEntitySet="Languages">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="LanguageName" ColumnName="LanguageName" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LicenseAgreements">
+      <EntityTypeMapping TypeName="HireRocks_DevModel.LicenseAgreement">
+        <MappingFragment StoreEntitySet="LicenseAgreements">
+          <ScalarProperty Name="Agreement" ColumnName="Agreement" />
+          <ScalarProperty Name="LicenseAgreementId" ColumnName="LicenseAgreementId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MessageLabels">
+      <EntityTypeMapping TypeName="HireRocks_DevModel.MessageLabel">
+        <MappingFragment StoreEntitySet="MessageLabels">
+          <ScalarProperty Name="LabelName" ColumnName="LabelName" />
+          <ScalarProperty Name="MessageLabelId" ColumnName="MessageLabelId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Messages">
+      <EntityTypeMapping TypeName="HireRocks_DevModel.Message">
+        <MappingFragment StoreEntitySet="Messages">
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="MessageToUserId" ColumnName="MessageToUserId" />
+          <ScalarProperty Name="MessageFromUserId" ColumnName="MessageFromUserId" />
+          <ScalarProperty Name="MessageLabelId" ColumnName="MessageLabelId" />
+          <ScalarProperty Name="IsViewed" ColumnName="IsViewed" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="MessageText" ColumnName="MessageText" />
+          <ScalarProperty Name="MessageId" ColumnName="MessageId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Notifications">
+      <EntityTypeMapping TypeName="HireRocks_DevModel.Notification">
+        <MappingFragment StoreEntitySet="Notifications">
+          <ScalarProperty Name="ObjectId" ColumnName="ObjectId" />
+          <ScalarProperty Name="NotificationType" ColumnName="NotificationType" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsViewed" ColumnName="IsViewed" />
+          <ScalarProperty Name="NotificationText" ColumnName="NotificationText" />
+          <ScalarProperty Name="NotificationId" ColumnName="NotificationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaymentMethods">
+      <EntityTypeMapping TypeName="HireRocks_DevModel.PaymentMethod">
+        <MappingFragment StoreEntitySet="PaymentMethods">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="PaymentMethodDescription" ColumnName="PaymentMethodDescription" />
+          <ScalarProperty Name="PaymentMethodName" ColumnName="PaymentMethodName" />
+          <ScalarProperty Name="PaymentMethodId" ColumnName="PaymentMethodId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReadyMadeTools">
+      <EntityTypeMapping TypeName="HireRocks_DevModel.ReadyMadeTool">
+        <MappingFragment StoreEntitySet="ReadyMadeTools">
+          <ScalarProperty Name="ToolOwnerId" ColumnName="ToolOwnerId" />
+          <ScalarProperty Name="ToolVersion" ColumnName="ToolVersion" />
+          <ScalarProperty Name="ToolLogo" ColumnName="ToolLogo" />
+          <ScalarProperty Name="DownloadURL" ColumnName="DownloadURL" />
+          <ScalarProperty Name="ToolDescription" ColumnName="ToolDescription" />
+          <ScalarProperty Name="ToolName" ColumnName="ToolName" />
+          <ScalarProperty Name="ToolId" ColumnName="ToolId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Skills">
+      <EntityTypeMapping TypeName="HireRocks_DevModel.Skill">
+        <MappingFragment StoreEntitySet="Skills">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="SkillDescription" ColumnName="SkillDescription" />
+          <ScalarProperty Name="SkillName" ColumnName="SkillName" />
+          <ScalarProperty Name="SkillId" ColumnName="SkillId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Teams">
+      <EntityTypeMapping TypeName="HireRocks_DevModel.Team">
+        <MappingFragment StoreEntitySet="Teams">
+          <ScalarProperty Name="TeamMemberId" ColumnName="TeamMemberId" />
+          <ScalarProperty Name="TeamOwnerId" ColumnName="TeamOwnerId" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="TeamId" ColumnName="TeamId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TimeSheets">
+      <EntityTypeMapping TypeName="HireRocks_DevModel.TimeSheet">
+        <MappingFragment StoreEntitySet="TimeSheets">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TimeUnits">
+      <EntityTypeMapping TypeName="HireRocks_DevModel.TimeUnit">
+        <MappingFragment StoreEntitySet="TimeUnits">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+          <ScalarProperty Name="TimeUnitId" ColumnName="TimeUnitId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransactionStatus">
+      <EntityTypeMapping TypeName="HireRocks_DevModel.TransactionStatu">
+        <MappingFragment StoreEntitySet="TransactionStatus">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="StatusName" ColumnName="StatusName" />
+          <ScalarProperty Name="StatusCode" ColumnName="StatusCode" />
+          <ScalarProperty Name="TransactionStatusId" ColumnName="TransactionStatusId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserPortfolios">
+      <EntityTypeMapping TypeName="HireRocks_DevModel.UserPortfolio">
+        <MappingFragment StoreEntitySet="UserPortfolios">
+          <ScalarProperty Name="WorkerId" ColumnName="WorkerId" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="ProjectEndDate" ColumnName="ProjectEndDate" />
+          <ScalarProperty Name="ProjectStartDate" ColumnName="ProjectStartDate" />
+          <ScalarProperty Name="ProjectDescription" ColumnName="ProjectDescription" />
+          <ScalarProperty Name="ProjectTitle" ColumnName="ProjectTitle" />
+          <ScalarProperty Name="UserPortfolioId" ColumnName="UserPortfolioId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserProfiles">
+      <EntityTypeMapping TypeName="HireRocks_DevModel.UserProfile">
+        <MappingFragment StoreEntitySet="UserProfiles">
+          <ScalarProperty Name="CertificationIds" ColumnName="CertificationIds" />
+          <ScalarProperty Name="IntroductionVideo" ColumnName="IntroductionVideo" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="TimeZone" ColumnName="TimeZone" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserRating" ColumnName="UserRating" />
+          <ScalarProperty Name="UserSubCategoryIds" ColumnName="UserSubCategoryIds" />
+          <ScalarProperty Name="EducationIds" ColumnName="EducationIds" />
+          <ScalarProperty Name="UserHourlyRate" ColumnName="UserHourlyRate" />
+          <ScalarProperty Name="UserLanguageIds" ColumnName="UserLanguageIds" />
+          <ScalarProperty Name="UserSkillIds" ColumnName="UserSkillIds" />
+          <ScalarProperty Name="ProfileTitle" ColumnName="ProfileTitle" />
+          <ScalarProperty Name="UserProfileId" ColumnName="UserProfileId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserRatings">
+      <EntityTypeMapping TypeName="HireRocks_DevModel.UserRating">
+        <MappingFragment StoreEntitySet="UserRatings">
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="Cooperation" ColumnName="Cooperation" />
+          <ScalarProperty Name="Communication" ColumnName="Communication" />
+          <ScalarProperty Name="Deadline" ColumnName="Deadline" />
+          <ScalarProperty Name="Availability" ColumnName="Availability" />
+          <ScalarProperty Name="Quality" ColumnName="Quality" />
+          <ScalarProperty Name="Skill" ColumnName="Skill" />
+          <ScalarProperty Name="UserRatingId" ColumnName="UserRatingId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkerHourlyRates">
+      <EntityTypeMapping TypeName="HireRocks_DevModel.WorkerHourlyRate">
+        <MappingFragment StoreEntitySet="WorkerHourlyRate">
+          <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="HourlyRate" ColumnName="HourlyRate" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="WorkerHourlyRateId" ColumnName="WorkerHourlyRateId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkerTypes">
+      <EntityTypeMapping TypeName="HireRocks_DevModel.WorkerType">
+        <MappingFragment StoreEntitySet="WorkerTypes">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="WorkerTypeId" ColumnName="WorkerTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="AspNetUserRoles" TypeName="HireRocks_DevModel.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
+      <EndProperty Name="AspNetUser">
+        <ScalarProperty Name="Id" ColumnName="UserId" />
+      </EndProperty>
+      <EndProperty Name="AspNetRole">
+        <ScalarProperty Name="Id" ColumnName="RoleId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <!--<FunctionImportMapping FunctionImportName="GetWorkerJobsByWorkerId" FunctionName="HireRocks_DevModel.Store.GetWorkerJobsByWorkerId">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="HireRocks_DevModel.GetWorkerJobsByWorkerId_Result">
+                <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="HourlyRate" ColumnName="HourlyRate" />
+                <ScalarProperty Name="FixedRate" ColumnName="FixedRate" />
+                <ScalarProperty Name="ContractStatusId" ColumnName="ContractStatusId" />
+                <ScalarProperty Name="Jobrating" ColumnName="Jobrating" />
+                <ScalarProperty Name="JobId" ColumnName="JobId" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>-->
+    <!--<FunctionImportMapping FunctionImportName="GetBurnedHoursInformation" FunctionName="HireRocks_DevModel.Store.GetBurnedHoursInformation">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="HireRocks_DevModel.GetBurnedHoursInformation_Result">
+                <ScalarProperty Name="TotalBurnedHours" ColumnName="TotalBurnedHours" />
+                <ScalarProperty Name="WeeklyBurnedHours" ColumnName="WeeklyBurnedHours" />
+                <ScalarProperty Name="TodayBurnedHours" ColumnName="TodayBurnedHours" />
+                <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>-->
+    <EntitySetMapping Name="AccountTypes">
+      <EntityTypeMapping TypeName="HireRocks_DevModel.AccountType">
+        <MappingFragment StoreEntitySet="AccountType">
+          <ScalarProperty Name="AccountTypeName" ColumnName="AccountTypeName" />
+          <ScalarProperty Name="AccountTypeId" ColumnName="AccountTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Memos">
+      <EntityTypeMapping TypeName="HireRocks_DevModel.Memo">
+        <MappingFragment StoreEntitySet="Memo">
+          <ScalarProperty Name="LastUsedDate" ColumnName="LastUsedDate" />
+          <ScalarProperty Name="WorkerId" ColumnName="WorkerId" />
+          <ScalarProperty Name="MemoText" ColumnName="MemoText" />
+          <ScalarProperty Name="MemoId" ColumnName="MemoId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserAccountTypes">
+      <EntityTypeMapping TypeName="HireRocks_DevModel.UserAccountType">
+        <MappingFragment StoreEntitySet="UserAccountType">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserAccountTypeId" ColumnName="UserAccountTypeId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="ApplyJob" FunctionName="HireRocks_DevModel.Store.ApplyJob" />
+    <FunctionImportMapping FunctionImportName="ApproveContract" FunctionName="HireRocks_DevModel.Store.ApproveContract" />
+    <FunctionImportMapping FunctionImportName="DeleteCapture" FunctionName="HireRocks_DevModel.Store.DeleteCapture" />
+    <FunctionImportMapping FunctionImportName="DeleteNotificationById" FunctionName="HireRocks_DevModel.Store.DeleteNotificationById" />
+    <FunctionImportMapping FunctionImportName="FindJobsByFilter" FunctionName="HireRocks_DevModel.Store.FindJobsByFilter">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.FindJobsByFilter_Result">
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+          <ScalarProperty Name="JobDescription" ColumnName="JobDescription" />
+          <ScalarProperty Name="JobStartDate" ColumnName="JobStartDate" />
+          <ScalarProperty Name="JobEndDate" ColumnName="JobEndDate" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="SubCategoryName" ColumnName="SubCategoryName" />
+          <ScalarProperty Name="JobTypeName" ColumnName="JobTypeName" />
+          <ScalarProperty Name="JobTypeId" ColumnName="JobTypeId" />
+          <ScalarProperty Name="EstimateDuration" ColumnName="EstimateDuration" />
+          <ScalarProperty Name="LevelName" ColumnName="LevelName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="WorkerType" ColumnName="WorkerType" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+          <ScalarProperty Name="IsHiringClosed" ColumnName="IsHiringClosed" />
+          <ScalarProperty Name="FixedRate" ColumnName="FixedRate" />
+          <ScalarProperty Name="ApplyButtonText" ColumnName="ApplyButtonText" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="FindWorkersByFilter" FunctionName="HireRocks_DevModel.Store.FindWorkersByFilter">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.FindWorkersByFilter_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="ProfileTitle" ColumnName="ProfileTitle" />
+          <ScalarProperty Name="Country1" ColumnName="Country1" />
+          <ScalarProperty Name="ProfilePic" ColumnName="ProfilePic" />
+          <ScalarProperty Name="UserHourlyRate" ColumnName="UserHourlyRate" />
+          <ScalarProperty Name="UserRating" ColumnName="UserRating" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="FunctionSplitString" FunctionName="HireRocks_DevModel.Store.FunctionSplitString" />
+    <FunctionImportMapping FunctionImportName="GetAllContractsByWorkerIdAndClientId" FunctionName="HireRocks_DevModel.Store.GetAllContractsByWorkerIdAndClientId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetAllContractsByWorkerIdAndClientId_Result">
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="HourlyRate" ColumnName="HourlyRate" />
+          <ScalarProperty Name="FixedRate" ColumnName="FixedRate" />
+          <ScalarProperty Name="ContractStatusName" ColumnName="ContractStatusName" />
+          <ScalarProperty Name="JobTypeName" ColumnName="JobTypeName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAllContractStatus" FunctionName="HireRocks_DevModel.Store.GetAllContractStatus">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetAllContractStatus_Result">
+          <ScalarProperty Name="ContractStatusId" ColumnName="ContractStatusId" />
+          <ScalarProperty Name="ContractStatusName" ColumnName="ContractStatusName" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAllDegreeTypes" FunctionName="HireRocks_DevModel.Store.GetAllDegreeTypes">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetAllDegreeTypes_Result">
+          <ScalarProperty Name="DegreeTypeId" ColumnName="DegreeTypeId" />
+          <ScalarProperty Name="DegreeTypeName" ColumnName="DegreeTypeName" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAllExperienceLevels" FunctionName="HireRocks_DevModel.Store.GetAllExperienceLevels">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetAllExperienceLevels_Result">
+          <ScalarProperty Name="ExperianceLevelId" ColumnName="ExperianceLevelId" />
+          <ScalarProperty Name="LevelName" ColumnName="LevelName" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ExperienceLowerRange" ColumnName="ExperienceLowerRange" />
+          <ScalarProperty Name="ExperienceHigherRange" ColumnName="ExperienceHigherRange" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAllJobCategories" FunctionName="HireRocks_DevModel.Store.GetAllJobCategories">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetAllJobCategories_Result">
+          <ScalarProperty Name="JobCategoryId" ColumnName="JobCategoryId" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="CategoryDescription" ColumnName="CategoryDescription" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAllJobSubCategories" FunctionName="HireRocks_DevModel.Store.GetAllJobSubCategories">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetAllJobSubCategories_Result">
+          <ScalarProperty Name="JobSubCategoryId" ColumnName="JobSubCategoryId" />
+          <ScalarProperty Name="SubCategoryName" ColumnName="SubCategoryName" />
+          <ScalarProperty Name="SubCategoryDescription" ColumnName="SubCategoryDescription" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="JobCategoryId" ColumnName="JobCategoryId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAllJobTypes" FunctionName="HireRocks_DevModel.Store.GetAllJobTypes">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetAllJobTypes_Result">
+          <ScalarProperty Name="JobTypeId" ColumnName="JobTypeId" />
+          <ScalarProperty Name="JobTypeName" ColumnName="JobTypeName" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAllLanguages" FunctionName="HireRocks_DevModel.Store.GetAllLanguages">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetAllLanguages_Result">
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="LanguageName" ColumnName="LanguageName" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAllPaymentMethods" FunctionName="HireRocks_DevModel.Store.GetAllPaymentMethods">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetAllPaymentMethods_Result">
+          <ScalarProperty Name="PaymentMethodId" ColumnName="PaymentMethodId" />
+          <ScalarProperty Name="PaymentMethodName" ColumnName="PaymentMethodName" />
+          <ScalarProperty Name="PaymentMethodDescription" ColumnName="PaymentMethodDescription" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAllSkills" FunctionName="HireRocks_DevModel.Store.GetAllSkills">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetAllSkills_Result">
+          <ScalarProperty Name="SkillId" ColumnName="SkillId" />
+          <ScalarProperty Name="SkillName" ColumnName="SkillName" />
+          <ScalarProperty Name="SkillDescription" ColumnName="SkillDescription" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAllTimeUnits" FunctionName="HireRocks_DevModel.Store.GetAllTimeUnits">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetAllTimeUnits_Result">
+          <ScalarProperty Name="TimeUnitId" ColumnName="TimeUnitId" />
+          <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAllWorkerTypes" FunctionName="HireRocks_DevModel.Store.GetAllWorkerTypes">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetAllWorkerTypes_Result">
+          <ScalarProperty Name="WorkerTypeId" ColumnName="WorkerTypeId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetBurnedHoursInformationFunction" FunctionName="HireRocks_DevModel.Store.GetBurnedHoursInformationFunction">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetBurnedHoursInformationFunction_Result">
+          <ScalarProperty Name="TotalBurnedHours" ColumnName="TotalBurnedHours" />
+          <ScalarProperty Name="WeeklyBurnedHours" ColumnName="WeeklyBurnedHours" />
+          <ScalarProperty Name="TodayBurnedHours" ColumnName="TodayBurnedHours" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetCapturesForClientReview" FunctionName="HireRocks_DevModel.Store.GetCapturesForClientReview">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetCapturesForClientReview_Result">
+          <ScalarProperty Name="CaptureId" ColumnName="CaptureId" />
+          <ScalarProperty Name="KeyCount" ColumnName="KeyCount" />
+          <ScalarProperty Name="MouseCount" ColumnName="MouseCount" />
+          <ScalarProperty Name="KeyboardCapture" ColumnName="KeyboardCapture" />
+          <ScalarProperty Name="MouseCapture" ColumnName="MouseCapture" />
+          <ScalarProperty Name="ScreenCaptureThumbnailImage" ColumnName="ScreenCaptureThumbnailImage" />
+          <ScalarProperty Name="ScreenCaptureFullImage" ColumnName="ScreenCaptureFullImage" />
+          <ScalarProperty Name="CaptureDate" ColumnName="CaptureDate" />
+          <ScalarProperty Name="TimeBurned" ColumnName="TimeBurned" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="IsRejected" ColumnName="IsRejected" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetCapturesScreenData" FunctionName="HireRocks_DevModel.Store.GetCapturesScreenData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetCapturesScreenData_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetCertificationsByUserId" FunctionName="HireRocks_DevModel.Store.GetCertificationsByUserId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetCertificationsByUserId_Result">
+          <ScalarProperty Name="CertificationId" ColumnName="CertificationId" />
+          <ScalarProperty Name="CertificationName" ColumnName="CertificationName" />
+          <ScalarProperty Name="CertificationDate" ColumnName="CertificationDate" />
+          <ScalarProperty Name="CertificationNumber" ColumnName="CertificationNumber" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetClientInfoByJobId" FunctionName="HireRocks_DevModel.Store.GetClientInfoByJobId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetClientInfoByJobId_Result">
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="ProfilePic" ColumnName="ProfilePic" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Country1" ColumnName="Country1" />
+          <ScalarProperty Name="UserRating" ColumnName="UserRating" />
+          <ScalarProperty Name="TotalJobsPosted" ColumnName="TotalJobsPosted" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetClientTeam" FunctionName="HireRocks_DevModel.Store.GetClientTeam">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetClientTeam_Result">
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Country1" ColumnName="Country1" />
+          <ScalarProperty Name="ProfilePic" ColumnName="ProfilePic" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserHourlyRate" ColumnName="UserHourlyRate" />
+          <ScalarProperty Name="UserRating" ColumnName="UserRating" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetCompleteProfileScreenData" FunctionName="HireRocks_DevModel.Store.GetCompleteProfileScreenData" />
+    <FunctionImportMapping FunctionImportName="GetContractByContractId" FunctionName="HireRocks_DevModel.Store.GetContractByContractId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetContractByContractId_Result">
+          <ScalarProperty Name="ActualDuration" ColumnName="ActualDuration" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="ContractStatusId" ColumnName="ContractStatusId" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="EndReason" ColumnName="EndReason" />
+          <ScalarProperty Name="EstimateDuration" ColumnName="EstimateDuration" />
+          <ScalarProperty Name="HourlyRate" ColumnName="HourlyRate" />
+          <ScalarProperty Name="FixedRate" ColumnName="FixedRate" />
+          <ScalarProperty Name="HoursLimit" ColumnName="HoursLimit" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="JobRating" ColumnName="JobRating" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="TimeUnitId" ColumnName="TimeUnitId" />
+          <ScalarProperty Name="WorkerId" ColumnName="WorkerId" />
+          <ScalarProperty Name="JobTypeId" ColumnName="JobTypeId" />
+          <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+          <ScalarProperty Name="UserRatingId" ColumnName="UserRatingId" />
+          <ScalarProperty Name="Skill" ColumnName="Skill" />
+          <ScalarProperty Name="Quality" ColumnName="Quality" />
+          <ScalarProperty Name="Availability" ColumnName="Availability" />
+          <ScalarProperty Name="Deadline" ColumnName="Deadline" />
+          <ScalarProperty Name="Communication" ColumnName="Communication" />
+          <ScalarProperty Name="Cooperation" ColumnName="Cooperation" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetContractByContractIdOrWorkerAndJobId" FunctionName="HireRocks_DevModel.Store.GetContractByContractIdOrWorkerAndJobId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetContractByContractIdOrWorkerAndJobId_Result">
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="EstimateDuration" ColumnName="EstimateDuration" />
+          <ScalarProperty Name="ActualDuration" ColumnName="ActualDuration" />
+          <ScalarProperty Name="TimeUnitId" ColumnName="TimeUnitId" />
+          <ScalarProperty Name="ContractStatusId" ColumnName="ContractStatusId" />
+          <ScalarProperty Name="HoursLimit" ColumnName="HoursLimit" />
+          <ScalarProperty Name="EndReason" ColumnName="EndReason" />
+          <ScalarProperty Name="JobRating" ColumnName="JobRating" />
+          <ScalarProperty Name="WorkerId" ColumnName="WorkerId" />
+          <ScalarProperty Name="FixedRate" ColumnName="FixedRate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedByUserId" ColumnName="CreatedByUserId" />
+          <ScalarProperty Name="ModifiedByUserId" ColumnName="ModifiedByUserId" />
+          <ScalarProperty Name="HourlyRate" ColumnName="HourlyRate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetContractDenyReasonsByRoleId" FunctionName="HireRocks_DevModel.Store.GetContractDenyReasonsByRoleId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetContractDenyReasonsByRoleId_Result">
+          <ScalarProperty Name="ContractDenyReasonId" ColumnName="ContractDenyReasonId" />
+          <ScalarProperty Name="DenyReason" ColumnName="DenyReason" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetContractEndReasonsByRoleId" FunctionName="HireRocks_DevModel.Store.GetContractEndReasonsByRoleId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetContractEndReasonsByRoleId_Result">
+          <ScalarProperty Name="ContractEndReasonId" ColumnName="ContractEndReasonId" />
+          <ScalarProperty Name="EndReason" ColumnName="EndReason" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetContractForReviewByContractId" FunctionName="HireRocks_DevModel.Store.GetContractForReviewByContractId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetContractForReviewByContractId_Result">
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="ContractStatusId" ColumnName="ContractStatusId" />
+          <ScalarProperty Name="HourlyRate" ColumnName="HourlyRate" />
+          <ScalarProperty Name="FixedRate" ColumnName="FixedRate" />
+          <ScalarProperty Name="EstimateDuration" ColumnName="EstimateDuration" />
+          <ScalarProperty Name="HoursLimit" ColumnName="HoursLimit" />
+          <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+          <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+          <ScalarProperty Name="JobTypeId" ColumnName="JobTypeId" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetContractForWorker" FunctionName="HireRocks_DevModel.Store.GetContractForWorker" />
+    <FunctionImportMapping FunctionImportName="GetEducationDetailsByUserId" FunctionName="HireRocks_DevModel.Store.GetEducationDetailsByUserId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetEducationDetailsByUserId_Result">
+          <ScalarProperty Name="DegreeTypeId" ColumnName="DegreeTypeId" />
+          <ScalarProperty Name="DegreeTypeName" ColumnName="DegreeTypeName" />
+          <ScalarProperty Name="DegreeName" ColumnName="DegreeName" />
+          <ScalarProperty Name="DegreeStartDate" ColumnName="DegreeStartDate" />
+          <ScalarProperty Name="DegreeEndDate" ColumnName="DegreeEndDate" />
+          <ScalarProperty Name="EducationId" ColumnName="EducationId" />
+          <ScalarProperty Name="Percentage" ColumnName="Percentage" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetJobAttachments" FunctionName="HireRocks_DevModel.Store.GetJobAttachments">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetJobAttachments_Result">
+          <ScalarProperty Name="JobAttachmentId" ColumnName="JobAttachmentId" />
+          <ScalarProperty Name="AttachmentName" ColumnName="AttachmentName" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="AttachmentOriginalName" ColumnName="AttachmentOriginalName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetJobAttachmentsByJobId" FunctionName="HireRocks_DevModel.Store.GetJobAttachmentsByJobId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetJobAttachmentsByJobId_Result">
+          <ScalarProperty Name="JobAttachmentId" ColumnName="JobAttachmentId" />
+          <ScalarProperty Name="AttachmentName" ColumnName="AttachmentName" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="AttachmentOriginalName" ColumnName="AttachmentOriginalName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetJobBidById" FunctionName="HireRocks_DevModel.Store.GetJobBidById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetJobBidById_Result">
+          <ScalarProperty Name="JobBidId" ColumnName="JobBidId" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="JobTypeId" ColumnName="JobTypeId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetJobByJobId" FunctionName="HireRocks_DevModel.Store.GetJobByJobId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetJobByJobId_Result">
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+          <ScalarProperty Name="JobDescription" ColumnName="JobDescription" />
+          <ScalarProperty Name="JobStartDate" ColumnName="JobStartDate" />
+          <ScalarProperty Name="JobEndDate" ColumnName="JobEndDate" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="SubCategoryName" ColumnName="SubCategoryName" />
+          <ScalarProperty Name="JobTypeName" ColumnName="JobTypeName" />
+          <ScalarProperty Name="EstimateDuration" ColumnName="EstimateDuration" />
+          <ScalarProperty Name="Locality_PRF" ColumnName="Locality_PRF" />
+          <ScalarProperty Name="Min_PRF_Rate" ColumnName="Min_PRF_Rate" />
+          <ScalarProperty Name="Max_PRF_Rate" ColumnName="Max_PRF_Rate" />
+          <ScalarProperty Name="FixedRate" ColumnName="FixedRate" />
+          <ScalarProperty Name="LevelName" ColumnName="LevelName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="WorkerType" ColumnName="WorkerType" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+          <ScalarProperty Name="IsHiringClosed" ColumnName="IsHiringClosed" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetJobByJobIdAndClientId" FunctionName="HireRocks_DevModel.Store.GetJobByJobIdAndClientId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetJobByJobIdAndClientId_Result">
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+          <ScalarProperty Name="JobDescription" ColumnName="JobDescription" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsHiringClosed" ColumnName="IsHiringClosed" />
+          <ScalarProperty Name="WorkerTypeId" ColumnName="WorkerTypeId" />
+          <ScalarProperty Name="ExperienceLevelExperianceLevelId" ColumnName="ExperienceLevelExperianceLevelId" />
+          <ScalarProperty Name="JobTypeId" ColumnName="JobTypeId" />
+          <ScalarProperty Name="JobSubCategoryId" ColumnName="JobSubCategoryId" />
+          <ScalarProperty Name="SkillsRequiredForJobIds" ColumnName="SkillsRequiredForJobIds" />
+          <ScalarProperty Name="JobStartDate" ColumnName="JobStartDate" />
+          <ScalarProperty Name="JobEndDate" ColumnName="JobEndDate" />
+          <ScalarProperty Name="EstimateDuration" ColumnName="EstimateDuration" />
+          <ScalarProperty Name="TimeUnitId" ColumnName="TimeUnitId" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="JobPostDate" ColumnName="JobPostDate" />
+          <ScalarProperty Name="Min_PRF_Rate" ColumnName="Min_PRF_Rate" />
+          <ScalarProperty Name="Max_PRF_Rate" ColumnName="Max_PRF_Rate" />
+          <ScalarProperty Name="Locality_PRF" ColumnName="Locality_PRF" />
+          <ScalarProperty Name="FixedRate" ColumnName="FixedRate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetJobCapturesByContractId" FunctionName="HireRocks_DevModel.Store.GetJobCapturesByContractId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetJobCapturesByContractId_Result">
+          <ScalarProperty Name="CaptureId" ColumnName="CaptureId" />
+          <ScalarProperty Name="KeyCount" ColumnName="KeyCount" />
+          <ScalarProperty Name="MouseCount" ColumnName="MouseCount" />
+          <ScalarProperty Name="KeyboardCapture" ColumnName="KeyboardCapture" />
+          <ScalarProperty Name="MouseCapture" ColumnName="MouseCapture" />
+          <ScalarProperty Name="ScreenCaptureThumbnailImage" ColumnName="ScreenCaptureThumbnailImage" />
+          <ScalarProperty Name="ScreenCaptureFullImage" ColumnName="ScreenCaptureFullImage" />
+          <ScalarProperty Name="CaptureDate" ColumnName="CaptureDate" />
+          <ScalarProperty Name="TimeBurned" ColumnName="TimeBurned" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="IsRejected" ColumnName="IsRejected" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="MemoId" ColumnName="MemoId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetJobListForHireWorkerScreen" FunctionName="HireRocks_DevModel.Store.GetJobListForHireWorkerScreen">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetJobListForHireWorkerScreen_Result">
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+          <ScalarProperty Name="JobTypeId" ColumnName="JobTypeId" />
+          <ScalarProperty Name="FixedRate" ColumnName="FixedRate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetJobListForMessageScreen" FunctionName="HireRocks_DevModel.Store.GetJobListForMessageScreen">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetJobListForMessageScreen_Result">
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetJobsByClientId" FunctionName="HireRocks_DevModel.Store.GetJobsByClientId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetJobsByClientId_Result">
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+          <ScalarProperty Name="JobStartDate" ColumnName="JobStartDate" />
+          <ScalarProperty Name="JobEndDate" ColumnName="JobEndDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsHiringClosed" ColumnName="IsHiringClosed" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetJobsByWorkerId" FunctionName="HireRocks_DevModel.Store.GetJobsByWorkerId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetJobsByWorkerId_Result">
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="HoursLimit" ColumnName="HoursLimit" />
+          <ScalarProperty Name="FixedRate" ColumnName="FixedRate" />
+          <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+          <ScalarProperty Name="JobTypeId" ColumnName="JobTypeId" />
+          <ScalarProperty Name="HourlyRate" ColumnName="HourlyRate" />
+          <ScalarProperty Name="JobTypeName" ColumnName="JobTypeName" />
+          <ScalarProperty Name="ContractStatus" ColumnName="ContractStatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetJobsForTracker" FunctionName="HireRocks_DevModel.Store.GetJobsForTracker">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetJobsForTracker_Result">
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+          <ScalarProperty Name="JobStartDate" ColumnName="JobStartDate" />
+          <ScalarProperty Name="JobTypeName" ColumnName="JobTypeName" />
+          <ScalarProperty Name="HoursLimit" ColumnName="HoursLimit" />
+          <ScalarProperty Name="TotalBurnedHours" ColumnName="TotalBurnedHours" />
+          <ScalarProperty Name="WeeklyBurnedHours" ColumnName="WeeklyBurnedHours" />
+          <ScalarProperty Name="TodayBurnedHours" ColumnName="TodayBurnedHours" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetLicenseAgreementById" FunctionName="HireRocks_DevModel.Store.GetLicenseAgreementById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetLicenseAgreementById_Result">
+          <ScalarProperty Name="LicenseAgreementId" ColumnName="LicenseAgreementId" />
+          <ScalarProperty Name="Agreement" ColumnName="Agreement" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetManageContractScreenData" FunctionName="HireRocks_DevModel.Store.GetManageContractScreenData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetManageContractScreenData_Result">
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="EstimateDuration" ColumnName="EstimateDuration" />
+          <ScalarProperty Name="HoursLimit" ColumnName="HoursLimit" />
+          <ScalarProperty Name="FixedRate" ColumnName="FixedRate" />
+          <ScalarProperty Name="EndReason" ColumnName="EndReason" />
+          <ScalarProperty Name="ContractStatusId" ColumnName="ContractStatusId" />
+          <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+          <ScalarProperty Name="JobTypeId" ColumnName="JobTypeId" />
+          <ScalarProperty Name="JobTypeName" ColumnName="JobTypeName" />
+          <ScalarProperty Name="UserRatingId" ColumnName="UserRatingId" />
+          <ScalarProperty Name="Skill" ColumnName="Skill" />
+          <ScalarProperty Name="Quality" ColumnName="Quality" />
+          <ScalarProperty Name="Availability" ColumnName="Availability" />
+          <ScalarProperty Name="Deadline" ColumnName="Deadline" />
+          <ScalarProperty Name="Communication" ColumnName="Communication" />
+          <ScalarProperty Name="Cooperation" ColumnName="Cooperation" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="HourlyRate" ColumnName="HourlyRate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="ActualDuration" ColumnName="ActualDuration" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetMessages" FunctionName="HireRocks_DevModel.Store.GetMessages">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetMessages_Result">
+          <ScalarProperty Name="MessageId" ColumnName="MessageId" />
+          <ScalarProperty Name="MessageText" ColumnName="MessageText" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="IsViewed" ColumnName="IsViewed" />
+          <ScalarProperty Name="MessageLabelId" ColumnName="MessageLabelId" />
+          <ScalarProperty Name="MessageFromUserId" ColumnName="MessageFromUserId" />
+          <ScalarProperty Name="MessageToUserId" ColumnName="MessageToUserId" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetNotificationsByUserId" FunctionName="HireRocks_DevModel.Store.GetNotificationsByUserId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetNotificationsByUserId_Result">
+          <ScalarProperty Name="NotificationId" ColumnName="NotificationId" />
+          <ScalarProperty Name="NotificationText" ColumnName="NotificationText" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="IsViewed" ColumnName="IsViewed" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetTimeLogByClientId" FunctionName="HireRocks_DevModel.Store.GetTimeLogByClientId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetTimeLogByClientId_Result">
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="Hours" ColumnName="Hours" />
+          <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+          <ScalarProperty Name="WorkerName" ColumnName="WorkerName" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+          <ScalarProperty Name="HourlyRate" ColumnName="HourlyRate" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetUnreadMessageCount" FunctionName="HireRocks_DevModel.Store.GetUnreadMessageCount" />
+    <FunctionImportMapping FunctionImportName="GetUnreadNotificationAndMessageCount" FunctionName="HireRocks_DevModel.Store.GetUnreadNotificationAndMessageCount">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetUnreadNotificationAndMessageCount_Result">
+          <ScalarProperty Name="UnreadMessages" ColumnName="UnreadMessages" />
+          <ScalarProperty Name="UnreadNotifications" ColumnName="UnreadNotifications" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetUnreadNotificationsCount" FunctionName="HireRocks_DevModel.Store.GetUnreadNotificationsCount" />
+    <FunctionImportMapping FunctionImportName="GetUserById" FunctionName="HireRocks_DevModel.Store.GetUserById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetUserById_Result">
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="UserHourlyRate" ColumnName="UserHourlyRate" />
+          <ScalarProperty Name="UserRating" ColumnName="UserRating" />
+          <ScalarProperty Name="JobsCompleted" ColumnName="JobsCompleted" />
+          <ScalarProperty Name="TimeBurned" ColumnName="TimeBurned" />
+          <ScalarProperty Name="ProfilePic" ColumnName="ProfilePic" />
+          <ScalarProperty Name="Country1" ColumnName="Country1" />
+          <ScalarProperty Name="ProfileTitle" ColumnName="ProfileTitle" />
+          <ScalarProperty Name="IntroductionVideo" ColumnName="IntroductionVideo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetUserEducations" FunctionName="HireRocks_DevModel.Store.GetUserEducations">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetUserEducations_Result">
+          <ScalarProperty Name="DegreeTypeId" ColumnName="DegreeTypeId" />
+          <ScalarProperty Name="DegreeTypeName" ColumnName="DegreeTypeName" />
+          <ScalarProperty Name="DegreeName" ColumnName="DegreeName" />
+          <ScalarProperty Name="DegreeStartDate" ColumnName="DegreeStartDate" />
+          <ScalarProperty Name="DegreeEndDate" ColumnName="DegreeEndDate" />
+          <ScalarProperty Name="EducationId" ColumnName="EducationId" />
+          <ScalarProperty Name="Percentage" ColumnName="Percentage" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetUserProfileByUserId" FunctionName="HireRocks_DevModel.Store.GetUserProfileByUserId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetUserProfileByUserId_Result">
+          <ScalarProperty Name="ProfileTitle" ColumnName="ProfileTitle" />
+          <ScalarProperty Name="UserProfileId" ColumnName="UserProfileId" />
+          <ScalarProperty Name="UserSkillIds" ColumnName="UserSkillIds" />
+          <ScalarProperty Name="UserLanguageIds" ColumnName="UserLanguageIds" />
+          <ScalarProperty Name="UserHourlyRate" ColumnName="UserHourlyRate" />
+          <ScalarProperty Name="EducationIds" ColumnName="EducationIds" />
+          <ScalarProperty Name="UserSubCategoryIds" ColumnName="UserSubCategoryIds" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="City1" ColumnName="City1" />
+          <ScalarProperty Name="City2" ColumnName="City2" />
+          <ScalarProperty Name="Country1" ColumnName="Country1" />
+          <ScalarProperty Name="Country2" ColumnName="Country2" />
+          <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
+          <ScalarProperty Name="WorkPhone" ColumnName="WorkPhone" />
+          <ScalarProperty Name="CellPhone" ColumnName="CellPhone" />
+          <ScalarProperty Name="ProfilePic" ColumnName="ProfilePic" />
+          <ScalarProperty Name="TimeZone" ColumnName="TimeZone" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="IntroductionVideo" ColumnName="IntroductionVideo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetWorkerJobListForMessageScreen" FunctionName="HireRocks_DevModel.Store.GetWorkerJobListForMessageScreen">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetWorkerJobListForMessageScreen_Result">
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetWorkerJobsByWorkerId" FunctionName="HireRocks_DevModel.Store.GetWorkerJobsByWorkerId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetWorkerJobsByWorkerId_Result">
+          <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="HourlyRate" ColumnName="HourlyRate" />
+          <ScalarProperty Name="FixedRate" ColumnName="FixedRate" />
+          <ScalarProperty Name="ContractStatusId" ColumnName="ContractStatusId" />
+          <ScalarProperty Name="Jobrating" ColumnName="Jobrating" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetWorkerRate" FunctionName="HireRocks_DevModel.Store.GetWorkerRate" />
+    <FunctionImportMapping FunctionImportName="GetWorkersBidForJob" FunctionName="HireRocks_DevModel.Store.GetWorkersBidForJob">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetWorkersBidForJob_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="ProfileTitle" ColumnName="ProfileTitle" />
+          <ScalarProperty Name="Country1" ColumnName="Country1" />
+          <ScalarProperty Name="ProfilePic" ColumnName="ProfilePic" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="IsHired" ColumnName="IsHired" />
+          <ScalarProperty Name="IsDenied" ColumnName="IsDenied" />
+          <ScalarProperty Name="JobBidId" ColumnName="JobBidId" />
+          <ScalarProperty Name="CoverLetter" ColumnName="CoverLetter" />
+          <ScalarProperty Name="UserHourlyRate" ColumnName="UserHourlyRate" />
+          <ScalarProperty Name="UserRating" ColumnName="UserRating" />
+          <ScalarProperty Name="Attachments" ColumnName="Attachments" />
+          <ScalarProperty Name="HireButtonText" ColumnName="HireButtonText" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetWorkersForMessageScreen" FunctionName="HireRocks_DevModel.Store.GetWorkersForMessageScreen">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetWorkersForMessageScreen_Result">
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="ProfilePic" ColumnName="ProfilePic" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="InsertAccountType" FunctionName="HireRocks_DevModel.Store.InsertAccountType" />
+    <FunctionImportMapping FunctionImportName="InsertCapture" FunctionName="HireRocks_DevModel.Store.InsertCapture">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.InsertCapture_Result">
+          <ScalarProperty Name="TotalBurnedHours" ColumnName="TotalBurnedHours" />
+          <ScalarProperty Name="WeeklyBurnedHours" ColumnName="WeeklyBurnedHours" />
+          <ScalarProperty Name="TodayBurnedHours" ColumnName="TodayBurnedHours" />
+          <ScalarProperty Name="IsContractOpen" ColumnName="IsContractOpen" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="InsertMessage" FunctionName="HireRocks_DevModel.Store.InsertMessage" />
+    <FunctionImportMapping FunctionImportName="InsertUpdateContract" FunctionName="HireRocks_DevModel.Store.InsertUpdateContract">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.InsertUpdateContract_Result">
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="insertupdatejob" FunctionName="HireRocks_DevModel.Store.insertupdatejob" />
+    <FunctionImportMapping FunctionImportName="InsertUpdateUserProfile" FunctionName="HireRocks_DevModel.Store.InsertUpdateUserProfile" />
+    <FunctionImportMapping FunctionImportName="IsEmailAddressAlreadyExists" FunctionName="HireRocks_DevModel.Store.IsEmailAddressAlreadyExists" />
+    <FunctionImportMapping FunctionImportName="IsUserNameAlreadyExists" FunctionName="HireRocks_DevModel.Store.IsUserNameAlreadyExists" />
+    <FunctionImportMapping FunctionImportName="JobRequestDenied" FunctionName="HireRocks_DevModel.Store.JobRequestDenied" />
+    <FunctionImportMapping FunctionImportName="RejectCapture" FunctionName="HireRocks_DevModel.Store.RejectCapture" />
+    <FunctionImportMapping FunctionImportName="RejectContract" FunctionName="HireRocks_DevModel.Store.RejectContract" />
+    <FunctionImportMapping FunctionImportName="ResetPassword" FunctionName="HireRocks_DevModel.Store.ResetPassword" />
+    <FunctionImportMapping FunctionImportName="SetForgotPasswordToken" FunctionName="HireRocks_DevModel.Store.SetForgotPasswordToken">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.SetForgotPasswordToken_Result">
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="UpdateMessageViewedStatus" FunctionName="HireRocks_DevModel.Store.UpdateMessageViewedStatus" />
+    <FunctionImportMapping FunctionImportName="UpdateNotificationViewedStatus" FunctionName="HireRocks_DevModel.Store.UpdateNotificationViewedStatus" />
+    <FunctionImportMapping FunctionImportName="VerifyEmailAddress" FunctionName="HireRocks_DevModel.Store.VerifyEmailAddress" />
+    <FunctionImportMapping FunctionImportName="WorkerHourlyReportByWorkerId" FunctionName="HireRocks_DevModel.Store.WorkerHourlyReportByWorkerId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.WorkerHourlyReportByWorkerId_Result">
+          <ScalarProperty Name="Timeburned" ColumnName="Timeburned" />
+          <ScalarProperty Name="MemoText" ColumnName="MemoText" />
+          <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="HourlyRate" ColumnName="HourlyRate" />
+          <ScalarProperty Name="hours" ColumnName="hours" />
+          <ScalarProperty Name="Earnings" ColumnName="Earnings" />
+          <ScalarProperty Name="CaptureDate" ColumnName="CaptureDate" />
+          <ScalarProperty Name="DT" ColumnName="DT" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="WorkerHourlyReportByWorkerIdAndClientId" FunctionName="HireRocks_DevModel.Store.WorkerHourlyReportByWorkerIdAndClientId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.WorkerHourlyReportByWorkerIdAndClientId_Result">
+          <ScalarProperty Name="Timeburned" ColumnName="Timeburned" />
+          <ScalarProperty Name="MemoText" ColumnName="MemoText" />
+          <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="FixedRate" ColumnName="FixedRate" />
+          <ScalarProperty Name="HourlyRate" ColumnName="HourlyRate" />
+          <ScalarProperty Name="hours" ColumnName="hours" />
+          <ScalarProperty Name="Earnings" ColumnName="Earnings" />
+          <ScalarProperty Name="CaptureDate" ColumnName="CaptureDate" />
+          <ScalarProperty Name="DT" ColumnName="DT" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="WorkerWeeklyReportByWorkerId" FunctionName="HireRocks_DevModel.Store.WorkerWeeklyReportByWorkerId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.WorkerWeeklyReportByWorkerId_Result">
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+          <ScalarProperty Name="WorkerName" ColumnName="WorkerName" />
+          <ScalarProperty Name="Timeburned" ColumnName="Timeburned" />
+          <ScalarProperty Name="MemoText" ColumnName="MemoText" />
+          <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+          <ScalarProperty Name="JobDescription" ColumnName="JobDescription" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="HourlyRate" ColumnName="HourlyRate" />
+          <ScalarProperty Name="hours" ColumnName="hours" />
+          <ScalarProperty Name="Earnings" ColumnName="Earnings" />
+          <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+          <ScalarProperty Name="CaptureDate" ColumnName="CaptureDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="WorkerWeeklyReportByWorkerIdAndClientId" FunctionName="HireRocks_DevModel.Store.WorkerWeeklyReportByWorkerIdAndClientId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.WorkerWeeklyReportByWorkerIdAndClientId_Result">
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+          <ScalarProperty Name="WorkerName" ColumnName="WorkerName" />
+          <ScalarProperty Name="Timeburned" ColumnName="Timeburned" />
+          <ScalarProperty Name="MemoText" ColumnName="MemoText" />
+          <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+          <ScalarProperty Name="JobDescription" ColumnName="JobDescription" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="HourlyRate" ColumnName="HourlyRate" />
+          <ScalarProperty Name="hours" ColumnName="hours" />
+          <ScalarProperty Name="Earnings" ColumnName="Earnings" />
+          <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+          <ScalarProperty Name="CaptureDate" ColumnName="CaptureDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="WorkerYearlyReportByWorkerId" FunctionName="HireRocks_DevModel.Store.WorkerYearlyReportByWorkerId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.WorkerYearlyReportByWorkerId_Result">
+          <ScalarProperty Name="Hours" ColumnName="Hours" />
+          <ScalarProperty Name="Earnings" ColumnName="Earnings" />
+          <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="WorkerName" ColumnName="WorkerName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="WorkerYearlyReportByWorkerIdAndClientId" FunctionName="HireRocks_DevModel.Store.WorkerYearlyReportByWorkerIdAndClientId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.WorkerYearlyReportByWorkerIdAndClientId_Result">
+          <ScalarProperty Name="Hours" ColumnName="Hours" />
+          <ScalarProperty Name="Earnings" ColumnName="Earnings" />
+          <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="WorkerName" ColumnName="WorkerName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="WorkSummaryOfClientByClientId" FunctionName="HireRocks_DevModel.Store.WorkSummaryOfClientByClientId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.WorkSummaryOfClientByClientId_Result">
+          <ScalarProperty Name="hrs" ColumnName="hrs" />
+          <ScalarProperty Name="Projectname" ColumnName="Projectname" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="StartDate1" ColumnName="StartDate1" />
+          <ScalarProperty Name="EndDate1" ColumnName="EndDate1" />
+          <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+          <ScalarProperty Name="empcount" ColumnName="empcount" />
+          <ScalarProperty Name="cost" ColumnName="cost" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="UpdateContractForWorker" FunctionName="HireRocks_DevModel.Store.UpdateContractForWorker" />
+    <FunctionImportMapping FunctionImportName="GetNotificationByUserId" FunctionName="HireRocks_DevModel.Store.GetNotificationByUserId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HireRocks_DevModel.GetNotificationByUserId_Result">
+          <ScalarProperty Name="NotificationId" ColumnName="NotificationId" />
+          <ScalarProperty Name="NotificationText" ColumnName="NotificationText" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="IsViewed" ColumnName="IsViewed" />
+          <ScalarProperty Name="NotificationType" ColumnName="NotificationType" />
+          <ScalarProperty Name="ObjectId" ColumnName="ObjectId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="InsertNotification" FunctionName="HireRocks_DevModel.Store.InsertNotification" />
+  </EntityContainerMapping>
+</Mapping>

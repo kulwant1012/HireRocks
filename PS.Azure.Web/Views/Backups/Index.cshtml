@@ -1,0 +1,148 @@
+﻿@model PS.Azure.Web.ViewModel.BackupsViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@if (TempData.ContainsKey("SuccessMessage"))
+{
+    <div class="alert alert-success">
+	    @*<button type="button" class="close">×</button>*@
+	    <h4>
+	    	Success
+	    </h4> 
+        @TempData["SuccessMessage"]
+    </div>    
+}
+
+@if (TempData.ContainsKey("ErrorMessage"))
+{ 
+    <div class="alert alert-error">
+	    <button type="button" class="close">×</button>
+	    <h4>
+	    	Error
+	    </h4>
+        @TempData["ErrorMessage"]
+    </div>    
+}
+<div class="btn-group">
+    <a href="/backups/createtask" class="btn btn-success">Create New Task <em class="icon-plus icon-white"></em></a>
+    <a href="/backups" class="btn">Refresh <em class="icon-refresh"></em></a>
+</div>
+
+<h2>Tasks</h2>
+
+<table class="table table-condensed">
+				<thead>
+					<tr>						
+						<th>
+							Name
+						</th>
+                        <th>
+							Source
+						</th>
+                        <th>
+							Destination
+						</th>
+						<th>
+							Backup Day
+						</th>
+						<th>
+							Backup Time (Time Zone)
+						</th>
+                        <th>
+                            Actions
+                        </th>
+					</tr>
+				</thead>
+				<tbody>
+
+                @foreach (var task in Model.Tasks)
+                {
+                    <tr>				
+						<td>
+							@task.Name
+						</td>
+                        <td>
+							@task.SourceStorageAccountName/@task.SourceStorageContainer
+						</td>
+						<td>
+							@task.DestinationStorageAccountName/@task.DestinationStorageContainer
+						</td>
+                        <td>
+							@task.BackupDay
+						</td>
+						<td>
+							@task.BackupTime @TimeZoneInfo.FindSystemTimeZoneById(task.BackupTimeZone).DisplayName
+						</td>
+                        <td>                               
+                            <div class="btn-group">
+				                <a href="/backups/deletetask/@task.Id" onclick="return confirm('Real want to delete?');"  class="btn btn-danger" ><em class="icon-trash  icon-white"></em></a> 
+                                @*<a href="/backups/taskdetails/@task.Id" class="btn"><em class="icon-details"></em></a>*@
+                                <a href="/backups/edittask/@task.Id" class="btn btn-warning"><em class="icon-edit icon-white"></em></a>
+                                <a href="/backups/starttask/@task.Id" class="btn btn-success" ><em class=""></em>Start Now</a>                                 
+			                </div>                                                     							
+						</td>
+					</tr>				
+                }
+                    				
+				</tbody>    
+			</table>
+
+<h2>Backups History</h2>
+
+<table class="table table-condensed">
+    <thead>
+	    <tr>
+            <th>
+	    		Task Name
+	    	</th>
+	    	<th>
+	    		Start Time
+	    	</th>
+            <th>
+	    		Duration
+	    	</th>
+	    	<th>
+	    		End Time
+	    	</th>	    	
+	    	<th>
+	    		Status
+	    	</th>
+            <th>
+	    		Actions
+	    	</th>
+	    </tr>
+	</thead>
+    <tbody>
+        @foreach (var backup in Model.Actions)
+        {
+            <tr class="@(backup.Result.IsSuccess ? "success" : "error")">
+                <td>
+                    @*@backup.BackupTaskId*@
+                    @(backup.BackupTask != null ? backup.BackupTask.Name : "[DELETED]")
+                </td>
+                <td>
+                    @backup.StartTime.AddTicks(TimeZoneInfo.FindSystemTimeZoneById(backup.BackupTask.BackupTimeZone).BaseUtcOffset.Ticks).ToString("dd.MM.yyyy HH:mm:ss")
+                </td>
+                <td>
+                    @{
+                        var duration = @backup.EndTime - backup.StartTime;
+                        <text>@string.Format("{0} hrs, {1} mins, {2} secs", duration.Hours, duration.Minutes, duration.Seconds)</text>
+                     }
+                </td>
+                <td>
+                    @backup.EndTime.AddTicks(TimeZoneInfo.FindSystemTimeZoneById(backup.BackupTask.BackupTimeZone).BaseUtcOffset.Ticks).ToString("dd.MM.yyyy HH:mm:ss")
+                </td>               
+                <td>
+                    @(backup.Result.IsSuccess ? "Success" : "Error")
+                </td>
+                 <td>
+                    <a href="/backups/backupdetails/@backup.Id" class="btn btn-@(backup.Result.IsSuccess ? "success" : "danger")">Details</a>
+                </td>
+            </tr>				
+        }
+    </tbody>
+</table>
+
+<a class="btn btn-danger" href="/backups/DeleteBackupHistory" onclick="return confirm('Real want to delete?');"><em class="icon-trash  icon-white"></em> Delete Backup History</a>

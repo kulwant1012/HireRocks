@@ -1,0 +1,58 @@
+﻿@model PS.Data.Entities.BackupAction
+
+@{
+    ViewBag.Title = "Backup Details";
+}
+
+<h2>Backup Details</h2>
+
+<fieldset>
+    <legend>Backup</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BackupTask.Name)
+    </div>
+    <div class="display-field">
+        <strong>@Html.DisplayFor(model => model.BackupTask.Name)</strong>
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.StartTime)
+    </div>
+    <div class="display-field">
+        <strong>@Html.DisplayFor(model => model.StartTime)</strong>
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EndTime)
+    </div>
+    <div class="display-field">
+        <strong>@Html.DisplayFor(model => model.EndTime)</strong>
+    </div>
+    
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BlobsList)
+    </div>
+    <div class="display-field">
+        @if (Model.BlobsList.Count == 0)
+        {
+            <strong>No files</strong>
+        }
+        @foreach (var file in Model.BlobsList)
+        {
+            <strong>@file</strong><br/>
+        }
+    </div>
+    @if (!Model.Result.IsSuccess)
+    {
+        <div class="display-label">
+             Error
+        </div>
+        <div class="display-label">
+            <strong>@Model.Result.ErrorMessage</strong>
+    </div>
+    }
+</fieldset>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

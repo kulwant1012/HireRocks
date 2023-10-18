@@ -1,0 +1,2290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HireRocks_DevModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AspNetRoles" EntityType="HireRocks_DevModel.AspNetRole" />
+    <EntitySet Name="AspNetUserClaims" EntityType="HireRocks_DevModel.AspNetUserClaim" />
+    <EntitySet Name="AspNetUserLogins" EntityType="HireRocks_DevModel.AspNetUserLogin" />
+    <EntitySet Name="AspNetUsers" EntityType="HireRocks_DevModel.AspNetUser" />
+    <EntitySet Name="C__MigrationHistory" EntityType="HireRocks_DevModel.C__MigrationHistory" />
+    <EntitySet Name="Captures" EntityType="HireRocks_DevModel.Capture" />
+    <EntitySet Name="Certifications" EntityType="HireRocks_DevModel.Certification" />
+    <EntitySet Name="Companies" EntityType="HireRocks_DevModel.Company" />
+    <EntitySet Name="ContractDenyReasons" EntityType="HireRocks_DevModel.ContractDenyReason" />
+    <EntitySet Name="ContractEndReasons" EntityType="HireRocks_DevModel.ContractEndReason" />
+    <EntitySet Name="Contracts" EntityType="HireRocks_DevModel.Contract" />
+    <EntitySet Name="ContractStatus" EntityType="HireRocks_DevModel.ContractStatu" />
+    <EntitySet Name="DegreeTypes" EntityType="HireRocks_DevModel.DegreeType" />
+    <EntitySet Name="Educations" EntityType="HireRocks_DevModel.Education" />
+    <EntitySet Name="ExceptionLogs" EntityType="HireRocks_DevModel.ExceptionLog" />
+    <EntitySet Name="ExperienceLevels" EntityType="HireRocks_DevModel.ExperienceLevel" />
+    <EntitySet Name="JobAttachments" EntityType="HireRocks_DevModel.JobAttachment" />
+    <EntitySet Name="JobCategories" EntityType="HireRocks_DevModel.JobCategory" />
+    <EntitySet Name="Jobs" EntityType="HireRocks_DevModel.Job" />
+    <EntitySet Name="JobsBidAttachments" EntityType="HireRocks_DevModel.JobsBidAttachment" />
+    <EntitySet Name="JobsBids" EntityType="HireRocks_DevModel.JobsBid" />
+    <EntitySet Name="JobSubCategories" EntityType="HireRocks_DevModel.JobSubCategory" />
+    <EntitySet Name="JobTypes" EntityType="HireRocks_DevModel.JobType" />
+    <EntitySet Name="Languages" EntityType="HireRocks_DevModel.Language" />
+    <EntitySet Name="LicenseAgreements" EntityType="HireRocks_DevModel.LicenseAgreement" />
+    <EntitySet Name="MessageLabels" EntityType="HireRocks_DevModel.MessageLabel" />
+    <EntitySet Name="Messages" EntityType="HireRocks_DevModel.Message" />
+    <EntitySet Name="Notifications" EntityType="HireRocks_DevModel.Notification" />
+    <EntitySet Name="PaymentMethods" EntityType="HireRocks_DevModel.PaymentMethod" />
+    <EntitySet Name="ReadyMadeTools" EntityType="HireRocks_DevModel.ReadyMadeTool" />
+    <EntitySet Name="Skills" EntityType="HireRocks_DevModel.Skill" />
+    <EntitySet Name="Teams" EntityType="HireRocks_DevModel.Team" />
+    <EntitySet Name="TimeSheets" EntityType="HireRocks_DevModel.TimeSheet" />
+    <EntitySet Name="TimeUnits" EntityType="HireRocks_DevModel.TimeUnit" />
+    <EntitySet Name="TransactionStatus" EntityType="HireRocks_DevModel.TransactionStatu" />
+    <EntitySet Name="UserPortfolios" EntityType="HireRocks_DevModel.UserPortfolio" />
+    <EntitySet Name="UserProfiles" EntityType="HireRocks_DevModel.UserProfile" />
+    <EntitySet Name="UserRatings" EntityType="HireRocks_DevModel.UserRating" />
+    <EntitySet Name="WorkerHourlyRates" EntityType="HireRocks_DevModel.WorkerHourlyRate" />
+    <EntitySet Name="WorkerTypes" EntityType="HireRocks_DevModel.WorkerType" />
+    <AssociationSet Name="FK_ContractDenyReason_RoleId" Association="HireRocks_DevModel.FK_ContractDenyReason_RoleId">
+      <End Role="AspNetRole" EntitySet="AspNetRoles" />
+      <End Role="ContractDenyReason" EntitySet="ContractDenyReasons" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RoleId" Association="HireRocks_DevModel.FK_RoleId">
+      <End Role="AspNetRole" EntitySet="AspNetRoles" />
+      <End Role="ContractEndReason" EntitySet="ContractEndReasons" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_User_Id" Association="HireRocks_DevModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_User_Id">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserClaim" EntitySet="AspNetUserClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="HireRocks_DevModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserLogin" EntitySet="AspNetUserLogins" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractAspNetUser" Association="HireRocks_DevModel.FK_ContractAspNetUser">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="Contract" EntitySet="Contracts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CreatedByUserId" Association="HireRocks_DevModel.FK_CreatedByUserId">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="Contract" EntitySet="Contracts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobAspNetUser" Association="HireRocks_DevModel.FK_JobAspNetUser">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="Job" EntitySet="Jobs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobsBid_AspNetUsers" Association="HireRocks_DevModel.FK_JobsBid_AspNetUsers">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="JobsBid" EntitySet="JobsBids" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MessageAspNetUser" Association="HireRocks_DevModel.FK_MessageAspNetUser">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="Message" EntitySet="Messages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MessageAspNetUser1" Association="HireRocks_DevModel.FK_MessageAspNetUser1">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="Message" EntitySet="Messages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ModifiedByUserId" Association="HireRocks_DevModel.FK_ModifiedByUserId">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="Contract" EntitySet="Contracts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NotificationAspNetUser" Association="HireRocks_DevModel.FK_NotificationAspNetUser">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="Notification" EntitySet="Notifications" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReadyMadeToolAspNetUser" Association="HireRocks_DevModel.FK_ReadyMadeToolAspNetUser">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="ReadyMadeTool" EntitySet="ReadyMadeTools" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TeamAspNetUser" Association="HireRocks_DevModel.FK_TeamAspNetUser">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="Team" EntitySet="Teams" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TeamAspNetUser1" Association="HireRocks_DevModel.FK_TeamAspNetUser1">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="Team" EntitySet="Teams" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserId" Association="HireRocks_DevModel.FK_UserId">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="UserRating" EntitySet="UserRatings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserPortfolioAspNetUser" Association="HireRocks_DevModel.FK_UserPortfolioAspNetUser">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="UserPortfolio" EntitySet="UserPortfolios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserProfileAspNetUser" Association="HireRocks_DevModel.FK_UserProfileAspNetUser">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="UserProfile" EntitySet="UserProfiles" />
+    </AssociationSet>
+    <AssociationSet Name="FK__UserRatin__Contr__589C25F3" Association="HireRocks_DevModel.FK__UserRatin__Contr__589C25F3">
+      <End Role="Contract" EntitySet="Contracts" />
+      <End Role="UserRating" EntitySet="UserRatings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractContractStatus" Association="HireRocks_DevModel.FK_ContractContractStatus">
+      <End Role="ContractStatu" EntitySet="ContractStatus" />
+      <End Role="Contract" EntitySet="Contracts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractId" Association="HireRocks_DevModel.FK_ContractId">
+      <End Role="Contract" EntitySet="Contracts" />
+      <End Role="WorkerHourlyRate" EntitySet="WorkerHourlyRates" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractJob" Association="HireRocks_DevModel.FK_ContractJob">
+      <End Role="Job" EntitySet="Jobs" />
+      <End Role="Contract" EntitySet="Contracts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractTimeUnits" Association="HireRocks_DevModel.FK_ContractTimeUnits">
+      <End Role="TimeUnit" EntitySet="TimeUnits" />
+      <End Role="Contract" EntitySet="Contracts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserPortfolioContract" Association="HireRocks_DevModel.FK_UserPortfolioContract">
+      <End Role="Contract" EntitySet="Contracts" />
+      <End Role="UserPortfolio" EntitySet="UserPortfolios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EducationDegreeType" Association="HireRocks_DevModel.FK_EducationDegreeType">
+      <End Role="DegreeType" EntitySet="DegreeTypes" />
+      <End Role="Education" EntitySet="Educations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobExperienceLevel" Association="HireRocks_DevModel.FK_JobExperienceLevel">
+      <End Role="ExperienceLevel" EntitySet="ExperienceLevels" />
+      <End Role="Job" EntitySet="Jobs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobAttachmentsJob" Association="HireRocks_DevModel.FK_JobAttachmentsJob">
+      <End Role="Job" EntitySet="Jobs" />
+      <End Role="JobAttachment" EntitySet="JobAttachments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobSubCategoryJobCategory" Association="HireRocks_DevModel.FK_JobSubCategoryJobCategory">
+      <End Role="JobCategory" EntitySet="JobCategories" />
+      <End Role="JobSubCategory" EntitySet="JobSubCategories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobFreelancersType" Association="HireRocks_DevModel.FK_JobFreelancersType">
+      <End Role="WorkerType" EntitySet="WorkerTypes" />
+      <End Role="Job" EntitySet="Jobs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobJobSubCategory" Association="HireRocks_DevModel.FK_JobJobSubCategory">
+      <End Role="JobSubCategory" EntitySet="JobSubCategories" />
+      <End Role="Job" EntitySet="Jobs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobJobType" Association="HireRocks_DevModel.FK_JobJobType">
+      <End Role="JobType" EntitySet="JobTypes" />
+      <End Role="Job" EntitySet="Jobs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobsBid_Jobs" Association="HireRocks_DevModel.FK_JobsBid_Jobs">
+      <End Role="Job" EntitySet="Jobs" />
+      <End Role="JobsBid" EntitySet="JobsBids" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobTimeUnits" Association="HireRocks_DevModel.FK_JobTimeUnits">
+      <End Role="TimeUnit" EntitySet="TimeUnits" />
+      <End Role="Job" EntitySet="Jobs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Messages_Jobs" Association="HireRocks_DevModel.FK_Messages_Jobs">
+      <End Role="Job" EntitySet="Jobs" />
+      <End Role="Message" EntitySet="Messages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobsBidAttachments_JobsBid" Association="HireRocks_DevModel.FK_JobsBidAttachments_JobsBid">
+      <End Role="JobsBid" EntitySet="JobsBids" />
+      <End Role="JobsBidAttachment" EntitySet="JobsBidAttachments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MessagesMessageLabels" Association="HireRocks_DevModel.FK_MessagesMessageLabels">
+      <End Role="MessageLabel" EntitySet="MessageLabels" />
+      <End Role="Message" EntitySet="Messages" />
+    </AssociationSet>
+    <AssociationSet Name="AspNetUserRoles" Association="HireRocks_DevModel.AspNetUserRoles">
+      <End Role="AspNetRole" EntitySet="AspNetRoles" />
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Contracts_ContractId" Association="HireRocks_DevModel.FK_Contracts_ContractId">
+      <End Role="Contract" EntitySet="Contracts" />
+      <End Role="Capture" EntitySet="Captures" />
+    </AssociationSet>
+    <!--<FunctionImport Name="GetBurnedHoursInformation" ReturnType="Collection(HireRocks_DevModel.GetBurnedHoursInformation_Result)">
+          <Parameter Name="ContractId" Mode="In" Type="Int64" />
+          </FunctionImport>-->
+    <EntitySet Name="AccountTypes" EntityType="HireRocks_DevModel.AccountType" />
+    <EntitySet Name="Memos" EntityType="HireRocks_DevModel.Memo" />
+    <EntitySet Name="UserAccountTypes" EntityType="HireRocks_DevModel.UserAccountType" />
+    <AssociationSet Name="FK_UserAccountType_AccountType" Association="HireRocks_DevModel.FK_UserAccountType_AccountType">
+      <End Role="AccountType" EntitySet="AccountTypes" />
+      <End Role="UserAccountType" EntitySet="UserAccountTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserAccountType_AspNetUsers" Association="HireRocks_DevModel.FK_UserAccountType_AspNetUsers">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="UserAccountType" EntitySet="UserAccountTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Capture_Memo" Association="HireRocks_DevModel.FK_Capture_Memo">
+      <End Role="Memo" EntitySet="Memos" />
+      <End Role="Capture" EntitySet="Captures" />
+    </AssociationSet>
+    <FunctionImport Name="ApplyJob">
+      <Parameter Name="jobId" Mode="In" Type="Int64" />
+      <Parameter Name="Rate" Mode="In" Type="Decimal" />
+      <Parameter Name="WorkerId" Mode="In" Type="String" />
+      <Parameter Name="ApplyJobAttachments" Mode="In" Type="String" />
+      <Parameter Name="CoverLetter" Mode="In" Type="String" />
+      <Parameter Name="WorkerName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ApproveContract">
+      <Parameter Name="ContractId" Mode="In" Type="Int64" />
+      <Parameter Name="ModifiedByUserId" Mode="In" Type="String" />
+      <Parameter Name="JobId" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteCapture">
+      <Parameter Name="CaptureIdsToDelete" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteNotificationById">
+      <Parameter Name="NotificationId" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="FindJobsByFilter" ReturnType="Collection(HireRocks_DevModel.FindJobsByFilter_Result)">
+      <Parameter Name="JobTitle" Mode="In" Type="String" />
+      <Parameter Name="JobCategoryId" Mode="In" Type="Int64" />
+      <Parameter Name="JobSubCategoryIds" Mode="In" Type="String" />
+      <Parameter Name="JobTypeId" Mode="In" Type="Int64" />
+      <Parameter Name="ExperienceLevelRequiredId" Mode="In" Type="Int64" />
+      <Parameter Name="WorkerId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="FindWorkersByFilter" ReturnType="Collection(HireRocks_DevModel.FindWorkersByFilter_Result)">
+      <Parameter Name="WorkerName" Mode="In" Type="String" />
+      <Parameter Name="HourlyRate" Mode="In" Type="Decimal" />
+      <Parameter Name="Rating" Mode="In" Type="Decimal" />
+      <Parameter Name="TimeZone" Mode="In" Type="String" />
+      <Parameter Name="CountryName" Mode="In" Type="String" />
+      <Parameter Name="SkillIds" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="FunctionSplitString" IsComposable="true" ReturnType="Collection(String)">
+      <Parameter Name="string" Mode="In" Type="String" />
+      <Parameter Name="delimiter" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetAllContractsByWorkerIdAndClientId" ReturnType="Collection(HireRocks_DevModel.GetAllContractsByWorkerIdAndClientId_Result)">
+      <Parameter Name="WorkerId" Mode="In" Type="String" />
+      <Parameter Name="ClientId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetAllContractStatus" ReturnType="Collection(HireRocks_DevModel.GetAllContractStatus_Result)" />
+    <FunctionImport Name="GetAllDegreeTypes" ReturnType="Collection(HireRocks_DevModel.GetAllDegreeTypes_Result)" />
+    <FunctionImport Name="GetAllExperienceLevels" ReturnType="Collection(HireRocks_DevModel.GetAllExperienceLevels_Result)" />
+    <FunctionImport Name="GetAllJobCategories" ReturnType="Collection(HireRocks_DevModel.GetAllJobCategories_Result)" />
+    <FunctionImport Name="GetAllJobSubCategories" ReturnType="Collection(HireRocks_DevModel.GetAllJobSubCategories_Result)" />
+    <FunctionImport Name="GetAllJobTypes" ReturnType="Collection(HireRocks_DevModel.GetAllJobTypes_Result)" />
+    <FunctionImport Name="GetAllLanguages" ReturnType="Collection(HireRocks_DevModel.GetAllLanguages_Result)" />
+    <FunctionImport Name="GetAllPaymentMethods" ReturnType="Collection(HireRocks_DevModel.GetAllPaymentMethods_Result)" />
+    <FunctionImport Name="GetAllSkills" ReturnType="Collection(HireRocks_DevModel.GetAllSkills_Result)" />
+    <FunctionImport Name="GetAllTimeUnits" ReturnType="Collection(HireRocks_DevModel.GetAllTimeUnits_Result)" />
+    <FunctionImport Name="GetAllWorkerTypes" ReturnType="Collection(HireRocks_DevModel.GetAllWorkerTypes_Result)" />
+    <FunctionImport Name="GetBurnedHoursInformation" ReturnType="Collection(HireRocks_DevModel.GetBurnedHoursInformation_Result)">
+      <Parameter Name="ContractId" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="GetBurnedHoursInformationFunction" IsComposable="true" ReturnType="Collection(HireRocks_DevModel.GetBurnedHoursInformationFunction_Result)">
+      <Parameter Name="ContractId" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="GetCapturesForClientReview" ReturnType="Collection(HireRocks_DevModel.GetCapturesForClientReview_Result)">
+      <Parameter Name="WorkerId" Mode="In" Type="String" />
+      <Parameter Name="JobId" Mode="In" Type="Int64" />
+      <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+      <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+      <Parameter Name="IsRejected" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="GetCapturesScreenData" ReturnType="Collection(HireRocks_DevModel.GetCapturesScreenData_Result)">
+      <Parameter Name="JobId" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="GetCertificationsByUserId" ReturnType="Collection(HireRocks_DevModel.GetCertificationsByUserId_Result)">
+      <Parameter Name="UserId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetClientInfoByJobId" ReturnType="Collection(HireRocks_DevModel.GetClientInfoByJobId_Result)">
+      <Parameter Name="JobId" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="GetClientTeam" ReturnType="Collection(HireRocks_DevModel.GetClientTeam_Result)">
+      <Parameter Name="ClientId" Mode="In" Type="String" />
+      <Parameter Name="JobId" Mode="In" Type="Int64" />
+      <Parameter Name="ShowActiveWorkers" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="GetCompleteProfileScreenData">
+      <Parameter Name="RoleId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetContractByContractId" ReturnType="Collection(HireRocks_DevModel.GetContractByContractId_Result)">
+      <Parameter Name="ContractId" Mode="In" Type="Int64" />
+      <Parameter Name="ClientId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetContractByContractIdOrWorkerAndJobId" ReturnType="Collection(HireRocks_DevModel.GetContractByContractIdOrWorkerAndJobId_Result)">
+      <Parameter Name="ContractId" Mode="In" Type="Int64" />
+      <Parameter Name="WorkerId" Mode="In" Type="String" />
+      <Parameter Name="JobId" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="GetContractDenyReasonsByRoleId" ReturnType="Collection(HireRocks_DevModel.GetContractDenyReasonsByRoleId_Result)">
+      <Parameter Name="RoleId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetContractEndReasonsByRoleId" ReturnType="Collection(HireRocks_DevModel.GetContractEndReasonsByRoleId_Result)">
+      <Parameter Name="RoleId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetContractForReviewByContractId" ReturnType="Collection(HireRocks_DevModel.GetContractForReviewByContractId_Result)">
+      <Parameter Name="ContractId" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="GetContractForWorker">
+      <Parameter Name="WorkerId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetEducationDetailsByUserId" ReturnType="Collection(HireRocks_DevModel.GetEducationDetailsByUserId_Result)">
+      <Parameter Name="UserId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetJobAttachments" ReturnType="Collection(HireRocks_DevModel.GetJobAttachments_Result)">
+      <Parameter Name="JobIds" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetJobAttachmentsByJobId" ReturnType="Collection(HireRocks_DevModel.GetJobAttachmentsByJobId_Result)">
+      <Parameter Name="JobId" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="GetJobBidById" ReturnType="Collection(HireRocks_DevModel.GetJobBidById_Result)">
+      <Parameter Name="JobBidId" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="GetJobByJobId" ReturnType="Collection(HireRocks_DevModel.GetJobByJobId_Result)">
+      <Parameter Name="JobId" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="GetJobByJobIdAndClientId" ReturnType="Collection(HireRocks_DevModel.GetJobByJobIdAndClientId_Result)">
+      <Parameter Name="JobId" Mode="In" Type="Int64" />
+      <Parameter Name="ClientId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetJobCapturesByContractId" ReturnType="Collection(HireRocks_DevModel.GetJobCapturesByContractId_Result)">
+      <Parameter Name="ContractId" Mode="In" Type="Int64" />
+      <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+      <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="GetJobListForHireWorkerScreen" ReturnType="Collection(HireRocks_DevModel.GetJobListForHireWorkerScreen_Result)">
+      <Parameter Name="ClientId" Mode="In" Type="String" />
+      <Parameter Name="WorkerId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetJobListForMessageScreen" ReturnType="Collection(HireRocks_DevModel.GetJobListForMessageScreen_Result)">
+      <Parameter Name="ClientId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetJobsByClientId" ReturnType="Collection(HireRocks_DevModel.GetJobsByClientId_Result)">
+      <Parameter Name="ClientId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetJobsByWorkerId" ReturnType="Collection(HireRocks_DevModel.GetJobsByWorkerId_Result)">
+      <Parameter Name="WorkerId" Mode="In" Type="String" />
+      <Parameter Name="IsActive" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="GetJobsForTracker" ReturnType="Collection(HireRocks_DevModel.GetJobsForTracker_Result)">
+      <Parameter Name="WorkerId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetLicenseAgreementById" ReturnType="Collection(HireRocks_DevModel.GetLicenseAgreementById_Result)">
+      <Parameter Name="LicenseAgreementId" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="GetManageContractScreenData" ReturnType="Collection(HireRocks_DevModel.GetManageContractScreenData_Result)">
+      <Parameter Name="ContractId" Mode="In" Type="Int64" />
+      <Parameter Name="UserId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetMessages" ReturnType="Collection(HireRocks_DevModel.GetMessages_Result)">
+      <Parameter Name="JobId" Mode="In" Type="Int64" />
+      <Parameter Name="WorkerId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetNotificationsByUserId" ReturnType="Collection(HireRocks_DevModel.GetNotificationsByUserId_Result)">
+      <Parameter Name="UserId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetTimeLogByClientId" ReturnType="Collection(HireRocks_DevModel.GetTimeLogByClientId_Result)">
+      <Parameter Name="ClientId" Mode="In" Type="String" />
+      <Parameter Name="StartDate" Mode="In" Type="DateTime" />
+      <Parameter Name="EndDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="GetUnreadMessageCount" ReturnType="Collection(Int32)">
+      <Parameter Name="UserId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetUnreadNotificationAndMessageCount" ReturnType="Collection(HireRocks_DevModel.GetUnreadNotificationAndMessageCount_Result)">
+      <Parameter Name="UserId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetUnreadNotificationsCount" ReturnType="Collection(Int32)">
+      <Parameter Name="UserId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetUserById" ReturnType="Collection(HireRocks_DevModel.GetUserById_Result)">
+      <Parameter Name="UserId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetUserEducations" ReturnType="Collection(HireRocks_DevModel.GetUserEducations_Result)">
+      <Parameter Name="UserId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetUserProfileByUserId" ReturnType="Collection(HireRocks_DevModel.GetUserProfileByUserId_Result)">
+      <Parameter Name="UserId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetWorkerJobListForMessageScreen" ReturnType="Collection(HireRocks_DevModel.GetWorkerJobListForMessageScreen_Result)">
+      <Parameter Name="WorkerId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetWorkerJobsByWorkerId" ReturnType="Collection(HireRocks_DevModel.GetWorkerJobsByWorkerId_Result)">
+      <Parameter Name="WorkerId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetWorkerRate" ReturnType="Collection(Decimal)">
+      <Parameter Name="WorkerId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetWorkersBidForJob" ReturnType="Collection(HireRocks_DevModel.GetWorkersBidForJob_Result)">
+      <Parameter Name="JobId" Mode="In" Type="Int64" />
+      <Parameter Name="ClientId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetWorkersForMessageScreen" ReturnType="Collection(HireRocks_DevModel.GetWorkersForMessageScreen_Result)">
+      <Parameter Name="JobId" Mode="In" Type="Int64" />
+      <Parameter Name="WorkerId" Mode="In" Type="String" />
+      <Parameter Name="ClientId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="InsertAccountType">
+      <Parameter Name="UserAccountTypeId" Mode="In" Type="Int32" />
+      <Parameter Name="UserId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="InsertCapture" ReturnType="Collection(HireRocks_DevModel.InsertCapture_Result)">
+      <Parameter Name="ContractId" Mode="In" Type="Int64" />
+      <Parameter Name="KeyCount" Mode="In" Type="Int32" />
+      <Parameter Name="MouseCount" Mode="In" Type="Int32" />
+      <Parameter Name="KeyboardCapture" Mode="In" Type="String" />
+      <Parameter Name="MouseCapture" Mode="In" Type="String" />
+      <Parameter Name="ScreenCaptureThumbnailImage" Mode="In" Type="String" />
+      <Parameter Name="ScreenCaptureFullImage" Mode="In" Type="String" />
+      <Parameter Name="CaptureDate" Mode="In" Type="DateTime" />
+      <Parameter Name="TimeBurned" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="InsertMemo">
+      <Parameter Name="JobId" Mode="In" Type="Int64" />
+      <Parameter Name="MemoText" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="InsertMessage">
+      <Parameter Name="JobId" Mode="In" Type="Int64" />
+      <Parameter Name="MessageText" Mode="In" Type="String" />
+      <Parameter Name="MessageFromUserId" Mode="In" Type="String" />
+      <Parameter Name="MessageToUserId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="InsertUpdateContract" ReturnType="Collection(HireRocks_DevModel.InsertUpdateContract_Result)">
+      <Parameter Name="ContractId" Mode="In" Type="Int64" />
+      <Parameter Name="WorkerId" Mode="In" Type="String" />
+      <Parameter Name="JobId" Mode="In" Type="Int64" />
+      <Parameter Name="HourlyRate" Mode="In" Type="Decimal" />
+      <Parameter Name="FixedRate" Mode="In" Type="Decimal" />
+      <Parameter Name="EstimatedDuration" Mode="In" Type="Decimal" />
+      <Parameter Name="WeeklyHourLimit" Mode="In" Type="Decimal" />
+      <Parameter Name="TimeUnitId" Mode="In" Type="Int64" />
+      <Parameter Name="ContractStatusId" Mode="In" Type="Int64" />
+      <Parameter Name="EndDate" Mode="In" Type="DateTime" />
+      <Parameter Name="EndReason" Mode="In" Type="String" />
+      <Parameter Name="CreatedModifiedByUserId" Mode="In" Type="String" />
+      <Parameter Name="IsEndingContract" Mode="In" Type="Boolean" />
+      <Parameter Name="UserRatingId" Mode="In" Type="Int64" />
+      <Parameter Name="Skill" Mode="In" Type="Decimal" />
+      <Parameter Name="Quality" Mode="In" Type="Decimal" />
+      <Parameter Name="Availability" Mode="In" Type="Decimal" />
+      <Parameter Name="Deadline" Mode="In" Type="Decimal" />
+      <Parameter Name="Communication" Mode="In" Type="Decimal" />
+      <Parameter Name="Cooperation" Mode="In" Type="Decimal" />
+      <Parameter Name="Comment" Mode="In" Type="String" />
+      <Parameter Name="UserId" Mode="In" Type="String" />
+      <Parameter Name="HourlyRateDateFromOrTo" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="insertupdatejob">
+      <Parameter Name="JobId" Mode="In" Type="Int64" />
+      <Parameter Name="JobTitle" Mode="In" Type="String" />
+      <Parameter Name="JobDescription" Mode="In" Type="String" />
+      <Parameter Name="IsActive" Mode="In" Type="Boolean" />
+      <Parameter Name="IsHiringClosed" Mode="In" Type="Boolean" />
+      <Parameter Name="WorkerTypeId" Mode="In" Type="Int64" />
+      <Parameter Name="ExperienceLevelId" Mode="In" Type="Int64" />
+      <Parameter Name="JobTypeId" Mode="In" Type="Int64" />
+      <Parameter Name="JobSubCategoryId" Mode="In" Type="Int64" />
+      <Parameter Name="SkillsRequiredForJob" Mode="In" Type="String" />
+      <Parameter Name="JobStartDate" Mode="In" Type="DateTime" />
+      <Parameter Name="JobEndDate" Mode="In" Type="DateTime" />
+      <Parameter Name="EstimatedDuration" Mode="In" Type="Decimal" />
+      <Parameter Name="TimeUnitId" Mode="In" Type="Int64" />
+      <Parameter Name="ClientId" Mode="In" Type="String" />
+      <Parameter Name="JobAttachments" Mode="In" Type="String" />
+      <Parameter Name="Min_PRF_Rate" Mode="In" Type="Decimal" />
+      <Parameter Name="Max_PRF_Rate" Mode="In" Type="Decimal" />
+      <Parameter Name="FixedRate" Mode="In" Type="Decimal" />
+      <Parameter Name="Locality_PRF" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="InsertUpdateUserProfile">
+      <Parameter Name="UserProfileId" Mode="In" Type="Int64" />
+      <Parameter Name="ProfileTitle" Mode="In" Type="String" />
+      <Parameter Name="UserSkillIds" Mode="In" Type="String" />
+      <Parameter Name="UserLanguageIds" Mode="In" Type="String" />
+      <Parameter Name="UserHourlyRate" Mode="In" Type="Decimal" />
+      <Parameter Name="EducationXML" Mode="In" Type="String" />
+      <Parameter Name="UserSubCategoryIds" Mode="In" Type="String" />
+      <Parameter Name="UserId" Mode="In" Type="String" />
+      <Parameter Name="Address1" Mode="In" Type="String" />
+      <Parameter Name="Address2" Mode="In" Type="String" />
+      <Parameter Name="City1" Mode="In" Type="String" />
+      <Parameter Name="City2" Mode="In" Type="String" />
+      <Parameter Name="Country1" Mode="In" Type="String" />
+      <Parameter Name="Country2" Mode="In" Type="String" />
+      <Parameter Name="HomePhone" Mode="In" Type="String" />
+      <Parameter Name="WorkPhone" Mode="In" Type="String" />
+      <Parameter Name="CellPhone" Mode="In" Type="String" />
+      <Parameter Name="ProfilePic" Mode="In" Type="String" />
+      <Parameter Name="TimeZone" Mode="In" Type="String" />
+      <Parameter Name="Gender" Mode="In" Type="String" />
+      <Parameter Name="DateOfBirth" Mode="In" Type="DateTime" />
+      <Parameter Name="CertificationDetailXML" Mode="In" Type="String" />
+      <Parameter Name="IntroductionVideo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="IsEmailAddressAlreadyExists" ReturnType="Collection(Int32)">
+      <Parameter Name="Email" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="IsUserNameAlreadyExists" ReturnType="Collection(Int32)">
+      <Parameter Name="UserName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="JobRequestDenied">
+      <Parameter Name="JobBidId" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="RejectCapture">
+      <Parameter Name="CaptureIdsToReject" Mode="In" Type="String" />
+      <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+      <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="RejectContract">
+      <Parameter Name="ContractId" Mode="In" Type="Int64" />
+      <Parameter Name="ModifiedByUserId" Mode="In" Type="String" />
+      <Parameter Name="EndReason" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ResetPassword" ReturnType="Collection(Int32)">
+      <Parameter Name="ForgotPasswordToken" Mode="In" Type="String" />
+      <Parameter Name="NewPassword" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SetForgotPasswordToken" ReturnType="Collection(HireRocks_DevModel.SetForgotPasswordToken_Result)">
+      <Parameter Name="ForgotPasswordToken" Mode="In" Type="String" />
+      <Parameter Name="EmailAddress" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateMessageViewedStatus">
+      <Parameter Name="UserId" Mode="In" Type="String" />
+      <Parameter Name="JobId" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateNotificationViewedStatus">
+      <Parameter Name="UserId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="VerifyEmailAddress" ReturnType="Collection(Int32)">
+      <Parameter Name="VerificationCode" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="WorkerHourlyReportByWorkerId" ReturnType="Collection(HireRocks_DevModel.WorkerHourlyReportByWorkerId_Result)">
+      <Parameter Name="WorkerId" Mode="In" Type="String" />
+      <Parameter Name="Date" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="WorkerHourlyReportByWorkerIdAndClientId" ReturnType="Collection(HireRocks_DevModel.WorkerHourlyReportByWorkerIdAndClientId_Result)">
+      <Parameter Name="WorkerId" Mode="In" Type="String" />
+      <Parameter Name="Date" Mode="In" Type="DateTime" />
+      <Parameter Name="JobId" Mode="In" Type="Int64" />
+      <Parameter Name="ClientId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="WorkerWeeklyReportByWorkerId" ReturnType="Collection(HireRocks_DevModel.WorkerWeeklyReportByWorkerId_Result)">
+      <Parameter Name="WorkerId" Mode="In" Type="String" />
+      <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+      <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+      <Parameter Name="JobId" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="WorkerWeeklyReportByWorkerIdAndClientId" ReturnType="Collection(HireRocks_DevModel.WorkerWeeklyReportByWorkerIdAndClientId_Result)">
+      <Parameter Name="WorkerId" Mode="In" Type="String" />
+      <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+      <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+      <Parameter Name="JobId" Mode="In" Type="Int64" />
+      <Parameter Name="ClientId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="WorkerYearlyReportByWorkerId" ReturnType="Collection(HireRocks_DevModel.WorkerYearlyReportByWorkerId_Result)">
+      <Parameter Name="WorkerId" Mode="In" Type="String" />
+      <Parameter Name="Year" Mode="In" Type="Int32" />
+      <Parameter Name="JobId" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="WorkerYearlyReportByWorkerIdAndClientId" ReturnType="Collection(HireRocks_DevModel.WorkerYearlyReportByWorkerIdAndClientId_Result)">
+      <Parameter Name="WorkerId" Mode="In" Type="String" />
+      <Parameter Name="Year" Mode="In" Type="Int32" />
+      <Parameter Name="JobId" Mode="In" Type="Int64" />
+      <Parameter Name="ClientId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="WorkSummaryOfClientByClientId" ReturnType="Collection(HireRocks_DevModel.WorkSummaryOfClientByClientId_Result)">
+      <Parameter Name="ClientId" Mode="In" Type="String" />
+      <Parameter Name="StartDate" Mode="In" Type="DateTime" />
+      <Parameter Name="EndDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateContractForWorker">
+      <Parameter Name="ContractId" Mode="In" Type="Int64" />
+      <Parameter Name="HourlyRate" Mode="In" Type="Decimal" />
+      <Parameter Name="FixedRate" Mode="In" Type="Decimal" />
+      <Parameter Name="WeeklyHourLimit" Mode="In" Type="Decimal" />
+      <Parameter Name="EndReason" Mode="In" Type="String" />
+      <Parameter Name="IsEndingContract" Mode="In" Type="Boolean" />
+      <Parameter Name="Skill" Mode="In" Type="Decimal" />
+      <Parameter Name="Quality" Mode="In" Type="Decimal" />
+      <Parameter Name="Availability" Mode="In" Type="Decimal" />
+      <Parameter Name="Deadline" Mode="In" Type="Decimal" />
+      <Parameter Name="Communication" Mode="In" Type="Decimal" />
+      <Parameter Name="Cooperation" Mode="In" Type="Decimal" />
+      <Parameter Name="Comment" Mode="In" Type="String" />
+      <Parameter Name="UserId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetNotificationByUserId" ReturnType="Collection(HireRocks_DevModel.GetNotificationByUserId_Result)">
+      <Parameter Name="UserId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="InsertNotification">
+      <Parameter Name="ContractId" Mode="In" Type="Int64" />
+      <Parameter Name="WorkerId" Mode="In" Type="String" />
+      <Parameter Name="JobId" Mode="In" Type="Int64" />
+      <Parameter Name="NotificationText" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="AspNetRole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ContractDenyReasons" Relationship="HireRocks_DevModel.FK_ContractDenyReason_RoleId" FromRole="AspNetRole" ToRole="ContractDenyReason" />
+    <NavigationProperty Name="ContractEndReasons" Relationship="HireRocks_DevModel.FK_RoleId" FromRole="AspNetRole" ToRole="ContractEndReason" />
+    <NavigationProperty Name="AspNetUsers" Relationship="HireRocks_DevModel.AspNetUserRoles" FromRole="AspNetRole" ToRole="AspNetUser" />
+  </EntityType>
+  <EntityType Name="AspNetUserClaim">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClaimValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="User_Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUser" Relationship="HireRocks_DevModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_User_Id" FromRole="AspNetUserClaim" ToRole="AspNetUser" />
+  </EntityType>
+  <EntityType Name="AspNetUserLogin">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+    </Key>
+    <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="LoginProvider" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="ProviderKey" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUser" Relationship="HireRocks_DevModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUserLogin" ToRole="AspNetUser" />
+  </EntityType>
+  <EntityType Name="AspNetUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="UserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Address1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Address2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="City1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="City2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="State1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="State2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Country1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Country2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="HomePhone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="WorkPhone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CellPhone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProfilePic" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsEmailVerified" Type="Boolean" />
+    <Property Name="IsPhoneVerified" Type="Boolean" />
+    <Property Name="Discriminator" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="EmailVerificationCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneVerificationCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ForgotPasswordToken" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsProfileCompleted" Type="Boolean" />
+    <NavigationProperty Name="AspNetUserClaims" Relationship="HireRocks_DevModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_User_Id" FromRole="AspNetUser" ToRole="AspNetUserClaim" />
+    <NavigationProperty Name="AspNetUserLogins" Relationship="HireRocks_DevModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUser" ToRole="AspNetUserLogin" />
+    <NavigationProperty Name="Contracts" Relationship="HireRocks_DevModel.FK_ContractAspNetUser" FromRole="AspNetUser" ToRole="Contract" />
+    <NavigationProperty Name="Contracts1" Relationship="HireRocks_DevModel.FK_CreatedByUserId" FromRole="AspNetUser" ToRole="Contract" />
+    <NavigationProperty Name="Jobs" Relationship="HireRocks_DevModel.FK_JobAspNetUser" FromRole="AspNetUser" ToRole="Job" />
+    <NavigationProperty Name="JobsBids" Relationship="HireRocks_DevModel.FK_JobsBid_AspNetUsers" FromRole="AspNetUser" ToRole="JobsBid" />
+    <NavigationProperty Name="Messages" Relationship="HireRocks_DevModel.FK_MessageAspNetUser" FromRole="AspNetUser" ToRole="Message" />
+    <NavigationProperty Name="Messages1" Relationship="HireRocks_DevModel.FK_MessageAspNetUser1" FromRole="AspNetUser" ToRole="Message" />
+    <NavigationProperty Name="Contracts2" Relationship="HireRocks_DevModel.FK_ModifiedByUserId" FromRole="AspNetUser" ToRole="Contract" />
+    <NavigationProperty Name="Notifications" Relationship="HireRocks_DevModel.FK_NotificationAspNetUser" FromRole="AspNetUser" ToRole="Notification" />
+    <NavigationProperty Name="ReadyMadeTools" Relationship="HireRocks_DevModel.FK_ReadyMadeToolAspNetUser" FromRole="AspNetUser" ToRole="ReadyMadeTool" />
+    <NavigationProperty Name="Teams" Relationship="HireRocks_DevModel.FK_TeamAspNetUser" FromRole="AspNetUser" ToRole="Team" />
+    <NavigationProperty Name="Teams1" Relationship="HireRocks_DevModel.FK_TeamAspNetUser1" FromRole="AspNetUser" ToRole="Team" />
+    <NavigationProperty Name="UserRatings" Relationship="HireRocks_DevModel.FK_UserId" FromRole="AspNetUser" ToRole="UserRating" />
+    <NavigationProperty Name="UserPortfolios" Relationship="HireRocks_DevModel.FK_UserPortfolioAspNetUser" FromRole="AspNetUser" ToRole="UserPortfolio" />
+    <NavigationProperty Name="UserProfiles" Relationship="HireRocks_DevModel.FK_UserProfileAspNetUser" FromRole="AspNetUser" ToRole="UserProfile" />
+    <NavigationProperty Name="AspNetRoles" Relationship="HireRocks_DevModel.AspNetUserRoles" FromRole="AspNetUser" ToRole="AspNetRole" />
+    <NavigationProperty Name="UserAccountTypes" Relationship="HireRocks_DevModel.FK_UserAccountType_AspNetUsers" FromRole="AspNetUser" ToRole="UserAccountType" />
+  </EntityType>
+  <EntityType Name="C__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="ContextKey" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="Model" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Name="ProductVersion" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Capture">
+    <Key>
+      <PropertyRef Name="CaptureId" />
+    </Key>
+    <Property Name="CaptureId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KeyCount" Type="Int32" />
+    <Property Name="MouseCount" Type="Int32" />
+    <Property Name="KeyboardCapture" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MouseCapture" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ScreenCaptureThumbnailImage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ScreenCaptureFullImage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CaptureDate" Type="DateTime" Precision="3" />
+    <Property Name="TimeBurned" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ContractId" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <NavigationProperty Name="Contract" Relationship="HireRocks_DevModel.FK_Contracts_ContractId" FromRole="Capture" ToRole="Contract" />
+    <Property Name="IsRejected" Type="Boolean" />
+    <Property Name="MemoId" Type="Int64" />
+    <NavigationProperty Name="Memo" Relationship="HireRocks_DevModel.FK_Capture_Memo" FromRole="Capture" ToRole="Memo" />
+  </EntityType>
+  <EntityType Name="Certification">
+    <Key>
+      <PropertyRef Name="CertificationId" />
+    </Key>
+    <Property Name="CertificationId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CertificationName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CertificationDate" Type="DateTime" Precision="3" />
+    <Property Name="CertificationNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="CompanyId" />
+    </Key>
+    <Property Name="CompanyId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyOwner" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyAddress" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyLogo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ContractDenyReason">
+    <Key>
+      <PropertyRef Name="ContractDenyReasonId" />
+    </Key>
+    <Property Name="ContractDenyReasonId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DenyReason" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="RoleId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetRole" Relationship="HireRocks_DevModel.FK_ContractDenyReason_RoleId" FromRole="ContractDenyReason" ToRole="AspNetRole" />
+  </EntityType>
+  <EntityType Name="ContractEndReason">
+    <Key>
+      <PropertyRef Name="ContractEndReasonId" />
+    </Key>
+    <Property Name="ContractEndReasonId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EndReason" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="RoleId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetRole" Relationship="HireRocks_DevModel.FK_RoleId" FromRole="ContractEndReason" ToRole="AspNetRole" />
+  </EntityType>
+  <EntityType Name="Contract">
+    <Key>
+      <PropertyRef Name="ContractId" />
+    </Key>
+    <Property Name="ContractId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="JobId" Type="Int64" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Precision="3" />
+    <Property Name="EstimateDuration" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="ActualDuration" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="TimeUnitId" Type="Int64" />
+    <Property Name="ContractStatusId" Type="Int64" />
+    <Property Name="HoursLimit" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="EndReason" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="JobRating" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="WorkerId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="FixedRate" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedByUserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="ModifiedByUserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="HourlyRate" Type="Decimal" Precision="18" Scale="0" />
+    <NavigationProperty Name="AspNetUser" Relationship="HireRocks_DevModel.FK_ContractAspNetUser" FromRole="Contract" ToRole="AspNetUser" />
+    <NavigationProperty Name="AspNetUser1" Relationship="HireRocks_DevModel.FK_CreatedByUserId" FromRole="Contract" ToRole="AspNetUser" />
+    <NavigationProperty Name="AspNetUser2" Relationship="HireRocks_DevModel.FK_ModifiedByUserId" FromRole="Contract" ToRole="AspNetUser" />
+    <NavigationProperty Name="UserRatings" Relationship="HireRocks_DevModel.FK__UserRatin__Contr__589C25F3" FromRole="Contract" ToRole="UserRating" />
+    <NavigationProperty Name="ContractStatu" Relationship="HireRocks_DevModel.FK_ContractContractStatus" FromRole="Contract" ToRole="ContractStatu" />
+    <NavigationProperty Name="WorkerHourlyRates" Relationship="HireRocks_DevModel.FK_ContractId" FromRole="Contract" ToRole="WorkerHourlyRate" />
+    <NavigationProperty Name="Job" Relationship="HireRocks_DevModel.FK_ContractJob" FromRole="Contract" ToRole="Job" />
+    <NavigationProperty Name="TimeUnit" Relationship="HireRocks_DevModel.FK_ContractTimeUnits" FromRole="Contract" ToRole="TimeUnit" />
+    <NavigationProperty Name="UserPortfolios" Relationship="HireRocks_DevModel.FK_UserPortfolioContract" FromRole="Contract" ToRole="UserPortfolio" />
+    <NavigationProperty Name="Captures" Relationship="HireRocks_DevModel.FK_Contracts_ContractId" FromRole="Contract" ToRole="Capture" />
+  </EntityType>
+  <EntityType Name="ContractStatu">
+    <Key>
+      <PropertyRef Name="ContractStatusId" />
+    </Key>
+    <Property Name="ContractStatusId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContractStatusName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Contracts" Relationship="HireRocks_DevModel.FK_ContractContractStatus" FromRole="ContractStatu" ToRole="Contract" />
+  </EntityType>
+  <EntityType Name="DegreeType">
+    <Key>
+      <PropertyRef Name="DegreeTypeId" />
+    </Key>
+    <Property Name="DegreeTypeId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DegreeTypeName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Educations" Relationship="HireRocks_DevModel.FK_EducationDegreeType" FromRole="DegreeType" ToRole="Education" />
+  </EntityType>
+  <EntityType Name="Education">
+    <Key>
+      <PropertyRef Name="EducationId" />
+    </Key>
+    <Property Name="EducationId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DegreeTypeId" Type="Int64" />
+    <Property Name="DegreeName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DegreeStartDate" Type="DateTime" Precision="3" />
+    <Property Name="DegreeEndDate" Type="DateTime" Precision="3" />
+    <Property Name="Percentage" Type="Decimal" Precision="18" Scale="0" />
+    <NavigationProperty Name="DegreeType" Relationship="HireRocks_DevModel.FK_EducationDegreeType" FromRole="Education" ToRole="DegreeType" />
+  </EntityType>
+  <EntityType Name="ExceptionLog">
+    <Key>
+      <PropertyRef Name="ExceptionLogId" />
+    </Key>
+    <Property Name="ExceptionLogId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Exception" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ExperienceLevel">
+    <Key>
+      <PropertyRef Name="ExperianceLevelId" />
+    </Key>
+    <Property Name="ExperianceLevelId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LevelName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="ExperienceLowerRange" Type="Int16" Nullable="false" />
+    <Property Name="ExperienceHigherRange" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="Jobs" Relationship="HireRocks_DevModel.FK_JobExperienceLevel" FromRole="ExperienceLevel" ToRole="Job" />
+  </EntityType>
+  <EntityType Name="JobAttachment">
+    <Key>
+      <PropertyRef Name="JobAttachmentId" />
+    </Key>
+    <Property Name="JobAttachmentId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AttachmentName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="JobId" Type="Int64" />
+    <Property Name="AttachmentOriginalName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Job" Relationship="HireRocks_DevModel.FK_JobAttachmentsJob" FromRole="JobAttachment" ToRole="Job" />
+  </EntityType>
+  <EntityType Name="JobCategory">
+    <Key>
+      <PropertyRef Name="JobCategoryId" />
+    </Key>
+    <Property Name="JobCategoryId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CategoryDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="JobSubCategories" Relationship="HireRocks_DevModel.FK_JobSubCategoryJobCategory" FromRole="JobCategory" ToRole="JobSubCategory" />
+  </EntityType>
+  <EntityType Name="Job">
+    <Key>
+      <PropertyRef Name="JobId" />
+    </Key>
+    <Property Name="JobId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="JobTitle" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="JobDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsHiringClosed" Type="Boolean" Nullable="false" />
+    <Property Name="WorkerTypeId" Type="Int64" />
+    <Property Name="ExperienceLevelExperianceLevelId" Type="Int64" />
+    <Property Name="JobTypeId" Type="Int64" />
+    <Property Name="JobSubCategoryId" Type="Int64" />
+    <Property Name="SkillsRequiredForJobIds" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="JobStartDate" Type="DateTime" Precision="3" />
+    <Property Name="JobEndDate" Type="DateTime" Precision="3" />
+    <Property Name="EstimateDuration" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="TimeUnitId" Type="Int64" />
+    <Property Name="ClientId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="JobPostDate" Type="DateTime" Precision="3" />
+    <Property Name="Min_PRF_Rate" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Max_PRF_Rate" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Locality_PRF" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FixedRate" Type="Decimal" Precision="18" Scale="0" />
+    <NavigationProperty Name="AspNetUser" Relationship="HireRocks_DevModel.FK_JobAspNetUser" FromRole="Job" ToRole="AspNetUser" />
+    <NavigationProperty Name="Contracts" Relationship="HireRocks_DevModel.FK_ContractJob" FromRole="Job" ToRole="Contract" />
+    <NavigationProperty Name="ExperienceLevel" Relationship="HireRocks_DevModel.FK_JobExperienceLevel" FromRole="Job" ToRole="ExperienceLevel" />
+    <NavigationProperty Name="JobAttachments" Relationship="HireRocks_DevModel.FK_JobAttachmentsJob" FromRole="Job" ToRole="JobAttachment" />
+    <NavigationProperty Name="WorkerType" Relationship="HireRocks_DevModel.FK_JobFreelancersType" FromRole="Job" ToRole="WorkerType" />
+    <NavigationProperty Name="JobSubCategory" Relationship="HireRocks_DevModel.FK_JobJobSubCategory" FromRole="Job" ToRole="JobSubCategory" />
+    <NavigationProperty Name="JobType" Relationship="HireRocks_DevModel.FK_JobJobType" FromRole="Job" ToRole="JobType" />
+    <NavigationProperty Name="JobsBids" Relationship="HireRocks_DevModel.FK_JobsBid_Jobs" FromRole="Job" ToRole="JobsBid" />
+    <NavigationProperty Name="TimeUnit" Relationship="HireRocks_DevModel.FK_JobTimeUnits" FromRole="Job" ToRole="TimeUnit" />
+    <NavigationProperty Name="Messages" Relationship="HireRocks_DevModel.FK_Messages_Jobs" FromRole="Job" ToRole="Message" />
+  </EntityType>
+  <EntityType Name="JobsBidAttachment">
+    <Key>
+      <PropertyRef Name="JobBidAttachmentId" />
+    </Key>
+    <Property Name="JobBidAttachmentId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AttachmentName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AttachmentOriginalName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="JobBidId" Type="Int64" />
+    <NavigationProperty Name="JobsBid" Relationship="HireRocks_DevModel.FK_JobsBidAttachments_JobsBid" FromRole="JobsBidAttachment" ToRole="JobsBid" />
+  </EntityType>
+  <EntityType Name="JobsBid">
+    <Key>
+      <PropertyRef Name="JobBidId" />
+    </Key>
+    <Property Name="JobBidId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="JobId" Type="Int64" Nullable="false" />
+    <Property Name="Rate" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="WorkerId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="IsHired" Type="Boolean" />
+    <Property Name="IsDenied" Type="Boolean" />
+    <Property Name="CoverLetter" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUser" Relationship="HireRocks_DevModel.FK_JobsBid_AspNetUsers" FromRole="JobsBid" ToRole="AspNetUser" />
+    <NavigationProperty Name="Job" Relationship="HireRocks_DevModel.FK_JobsBid_Jobs" FromRole="JobsBid" ToRole="Job" />
+    <NavigationProperty Name="JobsBidAttachments" Relationship="HireRocks_DevModel.FK_JobsBidAttachments_JobsBid" FromRole="JobsBid" ToRole="JobsBidAttachment" />
+  </EntityType>
+  <EntityType Name="JobSubCategory">
+    <Key>
+      <PropertyRef Name="JobSubCategoryId" />
+    </Key>
+    <Property Name="JobSubCategoryId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SubCategoryName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SubCategoryDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="JobCategoryId" Type="Int64" />
+    <NavigationProperty Name="JobCategory" Relationship="HireRocks_DevModel.FK_JobSubCategoryJobCategory" FromRole="JobSubCategory" ToRole="JobCategory" />
+    <NavigationProperty Name="Jobs" Relationship="HireRocks_DevModel.FK_JobJobSubCategory" FromRole="JobSubCategory" ToRole="Job" />
+  </EntityType>
+  <EntityType Name="JobType">
+    <Key>
+      <PropertyRef Name="JobTypeId" />
+    </Key>
+    <Property Name="JobTypeId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="JobTypeName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Jobs" Relationship="HireRocks_DevModel.FK_JobJobType" FromRole="JobType" ToRole="Job" />
+  </EntityType>
+  <EntityType Name="Language">
+    <Key>
+      <PropertyRef Name="LanguageId" />
+    </Key>
+    <Property Name="LanguageId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LanguageName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LicenseAgreement">
+    <Key>
+      <PropertyRef Name="LicenseAgreementId" />
+    </Key>
+    <Property Name="LicenseAgreementId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Agreement" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="MessageLabel">
+    <Key>
+      <PropertyRef Name="MessageLabelId" />
+    </Key>
+    <Property Name="MessageLabelId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LabelName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Messages" Relationship="HireRocks_DevModel.FK_MessagesMessageLabels" FromRole="MessageLabel" ToRole="Message" />
+  </EntityType>
+  <EntityType Name="Message">
+    <Key>
+      <PropertyRef Name="MessageId" />
+    </Key>
+    <Property Name="MessageId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MessageText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Subject" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DateTime" Type="DateTime" Precision="3" />
+    <Property Name="IsViewed" Type="Boolean" />
+    <Property Name="MessageLabelId" Type="Int64" />
+    <Property Name="MessageFromUserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="MessageToUserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="JobId" Type="Int64" />
+    <NavigationProperty Name="AspNetUser" Relationship="HireRocks_DevModel.FK_MessageAspNetUser" FromRole="Message" ToRole="AspNetUser" />
+    <NavigationProperty Name="AspNetUser1" Relationship="HireRocks_DevModel.FK_MessageAspNetUser1" FromRole="Message" ToRole="AspNetUser" />
+    <NavigationProperty Name="Job" Relationship="HireRocks_DevModel.FK_Messages_Jobs" FromRole="Message" ToRole="Job" />
+    <NavigationProperty Name="MessageLabel" Relationship="HireRocks_DevModel.FK_MessagesMessageLabels" FromRole="Message" ToRole="MessageLabel" />
+  </EntityType>
+  <EntityType Name="Notification">
+    <Key>
+      <PropertyRef Name="NotificationId" />
+    </Key>
+    <Property Name="NotificationId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NotificationText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsViewed" Type="Boolean" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="DateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUser" Relationship="HireRocks_DevModel.FK_NotificationAspNetUser" FromRole="Notification" ToRole="AspNetUser" />
+    <Property Name="NotificationType" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ObjectId" Type="Int64" />
+  </EntityType>
+  <EntityType Name="PaymentMethod">
+    <Key>
+      <PropertyRef Name="PaymentMethodId" />
+    </Key>
+    <Property Name="PaymentMethodId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PaymentMethodName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PaymentMethodDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ReadyMadeTool">
+    <Key>
+      <PropertyRef Name="ToolId" />
+    </Key>
+    <Property Name="ToolId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ToolName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ToolDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DownloadURL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ToolLogo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ToolVersion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ToolOwnerId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUser" Relationship="HireRocks_DevModel.FK_ReadyMadeToolAspNetUser" FromRole="ReadyMadeTool" ToRole="AspNetUser" />
+  </EntityType>
+  <EntityType Name="Skill">
+    <Key>
+      <PropertyRef Name="SkillId" />
+    </Key>
+    <Property Name="SkillId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SkillName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SkillDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Team">
+    <Key>
+      <PropertyRef Name="TeamId" />
+    </Key>
+    <Property Name="TeamId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="TeamOwnerId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="TeamMemberId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUser" Relationship="HireRocks_DevModel.FK_TeamAspNetUser" FromRole="Team" ToRole="AspNetUser" />
+    <NavigationProperty Name="AspNetUser1" Relationship="HireRocks_DevModel.FK_TeamAspNetUser1" FromRole="Team" ToRole="AspNetUser" />
+  </EntityType>
+  <EntityType Name="TimeSheet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="TimeUnit">
+    <Key>
+      <PropertyRef Name="TimeUnitId" />
+    </Key>
+    <Property Name="TimeUnitId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UnitName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Contracts" Relationship="HireRocks_DevModel.FK_ContractTimeUnits" FromRole="TimeUnit" ToRole="Contract" />
+    <NavigationProperty Name="Jobs" Relationship="HireRocks_DevModel.FK_JobTimeUnits" FromRole="TimeUnit" ToRole="Job" />
+  </EntityType>
+  <EntityType Name="TransactionStatu">
+    <Key>
+      <PropertyRef Name="TransactionStatusId" />
+    </Key>
+    <Property Name="TransactionStatusId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StatusCode" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="StatusName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserPortfolio">
+    <Key>
+      <PropertyRef Name="UserPortfolioId" />
+    </Key>
+    <Property Name="UserPortfolioId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectTitle" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProjectDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProjectStartDate" Type="DateTime" Precision="3" />
+    <Property Name="ProjectEndDate" Type="DateTime" Precision="3" />
+    <Property Name="ContractId" Type="Int64" />
+    <Property Name="WorkerId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUser" Relationship="HireRocks_DevModel.FK_UserPortfolioAspNetUser" FromRole="UserPortfolio" ToRole="AspNetUser" />
+    <NavigationProperty Name="Contract" Relationship="HireRocks_DevModel.FK_UserPortfolioContract" FromRole="UserPortfolio" ToRole="Contract" />
+  </EntityType>
+  <EntityType Name="UserProfile">
+    <Key>
+      <PropertyRef Name="UserProfileId" />
+    </Key>
+    <Property Name="UserProfileId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProfileTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UserSkillIds" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UserLanguageIds" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UserHourlyRate" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="EducationIds" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UserSubCategoryIds" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UserRating" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="TimeZone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateOfBirth" Type="DateTime" Precision="3" />
+    <Property Name="IntroductionVideo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CertificationIds" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUser" Relationship="HireRocks_DevModel.FK_UserProfileAspNetUser" FromRole="UserProfile" ToRole="AspNetUser" />
+  </EntityType>
+  <EntityType Name="UserRating">
+    <Key>
+      <PropertyRef Name="UserRatingId" />
+    </Key>
+    <Property Name="UserRatingId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Skill" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Quality" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Availability" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Deadline" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Communication" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Cooperation" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="ContractId" Type="Int64" />
+    <NavigationProperty Name="AspNetUser" Relationship="HireRocks_DevModel.FK_UserId" FromRole="UserRating" ToRole="AspNetUser" />
+    <NavigationProperty Name="Contract" Relationship="HireRocks_DevModel.FK__UserRatin__Contr__589C25F3" FromRole="UserRating" ToRole="Contract" />
+  </EntityType>
+  <EntityType Name="WorkerHourlyRate">
+    <Key>
+      <PropertyRef Name="WorkerHourlyRateId" />
+    </Key>
+    <Property Name="WorkerHourlyRateId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContractId" Type="Int64" />
+    <Property Name="HourlyRate" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="FromDate" Type="DateTime" Precision="3" />
+    <Property Name="ToDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Contract" Relationship="HireRocks_DevModel.FK_ContractId" FromRole="WorkerHourlyRate" ToRole="Contract" />
+  </EntityType>
+  <EntityType Name="WorkerType">
+    <Key>
+      <PropertyRef Name="WorkerTypeId" />
+    </Key>
+    <Property Name="WorkerTypeId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Jobs" Relationship="HireRocks_DevModel.FK_JobFreelancersType" FromRole="WorkerType" ToRole="Job" />
+  </EntityType>
+  <Association Name="FK_ContractDenyReason_RoleId">
+    <End Type="HireRocks_DevModel.AspNetRole" Role="AspNetRole" Multiplicity="0..1" />
+    <End Type="HireRocks_DevModel.ContractDenyReason" Role="ContractDenyReason" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetRole">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ContractDenyReason">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RoleId">
+    <End Type="HireRocks_DevModel.AspNetRole" Role="AspNetRole" Multiplicity="0..1" />
+    <End Type="HireRocks_DevModel.ContractEndReason" Role="ContractEndReason" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetRole">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ContractEndReason">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_User_Id">
+    <End Type="HireRocks_DevModel.AspNetUser" Role="AspNetUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="HireRocks_DevModel.AspNetUserClaim" Role="AspNetUserClaim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserClaim">
+        <PropertyRef Name="User_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+    <End Type="HireRocks_DevModel.AspNetUser" Role="AspNetUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="HireRocks_DevModel.AspNetUserLogin" Role="AspNetUserLogin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserLogin">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractAspNetUser">
+    <End Type="HireRocks_DevModel.AspNetUser" Role="AspNetUser" Multiplicity="0..1" />
+    <End Type="HireRocks_DevModel.Contract" Role="Contract" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Contract">
+        <PropertyRef Name="WorkerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CreatedByUserId">
+    <End Type="HireRocks_DevModel.AspNetUser" Role="AspNetUser" Multiplicity="0..1" />
+    <End Type="HireRocks_DevModel.Contract" Role="Contract" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Contract">
+        <PropertyRef Name="CreatedByUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobAspNetUser">
+    <End Type="HireRocks_DevModel.AspNetUser" Role="AspNetUser" Multiplicity="0..1" />
+    <End Type="HireRocks_DevModel.Job" Role="Job" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Job">
+        <PropertyRef Name="ClientId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobsBid_AspNetUsers">
+    <End Type="HireRocks_DevModel.AspNetUser" Role="AspNetUser" Multiplicity="1" />
+    <End Type="HireRocks_DevModel.JobsBid" Role="JobsBid" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="JobsBid">
+        <PropertyRef Name="WorkerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MessageAspNetUser">
+    <End Type="HireRocks_DevModel.AspNetUser" Role="AspNetUser" Multiplicity="0..1" />
+    <End Type="HireRocks_DevModel.Message" Role="Message" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Message">
+        <PropertyRef Name="MessageFromUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MessageAspNetUser1">
+    <End Type="HireRocks_DevModel.AspNetUser" Role="AspNetUser" Multiplicity="0..1" />
+    <End Type="HireRocks_DevModel.Message" Role="Message" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Message">
+        <PropertyRef Name="MessageToUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ModifiedByUserId">
+    <End Type="HireRocks_DevModel.AspNetUser" Role="AspNetUser" Multiplicity="0..1" />
+    <End Type="HireRocks_DevModel.Contract" Role="Contract" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Contract">
+        <PropertyRef Name="ModifiedByUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NotificationAspNetUser">
+    <End Type="HireRocks_DevModel.AspNetUser" Role="AspNetUser" Multiplicity="0..1" />
+    <End Type="HireRocks_DevModel.Notification" Role="Notification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Notification">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReadyMadeToolAspNetUser">
+    <End Type="HireRocks_DevModel.AspNetUser" Role="AspNetUser" Multiplicity="0..1" />
+    <End Type="HireRocks_DevModel.ReadyMadeTool" Role="ReadyMadeTool" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ReadyMadeTool">
+        <PropertyRef Name="ToolOwnerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TeamAspNetUser">
+    <End Type="HireRocks_DevModel.AspNetUser" Role="AspNetUser" Multiplicity="0..1" />
+    <End Type="HireRocks_DevModel.Team" Role="Team" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Team">
+        <PropertyRef Name="TeamOwnerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TeamAspNetUser1">
+    <End Type="HireRocks_DevModel.AspNetUser" Role="AspNetUser" Multiplicity="0..1" />
+    <End Type="HireRocks_DevModel.Team" Role="Team" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Team">
+        <PropertyRef Name="TeamMemberId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserId">
+    <End Type="HireRocks_DevModel.AspNetUser" Role="AspNetUser" Multiplicity="0..1" />
+    <End Type="HireRocks_DevModel.UserRating" Role="UserRating" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserRating">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserPortfolioAspNetUser">
+    <End Type="HireRocks_DevModel.AspNetUser" Role="AspNetUser" Multiplicity="0..1" />
+    <End Type="HireRocks_DevModel.UserPortfolio" Role="UserPortfolio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserPortfolio">
+        <PropertyRef Name="WorkerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserProfileAspNetUser">
+    <End Type="HireRocks_DevModel.AspNetUser" Role="AspNetUser" Multiplicity="0..1" />
+    <End Type="HireRocks_DevModel.UserProfile" Role="UserProfile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserProfile">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__UserRatin__Contr__589C25F3">
+    <End Type="HireRocks_DevModel.Contract" Role="Contract" Multiplicity="0..1" />
+    <End Type="HireRocks_DevModel.UserRating" Role="UserRating" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contract">
+        <PropertyRef Name="ContractId" />
+      </Principal>
+      <Dependent Role="UserRating">
+        <PropertyRef Name="ContractId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractContractStatus">
+    <End Type="HireRocks_DevModel.ContractStatu" Role="ContractStatu" Multiplicity="0..1" />
+    <End Type="HireRocks_DevModel.Contract" Role="Contract" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ContractStatu">
+        <PropertyRef Name="ContractStatusId" />
+      </Principal>
+      <Dependent Role="Contract">
+        <PropertyRef Name="ContractStatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractId">
+    <End Type="HireRocks_DevModel.Contract" Role="Contract" Multiplicity="0..1" />
+    <End Type="HireRocks_DevModel.WorkerHourlyRate" Role="WorkerHourlyRate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contract">
+        <PropertyRef Name="ContractId" />
+      </Principal>
+      <Dependent Role="WorkerHourlyRate">
+        <PropertyRef Name="ContractId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractJob">
+    <End Type="HireRocks_DevModel.Job" Role="Job" Multiplicity="0..1" />
+    <End Type="HireRocks_DevModel.Contract" Role="Contract" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Job">
+        <PropertyRef Name="JobId" />
+      </Principal>
+      <Dependent Role="Contract">
+        <PropertyRef Name="JobId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractTimeUnits">
+    <End Type="HireRocks_DevModel.TimeUnit" Role="TimeUnit" Multiplicity="0..1" />
+    <End Type="HireRocks_DevModel.Contract" Role="Contract" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TimeUnit">
+        <PropertyRef Name="TimeUnitId" />
+      </Principal>
+      <Dependent Role="Contract">
+        <PropertyRef Name="TimeUnitId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserPortfolioContract">
+    <End Type="HireRocks_DevModel.Contract" Role="Contract" Multiplicity="0..1" />
+    <End Type="HireRocks_DevModel.UserPortfolio" Role="UserPortfolio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contract">
+        <PropertyRef Name="ContractId" />
+      </Principal>
+      <Dependent Role="UserPortfolio">
+        <PropertyRef Name="ContractId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EducationDegreeType">
+    <End Type="HireRocks_DevModel.DegreeType" Role="DegreeType" Multiplicity="0..1" />
+    <End Type="HireRocks_DevModel.Education" Role="Education" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DegreeType">
+        <PropertyRef Name="DegreeTypeId" />
+      </Principal>
+      <Dependent Role="Education">
+        <PropertyRef Name="DegreeTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobExperienceLevel">
+    <End Type="HireRocks_DevModel.ExperienceLevel" Role="ExperienceLevel" Multiplicity="0..1" />
+    <End Type="HireRocks_DevModel.Job" Role="Job" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ExperienceLevel">
+        <PropertyRef Name="ExperianceLevelId" />
+      </Principal>
+      <Dependent Role="Job">
+        <PropertyRef Name="ExperienceLevelExperianceLevelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobAttachmentsJob">
+    <End Type="HireRocks_DevModel.Job" Role="Job" Multiplicity="0..1" />
+    <End Type="HireRocks_DevModel.JobAttachment" Role="JobAttachment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Job">
+        <PropertyRef Name="JobId" />
+      </Principal>
+      <Dependent Role="JobAttachment">
+        <PropertyRef Name="JobId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobSubCategoryJobCategory">
+    <End Type="HireRocks_DevModel.JobCategory" Role="JobCategory" Multiplicity="0..1" />
+    <End Type="HireRocks_DevModel.JobSubCategory" Role="JobSubCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JobCategory">
+        <PropertyRef Name="JobCategoryId" />
+      </Principal>
+      <Dependent Role="JobSubCategory">
+        <PropertyRef Name="JobCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobFreelancersType">
+    <End Type="HireRocks_DevModel.WorkerType" Role="WorkerType" Multiplicity="0..1" />
+    <End Type="HireRocks_DevModel.Job" Role="Job" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WorkerType">
+        <PropertyRef Name="WorkerTypeId" />
+      </Principal>
+      <Dependent Role="Job">
+        <PropertyRef Name="WorkerTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobJobSubCategory">
+    <End Type="HireRocks_DevModel.JobSubCategory" Role="JobSubCategory" Multiplicity="0..1" />
+    <End Type="HireRocks_DevModel.Job" Role="Job" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JobSubCategory">
+        <PropertyRef Name="JobSubCategoryId" />
+      </Principal>
+      <Dependent Role="Job">
+        <PropertyRef Name="JobSubCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobJobType">
+    <End Type="HireRocks_DevModel.JobType" Role="JobType" Multiplicity="0..1" />
+    <End Type="HireRocks_DevModel.Job" Role="Job" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JobType">
+        <PropertyRef Name="JobTypeId" />
+      </Principal>
+      <Dependent Role="Job">
+        <PropertyRef Name="JobTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobsBid_Jobs">
+    <End Type="HireRocks_DevModel.Job" Role="Job" Multiplicity="1" />
+    <End Type="HireRocks_DevModel.JobsBid" Role="JobsBid" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Job">
+        <PropertyRef Name="JobId" />
+      </Principal>
+      <Dependent Role="JobsBid">
+        <PropertyRef Name="JobId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobTimeUnits">
+    <End Type="HireRocks_DevModel.TimeUnit" Role="TimeUnit" Multiplicity="0..1" />
+    <End Type="HireRocks_DevModel.Job" Role="Job" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TimeUnit">
+        <PropertyRef Name="TimeUnitId" />
+      </Principal>
+      <Dependent Role="Job">
+        <PropertyRef Name="TimeUnitId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Messages_Jobs">
+    <End Type="HireRocks_DevModel.Job" Role="Job" Multiplicity="0..1" />
+    <End Type="HireRocks_DevModel.Message" Role="Message" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Job">
+        <PropertyRef Name="JobId" />
+      </Principal>
+      <Dependent Role="Message">
+        <PropertyRef Name="JobId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobsBidAttachments_JobsBid">
+    <End Type="HireRocks_DevModel.JobsBid" Role="JobsBid" Multiplicity="0..1" />
+    <End Type="HireRocks_DevModel.JobsBidAttachment" Role="JobsBidAttachment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JobsBid">
+        <PropertyRef Name="JobBidId" />
+      </Principal>
+      <Dependent Role="JobsBidAttachment">
+        <PropertyRef Name="JobBidId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MessagesMessageLabels">
+    <End Type="HireRocks_DevModel.MessageLabel" Role="MessageLabel" Multiplicity="0..1" />
+    <End Type="HireRocks_DevModel.Message" Role="Message" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MessageLabel">
+        <PropertyRef Name="MessageLabelId" />
+      </Principal>
+      <Dependent Role="Message">
+        <PropertyRef Name="MessageLabelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AspNetUserRoles">
+    <End Type="HireRocks_DevModel.AspNetRole" Role="AspNetRole" Multiplicity="*" />
+    <End Type="HireRocks_DevModel.AspNetUser" Role="AspNetUser" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_Contracts_ContractId">
+    <End Type="HireRocks_DevModel.Contract" Role="Contract" Multiplicity="0..1" />
+    <End Type="HireRocks_DevModel.Capture" Role="Capture" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contract">
+        <PropertyRef Name="ContractId" />
+      </Principal>
+      <Dependent Role="Capture">
+        <PropertyRef Name="ContractId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Memo">
+    <Key>
+      <PropertyRef Name="MemoId" />
+    </Key>
+    <Property Name="MemoId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MemoText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Captures" Relationship="HireRocks_DevModel.FK_Capture_Memo" FromRole="Memo" ToRole="Capture" />
+    <Property Name="WorkerId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LastUsedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <Association Name="FK_Capture_Memo">
+    <End Type="HireRocks_DevModel.Memo" Role="Memo" Multiplicity="0..1" />
+    <End Type="HireRocks_DevModel.Capture" Role="Capture" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Memo">
+        <PropertyRef Name="MemoId" />
+      </Principal>
+      <Dependent Role="Capture">
+        <PropertyRef Name="MemoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="AccountType">
+    <Key>
+      <PropertyRef Name="AccountTypeId" />
+    </Key>
+    <Property Name="AccountTypeId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AccountTypeName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="UserAccountTypes" Relationship="HireRocks_DevModel.FK_UserAccountType_AccountType" FromRole="AccountType" ToRole="UserAccountType" />
+  </EntityType>
+  <!--<EntityType Name="Memo">
+          <Key>
+            <PropertyRef Name="MemoId" />
+          </Key>
+          <Property Name="MemoId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MemoText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Captures" Relationship="HireRocks_DevModel.FK_Capture_Memo" FromRole="Memo" ToRole="Capture" />
+        </EntityType>-->
+  <EntityType Name="UserAccountType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserAccountTypeId" Type="Int64" />
+    <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AccountType" Relationship="HireRocks_DevModel.FK_UserAccountType_AccountType" FromRole="UserAccountType" ToRole="AccountType" />
+    <NavigationProperty Name="AspNetUser" Relationship="HireRocks_DevModel.FK_UserAccountType_AspNetUsers" FromRole="UserAccountType" ToRole="AspNetUser" />
+  </EntityType>
+  <Association Name="FK_UserAccountType_AccountType">
+    <End Type="HireRocks_DevModel.AccountType" Role="AccountType" Multiplicity="0..1" />
+    <End Type="HireRocks_DevModel.UserAccountType" Role="UserAccountType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AccountType">
+        <PropertyRef Name="AccountTypeId" />
+      </Principal>
+      <Dependent Role="UserAccountType">
+        <PropertyRef Name="UserAccountTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserAccountType_AspNetUsers">
+    <End Type="HireRocks_DevModel.AspNetUser" Role="AspNetUser" Multiplicity="0..1" />
+    <End Type="HireRocks_DevModel.UserAccountType" Role="UserAccountType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserAccountType">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="FindJobsByFilter_Result">
+    <Property Type="Int64" Name="JobId" Nullable="false" />
+    <Property Type="String" Name="JobTitle" Nullable="false" />
+    <Property Type="String" Name="JobDescription" Nullable="true" />
+    <Property Type="DateTime" Name="JobStartDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="JobEndDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="CategoryName" Nullable="true" />
+    <Property Type="String" Name="SubCategoryName" Nullable="true" />
+    <Property Type="String" Name="JobTypeName" Nullable="true" />
+    <Property Type="Int64" Name="JobTypeId" Nullable="true" />
+    <Property Type="Decimal" Name="EstimateDuration" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="LevelName" Nullable="true" />
+    <Property Type="String" Name="FirstName" Nullable="true" />
+    <Property Type="String" Name="LastName" Nullable="true" />
+    <Property Type="String" Name="UserName" Nullable="true" />
+    <Property Type="String" Name="WorkerType" Nullable="true" />
+    <Property Type="Boolean" Name="IsActive" Nullable="false" />
+    <Property Type="String" Name="UnitName" Nullable="true" />
+    <Property Type="Boolean" Name="IsHiringClosed" Nullable="false" />
+    <Property Type="Decimal" Name="FixedRate" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="ApplyButtonText" Nullable="true" MaxLength="21" />
+  </ComplexType>
+  <ComplexType Name="FindWorkersByFilter_Result">
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="128" />
+    <Property Type="String" Name="FirstName" Nullable="true" />
+    <Property Type="String" Name="LastName" Nullable="true" />
+    <Property Type="String" Name="ProfileTitle" Nullable="true" />
+    <Property Type="String" Name="Country1" Nullable="true" />
+    <Property Type="String" Name="ProfilePic" Nullable="true" />
+    <Property Type="Decimal" Name="UserHourlyRate" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="UserRating" Nullable="true" Precision="18" Scale="0" />
+  </ComplexType>
+  <ComplexType Name="GetAllContractsByWorkerIdAndClientId_Result">
+    <Property Type="Int64" Name="ContractId" Nullable="false" />
+    <Property Type="String" Name="JobTitle" Nullable="true" />
+    <Property Type="DateTime" Name="StartDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="HourlyRate" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="FixedRate" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="ContractStatusName" Nullable="true" />
+    <Property Type="String" Name="JobTypeName" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetAllContractStatus_Result">
+    <Property Type="Int64" Name="ContractStatusId" Nullable="false" />
+    <Property Type="String" Name="ContractStatusName" Nullable="false" />
+    <Property Type="Boolean" Name="IsActive" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="GetAllDegreeTypes_Result">
+    <Property Type="Int64" Name="DegreeTypeId" Nullable="false" />
+    <Property Type="String" Name="DegreeTypeName" Nullable="false" />
+    <Property Type="Boolean" Name="IsActive" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="GetAllExperienceLevels_Result">
+    <Property Type="Int64" Name="ExperianceLevelId" Nullable="false" />
+    <Property Type="String" Name="LevelName" Nullable="false" />
+    <Property Type="Boolean" Name="IsActive" Nullable="false" />
+    <Property Type="Int16" Name="ExperienceLowerRange" Nullable="false" />
+    <Property Type="Int16" Name="ExperienceHigherRange" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="GetAllJobCategories_Result">
+    <Property Type="Int64" Name="JobCategoryId" Nullable="false" />
+    <Property Type="String" Name="CategoryName" Nullable="false" />
+    <Property Type="String" Name="CategoryDescription" Nullable="true" />
+    <Property Type="Boolean" Name="IsActive" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="GetAllJobSubCategories_Result">
+    <Property Type="Int64" Name="JobSubCategoryId" Nullable="false" />
+    <Property Type="String" Name="SubCategoryName" Nullable="false" />
+    <Property Type="String" Name="SubCategoryDescription" Nullable="true" />
+    <Property Type="Boolean" Name="IsActive" Nullable="false" />
+    <Property Type="Int64" Name="JobCategoryId" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetAllJobTypes_Result">
+    <Property Type="Int64" Name="JobTypeId" Nullable="false" />
+    <Property Type="String" Name="JobTypeName" Nullable="false" />
+    <Property Type="Boolean" Name="IsActive" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="GetAllLanguages_Result">
+    <Property Type="Int64" Name="LanguageId" Nullable="false" />
+    <Property Type="String" Name="LanguageName" Nullable="false" />
+    <Property Type="Boolean" Name="IsActive" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="GetAllPaymentMethods_Result">
+    <Property Type="Int64" Name="PaymentMethodId" Nullable="false" />
+    <Property Type="String" Name="PaymentMethodName" Nullable="false" />
+    <Property Type="String" Name="PaymentMethodDescription" Nullable="true" />
+    <Property Type="Boolean" Name="IsActive" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="GetAllSkills_Result">
+    <Property Type="Int64" Name="SkillId" Nullable="false" />
+    <Property Type="String" Name="SkillName" Nullable="false" />
+    <Property Type="String" Name="SkillDescription" Nullable="true" />
+    <Property Type="Boolean" Name="IsActive" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="GetAllTimeUnits_Result">
+    <Property Type="Int64" Name="TimeUnitId" Nullable="false" />
+    <Property Type="String" Name="UnitName" Nullable="false" />
+    <Property Type="Boolean" Name="IsActive" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="GetAllWorkerTypes_Result">
+    <Property Type="Int64" Name="WorkerTypeId" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" />
+    <Property Type="String" Name="Description" Nullable="true" />
+    <Property Type="Boolean" Name="IsActive" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="GetBurnedHoursInformation_Result">
+    <Property Type="Decimal" Name="TotalBurnedHours" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="WeeklyBurnedHours" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="TodayBurnedHours" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="ContractId" Nullable="true" Precision="18" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="GetBurnedHoursInformationFunction_Result">
+    <Property Type="Decimal" Name="TotalBurnedHours" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="WeeklyBurnedHours" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="TodayBurnedHours" Nullable="true" Precision="18" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="GetCapturesForClientReview_Result">
+    <Property Type="Int64" Name="CaptureId" Nullable="false" />
+    <Property Type="Int32" Name="KeyCount" Nullable="true" />
+    <Property Type="Int32" Name="MouseCount" Nullable="true" />
+    <Property Type="String" Name="KeyboardCapture" Nullable="true" />
+    <Property Type="String" Name="MouseCapture" Nullable="true" />
+    <Property Type="String" Name="ScreenCaptureThumbnailImage" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ScreenCaptureFullImage" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="CaptureDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="TimeBurned" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Int64" Name="ContractId" Nullable="true" />
+    <Property Type="Boolean" Name="IsRejected" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetCapturesScreenData_Result">
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="128" />
+    <Property Type="String" Name="FirstName" Nullable="true" />
+    <Property Type="String" Name="LastName" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetCertificationsByUserId_Result">
+    <Property Type="Int64" Name="CertificationId" Nullable="false" />
+    <Property Type="String" Name="CertificationName" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="CertificationDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="CertificationNumber" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="GetClientInfoByJobId_Result">
+    <Property Type="String" Name="FirstName" Nullable="true" />
+    <Property Type="String" Name="LastName" Nullable="true" />
+    <Property Type="String" Name="UserName" Nullable="true" />
+    <Property Type="String" Name="ProfilePic" Nullable="true" />
+    <Property Type="String" Name="Email" Nullable="true" />
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="128" />
+    <Property Type="String" Name="Country1" Nullable="true" />
+    <Property Type="Decimal" Name="UserRating" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Int32" Name="TotalJobsPosted" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetClientTeam_Result">
+    <Property Type="String" Name="FirstName" Nullable="true" />
+    <Property Type="String" Name="LastName" Nullable="true" />
+    <Property Type="String" Name="Country1" Nullable="true" />
+    <Property Type="String" Name="ProfilePic" Nullable="true" />
+    <Property Type="String" Name="Email" Nullable="true" />
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="128" />
+    <Property Type="Decimal" Name="UserHourlyRate" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="UserRating" Nullable="true" Precision="18" Scale="0" />
+  </ComplexType>
+  <ComplexType Name="GetContractByContractId_Result">
+    <Property Type="Decimal" Name="ActualDuration" Nullable="true" Precision="38" Scale="2" />
+    <Property Type="Int64" Name="ContractId" Nullable="false" />
+    <Property Type="Int64" Name="ContractStatusId" Nullable="true" />
+    <Property Type="DateTime" Name="EndDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="EndReason" Nullable="true" />
+    <Property Type="Decimal" Name="EstimateDuration" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="HourlyRate" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="FixedRate" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="HoursLimit" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Int64" Name="JobId" Nullable="true" />
+    <Property Type="Decimal" Name="JobRating" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="DateTime" Name="StartDate" Nullable="true" Precision="23" />
+    <Property Type="Int64" Name="TimeUnitId" Nullable="true" />
+    <Property Type="String" Name="WorkerId" Nullable="true" MaxLength="128" />
+    <Property Type="Int64" Name="JobTypeId" Nullable="true" />
+    <Property Type="String" Name="JobTitle" Nullable="false" />
+    <Property Type="Int64" Name="UserRatingId" Nullable="true" />
+    <Property Type="Decimal" Name="Skill" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="Quality" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="Availability" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="Deadline" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="Communication" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="Cooperation" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="Comment" Nullable="true" />
+    <Property Type="String" Name="UserId" Nullable="true" MaxLength="128" />
+  </ComplexType>
+  <ComplexType Name="GetContractByContractIdOrWorkerAndJobId_Result">
+    <Property Type="Int64" Name="ContractId" Nullable="false" />
+    <Property Type="Int64" Name="JobId" Nullable="true" />
+    <Property Type="DateTime" Name="StartDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="EndDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="EstimateDuration" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="ActualDuration" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Int64" Name="TimeUnitId" Nullable="true" />
+    <Property Type="Int64" Name="ContractStatusId" Nullable="true" />
+    <Property Type="Decimal" Name="HoursLimit" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="EndReason" Nullable="true" />
+    <Property Type="Decimal" Name="JobRating" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="WorkerId" Nullable="true" MaxLength="128" />
+    <Property Type="Decimal" Name="FixedRate" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="CreatedByUserId" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="ModifiedByUserId" Nullable="true" MaxLength="128" />
+    <Property Type="Decimal" Name="HourlyRate" Nullable="true" Precision="18" Scale="0" />
+  </ComplexType>
+  <ComplexType Name="GetContractDenyReasonsByRoleId_Result">
+    <Property Type="Int64" Name="ContractDenyReasonId" Nullable="false" />
+    <Property Type="String" Name="DenyReason" Nullable="true" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="String" Name="RoleId" Nullable="true" MaxLength="128" />
+  </ComplexType>
+  <ComplexType Name="GetContractEndReasonsByRoleId_Result">
+    <Property Type="Int64" Name="ContractEndReasonId" Nullable="false" />
+    <Property Type="String" Name="EndReason" Nullable="true" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="String" Name="RoleId" Nullable="true" MaxLength="128" />
+  </ComplexType>
+  <ComplexType Name="GetContractForReviewByContractId_Result">
+    <Property Type="Int64" Name="ContractId" Nullable="false" />
+    <Property Type="Int64" Name="ContractStatusId" Nullable="true" />
+    <Property Type="Decimal" Name="HourlyRate" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="FixedRate" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="EstimateDuration" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="HoursLimit" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="UnitName" Nullable="true" />
+    <Property Type="String" Name="JobTitle" Nullable="true" />
+    <Property Type="Int64" Name="JobTypeId" Nullable="true" />
+    <Property Type="Int64" Name="JobId" Nullable="true" />
+    <Property Type="String" Name="FirstName" Nullable="true" />
+    <Property Type="String" Name="LastName" Nullable="true" />
+    <Property Type="String" Name="UserName" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetEducationDetailsByUserId_Result">
+    <Property Type="Int64" Name="DegreeTypeId" Nullable="false" />
+    <Property Type="String" Name="DegreeTypeName" Nullable="false" />
+    <Property Type="String" Name="DegreeName" Nullable="true" />
+    <Property Type="DateTime" Name="DegreeStartDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="DegreeEndDate" Nullable="true" Precision="23" />
+    <Property Type="Int64" Name="EducationId" Nullable="true" />
+    <Property Type="Decimal" Name="Percentage" Nullable="true" Precision="18" Scale="0" />
+  </ComplexType>
+  <ComplexType Name="GetJobAttachments_Result">
+    <Property Type="Int64" Name="JobAttachmentId" Nullable="false" />
+    <Property Type="String" Name="AttachmentName" Nullable="false" />
+    <Property Type="Int64" Name="JobId" Nullable="true" />
+    <Property Type="String" Name="AttachmentOriginalName" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetJobAttachmentsByJobId_Result">
+    <Property Type="Int64" Name="JobAttachmentId" Nullable="false" />
+    <Property Type="String" Name="AttachmentName" Nullable="false" />
+    <Property Type="Int64" Name="JobId" Nullable="true" />
+    <Property Type="String" Name="AttachmentOriginalName" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetJobBidById_Result">
+    <Property Type="Int64" Name="JobBidId" Nullable="false" />
+    <Property Type="Int64" Name="JobId" Nullable="false" />
+    <Property Type="String" Name="JobTitle" Nullable="false" />
+    <Property Type="Decimal" Name="Rate" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Int64" Name="JobTypeId" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetJobByJobId_Result">
+    <Property Type="Int64" Name="JobId" Nullable="false" />
+    <Property Type="String" Name="JobTitle" Nullable="false" />
+    <Property Type="String" Name="JobDescription" Nullable="true" />
+    <Property Type="DateTime" Name="JobStartDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="JobEndDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="CategoryName" Nullable="false" />
+    <Property Type="String" Name="SubCategoryName" Nullable="false" />
+    <Property Type="String" Name="JobTypeName" Nullable="false" />
+    <Property Type="Decimal" Name="EstimateDuration" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="Locality_PRF" Nullable="true" />
+    <Property Type="Decimal" Name="Min_PRF_Rate" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="Max_PRF_Rate" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="FixedRate" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="LevelName" Nullable="false" />
+    <Property Type="String" Name="FirstName" Nullable="true" />
+    <Property Type="String" Name="LastName" Nullable="true" />
+    <Property Type="String" Name="WorkerType" Nullable="false" />
+    <Property Type="Boolean" Name="IsActive" Nullable="false" />
+    <Property Type="String" Name="UnitName" Nullable="false" />
+    <Property Type="Boolean" Name="IsHiringClosed" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="GetJobByJobIdAndClientId_Result">
+    <Property Type="Int64" Name="JobId" Nullable="false" />
+    <Property Type="String" Name="JobTitle" Nullable="false" />
+    <Property Type="String" Name="JobDescription" Nullable="true" />
+    <Property Type="Boolean" Name="IsActive" Nullable="false" />
+    <Property Type="Boolean" Name="IsHiringClosed" Nullable="false" />
+    <Property Type="Int64" Name="WorkerTypeId" Nullable="true" />
+    <Property Type="Int64" Name="ExperienceLevelExperianceLevelId" Nullable="true" />
+    <Property Type="Int64" Name="JobTypeId" Nullable="true" />
+    <Property Type="Int64" Name="JobSubCategoryId" Nullable="true" />
+    <Property Type="String" Name="SkillsRequiredForJobIds" Nullable="false" />
+    <Property Type="DateTime" Name="JobStartDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="JobEndDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="EstimateDuration" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Int64" Name="TimeUnitId" Nullable="true" />
+    <Property Type="String" Name="ClientId" Nullable="true" MaxLength="128" />
+    <Property Type="DateTime" Name="JobPostDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="Min_PRF_Rate" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="Max_PRF_Rate" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="Locality_PRF" Nullable="true" />
+    <Property Type="Decimal" Name="FixedRate" Nullable="true" Precision="18" Scale="0" />
+  </ComplexType>
+  <ComplexType Name="GetJobCapturesByContractId_Result">
+    <Property Type="Int64" Name="CaptureId" Nullable="false" />
+    <Property Type="Int32" Name="KeyCount" Nullable="true" />
+    <Property Type="Int32" Name="MouseCount" Nullable="true" />
+    <Property Type="String" Name="KeyboardCapture" Nullable="true" />
+    <Property Type="String" Name="MouseCapture" Nullable="true" />
+    <Property Type="String" Name="ScreenCaptureThumbnailImage" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ScreenCaptureFullImage" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="CaptureDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="TimeBurned" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Int64" Name="ContractId" Nullable="true" />
+    <Property Type="Boolean" Name="IsRejected" Nullable="true" />
+    <Property Type="Boolean" Name="IsDeleted" Nullable="true" />
+    <Property Type="Int64" Name="MemoId" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetJobListForHireWorkerScreen_Result">
+    <Property Type="Int64" Name="JobId" Nullable="false" />
+    <Property Type="String" Name="JobTitle" Nullable="false" />
+    <Property Type="Int64" Name="JobTypeId" Nullable="true" />
+    <Property Type="Decimal" Name="FixedRate" Nullable="true" Precision="18" Scale="0" />
+  </ComplexType>
+  <ComplexType Name="GetJobListForMessageScreen_Result">
+    <Property Type="Int64" Name="JobId" Nullable="false" />
+    <Property Type="String" Name="JobTitle" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="GetJobsByClientId_Result">
+    <Property Type="Int64" Name="JobId" Nullable="false" />
+    <Property Type="String" Name="JobTitle" Nullable="false" />
+    <Property Type="DateTime" Name="JobStartDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="JobEndDate" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="IsActive" Nullable="false" />
+    <Property Type="Boolean" Name="IsHiringClosed" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="GetJobsByWorkerId_Result">
+    <Property Type="Int64" Name="ContractId" Nullable="false" />
+    <Property Type="DateTime" Name="StartDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="HoursLimit" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="FixedRate" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="JobTitle" Nullable="false" />
+    <Property Type="Int64" Name="JobTypeId" Nullable="true" />
+    <Property Type="Decimal" Name="HourlyRate" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="JobTypeName" Nullable="false" />
+    <Property Type="String" Name="ContractStatus" Nullable="true" MaxLength="8" />
+  </ComplexType>
+  <ComplexType Name="GetJobsForTracker_Result">
+    <Property Type="Int64" Name="ContractId" Nullable="true" />
+    <Property Type="String" Name="JobTitle" Nullable="false" />
+    <Property Type="DateTime" Name="JobStartDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="JobTypeName" Nullable="true" />
+    <Property Type="Decimal" Name="HoursLimit" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="TotalBurnedHours" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="WeeklyBurnedHours" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="TodayBurnedHours" Nullable="true" Precision="18" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="GetLicenseAgreementById_Result">
+    <Property Type="Int64" Name="LicenseAgreementId" Nullable="false" />
+    <Property Type="String" Name="Agreement" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="GetManageContractScreenData_Result">
+    <Property Type="Int64" Name="ContractId" Nullable="false" />
+    <Property Type="Decimal" Name="EstimateDuration" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="HoursLimit" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="FixedRate" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="EndReason" Nullable="true" />
+    <Property Type="Int64" Name="ContractStatusId" Nullable="true" />
+    <Property Type="String" Name="JobTitle" Nullable="false" />
+    <Property Type="Int64" Name="JobTypeId" Nullable="true" />
+    <Property Type="String" Name="JobTypeName" Nullable="false" />
+    <Property Type="Int64" Name="UserRatingId" Nullable="true" />
+    <Property Type="Decimal" Name="Skill" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="Quality" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="Availability" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="Deadline" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="Communication" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="Cooperation" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="Comment" Nullable="true" />
+    <Property Type="Decimal" Name="HourlyRate" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="DateTime" Name="EndDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="ActualDuration" Nullable="true" Precision="38" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="GetMessages_Result">
+    <Property Type="Int64" Name="MessageId" Nullable="false" />
+    <Property Type="String" Name="MessageText" Nullable="true" />
+    <Property Type="String" Name="Subject" Nullable="true" />
+    <Property Type="DateTime" Name="DateTime" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="IsViewed" Nullable="true" />
+    <Property Type="Int64" Name="MessageLabelId" Nullable="true" />
+    <Property Type="String" Name="MessageFromUserId" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="MessageToUserId" Nullable="true" MaxLength="128" />
+    <Property Type="Int64" Name="JobId" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetNotificationsByUserId_Result">
+    <Property Type="Int64" Name="NotificationId" Nullable="false" />
+    <Property Type="String" Name="NotificationText" Nullable="true" />
+    <Property Type="DateTime" Name="DateTime" Nullable="false" Precision="23" />
+    <Property Type="Boolean" Name="IsViewed" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetTimeLogByClientId_Result">
+    <Property Type="String" Name="StartDate" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="EndDate" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="JobTitle" Nullable="false" />
+    <Property Type="Int64" Name="JobId" Nullable="false" />
+    <Property Type="Int64" Name="ContractId" Nullable="false" />
+    <Property Type="Decimal" Name="Hours" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="String" Name="ClientName" Nullable="true" />
+    <Property Type="String" Name="WorkerName" Nullable="true" />
+    <Property Type="String" Name="FromDate" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="ToDate" Nullable="true" MaxLength="30" />
+    <Property Type="Decimal" Name="HourlyRate" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="Cost" Nullable="true" Precision="38" Scale="6" />
+  </ComplexType>
+  <ComplexType Name="GetUnreadNotificationAndMessageCount_Result">
+    <Property Type="Int32" Name="UnreadMessages" Nullable="true" />
+    <Property Type="Int32" Name="UnreadNotifications" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetUserById_Result">
+    <Property Type="String" Name="Email" Nullable="true" />
+    <Property Type="String" Name="UserName" Nullable="true" />
+    <Property Type="String" Name="FirstName" Nullable="true" />
+    <Property Type="String" Name="LastName" Nullable="true" />
+    <Property Type="Decimal" Name="UserHourlyRate" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="UserRating" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Int32" Name="JobsCompleted" Nullable="true" />
+    <Property Type="Decimal" Name="TimeBurned" Nullable="true" Precision="38" Scale="2" />
+    <Property Type="String" Name="ProfilePic" Nullable="true" />
+    <Property Type="String" Name="Country1" Nullable="true" />
+    <Property Type="String" Name="ProfileTitle" Nullable="true" />
+    <Property Type="String" Name="IntroductionVideo" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetUserEducations_Result">
+    <Property Type="Int64" Name="DegreeTypeId" Nullable="false" />
+    <Property Type="String" Name="DegreeTypeName" Nullable="false" />
+    <Property Type="String" Name="DegreeName" Nullable="true" />
+    <Property Type="DateTime" Name="DegreeStartDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="DegreeEndDate" Nullable="true" Precision="23" />
+    <Property Type="Int64" Name="EducationId" Nullable="true" />
+    <Property Type="Decimal" Name="Percentage" Nullable="true" Precision="18" Scale="0" />
+  </ComplexType>
+  <ComplexType Name="GetUserProfileByUserId_Result">
+    <Property Type="String" Name="ProfileTitle" Nullable="true" />
+    <Property Type="Int64" Name="UserProfileId" Nullable="false" />
+    <Property Type="String" Name="UserSkillIds" Nullable="true" />
+    <Property Type="String" Name="UserLanguageIds" Nullable="true" />
+    <Property Type="Decimal" Name="UserHourlyRate" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="EducationIds" Nullable="true" />
+    <Property Type="String" Name="UserSubCategoryIds" Nullable="true" />
+    <Property Type="String" Name="UserId" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Address1" Nullable="true" />
+    <Property Type="String" Name="Address2" Nullable="true" />
+    <Property Type="String" Name="City1" Nullable="true" />
+    <Property Type="String" Name="City2" Nullable="true" />
+    <Property Type="String" Name="Country1" Nullable="true" />
+    <Property Type="String" Name="Country2" Nullable="true" />
+    <Property Type="String" Name="HomePhone" Nullable="true" />
+    <Property Type="String" Name="WorkPhone" Nullable="true" />
+    <Property Type="String" Name="CellPhone" Nullable="true" />
+    <Property Type="String" Name="ProfilePic" Nullable="true" />
+    <Property Type="String" Name="TimeZone" Nullable="true" />
+    <Property Type="String" Name="Gender" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="DateOfBirth" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Email" Nullable="true" />
+    <Property Type="String" Name="IntroductionVideo" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetWorkerJobListForMessageScreen_Result">
+    <Property Type="Int64" Name="JobId" Nullable="false" />
+    <Property Type="String" Name="JobTitle" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="GetWorkerJobsByWorkerId_Result">
+    <Property Type="String" Name="JobTitle" Nullable="false" />
+    <Property Type="DateTime" Name="StartDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="EndDate" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="HourlyRate" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="FixedRate" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Int64" Name="ContractStatusId" Nullable="true" />
+    <Property Type="Decimal" Name="Jobrating" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Int64" Name="JobId" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="GetWorkersBidForJob_Result">
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="128" />
+    <Property Type="String" Name="FirstName" Nullable="true" />
+    <Property Type="String" Name="LastName" Nullable="true" />
+    <Property Type="String" Name="ProfileTitle" Nullable="true" />
+    <Property Type="String" Name="Country1" Nullable="true" />
+    <Property Type="String" Name="ProfilePic" Nullable="true" />
+    <Property Type="Decimal" Name="Rate" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Int64" Name="JobId" Nullable="true" />
+    <Property Type="Boolean" Name="IsHired" Nullable="true" />
+    <Property Type="Boolean" Name="IsDenied" Nullable="true" />
+    <Property Type="Int64" Name="JobBidId" Nullable="true" />
+    <Property Type="String" Name="CoverLetter" Nullable="true" />
+    <Property Type="Decimal" Name="UserHourlyRate" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="UserRating" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="Attachments" Nullable="true" />
+    <Property Type="String" Name="HireButtonText" Nullable="true" MaxLength="25" />
+  </ComplexType>
+  <ComplexType Name="GetWorkersForMessageScreen_Result">
+    <Property Type="String" Name="UserName" Nullable="true" />
+    <Property Type="String" Name="FirstName" Nullable="true" />
+    <Property Type="String" Name="LastName" Nullable="true" />
+    <Property Type="String" Name="ProfilePic" Nullable="true" />
+    <Property Type="String" Name="Email" Nullable="true" />
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="128" />
+    <Property Type="Int64" Name="ContractId" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="InsertCapture_Result">
+    <Property Type="Decimal" Name="TotalBurnedHours" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="WeeklyBurnedHours" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="TodayBurnedHours" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Boolean" Name="IsContractOpen" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SetForgotPasswordToken_Result">
+    <Property Type="String" Name="FirstName" Nullable="true" />
+    <Property Type="String" Name="LastName" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="WorkerHourlyReportByWorkerId_Result">
+    <Property Type="Decimal" Name="Timeburned" Nullable="true" Precision="38" Scale="2" />
+    <Property Type="String" Name="MemoText" Nullable="true" />
+    <Property Type="String" Name="JobTitle" Nullable="false" />
+    <Property Type="Int64" Name="ContractId" Nullable="true" />
+    <Property Type="Decimal" Name="HourlyRate" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="hours" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="Earnings" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="DateTime" Name="CaptureDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="DT" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="WorkerHourlyReportByWorkerIdAndClientId_Result">
+    <Property Type="Decimal" Name="Timeburned" Nullable="true" Precision="38" Scale="2" />
+    <Property Type="String" Name="MemoText" Nullable="true" />
+    <Property Type="String" Name="JobTitle" Nullable="false" />
+    <Property Type="Int64" Name="ContractId" Nullable="true" />
+    <Property Type="Decimal" Name="FixedRate" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="HourlyRate" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="hours" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="Earnings" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="DateTime" Name="CaptureDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="DT" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="WorkerWeeklyReportByWorkerId_Result">
+    <Property Type="String" Name="FromDate" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="ToDate" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="WorkerName" Nullable="true" />
+    <Property Type="Decimal" Name="Timeburned" Nullable="true" Precision="38" Scale="2" />
+    <Property Type="String" Name="MemoText" Nullable="true" />
+    <Property Type="String" Name="JobTitle" Nullable="true" />
+    <Property Type="String" Name="JobDescription" Nullable="true" />
+    <Property Type="Int64" Name="ContractId" Nullable="true" />
+    <Property Type="Decimal" Name="HourlyRate" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="hours" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="Earnings" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="String" Name="ClientName" Nullable="true" />
+    <Property Type="String" Name="CaptureDate" Nullable="true" MaxLength="30" />
+  </ComplexType>
+  <ComplexType Name="WorkerWeeklyReportByWorkerIdAndClientId_Result">
+    <Property Type="String" Name="FromDate" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="ToDate" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="WorkerName" Nullable="true" />
+    <Property Type="Decimal" Name="Timeburned" Nullable="true" Precision="38" Scale="2" />
+    <Property Type="String" Name="MemoText" Nullable="true" />
+    <Property Type="String" Name="JobTitle" Nullable="true" />
+    <Property Type="String" Name="JobDescription" Nullable="true" />
+    <Property Type="Int64" Name="ContractId" Nullable="true" />
+    <Property Type="Decimal" Name="HourlyRate" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="hours" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="Earnings" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="String" Name="ClientName" Nullable="true" />
+    <Property Type="String" Name="CaptureDate" Nullable="true" MaxLength="30" />
+  </ComplexType>
+  <ComplexType Name="WorkerYearlyReportByWorkerId_Result">
+    <Property Type="Decimal" Name="Hours" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="Earnings" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="String" Name="ClientName" Nullable="true" />
+    <Property Type="String" Name="Month" Nullable="true" MaxLength="30" />
+    <Property Type="Int32" Name="Year" Nullable="true" />
+    <Property Type="String" Name="Address" Nullable="true" />
+    <Property Type="String" Name="WorkerName" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="WorkerYearlyReportByWorkerIdAndClientId_Result">
+    <Property Type="Decimal" Name="Hours" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="Earnings" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="String" Name="ClientName" Nullable="true" />
+    <Property Type="String" Name="Month" Nullable="true" MaxLength="30" />
+    <Property Type="Int32" Name="Year" Nullable="true" />
+    <Property Type="String" Name="Address" Nullable="true" />
+    <Property Type="String" Name="WorkerName" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="WorkSummaryOfClientByClientId_Result">
+    <Property Type="Decimal" Name="hrs" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="String" Name="Projectname" Nullable="false" />
+    <Property Type="String" Name="StartDate" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="EndDate" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="StartDate1" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="EndDate1" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="ClientName" Nullable="true" />
+    <Property Type="Int32" Name="empcount" Nullable="true" />
+    <Property Type="Decimal" Name="cost" Nullable="true" Precision="38" Scale="6" />
+  </ComplexType>
+  <ComplexType Name="InsertUpdateContract_Result">
+    <Property Type="Int64" Name="ContractId" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="GetNotificationByUserId_Result">
+    <Property Type="Int64" Name="NotificationId" Nullable="false" />
+    <Property Type="String" Name="NotificationText" Nullable="true" />
+    <Property Type="DateTime" Name="DateTime" Nullable="false" Precision="23" />
+    <Property Type="Boolean" Name="IsViewed" Nullable="true" />
+    <Property Type="String" Name="NotificationType" Nullable="true" MaxLength="255" />
+    <Property Type="Int64" Name="ObjectId" Nullable="true" />
+  </ComplexType>
+  <!--<Association Name="FK_Capture_Memo">
+          <End Type="HireRocks_DevModel.Memo" Role="Memo" Multiplicity="0..1" />
+          <End Type="HireRocks_DevModel.Capture" Role="Capture" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Memo">
+              <PropertyRef Name="MemoId" />
+            </Principal>
+            <Dependent Role="Capture">
+              <PropertyRef Name="MemoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>-->
+</Schema>

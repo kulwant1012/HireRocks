@@ -1,0 +1,109 @@
+﻿@model PS.Data.Entities.BackupTask 
+
+<fieldset>
+       @* <legend>Backup Task</legend>*@
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <table>
+        <tr>
+            <td>
+                <fieldset>
+                    <legend>Source</legend>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.SourceStorageAccountName)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.SourceStorageAccountName)
+                        @Html.ValidationMessageFor(model => model.SourceStorageAccountName)
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.SourceStorageAccountKey)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.SourceStorageAccountKey)
+                        @Html.ValidationMessageFor(model => model.SourceStorageAccountKey)
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.SourceStorageContainer)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.SourceStorageContainer)
+                        @Html.ValidationMessageFor(model => model.SourceStorageContainer)
+                    </div>
+                </fieldset>
+            </td>          
+            <td>
+                <fieldset style="margin-left:100px">
+                    <legend>Destination</legend>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.DestinationStorageAccountName)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.DestinationStorageAccountName)
+                        @Html.ValidationMessageFor(model => model.DestinationStorageAccountName)
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.DestinationStorageAccountKey)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.DestinationStorageAccountKey)
+                        @Html.ValidationMessageFor(model => model.DestinationStorageAccountKey)
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.DestinationStorageContainer)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.DestinationStorageContainer)
+                        @Html.ValidationMessageFor(model => model.DestinationStorageContainer)
+                    </div>
+                </fieldset>
+            </td>            
+            <td>
+                <fieldset style="margin-left:100px;">    
+                    <legend>Shedule</legend>                
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.BackupDay)
+                    </div>
+                    <div class="editor-field">
+                       @Html.DropDownListFor(model => model.BackupDay, new SelectList(Enum.GetValues(typeof(PS.Data.Entities.BackupDay))))
+                       @Html.ValidationMessageFor(model => model.BackupDay)
+                    </div> 
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.BackupTimeZone)
+                    </div>
+                    <div class="editor-field">
+                       @Html.DropDownListFor(model => model.BackupTimeZone, new SelectList(TimeZoneInfo.GetSystemTimeZones(), "id", "DisplayName"))
+                       @Html.ValidationMessageFor(model => model.BackupTimeZone)
+                    </div>   
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.BackupTime)
+                    </div>
+                    <div class="editor-field">
+                        @Html.DropDownListFor(model => model.BackupTime, (SelectList)ViewBag.Hours)
+                        @Html.ValidationMessageFor(model => model.BackupTime)
+                    </div>                     
+                </fieldset>
+            </td>
+        </tr>
+    </table>
+
+        <p>
+            <input class="btn" type="submit" value="Save" />
+        </p>
+    </fieldset>        
+    
+     @Html.HiddenFor(model => model.UserId)
+     @Html.HiddenFor(model => model.CreatedDate)
+     @Html.HiddenFor(model => model.ModifyDate)
+     @Html.HiddenFor(model => model.Id)

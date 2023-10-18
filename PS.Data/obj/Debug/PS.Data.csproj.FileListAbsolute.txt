@@ -1,0 +1,200 @@
+C:\Hirerocks\PS.Data\bin\Debug\PS.Data.dll.config
+C:\Hirerocks\PS.Data\bin\Debug\PS.Data.dll
+C:\Hirerocks\PS.Data\bin\Debug\PS.Data.pdb
+C:\Hirerocks\PS.Data\bin\Debug\EntityFramework.dll
+C:\Hirerocks\PS.Data\bin\Debug\NLog.dll
+C:\Hirerocks\PS.Data\bin\Debug\Raven.Abstractions.dll
+C:\Hirerocks\PS.Data\bin\Debug\Raven.Client.Lightweight.dll
+C:\Hirerocks\PS.Data\bin\Debug\Raven.Database.dll
+C:\Hirerocks\PS.Data\bin\Debug\ServiceStack.Common.dll
+C:\Hirerocks\PS.Data\bin\Debug\ServiceStack.Interfaces.dll
+C:\Hirerocks\PS.Data\bin\Debug\ServiceStack.Redis.dll
+C:\Hirerocks\PS.Data\bin\Debug\ServiceStack.Text.dll
+C:\Hirerocks\PS.Data\bin\Debug\Lucene.Net.dll
+C:\Hirerocks\PS.Data\bin\Debug\ICSharpCode.NRefactory.dll
+C:\Hirerocks\PS.Data\bin\Debug\Lucene.Net.Contrib.SpellChecker.dll
+C:\Hirerocks\PS.Data\bin\Debug\Spatial4n.Core.dll
+C:\Hirerocks\PS.Data\bin\Debug\Lucene.Net.Contrib.Spatial.dll
+C:\Hirerocks\PS.Data\bin\Debug\BouncyCastle.Crypto.dll
+C:\Hirerocks\PS.Data\bin\Debug\EntityFramework.xml
+C:\Hirerocks\PS.Data\bin\Debug\NLog.xml
+C:\Hirerocks\PS.Data\bin\Debug\Raven.Abstractions.xml
+C:\Hirerocks\PS.Data\bin\Debug\Raven.Client.Lightweight.xml
+C:\Hirerocks\PS.Data\bin\Debug\Raven.Database.pdb
+C:\Hirerocks\PS.Data\bin\Debug\Raven.Database.xml
+C:\Hirerocks\PS.Data\bin\Debug\ServiceStack.Common.xml
+C:\Hirerocks\PS.Data\bin\Debug\ServiceStack.Interfaces.xml
+C:\Hirerocks\PS.Data\bin\Debug\ServiceStack.Redis.xml
+C:\Hirerocks\PS.Data\bin\Debug\ServiceStack.Text.xml
+C:\Hirerocks\PS.Data\bin\Debug\Lucene.Net.pdb
+C:\Hirerocks\PS.Data\bin\Debug\Lucene.Net.xml
+C:\Hirerocks\PS.Data\bin\Debug\Lucene.Net.Contrib.SpellChecker.pdb
+C:\Hirerocks\PS.Data\bin\Debug\Lucene.Net.Contrib.SpellChecker.xml
+C:\Hirerocks\PS.Data\bin\Debug\Spatial4n.Core.pdb
+C:\Hirerocks\PS.Data\bin\Debug\Lucene.Net.Contrib.Spatial.pdb
+C:\Hirerocks\PS.Data\bin\Debug\Lucene.Net.Contrib.Spatial.xml
+C:\Hirerocks\PS.Data\bin\Debug\BouncyCastle.Crypto.pdb
+C:\Hirerocks\PS.Data\obj\Debug\PS.Data.csproj.CoreCompileInputs.cache
+C:\Hirerocks\PS.Data\obj\Debug\PS.Data.dll
+C:\Hirerocks\PS.Data\obj\Debug\PS.Data.pdb
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Data\bin\Debug\PS.Data.dll.config
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Data\bin\Debug\PS.Data.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Data\bin\Debug\PS.Data.pdb
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Data\bin\Debug\EntityFramework.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Data\bin\Debug\NLog.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Data\bin\Debug\Raven.Abstractions.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Data\bin\Debug\Raven.Client.Lightweight.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Data\bin\Debug\Raven.Database.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Data\bin\Debug\ServiceStack.Common.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Data\bin\Debug\ServiceStack.Interfaces.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Data\bin\Debug\ServiceStack.Redis.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Data\bin\Debug\ServiceStack.Text.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Data\bin\Debug\Lucene.Net.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Data\bin\Debug\ICSharpCode.NRefactory.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Data\bin\Debug\Lucene.Net.Contrib.SpellChecker.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Data\bin\Debug\Spatial4n.Core.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Data\bin\Debug\Lucene.Net.Contrib.Spatial.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Data\bin\Debug\BouncyCastle.Crypto.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Data\bin\Debug\EntityFramework.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Data\bin\Debug\NLog.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Data\bin\Debug\Raven.Abstractions.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Data\bin\Debug\Raven.Client.Lightweight.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Data\bin\Debug\Raven.Database.pdb
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Data\bin\Debug\Raven.Database.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Data\bin\Debug\ServiceStack.Common.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Data\bin\Debug\ServiceStack.Interfaces.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Data\bin\Debug\ServiceStack.Redis.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Data\bin\Debug\ServiceStack.Text.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Data\bin\Debug\Lucene.Net.pdb
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Data\bin\Debug\Lucene.Net.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Data\bin\Debug\Lucene.Net.Contrib.SpellChecker.pdb
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Data\bin\Debug\Lucene.Net.Contrib.SpellChecker.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Data\bin\Debug\Spatial4n.Core.pdb
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Data\bin\Debug\Lucene.Net.Contrib.Spatial.pdb
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Data\bin\Debug\Lucene.Net.Contrib.Spatial.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Data\bin\Debug\BouncyCastle.Crypto.pdb
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Data\obj\Debug\PS.Data.csprojAssemblyReference.cache
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Data\obj\Debug\PS.Data.csproj.CoreCompileInputs.cache
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Data\obj\Debug\PS.Data.csproj.CopyComplete
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Data\obj\Debug\PS.Data.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Data\obj\Debug\PS.Data.pdb
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Data\bin\Debug\PS.Data.dll.config
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Data\bin\Debug\PS.Data.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Data\bin\Debug\PS.Data.pdb
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Data\bin\Debug\EntityFramework.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Data\bin\Debug\NLog.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Data\bin\Debug\Raven.Abstractions.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Data\bin\Debug\Raven.Client.Lightweight.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Data\bin\Debug\Raven.Database.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Data\bin\Debug\ServiceStack.Common.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Data\bin\Debug\ServiceStack.Interfaces.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Data\bin\Debug\ServiceStack.Redis.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Data\bin\Debug\ServiceStack.Text.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Data\bin\Debug\Lucene.Net.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Data\bin\Debug\ICSharpCode.NRefactory.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Data\bin\Debug\Lucene.Net.Contrib.SpellChecker.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Data\bin\Debug\Spatial4n.Core.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Data\bin\Debug\Lucene.Net.Contrib.Spatial.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Data\bin\Debug\BouncyCastle.Crypto.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Data\bin\Debug\EntityFramework.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Data\bin\Debug\NLog.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Data\bin\Debug\Raven.Abstractions.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Data\bin\Debug\Raven.Client.Lightweight.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Data\bin\Debug\Raven.Database.pdb
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Data\bin\Debug\Raven.Database.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Data\bin\Debug\ServiceStack.Common.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Data\bin\Debug\ServiceStack.Interfaces.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Data\bin\Debug\ServiceStack.Redis.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Data\bin\Debug\ServiceStack.Text.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Data\bin\Debug\Lucene.Net.pdb
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Data\bin\Debug\Lucene.Net.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Data\bin\Debug\Lucene.Net.Contrib.SpellChecker.pdb
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Data\bin\Debug\Lucene.Net.Contrib.SpellChecker.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Data\bin\Debug\Spatial4n.Core.pdb
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Data\bin\Debug\Lucene.Net.Contrib.Spatial.pdb
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Data\bin\Debug\Lucene.Net.Contrib.Spatial.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Data\bin\Debug\BouncyCastle.Crypto.pdb
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Data\obj\Debug\PS.Data.csprojResolveAssemblyReference.cache
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Data\obj\Debug\PS.Data.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Data\obj\Debug\PS.Data.pdb
+C:\Hirerocks\Hirerocks\PS.Data\bin\Debug\PS.Data.dll.config
+C:\Hirerocks\Hirerocks\PS.Data\bin\Debug\PS.Data.dll
+C:\Hirerocks\Hirerocks\PS.Data\bin\Debug\PS.Data.pdb
+C:\Hirerocks\Hirerocks\PS.Data\bin\Debug\EntityFramework.dll
+C:\Hirerocks\Hirerocks\PS.Data\bin\Debug\NLog.dll
+C:\Hirerocks\Hirerocks\PS.Data\bin\Debug\Raven.Abstractions.dll
+C:\Hirerocks\Hirerocks\PS.Data\bin\Debug\Raven.Client.Lightweight.dll
+C:\Hirerocks\Hirerocks\PS.Data\bin\Debug\Raven.Database.dll
+C:\Hirerocks\Hirerocks\PS.Data\bin\Debug\ServiceStack.Common.dll
+C:\Hirerocks\Hirerocks\PS.Data\bin\Debug\ServiceStack.Interfaces.dll
+C:\Hirerocks\Hirerocks\PS.Data\bin\Debug\ServiceStack.Redis.dll
+C:\Hirerocks\Hirerocks\PS.Data\bin\Debug\ServiceStack.Text.dll
+C:\Hirerocks\Hirerocks\PS.Data\bin\Debug\Lucene.Net.dll
+C:\Hirerocks\Hirerocks\PS.Data\bin\Debug\ICSharpCode.NRefactory.dll
+C:\Hirerocks\Hirerocks\PS.Data\bin\Debug\Lucene.Net.Contrib.SpellChecker.dll
+C:\Hirerocks\Hirerocks\PS.Data\bin\Debug\Spatial4n.Core.dll
+C:\Hirerocks\Hirerocks\PS.Data\bin\Debug\Lucene.Net.Contrib.Spatial.dll
+C:\Hirerocks\Hirerocks\PS.Data\bin\Debug\BouncyCastle.Crypto.dll
+C:\Hirerocks\Hirerocks\PS.Data\bin\Debug\EntityFramework.xml
+C:\Hirerocks\Hirerocks\PS.Data\bin\Debug\NLog.xml
+C:\Hirerocks\Hirerocks\PS.Data\bin\Debug\Raven.Abstractions.xml
+C:\Hirerocks\Hirerocks\PS.Data\bin\Debug\Raven.Client.Lightweight.xml
+C:\Hirerocks\Hirerocks\PS.Data\bin\Debug\Raven.Database.pdb
+C:\Hirerocks\Hirerocks\PS.Data\bin\Debug\Raven.Database.xml
+C:\Hirerocks\Hirerocks\PS.Data\bin\Debug\ServiceStack.Common.xml
+C:\Hirerocks\Hirerocks\PS.Data\bin\Debug\ServiceStack.Interfaces.xml
+C:\Hirerocks\Hirerocks\PS.Data\bin\Debug\ServiceStack.Redis.xml
+C:\Hirerocks\Hirerocks\PS.Data\bin\Debug\ServiceStack.Text.xml
+C:\Hirerocks\Hirerocks\PS.Data\bin\Debug\Lucene.Net.pdb
+C:\Hirerocks\Hirerocks\PS.Data\bin\Debug\Lucene.Net.xml
+C:\Hirerocks\Hirerocks\PS.Data\bin\Debug\Lucene.Net.Contrib.SpellChecker.pdb
+C:\Hirerocks\Hirerocks\PS.Data\bin\Debug\Lucene.Net.Contrib.SpellChecker.xml
+C:\Hirerocks\Hirerocks\PS.Data\bin\Debug\Spatial4n.Core.pdb
+C:\Hirerocks\Hirerocks\PS.Data\bin\Debug\Lucene.Net.Contrib.Spatial.pdb
+C:\Hirerocks\Hirerocks\PS.Data\bin\Debug\Lucene.Net.Contrib.Spatial.xml
+C:\Hirerocks\Hirerocks\PS.Data\bin\Debug\BouncyCastle.Crypto.pdb
+C:\Hirerocks\Hirerocks\PS.Data\obj\Debug\PS.Data.csprojAssemblyReference.cache
+C:\Hirerocks\Hirerocks\PS.Data\obj\Debug\PS.Data.csproj.CopyComplete
+C:\Hirerocks\Hirerocks\PS.Data\obj\Debug\PS.Data.dll
+C:\Hirerocks\Hirerocks\PS.Data\obj\Debug\PS.Data.pdb
+D:\Workspace\Hirerocks\Hirerocks\PS.Data\bin\Debug\PS.Data.dll.config
+D:\Workspace\Hirerocks\Hirerocks\PS.Data\bin\Debug\PS.Data.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Data\bin\Debug\PS.Data.pdb
+D:\Workspace\Hirerocks\Hirerocks\PS.Data\bin\Debug\EntityFramework.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Data\bin\Debug\NLog.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Data\bin\Debug\Raven.Abstractions.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Data\bin\Debug\Raven.Client.Lightweight.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Data\bin\Debug\Raven.Database.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Data\bin\Debug\ServiceStack.Common.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Data\bin\Debug\ServiceStack.Interfaces.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Data\bin\Debug\ServiceStack.Redis.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Data\bin\Debug\ServiceStack.Text.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Data\bin\Debug\Lucene.Net.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Data\bin\Debug\ICSharpCode.NRefactory.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Data\bin\Debug\Lucene.Net.Contrib.SpellChecker.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Data\bin\Debug\Spatial4n.Core.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Data\bin\Debug\Lucene.Net.Contrib.Spatial.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Data\bin\Debug\BouncyCastle.Crypto.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Data\bin\Debug\EntityFramework.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.Data\bin\Debug\NLog.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.Data\bin\Debug\Raven.Abstractions.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.Data\bin\Debug\Raven.Client.Lightweight.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.Data\bin\Debug\Raven.Database.pdb
+D:\Workspace\Hirerocks\Hirerocks\PS.Data\bin\Debug\Raven.Database.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.Data\bin\Debug\ServiceStack.Common.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.Data\bin\Debug\ServiceStack.Interfaces.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.Data\bin\Debug\ServiceStack.Redis.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.Data\bin\Debug\ServiceStack.Text.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.Data\bin\Debug\Lucene.Net.pdb
+D:\Workspace\Hirerocks\Hirerocks\PS.Data\bin\Debug\Lucene.Net.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.Data\bin\Debug\Lucene.Net.Contrib.SpellChecker.pdb
+D:\Workspace\Hirerocks\Hirerocks\PS.Data\bin\Debug\Lucene.Net.Contrib.SpellChecker.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.Data\bin\Debug\Spatial4n.Core.pdb
+D:\Workspace\Hirerocks\Hirerocks\PS.Data\bin\Debug\Lucene.Net.Contrib.Spatial.pdb
+D:\Workspace\Hirerocks\Hirerocks\PS.Data\bin\Debug\Lucene.Net.Contrib.Spatial.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.Data\bin\Debug\BouncyCastle.Crypto.pdb
+D:\Workspace\Hirerocks\Hirerocks\PS.Data\obj\Debug\PS.Data.csproj.AssemblyReference.cache
+D:\Workspace\Hirerocks\Hirerocks\PS.Data\obj\Debug\PS.Data.csproj.CoreCompileInputs.cache
+D:\Workspace\Hirerocks\Hirerocks\PS.Data\obj\Debug\PS.Data.csproj.CopyComplete
+D:\Workspace\Hirerocks\Hirerocks\PS.Data\obj\Debug\PS.Data.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Data\obj\Debug\PS.Data.pdb

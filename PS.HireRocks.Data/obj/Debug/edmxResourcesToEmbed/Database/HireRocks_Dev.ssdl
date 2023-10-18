@@ -1,0 +1,1614 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HireRocks_DevModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AccountType">
+    <Key>
+      <PropertyRef Name="AccountTypeId" />
+    </Key>
+    <Property Name="AccountTypeId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccountTypeName" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="AspNetRoles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserClaims">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClaimType" Type="nvarchar(max)" />
+    <Property Name="ClaimValue" Type="nvarchar(max)" />
+    <Property Name="User_Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserLogins">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+    </Key>
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="LoginProvider" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ProviderKey" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserRoles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="RoleId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUsers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar(max)" />
+    <Property Name="PasswordHash" Type="nvarchar(max)" />
+    <Property Name="SecurityStamp" Type="nvarchar(max)" />
+    <Property Name="FirstName" Type="nvarchar(max)" />
+    <Property Name="LastName" Type="nvarchar(max)" />
+    <Property Name="Address1" Type="nvarchar(max)" />
+    <Property Name="Address2" Type="nvarchar(max)" />
+    <Property Name="City1" Type="nvarchar(max)" />
+    <Property Name="City2" Type="nvarchar(max)" />
+    <Property Name="State1" Type="nvarchar(max)" />
+    <Property Name="State2" Type="nvarchar(max)" />
+    <Property Name="Country1" Type="nvarchar(max)" />
+    <Property Name="Country2" Type="nvarchar(max)" />
+    <Property Name="HomePhone" Type="nvarchar(max)" />
+    <Property Name="WorkPhone" Type="nvarchar(max)" />
+    <Property Name="CellPhone" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="ProfilePic" Type="nvarchar(max)" />
+    <Property Name="IsEmailVerified" Type="bit" />
+    <Property Name="IsPhoneVerified" Type="bit" />
+    <Property Name="Discriminator" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="EmailVerificationCode" Type="nvarchar(max)" />
+    <Property Name="PhoneVerificationCode" Type="nvarchar(max)" />
+    <Property Name="ForgotPasswordToken" Type="nvarchar" MaxLength="100" />
+    <Property Name="IsProfileCompleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="C__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Capture">
+    <Key>
+      <PropertyRef Name="CaptureId" />
+    </Key>
+    <Property Name="CaptureId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KeyCount" Type="int" />
+    <Property Name="MouseCount" Type="int" />
+    <Property Name="KeyboardCapture" Type="nvarchar(max)" />
+    <Property Name="MouseCapture" Type="nvarchar(max)" />
+    <Property Name="ScreenCaptureThumbnailImage" Type="nvarchar" MaxLength="50" />
+    <Property Name="ScreenCaptureFullImage" Type="nvarchar" MaxLength="50" />
+    <Property Name="CaptureDate" Type="datetime" />
+    <Property Name="TimeBurned" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ContractId" Type="bigint" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="IsRejected" Type="bit" />
+    <Property Name="MemoId" Type="bigint" />
+  </EntityType>
+  <EntityType Name="Certification">
+    <Key>
+      <PropertyRef Name="CertificationId" />
+    </Key>
+    <Property Name="CertificationId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CertificationName" Type="nvarchar" MaxLength="100" />
+    <Property Name="CertificationDate" Type="datetime" />
+    <Property Name="CertificationNumber" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Companies">
+    <Key>
+      <PropertyRef Name="CompanyId" />
+    </Key>
+    <Property Name="CompanyId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CompanyName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CompanyOwner" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CompanyAddress" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Phone" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CompanyLogo" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="ContractDenyReasons">
+    <Key>
+      <PropertyRef Name="ContractDenyReasonId" />
+    </Key>
+    <Property Name="ContractDenyReasonId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DenyReason" Type="nvarchar(max)" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="RoleId" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="ContractEndReasons">
+    <Key>
+      <PropertyRef Name="ContractEndReasonId" />
+    </Key>
+    <Property Name="ContractEndReasonId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EndReason" Type="nvarchar(max)" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="RoleId" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="Contracts">
+    <Key>
+      <PropertyRef Name="ContractId" />
+    </Key>
+    <Property Name="ContractId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobId" Type="bigint" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="EndDate" Type="datetime" />
+    <Property Name="EstimateDuration" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="ActualDuration" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="TimeUnitId" Type="bigint" />
+    <Property Name="ContractStatusId" Type="bigint" />
+    <Property Name="HoursLimit" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="EndReason" Type="nvarchar(max)" />
+    <Property Name="JobRating" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="WorkerId" Type="nvarchar" MaxLength="128" />
+    <Property Name="FixedRate" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="CreatedByUserId" Type="nvarchar" MaxLength="128" />
+    <Property Name="ModifiedByUserId" Type="nvarchar" MaxLength="128" />
+    <Property Name="HourlyRate" Type="decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="ContractStatus">
+    <Key>
+      <PropertyRef Name="ContractStatusId" />
+    </Key>
+    <Property Name="ContractStatusId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ContractStatusName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DegreeTypes">
+    <Key>
+      <PropertyRef Name="DegreeTypeId" />
+    </Key>
+    <Property Name="DegreeTypeId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DegreeTypeName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Educations">
+    <Key>
+      <PropertyRef Name="EducationId" />
+    </Key>
+    <Property Name="EducationId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DegreeTypeId" Type="bigint" />
+    <Property Name="DegreeName" Type="nvarchar(max)" />
+    <Property Name="DegreeStartDate" Type="datetime" />
+    <Property Name="DegreeEndDate" Type="datetime" />
+    <Property Name="Percentage" Type="decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="ExceptionLogs">
+    <Key>
+      <PropertyRef Name="ExceptionLogId" />
+    </Key>
+    <Property Name="ExceptionLogId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Exception" Type="nvarchar(max)" />
+    <Property Name="DateTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ExperienceLevels">
+    <Key>
+      <PropertyRef Name="ExperianceLevelId" />
+    </Key>
+    <Property Name="ExperianceLevelId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LevelName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="ExperienceLowerRange" Type="smallint" Nullable="false" />
+    <Property Name="ExperienceHigherRange" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="JobAttachments">
+    <Key>
+      <PropertyRef Name="JobAttachmentId" />
+    </Key>
+    <Property Name="JobAttachmentId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AttachmentName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="JobId" Type="bigint" />
+    <Property Name="AttachmentOriginalName" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="JobCategories">
+    <Key>
+      <PropertyRef Name="JobCategoryId" />
+    </Key>
+    <Property Name="JobCategoryId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CategoryDescription" Type="nvarchar(max)" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Jobs">
+    <Key>
+      <PropertyRef Name="JobId" />
+    </Key>
+    <Property Name="JobId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobTitle" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="JobDescription" Type="nvarchar(max)" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IsHiringClosed" Type="bit" Nullable="false" />
+    <Property Name="WorkerTypeId" Type="bigint" />
+    <Property Name="ExperienceLevelExperianceLevelId" Type="bigint" />
+    <Property Name="JobTypeId" Type="bigint" />
+    <Property Name="JobSubCategoryId" Type="bigint" />
+    <Property Name="SkillsRequiredForJobIds" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="JobStartDate" Type="datetime" />
+    <Property Name="JobEndDate" Type="datetime" />
+    <Property Name="EstimateDuration" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="TimeUnitId" Type="bigint" />
+    <Property Name="ClientId" Type="nvarchar" MaxLength="128" />
+    <Property Name="JobPostDate" Type="datetime" />
+    <Property Name="Min_PRF_Rate" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Max_PRF_Rate" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Locality_PRF" Type="nvarchar(max)" />
+    <Property Name="FixedRate" Type="decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="JobsBidAttachments">
+    <Key>
+      <PropertyRef Name="JobBidAttachmentId" />
+    </Key>
+    <Property Name="JobBidAttachmentId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AttachmentName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="AttachmentOriginalName" Type="nvarchar(max)" />
+    <Property Name="JobBidId" Type="bigint" />
+  </EntityType>
+  <EntityType Name="JobsBids">
+    <Key>
+      <PropertyRef Name="JobBidId" />
+    </Key>
+    <Property Name="JobBidId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobId" Type="bigint" Nullable="false" />
+    <Property Name="Rate" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="WorkerId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="IsHired" Type="bit" />
+    <Property Name="IsDenied" Type="bit" />
+    <Property Name="CoverLetter" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="JobSubCategories">
+    <Key>
+      <PropertyRef Name="JobSubCategoryId" />
+    </Key>
+    <Property Name="JobSubCategoryId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SubCategoryName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="SubCategoryDescription" Type="nvarchar(max)" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="JobCategoryId" Type="bigint" />
+  </EntityType>
+  <EntityType Name="JobTypes">
+    <Key>
+      <PropertyRef Name="JobTypeId" />
+    </Key>
+    <Property Name="JobTypeId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobTypeName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Languages">
+    <Key>
+      <PropertyRef Name="LanguageId" />
+    </Key>
+    <Property Name="LanguageId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LanguageName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LicenseAgreements">
+    <Key>
+      <PropertyRef Name="LicenseAgreementId" />
+    </Key>
+    <Property Name="LicenseAgreementId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Agreement" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Memo">
+    <Key>
+      <PropertyRef Name="MemoId" />
+    </Key>
+    <Property Name="MemoId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MemoText" Type="nvarchar(max)" />
+    <Property Name="WorkerId" Type="nvarchar(max)" />
+    <Property Name="LastUsedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="MessageLabels">
+    <Key>
+      <PropertyRef Name="MessageLabelId" />
+    </Key>
+    <Property Name="MessageLabelId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LabelName" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Messages">
+    <Key>
+      <PropertyRef Name="MessageId" />
+    </Key>
+    <Property Name="MessageId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MessageText" Type="nvarchar(max)" />
+    <Property Name="Subject" Type="nvarchar(max)" />
+    <Property Name="DateTime" Type="datetime" />
+    <Property Name="IsViewed" Type="bit" />
+    <Property Name="MessageLabelId" Type="bigint" />
+    <Property Name="MessageFromUserId" Type="nvarchar" MaxLength="128" />
+    <Property Name="MessageToUserId" Type="nvarchar" MaxLength="128" />
+    <Property Name="JobId" Type="bigint" />
+  </EntityType>
+  <EntityType Name="Notifications">
+    <Key>
+      <PropertyRef Name="NotificationId" />
+    </Key>
+    <Property Name="NotificationId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NotificationText" Type="nvarchar(max)" />
+    <Property Name="IsViewed" Type="bit" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="DateTime" Type="datetime" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" />
+    <Property Name="NotificationType" Type="varchar" MaxLength="255" />
+    <Property Name="ObjectId" Type="bigint" />
+  </EntityType>
+  <EntityType Name="PaymentMethods">
+    <Key>
+      <PropertyRef Name="PaymentMethodId" />
+    </Key>
+    <Property Name="PaymentMethodId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PaymentMethodName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PaymentMethodDescription" Type="nvarchar(max)" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ReadyMadeTools">
+    <Key>
+      <PropertyRef Name="ToolId" />
+    </Key>
+    <Property Name="ToolId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ToolName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ToolDescription" Type="nvarchar(max)" />
+    <Property Name="DownloadURL" Type="nvarchar(max)" />
+    <Property Name="ToolLogo" Type="nvarchar(max)" />
+    <Property Name="ToolVersion" Type="nvarchar(max)" />
+    <Property Name="ToolOwnerId" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="Skills">
+    <Key>
+      <PropertyRef Name="SkillId" />
+    </Key>
+    <Property Name="SkillId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SkillName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="SkillDescription" Type="nvarchar(max)" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Teams">
+    <Key>
+      <PropertyRef Name="TeamId" />
+    </Key>
+    <Property Name="TeamId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="TeamOwnerId" Type="nvarchar" MaxLength="128" />
+    <Property Name="TeamMemberId" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="TimeSheets">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TimeUnits">
+    <Key>
+      <PropertyRef Name="TimeUnitId" />
+    </Key>
+    <Property Name="TimeUnitId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UnitName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TransactionStatus">
+    <Key>
+      <PropertyRef Name="TransactionStatusId" />
+    </Key>
+    <Property Name="TransactionStatusId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StatusCode" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="StatusName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserAccountType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserAccountTypeId" Type="bigint" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="UserPortfolios">
+    <Key>
+      <PropertyRef Name="UserPortfolioId" />
+    </Key>
+    <Property Name="UserPortfolioId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProjectTitle" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ProjectDescription" Type="nvarchar(max)" />
+    <Property Name="ProjectStartDate" Type="datetime" />
+    <Property Name="ProjectEndDate" Type="datetime" />
+    <Property Name="ContractId" Type="bigint" />
+    <Property Name="WorkerId" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="UserProfiles">
+    <Key>
+      <PropertyRef Name="UserProfileId" />
+    </Key>
+    <Property Name="UserProfileId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProfileTitle" Type="nvarchar(max)" />
+    <Property Name="UserSkillIds" Type="nvarchar(max)" />
+    <Property Name="UserLanguageIds" Type="nvarchar(max)" />
+    <Property Name="UserHourlyRate" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="EducationIds" Type="nvarchar(max)" />
+    <Property Name="UserSubCategoryIds" Type="nvarchar(max)" />
+    <Property Name="UserRating" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" />
+    <Property Name="TimeZone" Type="nvarchar(max)" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateOfBirth" Type="datetime" />
+    <Property Name="IntroductionVideo" Type="nvarchar(max)" />
+    <Property Name="CertificationIds" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="UserRatings">
+    <Key>
+      <PropertyRef Name="UserRatingId" />
+    </Key>
+    <Property Name="UserRatingId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Skill" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Quality" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Availability" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Deadline" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Communication" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Cooperation" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Comment" Type="nvarchar(max)" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" />
+    <Property Name="ContractId" Type="bigint" />
+  </EntityType>
+  <EntityType Name="WorkerHourlyRate">
+    <Key>
+      <PropertyRef Name="WorkerHourlyRateId" />
+    </Key>
+    <Property Name="WorkerHourlyRateId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ContractId" Type="bigint" />
+    <Property Name="HourlyRate" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="FromDate" Type="datetime" />
+    <Property Name="ToDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="WorkerTypes">
+    <Key>
+      <PropertyRef Name="WorkerTypeId" />
+    </Key>
+    <Property Name="WorkerTypeId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__UserRatin__Contr__589C25F3">
+    <End Role="Contracts" Type="Self.Contracts" Multiplicity="0..1" />
+    <End Role="UserRatings" Type="Self.UserRatings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contracts">
+        <PropertyRef Name="ContractId" />
+      </Principal>
+      <Dependent Role="UserRatings">
+        <PropertyRef Name="ContractId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AspNetUserRoles_AspNetRole">
+    <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="1" />
+    <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetRoles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AspNetUserRoles_AspNetUser">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
+    <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Capture_Memo">
+    <End Role="Memo" Type="Self.Memo" Multiplicity="0..1" />
+    <End Role="Capture" Type="Self.Capture" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Memo">
+        <PropertyRef Name="MemoId" />
+      </Principal>
+      <Dependent Role="Capture">
+        <PropertyRef Name="MemoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractAspNetUser">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="Contracts" Type="Self.Contracts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Contracts">
+        <PropertyRef Name="WorkerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractContractStatus">
+    <End Role="ContractStatus" Type="Self.ContractStatus" Multiplicity="0..1" />
+    <End Role="Contracts" Type="Self.Contracts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ContractStatus">
+        <PropertyRef Name="ContractStatusId" />
+      </Principal>
+      <Dependent Role="Contracts">
+        <PropertyRef Name="ContractStatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractDenyReason_RoleId">
+    <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="0..1" />
+    <End Role="ContractDenyReasons" Type="Self.ContractDenyReasons" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetRoles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ContractDenyReasons">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractId">
+    <End Role="Contracts" Type="Self.Contracts" Multiplicity="0..1" />
+    <End Role="WorkerHourlyRate" Type="Self.WorkerHourlyRate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contracts">
+        <PropertyRef Name="ContractId" />
+      </Principal>
+      <Dependent Role="WorkerHourlyRate">
+        <PropertyRef Name="ContractId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractJob">
+    <End Role="Jobs" Type="Self.Jobs" Multiplicity="0..1" />
+    <End Role="Contracts" Type="Self.Contracts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Jobs">
+        <PropertyRef Name="JobId" />
+      </Principal>
+      <Dependent Role="Contracts">
+        <PropertyRef Name="JobId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Contracts_ContractId">
+    <End Role="Contracts" Type="Self.Contracts" Multiplicity="0..1" />
+    <End Role="Capture" Type="Self.Capture" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contracts">
+        <PropertyRef Name="ContractId" />
+      </Principal>
+      <Dependent Role="Capture">
+        <PropertyRef Name="ContractId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContractTimeUnits">
+    <End Role="TimeUnits" Type="Self.TimeUnits" Multiplicity="0..1" />
+    <End Role="Contracts" Type="Self.Contracts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TimeUnits">
+        <PropertyRef Name="TimeUnitId" />
+      </Principal>
+      <Dependent Role="Contracts">
+        <PropertyRef Name="TimeUnitId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CreatedByUserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="Contracts" Type="Self.Contracts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Contracts">
+        <PropertyRef Name="CreatedByUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_User_Id">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserClaims" Type="Self.AspNetUserClaims" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserClaims">
+        <PropertyRef Name="User_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserLogins" Type="Self.AspNetUserLogins" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserLogins">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EducationDegreeType">
+    <End Role="DegreeTypes" Type="Self.DegreeTypes" Multiplicity="0..1" />
+    <End Role="Educations" Type="Self.Educations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DegreeTypes">
+        <PropertyRef Name="DegreeTypeId" />
+      </Principal>
+      <Dependent Role="Educations">
+        <PropertyRef Name="DegreeTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobAspNetUser">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="Jobs" Type="Self.Jobs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Jobs">
+        <PropertyRef Name="ClientId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobAttachmentsJob">
+    <End Role="Jobs" Type="Self.Jobs" Multiplicity="0..1" />
+    <End Role="JobAttachments" Type="Self.JobAttachments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Jobs">
+        <PropertyRef Name="JobId" />
+      </Principal>
+      <Dependent Role="JobAttachments">
+        <PropertyRef Name="JobId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobExperienceLevel">
+    <End Role="ExperienceLevels" Type="Self.ExperienceLevels" Multiplicity="0..1" />
+    <End Role="Jobs" Type="Self.Jobs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ExperienceLevels">
+        <PropertyRef Name="ExperianceLevelId" />
+      </Principal>
+      <Dependent Role="Jobs">
+        <PropertyRef Name="ExperienceLevelExperianceLevelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobFreelancersType">
+    <End Role="WorkerTypes" Type="Self.WorkerTypes" Multiplicity="0..1" />
+    <End Role="Jobs" Type="Self.Jobs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WorkerTypes">
+        <PropertyRef Name="WorkerTypeId" />
+      </Principal>
+      <Dependent Role="Jobs">
+        <PropertyRef Name="WorkerTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobJobSubCategory">
+    <End Role="JobSubCategories" Type="Self.JobSubCategories" Multiplicity="0..1" />
+    <End Role="Jobs" Type="Self.Jobs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JobSubCategories">
+        <PropertyRef Name="JobSubCategoryId" />
+      </Principal>
+      <Dependent Role="Jobs">
+        <PropertyRef Name="JobSubCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobJobType">
+    <End Role="JobTypes" Type="Self.JobTypes" Multiplicity="0..1" />
+    <End Role="Jobs" Type="Self.Jobs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JobTypes">
+        <PropertyRef Name="JobTypeId" />
+      </Principal>
+      <Dependent Role="Jobs">
+        <PropertyRef Name="JobTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobsBid_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
+    <End Role="JobsBids" Type="Self.JobsBids" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="JobsBids">
+        <PropertyRef Name="WorkerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobsBid_Jobs">
+    <End Role="Jobs" Type="Self.Jobs" Multiplicity="1" />
+    <End Role="JobsBids" Type="Self.JobsBids" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Jobs">
+        <PropertyRef Name="JobId" />
+      </Principal>
+      <Dependent Role="JobsBids">
+        <PropertyRef Name="JobId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobsBidAttachments_JobsBid">
+    <End Role="JobsBids" Type="Self.JobsBids" Multiplicity="0..1" />
+    <End Role="JobsBidAttachments" Type="Self.JobsBidAttachments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JobsBids">
+        <PropertyRef Name="JobBidId" />
+      </Principal>
+      <Dependent Role="JobsBidAttachments">
+        <PropertyRef Name="JobBidId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobSubCategoryJobCategory">
+    <End Role="JobCategories" Type="Self.JobCategories" Multiplicity="0..1" />
+    <End Role="JobSubCategories" Type="Self.JobSubCategories" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JobCategories">
+        <PropertyRef Name="JobCategoryId" />
+      </Principal>
+      <Dependent Role="JobSubCategories">
+        <PropertyRef Name="JobCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobTimeUnits">
+    <End Role="TimeUnits" Type="Self.TimeUnits" Multiplicity="0..1" />
+    <End Role="Jobs" Type="Self.Jobs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TimeUnits">
+        <PropertyRef Name="TimeUnitId" />
+      </Principal>
+      <Dependent Role="Jobs">
+        <PropertyRef Name="TimeUnitId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MessageAspNetUser">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="Messages" Type="Self.Messages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Messages">
+        <PropertyRef Name="MessageFromUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MessageAspNetUser1">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="Messages" Type="Self.Messages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Messages">
+        <PropertyRef Name="MessageToUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Messages_Jobs">
+    <End Role="Jobs" Type="Self.Jobs" Multiplicity="0..1" />
+    <End Role="Messages" Type="Self.Messages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Jobs">
+        <PropertyRef Name="JobId" />
+      </Principal>
+      <Dependent Role="Messages">
+        <PropertyRef Name="JobId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MessagesMessageLabels">
+    <End Role="MessageLabels" Type="Self.MessageLabels" Multiplicity="0..1" />
+    <End Role="Messages" Type="Self.Messages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MessageLabels">
+        <PropertyRef Name="MessageLabelId" />
+      </Principal>
+      <Dependent Role="Messages">
+        <PropertyRef Name="MessageLabelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ModifiedByUserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="Contracts" Type="Self.Contracts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Contracts">
+        <PropertyRef Name="ModifiedByUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NotificationAspNetUser">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="Notifications" Type="Self.Notifications" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Notifications">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReadyMadeToolAspNetUser">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="ReadyMadeTools" Type="Self.ReadyMadeTools" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ReadyMadeTools">
+        <PropertyRef Name="ToolOwnerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RoleId">
+    <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="0..1" />
+    <End Role="ContractEndReasons" Type="Self.ContractEndReasons" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetRoles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ContractEndReasons">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TeamAspNetUser">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="Teams" Type="Self.Teams" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Teams">
+        <PropertyRef Name="TeamOwnerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TeamAspNetUser1">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="Teams" Type="Self.Teams" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Teams">
+        <PropertyRef Name="TeamMemberId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserAccountType_AccountType">
+    <End Role="AccountType" Type="Self.AccountType" Multiplicity="0..1" />
+    <End Role="UserAccountType" Type="Self.UserAccountType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AccountType">
+        <PropertyRef Name="AccountTypeId" />
+      </Principal>
+      <Dependent Role="UserAccountType">
+        <PropertyRef Name="UserAccountTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserAccountType_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="UserAccountType" Type="Self.UserAccountType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserAccountType">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="UserRatings" Type="Self.UserRatings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserRatings">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserPortfolioAspNetUser">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="UserPortfolios" Type="Self.UserPortfolios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserPortfolios">
+        <PropertyRef Name="WorkerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserPortfolioContract">
+    <End Role="Contracts" Type="Self.Contracts" Multiplicity="0..1" />
+    <End Role="UserPortfolios" Type="Self.UserPortfolios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contracts">
+        <PropertyRef Name="ContractId" />
+      </Principal>
+      <Dependent Role="UserPortfolios">
+        <PropertyRef Name="ContractId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserProfileAspNetUser">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="UserProfiles" Type="Self.UserProfiles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserProfiles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="ApplyJob" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="jobId" Type="bigint" Mode="In" />
+    <Parameter Name="Rate" Type="decimal" Mode="In" />
+    <Parameter Name="WorkerId" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="ApplyJobAttachments" Type="xml" Mode="In" />
+    <Parameter Name="CoverLetter" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="WorkerName" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="ApproveContract" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ContractId" Type="bigint" Mode="In" />
+    <Parameter Name="ModifiedByUserId" Type="nvarchar" Mode="In" />
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="DeleteCapture" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CaptureIdsToDelete" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="DeleteNotificationById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NotificationId" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="FindJobsByFilter" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="JobTitle" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="JobCategoryId" Type="bigint" Mode="In" />
+    <Parameter Name="JobSubCategoryIds" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="JobTypeId" Type="bigint" Mode="In" />
+    <Parameter Name="ExperienceLevelRequiredId" Type="bigint" Mode="In" />
+    <Parameter Name="WorkerId" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="FindWorkersByFilter" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="WorkerName" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="HourlyRate" Type="decimal" Mode="In" />
+    <Parameter Name="Rating" Type="decimal" Mode="In" />
+    <Parameter Name="TimeZone" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="CountryName" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="SkillIds" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="FunctionSplitString" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="string" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="delimiter" Type="char" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="splitdata" Type="nvarchar(max)" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="GetAllContractsByWorkerIdAndClientId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="WorkerId" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="ClientId" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="GetAllContractStatus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetAllDegreeTypes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetAllExperienceLevels" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetAllJobCategories" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetAllJobSubCategories" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetAllJobTypes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetAllLanguages" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetAllPaymentMethods" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetAllSkills" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetAllTimeUnits" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetAllWorkerTypes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetBurnedHoursInformationFunction" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ContractId" Type="bigint" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="TotalBurnedHours" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="WeeklyBurnedHours" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="TodayBurnedHours" Type="decimal" Precision="18" Scale="2" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="GetCapturesForClientReview" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="WorkerId" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+    <Parameter Name="FromDate" Type="datetime" Mode="In" />
+    <Parameter Name="ToDate" Type="datetime" Mode="In" />
+    <Parameter Name="IsRejected" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="GetCapturesScreenData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="GetCertificationsByUserId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="GetClientInfoByJobId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="GetClientTeam" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ClientId" Type="nvarchar" Mode="In" />
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+    <Parameter Name="ShowActiveWorkers" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="GetCompleteProfileScreenData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="RoleId" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GetContractByContractId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ContractId" Type="bigint" Mode="In" />
+    <Parameter Name="ClientId" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="GetContractByContractIdOrWorkerAndJobId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ContractId" Type="bigint" Mode="In" />
+    <Parameter Name="WorkerId" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="GetContractDenyReasonsByRoleId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="RoleId" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GetContractEndReasonsByRoleId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="RoleId" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GetContractForReviewByContractId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ContractId" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="GetContractForWorker" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="WorkerId" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GetEducationDetailsByUserId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="GetJobAttachments" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="JobIds" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="GetJobAttachmentsByJobId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="GetJobBidById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="JobBidId" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="GetJobByJobId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="GetJobByJobIdAndClientId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+    <Parameter Name="ClientId" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="GetJobCapturesByContractId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ContractId" Type="bigint" Mode="In" />
+    <Parameter Name="FromDate" Type="datetime" Mode="In" />
+    <Parameter Name="ToDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="GetJobListForHireWorkerScreen" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ClientId" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="WorkerId" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="GetJobListForMessageScreen" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ClientId" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="GetJobsByClientId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ClientId" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="GetJobsByWorkerId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="WorkerId" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="IsActive" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="GetJobsForTracker" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="WorkerId" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="GetLicenseAgreementById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LicenseAgreementId" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="GetManageContractScreenData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ContractId" Type="bigint" Mode="In" />
+    <Parameter Name="UserId" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GetMessages" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+    <Parameter Name="WorkerId" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="GetNotificationByUserId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="GetNotificationsByUserId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="GetTimeLogByClientId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ClientId" Type="nvarchar" Mode="In" />
+    <Parameter Name="StartDate" Type="date" Mode="In" />
+    <Parameter Name="EndDate" Type="date" Mode="In" />
+  </Function>
+  <Function Name="GetUnreadMessageCount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="GetUnreadNotificationAndMessageCount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="GetUnreadNotificationsCount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="GetUserById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="GetUserEducations" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="GetUserProfileByUserId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="GetWorkerJobListForMessageScreen" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="WorkerId" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="GetWorkerJobsByWorkerId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="WorkerId" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="GetWorkerRate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="WorkerId" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="GetWorkersBidForJob" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+    <Parameter Name="ClientId" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="GetWorkersForMessageScreen" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+    <Parameter Name="WorkerId" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="ClientId" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="InsertAccountType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserAccountTypeId" Type="int" Mode="In" />
+    <Parameter Name="UserId" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="InsertCapture" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ContractId" Type="bigint" Mode="In" />
+    <Parameter Name="KeyCount" Type="int" Mode="In" />
+    <Parameter Name="MouseCount" Type="int" Mode="In" />
+    <Parameter Name="KeyboardCapture" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="MouseCapture" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="ScreenCaptureThumbnailImage" Type="nvarchar" Mode="In" />
+    <Parameter Name="ScreenCaptureFullImage" Type="nvarchar" Mode="In" />
+    <Parameter Name="CaptureDate" Type="datetime" Mode="In" />
+    <Parameter Name="TimeBurned" Type="decimal" Mode="In" />
+  </Function>
+  <Function Name="InsertMessage" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+    <Parameter Name="MessageText" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="MessageFromUserId" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="MessageToUserId" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="InsertNotification" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ContractId" Type="bigint" Mode="In" />
+    <Parameter Name="WorkerId" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+    <Parameter Name="NotificationText" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="InsertUpdateContract" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ContractId" Type="bigint" Mode="In" />
+    <Parameter Name="WorkerId" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+    <Parameter Name="HourlyRate" Type="decimal" Mode="In" />
+    <Parameter Name="FixedRate" Type="decimal" Mode="In" />
+    <Parameter Name="EstimatedDuration" Type="decimal" Mode="In" />
+    <Parameter Name="WeeklyHourLimit" Type="decimal" Mode="In" />
+    <Parameter Name="TimeUnitId" Type="bigint" Mode="In" />
+    <Parameter Name="ContractStatusId" Type="bigint" Mode="In" />
+    <Parameter Name="EndDate" Type="datetime" Mode="In" />
+    <Parameter Name="EndReason" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="CreatedModifiedByUserId" Type="nvarchar" Mode="In" />
+    <Parameter Name="IsEndingContract" Type="bit" Mode="In" />
+    <Parameter Name="UserRatingId" Type="bigint" Mode="In" />
+    <Parameter Name="Skill" Type="decimal" Mode="In" />
+    <Parameter Name="Quality" Type="decimal" Mode="In" />
+    <Parameter Name="Availability" Type="decimal" Mode="In" />
+    <Parameter Name="Deadline" Type="decimal" Mode="In" />
+    <Parameter Name="Communication" Type="decimal" Mode="In" />
+    <Parameter Name="Cooperation" Type="decimal" Mode="In" />
+    <Parameter Name="Comment" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="UserId" Type="nvarchar" Mode="In" />
+    <Parameter Name="HourlyRateDateFromOrTo" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="insertupdatejob" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+    <Parameter Name="JobTitle" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="JobDescription" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="IsActive" Type="bit" Mode="In" />
+    <Parameter Name="IsHiringClosed" Type="bit" Mode="In" />
+    <Parameter Name="WorkerTypeId" Type="bigint" Mode="In" />
+    <Parameter Name="ExperienceLevelId" Type="bigint" Mode="In" />
+    <Parameter Name="JobTypeId" Type="bigint" Mode="In" />
+    <Parameter Name="JobSubCategoryId" Type="bigint" Mode="In" />
+    <Parameter Name="SkillsRequiredForJob" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="JobStartDate" Type="datetime" Mode="In" />
+    <Parameter Name="JobEndDate" Type="datetime" Mode="In" />
+    <Parameter Name="EstimatedDuration" Type="decimal" Mode="In" />
+    <Parameter Name="TimeUnitId" Type="bigint" Mode="In" />
+    <Parameter Name="ClientId" Type="nvarchar" Mode="In" />
+    <Parameter Name="JobAttachments" Type="xml" Mode="In" />
+    <Parameter Name="Min_PRF_Rate" Type="decimal" Mode="In" />
+    <Parameter Name="Max_PRF_Rate" Type="decimal" Mode="In" />
+    <Parameter Name="FixedRate" Type="decimal" Mode="In" />
+    <Parameter Name="Locality_PRF" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="InsertUpdateUserProfile" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserProfileId" Type="bigint" Mode="In" />
+    <Parameter Name="ProfileTitle" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="UserSkillIds" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="UserLanguageIds" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="UserHourlyRate" Type="decimal" Mode="In" />
+    <Parameter Name="EducationXML" Type="xml" Mode="In" />
+    <Parameter Name="UserSubCategoryIds" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="UserId" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Address1" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Address2" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="City1" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="City2" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Country1" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Country2" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="HomePhone" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="WorkPhone" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="CellPhone" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="ProfilePic" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="TimeZone" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Gender" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="DateOfBirth" Type="datetime" Mode="In" />
+    <Parameter Name="CertificationDetailXML" Type="xml" Mode="In" />
+    <Parameter Name="IntroductionVideo" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="IsEmailAddressAlreadyExists" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="IsUserNameAlreadyExists" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="JobRequestDenied" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="JobBidId" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="RejectCapture" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CaptureIdsToReject" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="FromDate" Type="datetime" Mode="In" />
+    <Parameter Name="ToDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="RejectContract" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ContractId" Type="bigint" Mode="In" />
+    <Parameter Name="ModifiedByUserId" Type="nvarchar" Mode="In" />
+    <Parameter Name="EndReason" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="ResetPassword" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ForgotPasswordToken" Type="nvarchar" Mode="In" />
+    <Parameter Name="NewPassword" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SetForgotPasswordToken" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ForgotPasswordToken" Type="nvarchar" Mode="In" />
+    <Parameter Name="EmailAddress" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateContractForWorker" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ContractId" Type="bigint" Mode="In" />
+    <Parameter Name="HourlyRate" Type="decimal" Mode="In" />
+    <Parameter Name="FixedRate" Type="decimal" Mode="In" />
+    <Parameter Name="WeeklyHourLimit" Type="decimal" Mode="In" />
+    <Parameter Name="EndReason" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="IsEndingContract" Type="bit" Mode="In" />
+    <Parameter Name="Skill" Type="decimal" Mode="In" />
+    <Parameter Name="Quality" Type="decimal" Mode="In" />
+    <Parameter Name="Availability" Type="decimal" Mode="In" />
+    <Parameter Name="Deadline" Type="decimal" Mode="In" />
+    <Parameter Name="Communication" Type="decimal" Mode="In" />
+    <Parameter Name="Cooperation" Type="decimal" Mode="In" />
+    <Parameter Name="Comment" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="UserId" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateMessageViewedStatus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="UpdateNotificationViewedStatus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="VerifyEmailAddress" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="VerificationCode" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="WorkerHourlyReportByWorkerId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="WorkerId" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Date" Type="date" Mode="In" />
+  </Function>
+  <Function Name="WorkerHourlyReportByWorkerIdAndClientId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="WorkerId" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Date" Type="date" Mode="In" />
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+    <Parameter Name="ClientId" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="WorkerWeeklyReportByWorkerId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="WorkerId" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="FromDate" Type="date" Mode="In" />
+    <Parameter Name="ToDate" Type="date" Mode="In" />
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="WorkerWeeklyReportByWorkerIdAndClientId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="WorkerId" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="FromDate" Type="date" Mode="In" />
+    <Parameter Name="ToDate" Type="date" Mode="In" />
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+    <Parameter Name="ClientId" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="WorkerYearlyReportByWorkerId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="WorkerId" Type="nvarchar" Mode="In" />
+    <Parameter Name="Year" Type="int" Mode="In" />
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="WorkerYearlyReportByWorkerIdAndClientId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="WorkerId" Type="nvarchar" Mode="In" />
+    <Parameter Name="Year" Type="int" Mode="In" />
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+    <Parameter Name="ClientId" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="WorkSummaryOfClientByClientId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ClientId" Type="nvarchar" Mode="In" />
+    <Parameter Name="StartDate" Type="date" Mode="In" />
+    <Parameter Name="EndDate" Type="date" Mode="In" />
+  </Function>
+  <EntityContainer Name="HireRocks_DevModelStoreContainer">
+    <EntitySet Name="AccountType" EntityType="Self.AccountType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="C__MigrationHistory" EntityType="Self.C__MigrationHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Capture" EntityType="Self.Capture" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Certification" EntityType="Self.Certification" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Companies" EntityType="Self.Companies" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ContractDenyReasons" EntityType="Self.ContractDenyReasons" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ContractEndReasons" EntityType="Self.ContractEndReasons" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Contracts" EntityType="Self.Contracts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ContractStatus" EntityType="Self.ContractStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DegreeTypes" EntityType="Self.DegreeTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Educations" EntityType="Self.Educations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ExceptionLogs" EntityType="Self.ExceptionLogs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ExperienceLevels" EntityType="Self.ExperienceLevels" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="JobAttachments" EntityType="Self.JobAttachments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="JobCategories" EntityType="Self.JobCategories" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Jobs" EntityType="Self.Jobs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="JobsBidAttachments" EntityType="Self.JobsBidAttachments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="JobsBids" EntityType="Self.JobsBids" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="JobSubCategories" EntityType="Self.JobSubCategories" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="JobTypes" EntityType="Self.JobTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Languages" EntityType="Self.Languages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LicenseAgreements" EntityType="Self.LicenseAgreements" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Memo" EntityType="Self.Memo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MessageLabels" EntityType="Self.MessageLabels" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Messages" EntityType="Self.Messages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Notifications" EntityType="Self.Notifications" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PaymentMethods" EntityType="Self.PaymentMethods" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ReadyMadeTools" EntityType="Self.ReadyMadeTools" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Skills" EntityType="Self.Skills" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Teams" EntityType="Self.Teams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TimeSheets" EntityType="Self.TimeSheets" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TimeUnits" EntityType="Self.TimeUnits" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TransactionStatus" EntityType="Self.TransactionStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserAccountType" EntityType="Self.UserAccountType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserPortfolios" EntityType="Self.UserPortfolios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserProfiles" EntityType="Self.UserProfiles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserRatings" EntityType="Self.UserRatings" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkerHourlyRate" EntityType="Self.WorkerHourlyRate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkerTypes" EntityType="Self.WorkerTypes" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__UserRatin__Contr__589C25F3" Association="Self.FK__UserRatin__Contr__589C25F3">
+      <End Role="Contracts" EntitySet="Contracts" />
+      <End Role="UserRatings" EntitySet="UserRatings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AspNetUserRoles_AspNetRole" Association="Self.FK_AspNetUserRoles_AspNetRole">
+      <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AspNetUserRoles_AspNetUser" Association="Self.FK_AspNetUserRoles_AspNetUser">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Capture_Memo" Association="Self.FK_Capture_Memo">
+      <End Role="Memo" EntitySet="Memo" />
+      <End Role="Capture" EntitySet="Capture" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractAspNetUser" Association="Self.FK_ContractAspNetUser">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="Contracts" EntitySet="Contracts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractContractStatus" Association="Self.FK_ContractContractStatus">
+      <End Role="ContractStatus" EntitySet="ContractStatus" />
+      <End Role="Contracts" EntitySet="Contracts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractDenyReason_RoleId" Association="Self.FK_ContractDenyReason_RoleId">
+      <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+      <End Role="ContractDenyReasons" EntitySet="ContractDenyReasons" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractId" Association="Self.FK_ContractId">
+      <End Role="Contracts" EntitySet="Contracts" />
+      <End Role="WorkerHourlyRate" EntitySet="WorkerHourlyRate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractJob" Association="Self.FK_ContractJob">
+      <End Role="Jobs" EntitySet="Jobs" />
+      <End Role="Contracts" EntitySet="Contracts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Contracts_ContractId" Association="Self.FK_Contracts_ContractId">
+      <End Role="Contracts" EntitySet="Contracts" />
+      <End Role="Capture" EntitySet="Capture" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContractTimeUnits" Association="Self.FK_ContractTimeUnits">
+      <End Role="TimeUnits" EntitySet="TimeUnits" />
+      <End Role="Contracts" EntitySet="Contracts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CreatedByUserId" Association="Self.FK_CreatedByUserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="Contracts" EntitySet="Contracts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_User_Id" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_User_Id">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EducationDegreeType" Association="Self.FK_EducationDegreeType">
+      <End Role="DegreeTypes" EntitySet="DegreeTypes" />
+      <End Role="Educations" EntitySet="Educations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobAspNetUser" Association="Self.FK_JobAspNetUser">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="Jobs" EntitySet="Jobs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobAttachmentsJob" Association="Self.FK_JobAttachmentsJob">
+      <End Role="Jobs" EntitySet="Jobs" />
+      <End Role="JobAttachments" EntitySet="JobAttachments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobExperienceLevel" Association="Self.FK_JobExperienceLevel">
+      <End Role="ExperienceLevels" EntitySet="ExperienceLevels" />
+      <End Role="Jobs" EntitySet="Jobs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobFreelancersType" Association="Self.FK_JobFreelancersType">
+      <End Role="WorkerTypes" EntitySet="WorkerTypes" />
+      <End Role="Jobs" EntitySet="Jobs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobJobSubCategory" Association="Self.FK_JobJobSubCategory">
+      <End Role="JobSubCategories" EntitySet="JobSubCategories" />
+      <End Role="Jobs" EntitySet="Jobs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobJobType" Association="Self.FK_JobJobType">
+      <End Role="JobTypes" EntitySet="JobTypes" />
+      <End Role="Jobs" EntitySet="Jobs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobsBid_AspNetUsers" Association="Self.FK_JobsBid_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="JobsBids" EntitySet="JobsBids" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobsBid_Jobs" Association="Self.FK_JobsBid_Jobs">
+      <End Role="Jobs" EntitySet="Jobs" />
+      <End Role="JobsBids" EntitySet="JobsBids" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobsBidAttachments_JobsBid" Association="Self.FK_JobsBidAttachments_JobsBid">
+      <End Role="JobsBids" EntitySet="JobsBids" />
+      <End Role="JobsBidAttachments" EntitySet="JobsBidAttachments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobSubCategoryJobCategory" Association="Self.FK_JobSubCategoryJobCategory">
+      <End Role="JobCategories" EntitySet="JobCategories" />
+      <End Role="JobSubCategories" EntitySet="JobSubCategories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobTimeUnits" Association="Self.FK_JobTimeUnits">
+      <End Role="TimeUnits" EntitySet="TimeUnits" />
+      <End Role="Jobs" EntitySet="Jobs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MessageAspNetUser" Association="Self.FK_MessageAspNetUser">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="Messages" EntitySet="Messages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MessageAspNetUser1" Association="Self.FK_MessageAspNetUser1">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="Messages" EntitySet="Messages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Messages_Jobs" Association="Self.FK_Messages_Jobs">
+      <End Role="Jobs" EntitySet="Jobs" />
+      <End Role="Messages" EntitySet="Messages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MessagesMessageLabels" Association="Self.FK_MessagesMessageLabels">
+      <End Role="MessageLabels" EntitySet="MessageLabels" />
+      <End Role="Messages" EntitySet="Messages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ModifiedByUserId" Association="Self.FK_ModifiedByUserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="Contracts" EntitySet="Contracts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NotificationAspNetUser" Association="Self.FK_NotificationAspNetUser">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="Notifications" EntitySet="Notifications" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReadyMadeToolAspNetUser" Association="Self.FK_ReadyMadeToolAspNetUser">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="ReadyMadeTools" EntitySet="ReadyMadeTools" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RoleId" Association="Self.FK_RoleId">
+      <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+      <End Role="ContractEndReasons" EntitySet="ContractEndReasons" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TeamAspNetUser" Association="Self.FK_TeamAspNetUser">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="Teams" EntitySet="Teams" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TeamAspNetUser1" Association="Self.FK_TeamAspNetUser1">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="Teams" EntitySet="Teams" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserAccountType_AccountType" Association="Self.FK_UserAccountType_AccountType">
+      <End Role="AccountType" EntitySet="AccountType" />
+      <End Role="UserAccountType" EntitySet="UserAccountType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserAccountType_AspNetUsers" Association="Self.FK_UserAccountType_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="UserAccountType" EntitySet="UserAccountType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserId" Association="Self.FK_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="UserRatings" EntitySet="UserRatings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserPortfolioAspNetUser" Association="Self.FK_UserPortfolioAspNetUser">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="UserPortfolios" EntitySet="UserPortfolios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserPortfolioContract" Association="Self.FK_UserPortfolioContract">
+      <End Role="Contracts" EntitySet="Contracts" />
+      <End Role="UserPortfolios" EntitySet="UserPortfolios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserProfileAspNetUser" Association="Self.FK_UserProfileAspNetUser">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="UserProfiles" EntitySet="UserProfiles" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

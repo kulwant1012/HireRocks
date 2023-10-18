@@ -1,0 +1,572 @@
+C:\Hirerocks\PS.Azure.Web\bin\Email\images\complete copy.png
+C:\Hirerocks\PS.Azure.Web\bin\Email\images\footer.png
+C:\Hirerocks\PS.Azure.Web\bin\Email\images\header.png
+C:\Hirerocks\PS.Azure.Web\bin\Email\images\line.png
+C:\Hirerocks\PS.Azure.Web\bin\Email\newUserEmail.html
+C:\Hirerocks\PS.Azure.Web\bin\Email\Template.html
+C:\Hirerocks\PS.Azure.Web\bin\Email\welcomeEmail.html
+C:\Hirerocks\PS.Azure.Web\bin\PS.Azure.Web.dll.config
+C:\Hirerocks\PS.Azure.Web\bin\PS.Azure.Web.dll
+C:\Hirerocks\PS.Azure.Web\bin\PS.Azure.Web.pdb
+C:\Hirerocks\PS.Azure.Web\bin\Antlr3.Runtime.dll
+C:\Hirerocks\PS.Azure.Web\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Hirerocks\PS.Azure.Web\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Hirerocks\PS.Azure.Web\bin\Microsoft.Data.Edm.dll
+C:\Hirerocks\PS.Azure.Web\bin\Microsoft.Data.OData.dll
+C:\Hirerocks\PS.Azure.Web\bin\Microsoft.Data.Services.dll
+C:\Hirerocks\PS.Azure.Web\bin\Microsoft.Owin.dll
+C:\Hirerocks\PS.Azure.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Hirerocks\PS.Azure.Web\bin\Microsoft.Owin.Security.dll
+C:\Hirerocks\PS.Azure.Web\bin\Microsoft.Web.Optimization.dll
+C:\Hirerocks\PS.Azure.Web\bin\Microsoft.WindowsAzure.Configuration.dll
+C:\Hirerocks\PS.Azure.Web\bin\Microsoft.WindowsAzure.Storage.dll
+C:\Hirerocks\PS.Azure.Web\bin\Newtonsoft.Json.dll
+C:\Hirerocks\PS.Azure.Web\bin\Owin.dll
+C:\Hirerocks\PS.Azure.Web\bin\PS.Data.dll
+C:\Hirerocks\PS.Azure.Web\bin\Raven.Abstractions.dll
+C:\Hirerocks\PS.Azure.Web\bin\Raven.Client.Lightweight.dll
+C:\Hirerocks\PS.Azure.Web\bin\System.Net.Http.Extensions.dll
+C:\Hirerocks\PS.Azure.Web\bin\System.Net.Http.Formatting.dll
+C:\Hirerocks\PS.Azure.Web\bin\System.Net.Http.Primitives.dll
+C:\Hirerocks\PS.Azure.Web\bin\System.Spatial.dll
+C:\Hirerocks\PS.Azure.Web\bin\System.Web.Helpers.dll
+C:\Hirerocks\PS.Azure.Web\bin\System.Web.Http.dll
+C:\Hirerocks\PS.Azure.Web\bin\System.Web.Http.WebHost.dll
+C:\Hirerocks\PS.Azure.Web\bin\System.Web.Mvc.dll
+C:\Hirerocks\PS.Azure.Web\bin\System.Web.Optimization.dll
+C:\Hirerocks\PS.Azure.Web\bin\System.Web.Razor.dll
+C:\Hirerocks\PS.Azure.Web\bin\System.Web.WebPages.Deployment.dll
+C:\Hirerocks\PS.Azure.Web\bin\System.Web.WebPages.dll
+C:\Hirerocks\PS.Azure.Web\bin\System.Web.WebPages.Razor.dll
+C:\Hirerocks\PS.Azure.Web\bin\Web.Optimization.dll
+C:\Hirerocks\PS.Azure.Web\bin\WebGrease.dll
+C:\Hirerocks\PS.Azure.Web\bin\ServiceStack.Interfaces.dll
+C:\Hirerocks\PS.Azure.Web\bin\PS.Data.pdb
+C:\Hirerocks\PS.Azure.Web\bin\PS.Data.dll.config
+C:\Hirerocks\PS.Azure.Web\bin\Antlr3.Runtime.pdb
+C:\Hirerocks\PS.Azure.Web\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Hirerocks\PS.Azure.Web\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Hirerocks\PS.Azure.Web\bin\Microsoft.Data.Edm.xml
+C:\Hirerocks\PS.Azure.Web\bin\Microsoft.Data.OData.xml
+C:\Hirerocks\PS.Azure.Web\bin\Microsoft.Data.Services.xml
+C:\Hirerocks\PS.Azure.Web\bin\Microsoft.Owin.xml
+C:\Hirerocks\PS.Azure.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Hirerocks\PS.Azure.Web\bin\Microsoft.Owin.Security.xml
+C:\Hirerocks\PS.Azure.Web\bin\Microsoft.WindowsAzure.Configuration.xml
+C:\Hirerocks\PS.Azure.Web\bin\Microsoft.WindowsAzure.Storage.xml
+C:\Hirerocks\PS.Azure.Web\bin\Newtonsoft.Json.xml
+C:\Hirerocks\PS.Azure.Web\bin\Raven.Abstractions.xml
+C:\Hirerocks\PS.Azure.Web\bin\Raven.Client.Lightweight.xml
+C:\Hirerocks\PS.Azure.Web\bin\System.Net.Http.Extensions.xml
+C:\Hirerocks\PS.Azure.Web\bin\System.Net.Http.Formatting.xml
+C:\Hirerocks\PS.Azure.Web\bin\System.Net.Http.Primitives.xml
+C:\Hirerocks\PS.Azure.Web\bin\System.Spatial.xml
+C:\Hirerocks\PS.Azure.Web\bin\System.Web.Helpers.xml
+C:\Hirerocks\PS.Azure.Web\bin\System.Web.Http.xml
+C:\Hirerocks\PS.Azure.Web\bin\System.Web.Http.WebHost.xml
+C:\Hirerocks\PS.Azure.Web\bin\System.Web.Mvc.xml
+C:\Hirerocks\PS.Azure.Web\bin\System.Web.Optimization.xml
+C:\Hirerocks\PS.Azure.Web\bin\System.Web.Razor.xml
+C:\Hirerocks\PS.Azure.Web\bin\System.Web.WebPages.xml
+C:\Hirerocks\PS.Azure.Web\bin\System.Web.WebPages.Deployment.xml
+C:\Hirerocks\PS.Azure.Web\bin\System.Web.WebPages.Razor.xml
+C:\Hirerocks\PS.Azure.Web\bin\ServiceStack.Interfaces.xml
+C:\Hirerocks\PS.Azure.Web\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\PS.Azure.Web\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\PS.Azure.Web\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\PS.Azure.Web\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\PS.Azure.Web\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\PS.Azure.Web\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\PS.Azure.Web\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\PS.Azure.Web\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\PS.Azure.Web\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\PS.Azure.Web\bin\de\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\PS.Azure.Web\bin\es\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\PS.Azure.Web\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\PS.Azure.Web\bin\it\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\PS.Azure.Web\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\PS.Azure.Web\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\PS.Azure.Web\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\PS.Azure.Web\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\PS.Azure.Web\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\PS.Azure.Web\bin\de\Microsoft.Data.Services.resources.dll
+C:\Hirerocks\PS.Azure.Web\bin\es\Microsoft.Data.Services.resources.dll
+C:\Hirerocks\PS.Azure.Web\bin\fr\Microsoft.Data.Services.resources.dll
+C:\Hirerocks\PS.Azure.Web\bin\it\Microsoft.Data.Services.resources.dll
+C:\Hirerocks\PS.Azure.Web\bin\ja\Microsoft.Data.Services.resources.dll
+C:\Hirerocks\PS.Azure.Web\bin\ko\Microsoft.Data.Services.resources.dll
+C:\Hirerocks\PS.Azure.Web\bin\ru\Microsoft.Data.Services.resources.dll
+C:\Hirerocks\PS.Azure.Web\bin\zh-Hans\Microsoft.Data.Services.resources.dll
+C:\Hirerocks\PS.Azure.Web\bin\zh-Hant\Microsoft.Data.Services.resources.dll
+C:\Hirerocks\PS.Azure.Web\bin\de\System.Spatial.resources.dll
+C:\Hirerocks\PS.Azure.Web\bin\es\System.Spatial.resources.dll
+C:\Hirerocks\PS.Azure.Web\bin\fr\System.Spatial.resources.dll
+C:\Hirerocks\PS.Azure.Web\bin\it\System.Spatial.resources.dll
+C:\Hirerocks\PS.Azure.Web\bin\ja\System.Spatial.resources.dll
+C:\Hirerocks\PS.Azure.Web\bin\ko\System.Spatial.resources.dll
+C:\Hirerocks\PS.Azure.Web\bin\ru\System.Spatial.resources.dll
+C:\Hirerocks\PS.Azure.Web\bin\zh-Hans\System.Spatial.resources.dll
+C:\Hirerocks\PS.Azure.Web\bin\zh-Hant\System.Spatial.resources.dll
+C:\Hirerocks\PS.Azure.Web\obj\Debug\PS.Azure.Web.csproj.App.config
+C:\Hirerocks\PS.Azure.Web\obj\Debug\PS.Azure.Web.csprojResolveAssemblyReference.cache
+C:\Hirerocks\PS.Azure.Web\obj\Debug\PS.Azure.Web.csproj.CoreCompileInputs.cache
+C:\Hirerocks\PS.Azure.Web\obj\Debug\PS.Azure.Web.dll
+C:\Hirerocks\PS.Azure.Web\obj\Debug\PS.Azure.Web.pdb
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\Email\images\complete copy.png
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\Email\images\footer.png
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\Email\images\header.png
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\Email\images\line.png
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\Email\newUserEmail.html
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\Email\Template.html
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\Email\welcomeEmail.html
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\PS.Azure.Web.dll.config
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\PS.Azure.Web.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\PS.Azure.Web.pdb
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\Antlr3.Runtime.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\Microsoft.AspNet.SignalR.Core.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\Microsoft.Data.Edm.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\Microsoft.Data.OData.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\Microsoft.Data.Services.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\Microsoft.Owin.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\Microsoft.Owin.Security.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\Microsoft.Web.Infrastructure.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\Microsoft.Web.Optimization.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\Microsoft.WindowsAzure.Configuration.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\Microsoft.WindowsAzure.Storage.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\Newtonsoft.Json.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\Owin.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\PS.Data.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\Raven.Abstractions.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\Raven.Client.Lightweight.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\System.Net.Http.Extensions.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\System.Net.Http.Formatting.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\System.Net.Http.Primitives.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\System.Spatial.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\System.Web.Helpers.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\System.Web.Http.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\System.Web.Http.WebHost.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\System.Web.Mvc.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\System.Web.Optimization.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\System.Web.Razor.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\System.Web.WebPages.Deployment.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\System.Web.WebPages.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\System.Web.WebPages.Razor.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\Web.Optimization.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\WebGrease.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\ServiceStack.Interfaces.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\PS.Data.pdb
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\PS.Data.dll.config
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\Antlr3.Runtime.pdb
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\Microsoft.AspNet.SignalR.Core.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\Microsoft.Data.Edm.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\Microsoft.Data.OData.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\Microsoft.Data.Services.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\Microsoft.Owin.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\Microsoft.Owin.Security.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\Microsoft.WindowsAzure.Configuration.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\Microsoft.WindowsAzure.Storage.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\Newtonsoft.Json.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\Raven.Abstractions.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\Raven.Client.Lightweight.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\System.Net.Http.Extensions.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\System.Net.Http.Formatting.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\System.Net.Http.Primitives.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\System.Spatial.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\System.Web.Helpers.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\System.Web.Http.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\System.Web.Http.WebHost.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\System.Web.Mvc.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\System.Web.Optimization.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\System.Web.Razor.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\System.Web.WebPages.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\System.Web.WebPages.Deployment.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\System.Web.WebPages.Razor.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\Microsoft.Web.Infrastructure.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\ServiceStack.Interfaces.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\de\Microsoft.Data.Edm.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\es\Microsoft.Data.Edm.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\it\Microsoft.Data.Edm.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\de\Microsoft.Data.OData.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\es\Microsoft.Data.OData.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\fr\Microsoft.Data.OData.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\it\Microsoft.Data.OData.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\ja\Microsoft.Data.OData.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\ko\Microsoft.Data.OData.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\ru\Microsoft.Data.OData.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\de\Microsoft.Data.Services.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\es\Microsoft.Data.Services.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\fr\Microsoft.Data.Services.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\it\Microsoft.Data.Services.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\ja\Microsoft.Data.Services.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\ko\Microsoft.Data.Services.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\ru\Microsoft.Data.Services.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\zh-Hans\Microsoft.Data.Services.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\zh-Hant\Microsoft.Data.Services.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\de\System.Spatial.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\es\System.Spatial.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\fr\System.Spatial.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\it\System.Spatial.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\ja\System.Spatial.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\ko\System.Spatial.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\ru\System.Spatial.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\zh-Hans\System.Spatial.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\bin\zh-Hant\System.Spatial.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\obj\Debug\PS.Azure.Web.csproj.App.config
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\obj\Debug\PS.Azure.Web.csprojAssemblyReference.cache
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\obj\Debug\PS.Azure.Web.csproj.CoreCompileInputs.cache
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\obj\Debug\PS.Azure.Web.csproj.CopyComplete
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\obj\Debug\PS.Azure.Web.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.Azure.Web\obj\Debug\PS.Azure.Web.pdb
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\Email\images\complete copy.png
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\Email\images\footer.png
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\Email\images\header.png
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\Email\images\line.png
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\Email\newUserEmail.html
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\Email\Template.html
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\Email\welcomeEmail.html
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\PS.Azure.Web.dll.config
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\PS.Azure.Web.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\PS.Azure.Web.pdb
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\Antlr3.Runtime.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.AspNet.SignalR.Core.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.Data.Edm.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.Data.OData.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.Data.Services.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.Owin.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.Owin.Security.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.Web.Optimization.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.WindowsAzure.Configuration.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.WindowsAzure.Storage.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\Newtonsoft.Json.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\Owin.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\PS.Data.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\Raven.Abstractions.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\Raven.Client.Lightweight.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Net.Http.Extensions.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Net.Http.Formatting.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Net.Http.Primitives.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Spatial.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.Helpers.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.Http.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.Http.WebHost.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.Mvc.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.Optimization.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.Razor.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.WebPages.Deployment.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.WebPages.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.WebPages.Razor.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\Web.Optimization.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\WebGrease.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\ServiceStack.Interfaces.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\PS.Data.pdb
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\Antlr3.Runtime.pdb
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.AspNet.SignalR.Core.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.Data.Edm.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.Data.OData.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.Data.Services.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.Owin.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.Owin.Security.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.WindowsAzure.Configuration.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.WindowsAzure.Storage.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\Newtonsoft.Json.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\Raven.Abstractions.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\Raven.Client.Lightweight.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Net.Http.Extensions.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Net.Http.Formatting.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Net.Http.Primitives.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Spatial.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.Helpers.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.Http.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.Http.WebHost.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.Mvc.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.Optimization.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.Razor.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.WebPages.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.WebPages.Deployment.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.WebPages.Razor.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\ServiceStack.Interfaces.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\de\Microsoft.Data.Edm.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\es\Microsoft.Data.Edm.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\fr\Microsoft.Data.Edm.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\it\Microsoft.Data.Edm.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\ja\Microsoft.Data.Edm.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\ko\Microsoft.Data.Edm.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\ru\Microsoft.Data.Edm.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\de\Microsoft.Data.OData.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\es\Microsoft.Data.OData.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\fr\Microsoft.Data.OData.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\it\Microsoft.Data.OData.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\ja\Microsoft.Data.OData.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\ko\Microsoft.Data.OData.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\ru\Microsoft.Data.OData.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\de\Microsoft.Data.Services.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\es\Microsoft.Data.Services.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\fr\Microsoft.Data.Services.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\it\Microsoft.Data.Services.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\ja\Microsoft.Data.Services.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\ko\Microsoft.Data.Services.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\ru\Microsoft.Data.Services.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\zh-Hans\Microsoft.Data.Services.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\zh-Hant\Microsoft.Data.Services.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\de\System.Spatial.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\es\System.Spatial.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\fr\System.Spatial.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\it\System.Spatial.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\ja\System.Spatial.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\ko\System.Spatial.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\ru\System.Spatial.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\zh-Hans\System.Spatial.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\bin\zh-Hant\System.Spatial.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\obj\Debug\PS.Azure.Web.csproj.App.config
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\obj\Debug\PS.Azure.Web.csprojResolveAssemblyReference.cache
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\obj\Debug\PS.Azure.Web.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.Azure.Web\obj\Debug\PS.Azure.Web.pdb
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\Email\images\complete copy.png
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\Email\images\footer.png
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\Email\images\header.png
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\Email\images\line.png
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\Email\newUserEmail.html
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\Email\Template.html
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\Email\welcomeEmail.html
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\PS.Azure.Web.dll.config
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\PS.Azure.Web.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\PS.Azure.Web.pdb
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\Antlr3.Runtime.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.Data.Edm.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.Data.OData.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.Data.Services.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.Owin.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.Owin.Security.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.Web.Optimization.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.WindowsAzure.Configuration.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.WindowsAzure.Storage.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\Newtonsoft.Json.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\Owin.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\PS.Data.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\Raven.Abstractions.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\Raven.Client.Lightweight.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Net.Http.Extensions.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Net.Http.Formatting.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Net.Http.Primitives.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Spatial.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.Helpers.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.Http.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.Http.WebHost.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.Mvc.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.Optimization.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.Razor.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.WebPages.Deployment.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.WebPages.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.WebPages.Razor.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\Web.Optimization.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\WebGrease.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\ServiceStack.Interfaces.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\PS.Data.pdb
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\PS.Data.dll.config
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\Antlr3.Runtime.pdb
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.Data.Edm.xml
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.Data.OData.xml
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.Data.Services.xml
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.Owin.xml
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.Owin.Security.xml
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.WindowsAzure.Configuration.xml
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.WindowsAzure.Storage.xml
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\Newtonsoft.Json.xml
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\Raven.Abstractions.xml
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\Raven.Client.Lightweight.xml
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Net.Http.Extensions.xml
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Net.Http.Formatting.xml
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Net.Http.Primitives.xml
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Spatial.xml
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.Helpers.xml
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.Http.xml
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.Http.WebHost.xml
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.Mvc.xml
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.Optimization.xml
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.Razor.xml
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.WebPages.xml
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.WebPages.Deployment.xml
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.WebPages.Razor.xml
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\ServiceStack.Interfaces.xml
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\de\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\es\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\it\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\de\Microsoft.Data.Services.resources.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\es\Microsoft.Data.Services.resources.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\fr\Microsoft.Data.Services.resources.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\it\Microsoft.Data.Services.resources.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\ja\Microsoft.Data.Services.resources.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\ko\Microsoft.Data.Services.resources.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\ru\Microsoft.Data.Services.resources.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\zh-Hans\Microsoft.Data.Services.resources.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\zh-Hant\Microsoft.Data.Services.resources.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\de\System.Spatial.resources.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\es\System.Spatial.resources.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\fr\System.Spatial.resources.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\it\System.Spatial.resources.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\ja\System.Spatial.resources.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\ko\System.Spatial.resources.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\ru\System.Spatial.resources.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\zh-Hans\System.Spatial.resources.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\bin\zh-Hant\System.Spatial.resources.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\obj\Debug\PS.Azure.Web.csproj.App.config
+C:\Hirerocks\Hirerocks\PS.Azure.Web\obj\Debug\PS.Azure.Web.csprojAssemblyReference.cache
+C:\Hirerocks\Hirerocks\PS.Azure.Web\obj\Debug\PS.Azure.Web.csproj.CopyComplete
+C:\Hirerocks\Hirerocks\PS.Azure.Web\obj\Debug\PS.Azure.Web.dll
+C:\Hirerocks\Hirerocks\PS.Azure.Web\obj\Debug\PS.Azure.Web.pdb
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\Email\images\complete copy.png
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\Email\images\footer.png
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\Email\images\header.png
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\Email\images\line.png
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\Email\newUserEmail.html
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\Email\Template.html
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\Email\welcomeEmail.html
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\PS.Azure.Web.dll.config
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\PS.Azure.Web.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\PS.Azure.Web.pdb
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\Antlr3.Runtime.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.AspNet.SignalR.Core.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.Data.Edm.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.Data.OData.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.Data.Services.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.Owin.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.Owin.Security.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.Web.Optimization.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.WindowsAzure.Configuration.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.WindowsAzure.Storage.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\Newtonsoft.Json.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\Owin.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\PS.Data.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\Raven.Abstractions.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\Raven.Client.Lightweight.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Net.Http.Extensions.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Net.Http.Formatting.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Net.Http.Primitives.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Spatial.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.Helpers.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.Http.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.Http.WebHost.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.Mvc.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.Optimization.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.Razor.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.WebPages.Deployment.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.WebPages.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.WebPages.Razor.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\Web.Optimization.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\WebGrease.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\ServiceStack.Interfaces.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\PS.Data.pdb
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\PS.Data.dll.config
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\Antlr3.Runtime.pdb
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.AspNet.SignalR.Core.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.Data.Edm.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.Data.OData.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.Data.Services.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.Owin.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.Owin.Security.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.WindowsAzure.Configuration.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\Microsoft.WindowsAzure.Storage.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\Newtonsoft.Json.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\Raven.Abstractions.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\Raven.Client.Lightweight.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Net.Http.Extensions.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Net.Http.Formatting.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Net.Http.Primitives.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Spatial.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.Helpers.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.Http.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.Http.WebHost.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.Mvc.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.Optimization.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.Razor.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.WebPages.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.WebPages.Deployment.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\System.Web.WebPages.Razor.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\ServiceStack.Interfaces.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\de\Microsoft.Data.Edm.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\es\Microsoft.Data.Edm.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\it\Microsoft.Data.Edm.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\de\Microsoft.Data.OData.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\es\Microsoft.Data.OData.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\fr\Microsoft.Data.OData.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\it\Microsoft.Data.OData.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\ja\Microsoft.Data.OData.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\ko\Microsoft.Data.OData.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\ru\Microsoft.Data.OData.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\de\Microsoft.Data.Services.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\es\Microsoft.Data.Services.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\fr\Microsoft.Data.Services.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\it\Microsoft.Data.Services.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\ja\Microsoft.Data.Services.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\ko\Microsoft.Data.Services.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\ru\Microsoft.Data.Services.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\zh-Hans\Microsoft.Data.Services.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\zh-Hant\Microsoft.Data.Services.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\de\System.Spatial.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\es\System.Spatial.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\fr\System.Spatial.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\it\System.Spatial.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\ja\System.Spatial.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\ko\System.Spatial.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\ru\System.Spatial.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\zh-Hans\System.Spatial.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\bin\zh-Hant\System.Spatial.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\obj\Debug\PS.Azure.Web.csproj.App.config
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\obj\Debug\PS.Azure.Web.csproj.AssemblyReference.cache
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\obj\Debug\PS.Azure.Web.csproj.CoreCompileInputs.cache
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\obj\Debug\PS.Azure.Web.csproj.CopyComplete
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\obj\Debug\PS.Azure.Web.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.Azure.Web\obj\Debug\PS.Azure.Web.pdb
