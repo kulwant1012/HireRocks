@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/PS.Data.Entities" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/PS.Data.Entities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.169.235.121:84/PSService/Services/PSService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://192.169.235.121:84/PSService/Services/PSService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="Entity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Entity" nillable="true" type="tns:Entity" />
+  <xs:complexType name="BackupTask">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BackupDay" type="tns:BackupDay" />
+          <xs:element minOccurs="0" name="BackupTime" type="ser:duration" />
+          <xs:element minOccurs="0" name="BackupTimeZone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreatedDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DestinationStorageAccountKey" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DestinationStorageAccountName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DestinationStorageContainer" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifyDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SourceStorageAccountKey" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SourceStorageAccountName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SourceStorageContainer" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BackupTask" nillable="true" type="tns:BackupTask" />
+  <xs:simpleType name="BackupDay">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Sunday" />
+      <xs:enumeration value="Monday" />
+      <xs:enumeration value="Tuesday" />
+      <xs:enumeration value="Wednesday" />
+      <xs:enumeration value="Thursday" />
+      <xs:enumeration value="Friday" />
+      <xs:enumeration value="Saturday" />
+      <xs:enumeration value="EveryDay" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="BackupDay" nillable="true" type="tns:BackupDay" />
+  <xs:complexType name="ArrayOfBackupTask">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BackupTask" nillable="true" type="tns:BackupTask" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBackupTask" nillable="true" type="tns:ArrayOfBackupTask" />
+  <xs:complexType name="BackupAction">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BackupTask" nillable="true" type="tns:BackupTask" />
+          <xs:element minOccurs="0" name="BackupTaskId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BackupTime" type="ser:duration" />
+          <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="BlobsList" nillable="true" type="q1:ArrayOfstring" />
+          <xs:element minOccurs="0" name="EndTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Result" nillable="true" type="tns:BackupActionResult" />
+          <xs:element minOccurs="0" name="StartTime" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BackupAction" nillable="true" type="tns:BackupAction" />
+  <xs:complexType name="BackupActionResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BackupActionResult" nillable="true" type="tns:BackupActionResult" />
+  <xs:complexType name="ArrayOfBackupAction">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BackupAction" nillable="true" type="tns:BackupAction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBackupAction" nillable="true" type="tns:ArrayOfBackupAction" />
+  <xs:complexType name="Resource">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="CompanyIds" nillable="true" type="q2:ArrayOfint" />
+      <xs:element minOccurs="0" name="ExtensionData" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LongDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MSRP" type="xs:double" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="MediaUrlList" nillable="true" type="q3:ArrayOfstring" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResourceContentUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResourceQSpaceID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResourceQSpaceName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShortDescription" nillable="true" type="xs:string" />
+      <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="VideoUrlList" nillable="true" type="q4:ArrayOfstring" />
+      <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="deletedMediaUrlList" nillable="true" type="q5:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Resource" nillable="true" type="tns:Resource" />
+  <xs:complexType name="ArrayOfResource">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Resource" nillable="true" type="tns:Resource" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfResource" nillable="true" type="tns:ArrayOfResource" />
+  <xs:complexType name="ArrayOfCompany">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Company" nillable="true" type="tns:Company" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCompany" nillable="true" type="tns:ArrayOfCompany" />
+  <xs:complexType name="Company">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+          <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="BrandIds" nillable="true" type="q6:ArrayOfstring" />
+          <xs:element minOccurs="0" name="ExtensionData" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Website" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Company" nillable="true" type="tns:Company" />
+  <xs:complexType name="ArrayOfBrand">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Brand" nillable="true" type="tns:Brand" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBrand" nillable="true" type="tns:ArrayOfBrand" />
+  <xs:complexType name="Brand">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Brand" nillable="true" type="tns:Brand" />
+  <xs:complexType name="AddMediaFile">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ContentType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MediaFile" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="Result" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddMediaFile" nillable="true" type="tns:AddMediaFile" />
+  <xs:simpleType name="BankAccountType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Checking" />
+      <xs:enumeration value="Savings" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="BankAccountType" nillable="true" type="tns:BankAccountType" />
+  <xs:simpleType name="BankAccountStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Verified" />
+      <xs:enumeration value="InProgress" />
+      <xs:enumeration value="Logged" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="BankAccountStatus" nillable="true" type="tns:BankAccountStatus" />
+  <xs:complexType name="ResourceTypeItem">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResourceItemBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResourceTypeItem" nillable="true" type="tns:ResourceTypeItem" />
+  <xs:complexType name="ResourceItemBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResourceItemBase" nillable="true" type="tns:ResourceItemBase" />
+  <xs:complexType name="ArrayOfResourceTypeItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ResourceTypeItem" nillable="true" type="tns:ResourceTypeItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfResourceTypeItem" nillable="true" type="tns:ArrayOfResourceTypeItem" />
+  <xs:complexType name="ResourceCategoryItem">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResourceItemBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="TypeId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResourceCategoryItem" nillable="true" type="tns:ResourceCategoryItem" />
+  <xs:complexType name="ArrayOfResourceCategoryItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ResourceCategoryItem" nillable="true" type="tns:ResourceCategoryItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfResourceCategoryItem" nillable="true" type="tns:ArrayOfResourceCategoryItem" />
+  <xs:complexType name="QSpace">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CanProduceTasks" type="xs:boolean" />
+          <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ChildQspaces" nillable="true" type="q7:ArrayOfstring" />
+          <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="EnergyLevel" type="tns:EnergyLevel" />
+          <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ParentQSpaces" nillable="true" type="q8:ArrayOfstring" />
+          <xs:element minOccurs="0" name="QScore" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" name="Role" nillable="true" type="tns:ArrayOfQSpaceRole" />
+          <xs:element minOccurs="0" name="Sector" type="tns:SectorType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="QSpace" nillable="true" type="tns:QSpace" />
+  <xs:simpleType name="EnergyLevel">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Zero" />
+      <xs:enumeration value="One" />
+      <xs:enumeration value="Two" />
+      <xs:enumeration value="Three" />
+      <xs:enumeration value="Four" />
+      <xs:enumeration value="Five" />
+      <xs:enumeration value="Six" />
+      <xs:enumeration value="Seven" />
+      <xs:enumeration value="Eight" />
+      <xs:enumeration value="Nine" />
+      <xs:enumeration value="Ten" />
+      <xs:enumeration value="Eleven" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EnergyLevel" nillable="true" type="tns:EnergyLevel" />
+  <xs:complexType name="ArrayOfQSpaceRole">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="QSpaceRole" nillable="true" type="tns:QSpaceRole" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfQSpaceRole" nillable="true" type="tns:ArrayOfQSpaceRole" />
+  <xs:complexType name="QSpaceRole">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:QSpace">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CanCreateChild" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CanDeleteChild" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Name" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="QSpaceRole" nillable="true" type="tns:QSpaceRole" />
+  <xs:simpleType name="SectorType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Structure" />
+      <xs:enumeration value="Creation" />
+      <xs:enumeration value="Collective" />
+      <xs:enumeration value="Resource" />
+      <xs:enumeration value="Information" />
+      <xs:enumeration value="Experience" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SectorType" nillable="true" type="tns:SectorType" />
+  <xs:complexType name="ArrayOfQSpace">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="QSpace" nillable="true" type="tns:QSpace" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfQSpace" nillable="true" type="tns:ArrayOfQSpace" />
+  <xs:complexType name="Task">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:QSpace">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AssignedUsers" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreatorId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EstimatedBudget" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" name="EstimatedQscore" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" name="EstimatedTime" type="ser:duration" />
+          <xs:element minOccurs="0" name="FinishedDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="LastModifiedDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="RewardPoints" type="xs:unsignedInt" />
+          <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Task" nillable="true" type="tns:Task" />
+  <xs:complexType name="ArrayOfTask">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Task" nillable="true" type="tns:Task" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTask" nillable="true" type="tns:ArrayOfTask" />
+</xs:schema>

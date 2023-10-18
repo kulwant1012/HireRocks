@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f026bd92-d5f4-457e-bb04-d9d50500f0f2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://192.169.235.121:84/PSService/Services/PSService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PSService11.xsd" MetadataType="Schema" ID="a8607a1c-77ff-4b23-bfcd-af2d590b92ac" SourceId="1" SourceUrl="http://192.169.235.121:84/PSService/Services/PSService.svc?xsd=xsd7" />
+    <MetadataFile FileName="PSService12.xsd" MetadataType="Schema" ID="1bf4d6cf-ffe7-4ebf-a952-c7185675f211" SourceId="1" SourceUrl="http://192.169.235.121:84/PSService/Services/PSService.svc?xsd=xsd8" />
+    <MetadataFile FileName="PSService2.disco" MetadataType="Disco" ID="388dfa40-656e-42de-afd0-e8ed90ebc5de" SourceId="1" SourceUrl="http://192.169.235.121:84/PSService/Services/PSService.svc?disco" />
+    <MetadataFile FileName="PSService13.xsd" MetadataType="Schema" ID="8522df12-0133-40b7-a4db-a52a66bb52d0" SourceId="1" SourceUrl="http://192.169.235.121:84/PSService/Services/PSService.svc?xsd=xsd1" />
+    <MetadataFile FileName="PSService14.xsd" MetadataType="Schema" ID="a0b84e1a-0bb6-4936-815c-99d52b1157f7" SourceId="1" SourceUrl="http://192.169.235.121:84/PSService/Services/PSService.svc?xsd=xsd5" />
+    <MetadataFile FileName="PSService2.wsdl" MetadataType="Wsdl" ID="8277f882-5b2d-46a8-b17c-f874c8de5805" SourceId="1" SourceUrl="http://192.169.235.121:84/PSService/Services/PSService.svc?wsdl" />
+    <MetadataFile FileName="PSService15.xsd" MetadataType="Schema" ID="5e6eb904-587b-40a2-9f51-54f1adabe6d7" SourceId="1" SourceUrl="http://192.169.235.121:84/PSService/Services/PSService.svc?xsd=xsd2" />
+    <MetadataFile FileName="PSService16.xsd" MetadataType="Schema" ID="ed392f66-d2eb-410c-a68b-a215edb15d53" SourceId="1" SourceUrl="http://192.169.235.121:84/PSService/Services/PSService.svc?xsd=xsd6" />
+    <MetadataFile FileName="PSService17.xsd" MetadataType="Schema" ID="223b7f04-ebbc-4be0-be89-5de2fe98a625" SourceId="1" SourceUrl="http://192.169.235.121:84/PSService/Services/PSService.svc?xsd=xsd0" />
+    <MetadataFile FileName="PSService18.xsd" MetadataType="Schema" ID="efa18859-fe76-4041-b2cc-d495ed026614" SourceId="1" SourceUrl="http://192.169.235.121:84/PSService/Services/PSService.svc?xsd=xsd9" />
+    <MetadataFile FileName="PSService19.xsd" MetadataType="Schema" ID="07883259-e449-41a1-af85-25c2859ef84d" SourceId="1" SourceUrl="http://192.169.235.121:84/PSService/Services/PSService.svc?xsd=xsd3" />
+    <MetadataFile FileName="PSService20.xsd" MetadataType="Schema" ID="17981ec6-1de7-4624-9b04-10aa7253fc23" SourceId="1" SourceUrl="http://192.169.235.121:84/PSService/Services/PSService.svc?xsd=xsd4" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

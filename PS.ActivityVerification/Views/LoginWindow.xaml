@@ -1,0 +1,51 @@
+﻿<Window xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        x:Class="PS.ActivityVerification.Views.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:w="clr-namespace:PS.ActivityVerification.Helpers"
+        WindowStartupLocation="CenterScreen" Background="WhiteSmoke"
+        Title="Login" Height="250" Width="400" ResizeMode="NoResize"
+        DataContext="{Binding LoginModel,Source={StaticResource Locator}}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding ErrorMessage}" VerticalAlignment="Top" Foreground="Red" />
+        <TextBlock Grid.Row="0" Grid.Column="1" Text="Please enter your login and password" VerticalAlignment="Center"
+                   FontWeight="Bold" Margin="20" />
+
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20" />
+                <ColumnDefinition Width="80" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="1" Content="Login:" />
+            <TextBox Text="{Binding User.Login}" Grid.Row="0" Grid.Column="2" Width="250" Height="30"
+                     BorderBrush="WhiteSmoke" BorderThickness="2" />
+            <Label Grid.Row="1" Grid.Column="1" Content="Password:" />
+            <StackPanel Grid.Row="1" Grid.Column="2">
+                <PasswordBox PasswordChar="*" Width="250" Height="30"
+                             w:PasswordHelper.Attach="True" BorderBrush="WhiteSmoke" BorderThickness="2"
+                             w:PasswordHelper.Password="{Binding Text, ElementName=plain, Mode=TwoWay}" />
+                <TextBlock FontSize="2" Opacity="0.1" x:Name="plain" Text="{Binding User.Password, Mode=TwoWay}" />
+            </StackPanel>
+        </Grid>
+
+        <telerik:RadButton Name="Login" Content="Login" Grid.Row="2" Grid.Column="1" Height="30" Width="100"
+                           Command="{Binding LoginCommand}" telerik:StyleManager.Theme="Windows8" />
+
+        <telerik:RadBusyIndicator Grid.Row="0" Grid.RowSpan="3" IsBusy="{Binding IsBusy}" telerik:StyleManager.Theme="Windows8"
+				IsIndeterminate="True" >
+        </telerik:RadBusyIndicator>
+    </Grid>
+</Window>

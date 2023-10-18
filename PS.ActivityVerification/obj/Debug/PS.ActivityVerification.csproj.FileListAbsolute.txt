@@ -1,0 +1,815 @@
+C:\Hirerocks\PS.ActivityVerification\obj\Debug\PS.ActivityVerification.csprojResolveAssemblyReference.cache
+C:\Hirerocks\PS.ActivityVerification\obj\Debug\Views\MainWindow.baml
+C:\Hirerocks\PS.ActivityVerification\obj\Debug\Views\SelectActivityWindow.baml
+C:\Hirerocks\PS.ActivityVerification\obj\Debug\Views\SelectQSpaceWindow.baml
+C:\Hirerocks\PS.ActivityVerification\obj\Debug\Views\SubmitOutputWindow.baml
+C:\Hirerocks\PS.ActivityVerification\obj\Debug\Views\LoginWindow.g.cs
+C:\Hirerocks\PS.ActivityVerification\obj\Debug\Views\MainWindow.g.cs
+C:\Hirerocks\PS.ActivityVerification\obj\Debug\Views\SelectActivityWindow.g.cs
+C:\Hirerocks\PS.ActivityVerification\obj\Debug\Views\SelectQSpaceWindow.g.cs
+C:\Hirerocks\PS.ActivityVerification\obj\Debug\Views\SubmitOutputWindow.g.cs
+C:\Hirerocks\PS.ActivityVerification\obj\Debug\App.g.cs
+C:\Hirerocks\PS.ActivityVerification\obj\Debug\Activity Capture Tool_Content.g.cs
+C:\Hirerocks\PS.ActivityVerification\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Hirerocks\PS.ActivityVerification\obj\Debug\Activity Capture Tool_MarkupCompile.cache
+C:\Hirerocks\PS.ActivityVerification\obj\Debug\Activity Capture Tool_MarkupCompile.lref
+C:\Hirerocks\PS.ActivityVerification\obj\Debug\App.baml
+C:\Hirerocks\PS.ActivityVerification\obj\Debug\Resources\NotifyIconResources.baml
+C:\Hirerocks\PS.ActivityVerification\obj\Debug\Views\LoginWindow.baml
+C:\Hirerocks\PS.ActivityVerification\obj\Debug\Activity Capture Tool.g.resources
+C:\Hirerocks\PS.ActivityVerification\obj\Debug\PS.ActivityVerification.Properties.Resources.resources
+C:\Hirerocks\PS.ActivityVerification\obj\Debug\PS.ActivityVerification.csproj.GenerateResource.Cache
+C:\Hirerocks\PS.ActivityVerification\obj\Debug\PS.ActivityVerification.csproj.CoreCompileInputs.cache
+C:\Hirerocks\PS.ActivityVerification\obj\Debug\Activity Capture Tool.TrustInfo.xml
+C:\Hirerocks\PS.ActivityVerification\obj\Debug\Activity Capture Tool.exe
+C:\Hirerocks\PS.ActivityVerification\obj\Debug\Activity Capture Tool.pdb
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Activity Capture Tool.exe.config
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Activity Capture Tool.exe.manifest
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Activity Capture Tool.application
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Activity Capture Tool.exe
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Activity Capture Tool.pdb
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\GalaSoft.MvvmLight.Extras.WPF45.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\GalaSoft.MvvmLight.WPF45.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Hardcodet.Wpf.TaskbarNotification.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.AspNet.SignalR.Client.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.Data.Edm.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.Data.OData.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.Data.Services.Client.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.WindowsAzure.Configuration.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.WindowsAzure.Storage.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\MouseKeyboardLibrary.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Newtonsoft.Json.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\PS.Data.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Abstractions.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Client.Embedded.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Client.Lightweight.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\System.Spatial.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\System.Windows.Interactivity.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.DataVisualization.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.Docking.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.Input.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.Navigation.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.RibbonView.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\ServiceStack.Interfaces.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.CompilerServices.AsyncTargetingPack.Net4.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Database.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Data.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Lucene.Net.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Lucene.Net.Contrib.Spatial.NTS.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\ICSharpCode.NRefactory.CSharp.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Jint.Raven.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Esent.Interop.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Spatial4n.Core.NTS.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\ICSharpCode.NRefactory.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\AWSSDK.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\NetTopologySuite.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\GeoAPI.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Mono.Cecil.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\PowerCollections.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\PS.Data.pdb
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\PS.Data.dll.config
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\GalaSoft.MvvmLight.Extras.WPF45.xml
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\GalaSoft.MvvmLight.WPF45.xml
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.AspNet.SignalR.Client.xml
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.Data.Edm.xml
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.Data.OData.xml
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.Data.Services.Client.xml
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.WindowsAzure.Configuration.xml
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.WindowsAzure.Storage.xml
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Newtonsoft.Json.xml
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Abstractions.pdb
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Abstractions.xml
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Client.Embedded.pdb
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Client.Embedded.xml
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Client.Lightweight.pdb
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Client.Lightweight.xml
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\System.Spatial.xml
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\System.Windows.Interactivity.xml
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.pdb
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.xml
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.DataVisualization.pdb
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.DataVisualization.xml
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.Docking.pdb
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.Docking.xml
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.Input.pdb
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.Input.xml
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.Navigation.pdb
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.Navigation.xml
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.RibbonView.pdb
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.RibbonView.xml
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\ServiceStack.Interfaces.xml
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.CompilerServices.AsyncTargetingPack.Net4.xml
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Database.pdb
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Data.pdb
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Data.xml
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Lucene.Net.pdb
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Lucene.Net.xml
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Lucene.Net.Contrib.Spatial.NTS.pdb
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Lucene.Net.Contrib.Spatial.NTS.xml
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\ICSharpCode.NRefactory.CSharp.xml
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Jint.Raven.pdb
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Esent.Interop.pdb
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Esent.Interop.xml
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Spatial4n.Core.NTS.pdb
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\Spatial4n.Core.NTS.xml
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\ICSharpCode.NRefactory.xml
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\AWSSDK.xml
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\de\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\es\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\fr\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\it\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\ja\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\ko\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\ru\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\de\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\es\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\fr\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\it\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\ja\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\ko\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\ru\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\de\Microsoft.Data.Services.Client.resources.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\es\Microsoft.Data.Services.Client.resources.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\fr\Microsoft.Data.Services.Client.resources.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\it\Microsoft.Data.Services.Client.resources.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\ja\Microsoft.Data.Services.Client.resources.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\ko\Microsoft.Data.Services.Client.resources.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\ru\Microsoft.Data.Services.Client.resources.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\de\System.Spatial.resources.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\es\System.Spatial.resources.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\fr\System.Spatial.resources.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\it\System.Spatial.resources.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\ja\System.Spatial.resources.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\ko\System.Spatial.resources.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\ru\System.Spatial.resources.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\zh-Hans\System.Spatial.resources.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\zh-Hant\System.Spatial.resources.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\de\Telerik.Windows.Controls.resources.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\es\Telerik.Windows.Controls.resources.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\fr\Telerik.Windows.Controls.resources.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\it\Telerik.Windows.Controls.resources.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\nl\Telerik.Windows.Controls.resources.dll
+C:\Hirerocks\PS.ActivityVerification\bin\Debug\tr\Telerik.Windows.Controls.resources.dll
+C:\Hirerocks\PS.ActivityVerification\obj\Debug\Activity Capture Tool.exe.manifest
+C:\Hirerocks\PS.ActivityVerification\obj\Debug\Activity Capture Tool.application
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Activity Capture Tool.exe.config
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Activity Capture Tool.exe.manifest
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Activity Capture Tool.application
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Activity Capture Tool.exe
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Activity Capture Tool.pdb
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\GalaSoft.MvvmLight.Extras.WPF45.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\GalaSoft.MvvmLight.WPF45.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Hardcodet.Wpf.TaskbarNotification.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.AspNet.SignalR.Client.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.Data.Edm.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.Data.OData.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.Data.Services.Client.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.WindowsAzure.Configuration.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.WindowsAzure.Storage.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\MouseKeyboardLibrary.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Newtonsoft.Json.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\PS.Data.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Abstractions.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Client.Embedded.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Client.Lightweight.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\System.Spatial.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\System.Windows.Interactivity.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.DataVisualization.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.Docking.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.Input.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.Navigation.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.RibbonView.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\ServiceStack.Interfaces.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.CompilerServices.AsyncTargetingPack.Net4.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Database.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Data.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Lucene.Net.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Lucene.Net.Contrib.Spatial.NTS.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\ICSharpCode.NRefactory.CSharp.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Jint.Raven.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Esent.Interop.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Spatial4n.Core.NTS.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\ICSharpCode.NRefactory.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\AWSSDK.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\NetTopologySuite.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\GeoAPI.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Mono.Cecil.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\PowerCollections.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\PS.Data.pdb
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\PS.Data.dll.config
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\GalaSoft.MvvmLight.Extras.WPF45.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\GalaSoft.MvvmLight.WPF45.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.AspNet.SignalR.Client.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.Data.Edm.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.Data.OData.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.Data.Services.Client.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.WindowsAzure.Configuration.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.WindowsAzure.Storage.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Newtonsoft.Json.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Abstractions.pdb
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Abstractions.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Client.Embedded.pdb
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Client.Embedded.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Client.Lightweight.pdb
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Client.Lightweight.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\System.Spatial.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\System.Windows.Interactivity.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.pdb
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.DataVisualization.pdb
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.DataVisualization.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.Docking.pdb
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.Docking.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.Input.pdb
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.Input.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.Navigation.pdb
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.Navigation.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.RibbonView.pdb
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.RibbonView.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\ServiceStack.Interfaces.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.CompilerServices.AsyncTargetingPack.Net4.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Database.pdb
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Data.pdb
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Data.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Lucene.Net.pdb
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Lucene.Net.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Lucene.Net.Contrib.Spatial.NTS.pdb
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Lucene.Net.Contrib.Spatial.NTS.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\ICSharpCode.NRefactory.CSharp.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Jint.Raven.pdb
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Esent.Interop.pdb
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Esent.Interop.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Spatial4n.Core.NTS.pdb
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\Spatial4n.Core.NTS.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\ICSharpCode.NRefactory.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\AWSSDK.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\de\Microsoft.Data.Edm.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\es\Microsoft.Data.Edm.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\fr\Microsoft.Data.Edm.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\it\Microsoft.Data.Edm.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\ja\Microsoft.Data.Edm.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\ko\Microsoft.Data.Edm.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\ru\Microsoft.Data.Edm.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\de\Microsoft.Data.OData.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\es\Microsoft.Data.OData.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\fr\Microsoft.Data.OData.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\it\Microsoft.Data.OData.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\ja\Microsoft.Data.OData.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\ko\Microsoft.Data.OData.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\ru\Microsoft.Data.OData.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\de\Microsoft.Data.Services.Client.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\es\Microsoft.Data.Services.Client.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\fr\Microsoft.Data.Services.Client.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\it\Microsoft.Data.Services.Client.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\ja\Microsoft.Data.Services.Client.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\ko\Microsoft.Data.Services.Client.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\ru\Microsoft.Data.Services.Client.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\de\System.Spatial.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\es\System.Spatial.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\fr\System.Spatial.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\it\System.Spatial.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\ja\System.Spatial.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\ko\System.Spatial.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\ru\System.Spatial.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\zh-Hans\System.Spatial.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\zh-Hant\System.Spatial.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\de\Telerik.Windows.Controls.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\es\Telerik.Windows.Controls.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\fr\Telerik.Windows.Controls.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\it\Telerik.Windows.Controls.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\nl\Telerik.Windows.Controls.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\bin\Debug\tr\Telerik.Windows.Controls.resources.dll
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\obj\Debug\PS.ActivityVerification.csprojAssemblyReference.cache
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\obj\Debug\Views\MainWindow.baml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\obj\Debug\Views\SelectActivityWindow.baml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\obj\Debug\Views\SelectQSpaceWindow.baml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\obj\Debug\Views\SubmitOutputWindow.baml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\obj\Debug\Views\LoginWindow.g.cs
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\obj\Debug\Views\MainWindow.g.cs
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\obj\Debug\Views\SelectActivityWindow.g.cs
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\obj\Debug\Views\SelectQSpaceWindow.g.cs
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\obj\Debug\Views\SubmitOutputWindow.g.cs
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\obj\Debug\App.g.cs
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\obj\Debug\Activity Capture Tool_Content.g.cs
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\obj\Debug\Activity Capture Tool_MarkupCompile.cache
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\obj\Debug\Activity Capture Tool_MarkupCompile.lref
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\obj\Debug\App.baml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\obj\Debug\Resources\NotifyIconResources.baml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\obj\Debug\Views\LoginWindow.baml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\obj\Debug\Activity Capture Tool.g.resources
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\obj\Debug\PS.ActivityVerification.Properties.Resources.resources
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\obj\Debug\PS.ActivityVerification.csproj.GenerateResource.cache
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\obj\Debug\PS.ActivityVerification.csproj.CoreCompileInputs.cache
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\obj\Debug\Activity Capture Tool.TrustInfo.xml
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\obj\Debug\Activity Capture Tool.exe.manifest
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\obj\Debug\Activity Capture Tool.application
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\obj\Debug\PS.ActivityVerification.csproj.CopyComplete
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\obj\Debug\Activity Capture Tool.exe
+D:\HireRocks_compiledcode_06_Aug\Hirerocks_06Aug2018\Hirerocks\PS.ActivityVerification\obj\Debug\Activity Capture Tool.pdb
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Activity Capture Tool.exe.config
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Activity Capture Tool.exe.manifest
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Activity Capture Tool.application
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Activity Capture Tool.exe
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Activity Capture Tool.pdb
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\GalaSoft.MvvmLight.Extras.WPF45.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\GalaSoft.MvvmLight.WPF45.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Hardcodet.Wpf.TaskbarNotification.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.AspNet.SignalR.Client.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.Data.Edm.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.Data.OData.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.Data.Services.Client.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.WindowsAzure.Configuration.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.WindowsAzure.Storage.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\MouseKeyboardLibrary.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Newtonsoft.Json.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\PS.Data.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Abstractions.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Client.Embedded.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Client.Lightweight.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\System.Spatial.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\System.Windows.Interactivity.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.DataVisualization.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.Docking.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.Input.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.Navigation.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.RibbonView.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ServiceStack.Interfaces.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.CompilerServices.AsyncTargetingPack.Net4.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Database.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Data.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Lucene.Net.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Lucene.Net.Contrib.Spatial.NTS.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ICSharpCode.NRefactory.CSharp.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Jint.Raven.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Esent.Interop.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Spatial4n.Core.NTS.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ICSharpCode.NRefactory.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\AWSSDK.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\NetTopologySuite.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\GeoAPI.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Mono.Cecil.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\PowerCollections.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\PS.Data.pdb
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\GalaSoft.MvvmLight.Extras.WPF45.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\GalaSoft.MvvmLight.WPF45.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.AspNet.SignalR.Client.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.Data.Edm.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.Data.OData.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.Data.Services.Client.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.WindowsAzure.Configuration.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.WindowsAzure.Storage.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Newtonsoft.Json.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Abstractions.pdb
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Abstractions.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Client.Embedded.pdb
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Client.Embedded.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Client.Lightweight.pdb
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Client.Lightweight.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\System.Spatial.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\System.Windows.Interactivity.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.pdb
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.DataVisualization.pdb
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.DataVisualization.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.Docking.pdb
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.Docking.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.Input.pdb
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.Input.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.Navigation.pdb
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.Navigation.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.RibbonView.pdb
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.RibbonView.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ServiceStack.Interfaces.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.CompilerServices.AsyncTargetingPack.Net4.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Database.pdb
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Data.pdb
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Data.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Lucene.Net.pdb
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Lucene.Net.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Lucene.Net.Contrib.Spatial.NTS.pdb
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Lucene.Net.Contrib.Spatial.NTS.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ICSharpCode.NRefactory.CSharp.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Jint.Raven.pdb
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Esent.Interop.pdb
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Esent.Interop.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Spatial4n.Core.NTS.pdb
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Spatial4n.Core.NTS.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ICSharpCode.NRefactory.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\AWSSDK.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\de\Microsoft.Data.Edm.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\es\Microsoft.Data.Edm.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\fr\Microsoft.Data.Edm.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\it\Microsoft.Data.Edm.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ja\Microsoft.Data.Edm.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ko\Microsoft.Data.Edm.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ru\Microsoft.Data.Edm.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\zh-Hans\Microsoft.Data.Edm.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\zh-Hant\Microsoft.Data.Edm.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\de\Microsoft.Data.OData.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\es\Microsoft.Data.OData.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\fr\Microsoft.Data.OData.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\it\Microsoft.Data.OData.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ja\Microsoft.Data.OData.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ko\Microsoft.Data.OData.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ru\Microsoft.Data.OData.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\zh-Hans\Microsoft.Data.OData.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\zh-Hant\Microsoft.Data.OData.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\de\Microsoft.Data.Services.Client.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\es\Microsoft.Data.Services.Client.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\fr\Microsoft.Data.Services.Client.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\it\Microsoft.Data.Services.Client.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ja\Microsoft.Data.Services.Client.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ko\Microsoft.Data.Services.Client.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ru\Microsoft.Data.Services.Client.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\de\System.Spatial.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\es\System.Spatial.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\fr\System.Spatial.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\it\System.Spatial.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ja\System.Spatial.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ko\System.Spatial.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ru\System.Spatial.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\zh-Hans\System.Spatial.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\zh-Hant\System.Spatial.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\de\Telerik.Windows.Controls.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\es\Telerik.Windows.Controls.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\fr\Telerik.Windows.Controls.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\it\Telerik.Windows.Controls.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\nl\Telerik.Windows.Controls.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\tr\Telerik.Windows.Controls.resources.dll
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\PS.ActivityVerification.csprojResolveAssemblyReference.cache
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Views\MainWindow.baml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Views\SelectActivityWindow.baml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Views\SelectQSpaceWindow.baml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Views\SubmitOutputWindow.baml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Views\LoginWindow.g.cs
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Views\MainWindow.g.cs
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Views\SelectActivityWindow.g.cs
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Views\SelectQSpaceWindow.g.cs
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Views\SubmitOutputWindow.g.cs
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\App.g.cs
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Activity Capture Tool_Content.g.cs
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Activity Capture Tool_MarkupCompile.cache
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Activity Capture Tool_MarkupCompile.lref
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\App.baml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Resources\NotifyIconResources.baml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Views\LoginWindow.baml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Activity Capture Tool.g.resources
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\PS.ActivityVerification.Properties.Resources.resources
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\PS.ActivityVerification.csproj.GenerateResource.Cache
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Activity Capture Tool.TrustInfo.xml
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Activity Capture Tool.exe.manifest
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Activity Capture Tool.application
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Activity Capture Tool.exe
+E:\Projects\Hirerock New\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Activity Capture Tool.pdb
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Activity Capture Tool.exe.config
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Activity Capture Tool.exe.manifest
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Activity Capture Tool.application
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Activity Capture Tool.exe
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Activity Capture Tool.pdb
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\GalaSoft.MvvmLight.Extras.WPF45.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\GalaSoft.MvvmLight.WPF45.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Hardcodet.Wpf.TaskbarNotification.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.AspNet.SignalR.Client.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.Data.Edm.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.Data.OData.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.Data.Services.Client.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.WindowsAzure.Configuration.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.WindowsAzure.Storage.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\MouseKeyboardLibrary.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Newtonsoft.Json.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\PS.Data.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Abstractions.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Client.Embedded.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Client.Lightweight.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\System.Spatial.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\System.Windows.Interactivity.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.DataVisualization.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.Docking.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.Input.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.Navigation.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.RibbonView.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ServiceStack.Interfaces.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.CompilerServices.AsyncTargetingPack.Net4.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Database.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Data.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Lucene.Net.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Lucene.Net.Contrib.Spatial.NTS.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ICSharpCode.NRefactory.CSharp.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Jint.Raven.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Esent.Interop.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Spatial4n.Core.NTS.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ICSharpCode.NRefactory.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\AWSSDK.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\NetTopologySuite.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\GeoAPI.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Mono.Cecil.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\PowerCollections.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\PS.Data.pdb
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\PS.Data.dll.config
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\GalaSoft.MvvmLight.Extras.WPF45.xml
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\GalaSoft.MvvmLight.WPF45.xml
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.AspNet.SignalR.Client.xml
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.Data.Edm.xml
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.Data.OData.xml
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.Data.Services.Client.xml
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.WindowsAzure.Configuration.xml
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.WindowsAzure.Storage.xml
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Newtonsoft.Json.xml
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Abstractions.pdb
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Abstractions.xml
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Client.Embedded.pdb
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Client.Embedded.xml
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Client.Lightweight.pdb
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Client.Lightweight.xml
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\System.Spatial.xml
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\System.Windows.Interactivity.xml
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.pdb
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.xml
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.DataVisualization.pdb
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.DataVisualization.xml
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.Docking.pdb
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.Docking.xml
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.Input.pdb
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.Input.xml
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.Navigation.pdb
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.Navigation.xml
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.RibbonView.pdb
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.RibbonView.xml
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ServiceStack.Interfaces.xml
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.CompilerServices.AsyncTargetingPack.Net4.xml
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Database.pdb
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Data.pdb
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Data.xml
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Lucene.Net.pdb
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Lucene.Net.xml
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Lucene.Net.Contrib.Spatial.NTS.pdb
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Lucene.Net.Contrib.Spatial.NTS.xml
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ICSharpCode.NRefactory.CSharp.xml
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Jint.Raven.pdb
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Esent.Interop.pdb
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Esent.Interop.xml
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Spatial4n.Core.NTS.pdb
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Spatial4n.Core.NTS.xml
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ICSharpCode.NRefactory.xml
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\AWSSDK.xml
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\de\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\es\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\fr\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\it\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ja\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ko\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ru\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\de\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\es\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\fr\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\it\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ja\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ko\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ru\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\de\Microsoft.Data.Services.Client.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\es\Microsoft.Data.Services.Client.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\fr\Microsoft.Data.Services.Client.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\it\Microsoft.Data.Services.Client.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ja\Microsoft.Data.Services.Client.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ko\Microsoft.Data.Services.Client.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ru\Microsoft.Data.Services.Client.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\de\System.Spatial.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\es\System.Spatial.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\fr\System.Spatial.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\it\System.Spatial.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ja\System.Spatial.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ko\System.Spatial.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ru\System.Spatial.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\zh-Hans\System.Spatial.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\zh-Hant\System.Spatial.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\de\Telerik.Windows.Controls.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\es\Telerik.Windows.Controls.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\fr\Telerik.Windows.Controls.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\it\Telerik.Windows.Controls.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\nl\Telerik.Windows.Controls.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\tr\Telerik.Windows.Controls.resources.dll
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\PS.ActivityVerification.csprojAssemblyReference.cache
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Views\MainWindow.baml
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Views\SelectActivityWindow.baml
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Views\SelectQSpaceWindow.baml
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Views\SubmitOutputWindow.baml
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Views\LoginWindow.g.cs
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Views\MainWindow.g.cs
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Views\SelectActivityWindow.g.cs
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Views\SelectQSpaceWindow.g.cs
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Views\SubmitOutputWindow.g.cs
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\App.g.cs
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Activity Capture Tool_Content.g.cs
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Activity Capture Tool_MarkupCompile.cache
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Activity Capture Tool_MarkupCompile.lref
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\App.baml
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Resources\NotifyIconResources.baml
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Views\LoginWindow.baml
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Activity Capture Tool.g.resources
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\PS.ActivityVerification.Properties.Resources.resources
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\PS.ActivityVerification.csproj.GenerateResource.cache
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Activity Capture Tool.TrustInfo.xml
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Activity Capture Tool.exe.manifest
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Activity Capture Tool.application
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\PS.ActivityVerification.csproj.CopyComplete
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Activity Capture Tool.exe
+C:\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Activity Capture Tool.pdb
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Activity Capture Tool.exe.config
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Activity Capture Tool.exe.manifest
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Activity Capture Tool.application
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Activity Capture Tool.exe
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Activity Capture Tool.pdb
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\GalaSoft.MvvmLight.Extras.WPF45.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\GalaSoft.MvvmLight.WPF45.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Hardcodet.Wpf.TaskbarNotification.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.AspNet.SignalR.Client.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.Data.Edm.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.Data.OData.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.Data.Services.Client.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.WindowsAzure.Configuration.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.WindowsAzure.Storage.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\MouseKeyboardLibrary.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Newtonsoft.Json.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\PS.Data.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Abstractions.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Client.Embedded.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Client.Lightweight.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\System.Spatial.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\System.Windows.Interactivity.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.DataVisualization.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.Docking.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.Input.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.Navigation.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.RibbonView.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ServiceStack.Interfaces.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.CompilerServices.AsyncTargetingPack.Net4.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Database.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Data.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Lucene.Net.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Lucene.Net.Contrib.Spatial.NTS.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ICSharpCode.NRefactory.CSharp.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Jint.Raven.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Esent.Interop.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Spatial4n.Core.NTS.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ICSharpCode.NRefactory.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\AWSSDK.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\NetTopologySuite.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\GeoAPI.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Mono.Cecil.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\PowerCollections.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\PS.Data.pdb
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\PS.Data.dll.config
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\GalaSoft.MvvmLight.Extras.WPF45.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\GalaSoft.MvvmLight.WPF45.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.AspNet.SignalR.Client.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.Data.Edm.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.Data.OData.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.Data.Services.Client.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.WindowsAzure.Configuration.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.WindowsAzure.Storage.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Newtonsoft.Json.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Abstractions.pdb
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Abstractions.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Client.Embedded.pdb
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Client.Embedded.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Client.Lightweight.pdb
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Client.Lightweight.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\System.Spatial.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\System.Windows.Interactivity.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.pdb
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.DataVisualization.pdb
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.DataVisualization.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.Docking.pdb
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.Docking.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.Input.pdb
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.Input.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.Navigation.pdb
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.Navigation.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.RibbonView.pdb
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Controls.RibbonView.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ServiceStack.Interfaces.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Microsoft.CompilerServices.AsyncTargetingPack.Net4.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Raven.Database.pdb
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Data.pdb
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Telerik.Windows.Data.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Lucene.Net.pdb
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Lucene.Net.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Lucene.Net.Contrib.Spatial.NTS.pdb
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Lucene.Net.Contrib.Spatial.NTS.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ICSharpCode.NRefactory.CSharp.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Jint.Raven.pdb
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Esent.Interop.pdb
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Esent.Interop.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Spatial4n.Core.NTS.pdb
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\Spatial4n.Core.NTS.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ICSharpCode.NRefactory.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\AWSSDK.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\de\Microsoft.Data.Edm.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\es\Microsoft.Data.Edm.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\fr\Microsoft.Data.Edm.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\it\Microsoft.Data.Edm.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ja\Microsoft.Data.Edm.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ko\Microsoft.Data.Edm.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ru\Microsoft.Data.Edm.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\de\Microsoft.Data.OData.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\es\Microsoft.Data.OData.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\fr\Microsoft.Data.OData.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\it\Microsoft.Data.OData.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ja\Microsoft.Data.OData.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ko\Microsoft.Data.OData.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ru\Microsoft.Data.OData.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\de\Microsoft.Data.Services.Client.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\es\Microsoft.Data.Services.Client.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\fr\Microsoft.Data.Services.Client.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\it\Microsoft.Data.Services.Client.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ja\Microsoft.Data.Services.Client.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ko\Microsoft.Data.Services.Client.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ru\Microsoft.Data.Services.Client.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\de\System.Spatial.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\es\System.Spatial.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\fr\System.Spatial.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\it\System.Spatial.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ja\System.Spatial.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ko\System.Spatial.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\ru\System.Spatial.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\zh-Hans\System.Spatial.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\zh-Hant\System.Spatial.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\de\Telerik.Windows.Controls.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\es\Telerik.Windows.Controls.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\fr\Telerik.Windows.Controls.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\it\Telerik.Windows.Controls.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\nl\Telerik.Windows.Controls.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\bin\Debug\tr\Telerik.Windows.Controls.resources.dll
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\PS.ActivityVerification.csproj.AssemblyReference.cache
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Views\MainWindow.baml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Views\SelectActivityWindow.baml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Views\SelectQSpaceWindow.baml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Views\SubmitOutputWindow.baml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Views\LoginWindow.g.cs
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Views\MainWindow.g.cs
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Views\SelectActivityWindow.g.cs
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Views\SelectQSpaceWindow.g.cs
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Views\SubmitOutputWindow.g.cs
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\App.g.cs
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Activity Capture Tool_Content.g.cs
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Activity Capture Tool_MarkupCompile.cache
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Activity Capture Tool_MarkupCompile.lref
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\App.baml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Resources\NotifyIconResources.baml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Views\LoginWindow.baml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Activity Capture Tool.g.resources
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\PS.ActivityVerification.Properties.Resources.resources
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\PS.ActivityVerification.csproj.GenerateResource.cache
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\PS.ActivityVerification.csproj.CoreCompileInputs.cache
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Activity Capture Tool.TrustInfo.xml
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Activity Capture Tool.exe.manifest
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Activity Capture Tool.application
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\PS.ActivityVerification.csproj.CopyComplete
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Activity Capture Tool.exe
+D:\Workspace\Hirerocks\Hirerocks\PS.ActivityVerification\obj\Debug\Activity Capture Tool.pdb
